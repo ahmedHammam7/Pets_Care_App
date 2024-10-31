@@ -18,4 +18,20 @@ abstract class AppTextStyles {
       fontSize: 14.sp,
       fontWeight: FontWeight.w400,
       color: AppColors.primaryColor.withOpacity(0.9));
+
+  static TextStyle welcomeText = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeight.bold,
+    color: AppColors.primaryColor,
+  );
+  static TextStyle primaryButtonText = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.bold,
+    color: AppColors.white,
+  );
+  static TextStyle signWithText = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w400,
+    color: AppColors.darkGray,
+  );
 }
