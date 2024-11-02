@@ -34,4 +34,19 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w400,
     color: AppColors.darkGray,
   );
+  static TextStyle loginToContinue = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.bold,
+    color: AppColors.darkGray.withOpacity(0.8),
+  );
+  static TextStyle textFieldLabel = TextStyle(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.bold,
+    color: AppColors.primaryColor,
+  );
+  static TextStyle richText = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.bold,
+    color: AppColors.darkGray.withOpacity(0.8),
+  );
 }

@@ -14,7 +14,7 @@ class PrimaryButton extends StatelessWidget {
         onTap: onTap,
         child: Container(
           alignment: Alignment.center,
-          height: 60.h,
+          height: 55.h,
           width: double.infinity,
           decoration: BoxDecoration(
             color: AppColors.primaryColor,

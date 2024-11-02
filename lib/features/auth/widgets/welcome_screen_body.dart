@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pets_care_app/core/helper/extension.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
+import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
 import 'package:pets_care_app/features/auth/widgets/social_circle.dart';
@@ -29,13 +31,23 @@ class WelcomeScreenBody extends StatelessWidget {
                 style: AppTextStyles.welcomeText,
               ),
               verticalSpace(60),
-              PrimaryButton(text: "Login", onTap: () {}),
+              PrimaryButton(
+                  text: "Login",
+                  onTap: () {
+                    context.pushNamedAndRemoveUntil(Routes.loginScreen,
+                        predicate: (Route<dynamic> route) => false);
+                  }),
               verticalSpace(20),
-              PrimaryButton(text: "Sign Up", onTap: () {}),
-              verticalSpace(25),
+              PrimaryButton(
+                  text: "Sign Up",
+                  onTap: () {
+                    context.pushNamedAndRemoveUntil(Routes.registerScreen,
+                        predicate: (Route<dynamic> route) => false);
+                  }),
+              verticalSpace(30),
               Text("or sign in with social media",
                   style: AppTextStyles.signWithText),
-              verticalSpace(30),
+              verticalSpace(40),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [

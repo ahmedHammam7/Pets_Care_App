@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/helper/constants.dart';
+import 'package:pets_care_app/core/helper/extension.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
+import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/features/onBoarding/views/widgets/next_button.dart';
@@ -35,7 +37,10 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       InkWell(
-                        onTap: () {},
+                        onTap: () {
+                          context.pushNamedAndRemoveUntil(Routes.welcomeScreen,
+                              predicate: (Route<dynamic> route) => false);
+                        },
                         child: Text(
                           "Skip",
                           style: AppTextStyles.skipButton,
