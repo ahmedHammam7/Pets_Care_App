@@ -51,22 +51,17 @@ class WelcomeScreenBody extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  const Spacer(),
+                  const Spacer(flex: 3),
                   SocialCircle(
                     image: "assets/png/facebook.png",
                     onTap: () {},
                   ),
-                  const Spacer(),
+                  const Spacer(flex: 1),
                   SocialCircle(
                     image: "assets/png/google.png",
                     onTap: () {},
                   ),
-                  const Spacer(),
-                  SocialCircle(
-                    image: "assets/png/linkedin.png",
-                    onTap: () {},
-                  ),
-                  const Spacer(),
+                  const Spacer(flex: 3),
                 ],
               )
             ],
