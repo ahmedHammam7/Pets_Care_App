@@ -5,5 +5,4 @@ class Routes {
   static const String onBoardingScreen = '/onBoardingScreen';
   static const String homeLayout = '/HomeLayout';
   static const String profileScreen = '/ProfileScreen';
-  static const String welcomeScreen = '/welcomeScreen';
 }

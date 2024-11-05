@@ -9,6 +9,7 @@ import 'package:pets_care_app/features/auth/widgets/app_password_field.dart';
 import 'package:pets_care_app/features/auth/widgets/app_text_field.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
 import 'package:pets_care_app/features/auth/widgets/rich_text.dart';
+import 'package:pets_care_app/features/auth/widgets/social_circle.dart';
 
 class RegisterScreenBody extends StatefulWidget {
   const RegisterScreenBody({super.key});
@@ -20,7 +21,6 @@ class RegisterScreenBody extends StatefulWidget {
 bool obscureText = false;
 
 class _RegisterScreenBodyState extends State<RegisterScreenBody> {
-  String dropDownValue = "Dog";
   String dropDownValue2 = "User";
   @override
   Widget build(BuildContext context) {
@@ -75,66 +75,34 @@ class _RegisterScreenBodyState extends State<RegisterScreenBody> {
                   },
                 ),
                 verticalSpace(20),
-                Row(
-                  children: [
-                    const Spacer(),
-                    DropdownButton(
-                      style: AppTextStyles.textFieldLabel,
-                      value: dropDownValue,
-                      icon: const Icon(
-                        Icons.arrow_drop_down,
-                        color: AppColors.primaryColor,
-                      ),
-                      items: const [
-                        DropdownMenuItem(
-                          value: "Dog",
-                          child: Text("Dog"),
-                        ),
-                        DropdownMenuItem(
-                          value: "Cat",
-                          child: Text("Cat"),
-                        ),
-                      ],
-                      onChanged: (value) {
-                        setState(
-                          () {
-                            dropDownValue = value.toString();
-                          },
-                        );
-                      },
+                DropdownButton(
+                  style: AppTextStyles.textFieldLabel,
+                  value: dropDownValue2,
+                  icon: const Icon(
+                    Icons.arrow_drop_down,
+                    color: AppColors.primaryColor,
+                  ),
+                  items: const [
+                    DropdownMenuItem(
+                      value: "User",
+                      child: Text("User"),
                     ),
-                    const Spacer(),
-                    DropdownButton(
-                      style: AppTextStyles.textFieldLabel,
-                      value: dropDownValue2,
-                      icon: const Icon(
-                        Icons.arrow_drop_down,
-                        color: AppColors.primaryColor,
-                      ),
-                      items: const [
-                        DropdownMenuItem(
-                          value: "User",
-                          child: Text("User"),
-                        ),
-                        DropdownMenuItem(
-                          value: "Doctor",
-                          child: Text("Doctor"),
-                        ),
-                        DropdownMenuItem(
-                          value: "PetsStore",
-                          child: Text("PetsStore"),
-                        ),
-                      ],
-                      onChanged: (value) {
-                        setState(
-                          () {
-                            dropDownValue2 = value.toString();
-                          },
-                        );
-                      },
+                    DropdownMenuItem(
+                      value: "Doctor",
+                      child: Text("Doctor"),
                     ),
-                    const Spacer(),
+                    DropdownMenuItem(
+                      value: "PetsStore",
+                      child: Text("PetsStore"),
+                    ),
                   ],
+                  onChanged: (value) {
+                    setState(
+                      () {
+                        dropDownValue2 = value.toString();
+                      },
+                    );
+                  },
                 ),
                 verticalSpace(40),
                 PrimaryButton(
@@ -150,6 +118,24 @@ class _RegisterScreenBodyState extends State<RegisterScreenBody> {
                         predicate: (Route<dynamic> route) => false);
                   },
                 ),
+                verticalSpace(30),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Spacer(flex: 3),
+                    SocialCircle(
+                      image: "assets/png/facebook.png",
+                      onTap: () {},
+                    ),
+                    const Spacer(flex: 1),
+                    SocialCircle(
+                      image: "assets/png/google.png",
+                      onTap: () {},
+                    ),
+                    const Spacer(flex: 3),
+                  ],
+                ),
+                verticalSpace(20),
               ],
             ),
           ),
