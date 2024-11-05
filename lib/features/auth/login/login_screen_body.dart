@@ -8,6 +8,7 @@ import 'package:pets_care_app/features/auth/widgets/app_password_field.dart';
 import 'package:pets_care_app/features/auth/widgets/app_text_field.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
 import 'package:pets_care_app/features/auth/widgets/rich_text.dart';
+import 'package:pets_care_app/features/auth/widgets/social_circle.dart';
 
 class LoginScreenBody extends StatefulWidget {
   const LoginScreenBody({super.key});
@@ -74,6 +75,24 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                         predicate: (Route<dynamic> route) => false);
                   },
                 ),
+                verticalSpace(30),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    const Spacer(flex: 3),
+                    SocialCircle(
+                      image: "assets/png/facebook.png",
+                      onTap: () {},
+                    ),
+                    const Spacer(flex: 1),
+                    SocialCircle(
+                      image: "assets/png/google.png",
+                      onTap: () {},
+                    ),
+                    const Spacer(flex: 3),
+                  ],
+                ),
+                verticalSpace(20),
               ],
             ),
           ),
