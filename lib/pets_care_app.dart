@@ -16,7 +16,7 @@ class PetsCareApp extends StatelessWidget {
         theme: ThemeData(scaffoldBackgroundColor: AppColors.white),
         debugShowCheckedModeBanner: false,
         onGenerateRoute: AppRoutes().onGenerateRoute,
-        initialRoute: Routes.onBoardingScreen,
+        initialRoute: Routes.profileScreen,
       ),
     );
   }

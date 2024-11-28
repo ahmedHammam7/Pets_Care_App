@@ -1,0 +1,44 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pets_care_app/core/helper/spacer.dart';
+import 'package:pets_care_app/core/themes/colors.dart';
+import 'package:pets_care_app/core/themes/text_styles.dart';
+
+class HomeHeader extends StatelessWidget {
+  const HomeHeader({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        CircleAvatar(
+          radius: 24.r,
+          backgroundColor: AppColors.primaryColor,
+          child: CircleAvatar(
+            radius: 22.r,
+            backgroundColor: AppColors.white,
+            backgroundImage: const AssetImage("assets/png/profile.png"),
+          ),
+        ),
+        horizontalSpace(7),
+        SizedBox(
+          width: 130.w,
+          child: Text(
+            "Ahmed Hammam",
+            style: AppTextStyles.textFieldLabel,
+            overflow: TextOverflow.ellipsis,
+          ),
+        ),
+        horizontalSpace(7),
+        Image.asset(
+          "assets/png/hand.png",
+          height: 25.h,
+        ),
+        const Spacer(),
+        const Icon(
+          Icons.notifications_none_rounded,
+        )
+      ],
+    );
+  }
+}

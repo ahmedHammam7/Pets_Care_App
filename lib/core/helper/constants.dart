@@ -14,4 +14,16 @@ class Constants {
     "What do you think? book our veterinarians now",
     "Just turn on your location and you will find the nearest pet care you wish."
   ];
+  static List<String> featuresText = const [
+    "Store",
+    "Doctores",
+    "Pets",
+    "Chat Bot",
+  ];
+  static List<String> featuresImage = const [
+    "assets/png/store.png",
+    "assets/png/doctor.png",
+    "assets/png/pets.png",
+    "assets/png/bot.png",
+  ];
 }
