@@ -49,4 +49,19 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.bold,
     color: AppColors.darkGray.withOpacity(0.8),
   );
+  static TextStyle homeContainerText = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.bold,
+    color: AppColors.white,
+  );
+  static TextStyle featuresText = TextStyle(
+    fontSize: 17.sp,
+    fontWeight: FontWeight.bold,
+    color: AppColors.darkGray,
+  );
+  static TextStyle recommendedText = TextStyle(
+    fontSize: 22.sp,
+    fontWeight: FontWeight.bold,
+    color: AppColors.primaryColor,
+  );
 }
