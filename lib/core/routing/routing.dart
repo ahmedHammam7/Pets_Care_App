@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
-import 'package:pets_care_app/features/auth/login/login_screen.dart';
-import 'package:pets_care_app/features/auth/register/register_screen.dart';
-import 'package:pets_care_app/features/home/views/home_screen.dart';
-import 'package:pets_care_app/features/onBoarding/views/on_boarding_screen.dart';
-import 'package:pets_care_app/features/profile/views/profile_screen.dart';
+import 'package:pets_care_app/features/auth/login/ui/views/login_screen.dart';
+import 'package:pets_care_app/features/auth/register/ui/views/register_screen.dart';
+import 'package:pets_care_app/features/home/ui/views/home_screen.dart';
+import 'package:pets_care_app/features/onBoarding/ui/views/on_boarding_screen.dart';
+import 'package:pets_care_app/features/profile/ui/views/profile_screen.dart';
 
 class AppRoutes {
   Route? onGenerateRoute(RouteSettings settings) {

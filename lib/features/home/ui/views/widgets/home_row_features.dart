@@ -3,7 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/helper/constants.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
-import 'package:pets_care_app/features/home/views/widgets/home_features_item.dart';
+import 'package:pets_care_app/features/home/ui/views/widgets/home_features_item.dart';
 
 class HomeRowFeatures extends StatefulWidget {
   const HomeRowFeatures({super.key});
