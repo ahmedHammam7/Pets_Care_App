@@ -6,7 +6,7 @@ import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
-import 'package:pets_care_app/features/onBoarding/views/widgets/next_button.dart';
+import 'package:pets_care_app/features/onBoarding/ui/views/widgets/next_button.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 class OnBoardingBody extends StatefulWidget {

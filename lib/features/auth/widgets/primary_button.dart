@@ -23,7 +23,7 @@ class PrimaryButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
+    return GestureDetector(
         onTap: onTap,
         child: Container(
           alignment: Alignment.center,

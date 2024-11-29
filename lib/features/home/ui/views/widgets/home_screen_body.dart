@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
-import 'package:pets_care_app/features/home/views/widgets/home_header.dart';
-import 'package:pets_care_app/features/home/views/widgets/home_header_container.dart';
-import 'package:pets_care_app/features/home/views/widgets/home_row_features.dart';
-import 'package:pets_care_app/features/home/views/widgets/pets_reminder_container.dart';
-import 'package:pets_care_app/features/home/views/widgets/recommended_list_item.dart';
-import 'package:pets_care_app/features/home/views/widgets/recommended_text.dart';
+import 'package:pets_care_app/features/home/ui/views/widgets/home_header.dart';
+import 'package:pets_care_app/features/home/ui/views/widgets/home_header_container.dart';
+import 'package:pets_care_app/features/home/ui/views/widgets/home_row_features.dart';
+import 'package:pets_care_app/features/home/ui/views/widgets/pets_reminder_container.dart';
+import 'package:pets_care_app/features/home/ui/views/widgets/recommended_list_item.dart';
+import 'package:pets_care_app/features/home/ui/views/widgets/recommended_text.dart';
 
 class HomeScreenBody extends StatelessWidget {
   const HomeScreenBody({super.key});

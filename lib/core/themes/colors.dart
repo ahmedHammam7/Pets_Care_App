@@ -6,4 +6,5 @@ abstract class AppColors {
   static Color darkGray = const Color.fromARGB(255, 64, 64, 64);
   static const Color white = Colors.white;
   static const Color textFieldColor = Color(0xffE5E5E5);
+  static const Color red = Color(0xffE00E0E);
 }
