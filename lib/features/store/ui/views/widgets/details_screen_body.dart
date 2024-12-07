@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pets_care_app/core/helper/extension.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
@@ -13,11 +14,20 @@ class DetailsScreenBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: SingleChildScrollView(
+        physics: const BouncingScrollPhysics(),
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 14.w),
           child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              IconButton(
+                  onPressed: () {
+                    context.pop();
+                  },
+                  icon: Icon(
+                    Icons.arrow_back_ios,
+                    size: 24.sp,
+                  )),
               Image(
                 image: const AssetImage("assets/png/food_test.png"),
                 height: 373.h,
