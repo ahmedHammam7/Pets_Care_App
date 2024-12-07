@@ -64,4 +64,59 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.bold,
     color: AppColors.primaryColor,
   );
+  static TextStyle shopTitle = TextStyle(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.primaryColor,
+  );
+  static TextStyle shopIconText = TextStyle(
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w400,
+    color: AppColors.storeIconText,
+  );
+  static TextStyle storePrice = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.green,
+  );
+  static TextStyle storeNameItem = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColors.primaryColor,
+  );
+  static TextStyle storeSizeItem = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.storeSizeItemColor,
+  );
+  static TextStyle storeRecommendedText = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.primaryColor,
+  );
+  static TextStyle detaisInfo = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeight.bold,
+    color: AppColors.primaryColor,
+  );
+  static TextStyle brandText = TextStyle(
+    fontSize: 17.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.brandColor,
+  );
+  static TextStyle storeItemDesc = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w400,
+    color: AppColors.primaryColor,
+  );
+  static TextStyle quantityWidgetText = TextStyle(
+    fontSize: 14.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.storeSizeItemColor,
+  );
+  static TextStyle addToCartButton = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.white,
+  );
 }

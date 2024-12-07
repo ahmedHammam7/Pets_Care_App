@@ -8,61 +8,63 @@ class RecommendedListItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      clipBehavior: Clip.none,
-      children: [
-        Container(
-          width: 114.w,
-          height: 178.h,
-          decoration: BoxDecoration(
-            color: AppColors.primaryColor,
-            borderRadius: BorderRadius.all(
-              Radius.circular(16.r),
-            ),
-          ),
-          padding: EdgeInsets.symmetric(vertical: 5.h),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Image.asset(
-                "assets/png/food.png",
-                height: 100.h,
-              ),
-              SizedBox(
-                width: 70.w,
-                child: Text(
-                  "Dry Food",
-                  textAlign: TextAlign.center,
-                  style: AppTextStyles.homeContainerText,
-                ),
-              ),
-              SizedBox(
-                width: 70.w,
-                child: Text(
-                  "20.99" r"$",
-                  textAlign: TextAlign.center,
-                  style: AppTextStyles.homeContainerText,
-                ),
-              ),
-            ],
-          ),
-        ),
-        Positioned(
-          right: 0.w,
-          left: 0.w,
-          bottom: -12.h,
-          child: GestureDetector(
-            onTap: () {},
-            child: CircleAvatar(
-              backgroundColor: AppColors.gray.withOpacity(.9),
-              child: const Icon(
-                Icons.add,
-                color: AppColors.primaryColor,
+    return GestureDetector(
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Container(
+            width: 114.w,
+            height: 178.h,
+            decoration: BoxDecoration(
+              color: AppColors.primaryColor,
+              borderRadius: BorderRadius.all(
+                Radius.circular(16.r),
               ),
             ),
+            padding: EdgeInsets.symmetric(vertical: 5.h),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset(
+                  "assets/png/food.png",
+                  height: 100.h,
+                ),
+                SizedBox(
+                  width: 70.w,
+                  child: Text(
+                    "Dry Food",
+                    textAlign: TextAlign.center,
+                    style: AppTextStyles.homeContainerText,
+                  ),
+                ),
+                SizedBox(
+                  width: 70.w,
+                  child: Text(
+                    "20.99" r"$",
+                    textAlign: TextAlign.center,
+                    style: AppTextStyles.homeContainerText,
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-      ],
+          Positioned(
+            right: 0.w,
+            left: 0.w,
+            bottom: -12.h,
+            child: GestureDetector(
+              onTap: () {},
+              child: CircleAvatar(
+                backgroundColor: AppColors.gray.withOpacity(.9),
+                child: const Icon(
+                  Icons.add,
+                  color: AppColors.primaryColor,
+                ),
+              ),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
