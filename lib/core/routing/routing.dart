@@ -5,6 +5,8 @@ import 'package:pets_care_app/features/auth/register/ui/views/register_screen.da
 import 'package:pets_care_app/features/home/ui/views/home_screen.dart';
 import 'package:pets_care_app/features/onBoarding/ui/views/on_boarding_screen.dart';
 import 'package:pets_care_app/features/profile/ui/views/profile_screen.dart';
+import 'package:pets_care_app/features/store/ui/views/details_screen.dart';
+import 'package:pets_care_app/features/store/ui/views/store_screen.dart';
 
 class AppRoutes {
   Route? onGenerateRoute(RouteSettings settings) {
@@ -28,6 +30,14 @@ class AppRoutes {
       case Routes.profileScreen:
         return MaterialPageRoute(
           builder: (context) => const ProfileScreen(),
+        );
+      case Routes.storeScreen:
+        return MaterialPageRoute(
+          builder: (context) => const StoreScreen(),
+        );
+      case Routes.detailsScreen:
+        return MaterialPageRoute(
+          builder: (context) => const DetailsScreen(),
         );
 
       default:

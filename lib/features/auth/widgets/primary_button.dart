@@ -31,7 +31,7 @@ class PrimaryButton extends StatelessWidget {
           width: width ?? double.infinity,
           decoration: BoxDecoration(
             color: color ?? AppColors.primaryColor,
-            borderRadius: BorderRadius.circular(radius ?? 24.r),
+            borderRadius: BorderRadius.circular(radius?.r ?? 24.r),
           ),
           child: Text(
             text,
