@@ -13,7 +13,12 @@ class PetsCareApp extends StatelessWidget {
       designSize: const Size(375, 812),
       minTextAdapt: true,
       child: MaterialApp(
-        theme: ThemeData(scaffoldBackgroundColor: AppColors.white),
+        theme: ThemeData(
+          scaffoldBackgroundColor: AppColors.white,
+          appBarTheme: const AppBarTheme(
+            surfaceTintColor: AppColors.white,
+          ),
+        ),
         debugShowCheckedModeBanner: false,
         onGenerateRoute: AppRoutes().onGenerateRoute,
         initialRoute: Routes.storeScreen,
