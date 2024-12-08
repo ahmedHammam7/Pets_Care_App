@@ -14,7 +14,17 @@ class CartScreenBody extends StatelessWidget {
     return SafeArea(
       child: SingleChildScrollView(
         child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 20.w),
+              child: IconButton(
+                  onPressed: () {},
+                  icon: Icon(
+                    Icons.arrow_back_ios,
+                    size: 24.sp,
+                  )),
+            ),
             const CartList(),
             verticalSpace(50),
             TotalRow(
