@@ -21,7 +21,7 @@ class PetsCareApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         onGenerateRoute: AppRoutes().onGenerateRoute,
-        initialRoute: Routes.storeScreen,
+        initialRoute: Routes.cartScreen,
       ),
     );
   }
