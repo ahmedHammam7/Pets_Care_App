@@ -119,4 +119,14 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w500,
     color: AppColors.white,
   );
+  static TextStyle cartItemName = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColors.primaryColor,
+  );
+  static TextStyle subTotalCart = TextStyle(
+    fontSize: 12.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.primaryColor,
+  );
 }
