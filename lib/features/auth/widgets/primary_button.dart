@@ -25,18 +25,20 @@ class PrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
         onTap: onTap,
-        child: Container(
-          alignment: Alignment.center,
-          height: height ?? 55.h,
-          width: width ?? double.infinity,
-          decoration: BoxDecoration(
-            color: color ?? AppColors.primaryColor,
-            borderRadius: BorderRadius.circular(radius?.r ?? 24.r),
-          ),
-          child: Text(
-            text,
-            style: textstyle ?? AppTextStyles.primaryButtonText,
-            textAlign: TextAlign.center,
+        child: Center(
+          child: Container(
+            alignment: Alignment.center,
+            height: height ?? 55.h,
+            width: width ?? double.infinity,
+            decoration: BoxDecoration(
+              color: color ?? AppColors.primaryColor,
+              borderRadius: BorderRadius.circular(radius?.r ?? 24.r),
+            ),
+            child: Text(
+              text,
+              style: textstyle ?? AppTextStyles.primaryButtonText,
+              textAlign: TextAlign.center,
+            ),
           ),
         ));
   }
