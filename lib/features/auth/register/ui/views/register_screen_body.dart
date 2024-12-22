@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
 import 'package:pets_care_app/core/helper/extension.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
+import 'package:pets_care_app/features/auth/widgets/add_certificate.dart';
 import 'package:pets_care_app/features/auth/widgets/app_password_field.dart';
 import 'package:pets_care_app/features/auth/widgets/app_text_field.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
@@ -104,6 +106,7 @@ class _RegisterScreenBodyState extends State<RegisterScreenBody> {
                     );
                   },
                 ),
+                if (dropDownValue2 == "Doctor") doctorInfo(),
                 verticalSpace(40),
                 PrimaryButton(
                   text: "Sign Up",
@@ -143,4 +146,18 @@ class _RegisterScreenBodyState extends State<RegisterScreenBody> {
       ),
     );
   }
+}
+
+Widget doctorInfo() {
+  return Column(children: [
+    const AddCertificate(),
+    verticalSpace(30),
+    AppTextField(
+      labelText: "Price",
+      keyboardType: TextInputType.text,
+      validator: (value) {
+        return null;
+      },
+    )
+  ]);
 }

@@ -129,4 +129,14 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w500,
     color: AppColors.primaryColor,
   );
+  static TextStyle clinicsTitle = TextStyle(
+    fontSize: 20.sp,
+    fontWeight: FontWeight.w600,
+    color: AppColors.primaryColor,
+  );
+  static TextStyle experience = TextStyle(
+    fontSize: 10.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.storeSizeItemColor,
+  );
 }
