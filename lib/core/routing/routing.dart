@@ -54,6 +54,7 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (context) => const DoctorDetailsScreen(),
         );
+
       default:
         return null;
     }
