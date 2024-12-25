@@ -2,8 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/helper/extension.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
+import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
+import 'package:pets_care_app/features/clinics/ui/widgets/choase_appointment_widget.dart';
 import 'package:pets_care_app/features/clinics/ui/widgets/doctor_details_info.dart';
 
 class DoctorDetailsBody extends StatelessWidget {
@@ -40,9 +42,26 @@ class DoctorDetailsBody extends StatelessWidget {
               verticalSpace(30),
               PrimaryButton(
                 text: "Book an Appointment",
-                onTap: () {},
+                onTap: () {
+                  showBottomSheet(
+                      context: context,
+                      elevation: 8,
+                      builder: (context) {
+                        return Container(
+                          height: 400.h,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            color: AppColors.gray,
+                            borderRadius: const BorderRadius.vertical(
+                              top: Radius.circular(20),
+                            ),
+                          ),
+                          child: const ChoaseAppointmentWidget(),
+                        );
+                      });
+                },
                 textstyle: AppTextStyles.addToCartButton,
-                radius: 8,
+                radius: 8.r,
               ),
             ],
           ),

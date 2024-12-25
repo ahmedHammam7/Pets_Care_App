@@ -139,4 +139,14 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w500,
     color: AppColors.storeSizeItemColor,
   );
+  static TextStyle choaseDate = TextStyle(
+    fontSize: 24.sp,
+    fontWeight: FontWeight.w500,
+    color: AppColors.primaryColor,
+  );
+  static TextStyle pickDateButton = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.bold,
+    color: AppColors.white,
+  );
 }
