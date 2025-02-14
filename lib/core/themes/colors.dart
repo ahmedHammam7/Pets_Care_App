@@ -12,4 +12,5 @@ abstract class AppColors {
   static const Color storeSizeItemColor = Color(0xff868889);
   static const Color separatedLine = Color(0xffEBEBEB);
   static const Color brandColor = Color(0xff064E57);
+  static const Color addedPets = Color(0xffD9D9D9);
 }

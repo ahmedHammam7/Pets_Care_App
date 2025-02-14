@@ -1,0 +1,2 @@
+E:/Grad_project/Pets_Care_App/android/app/.cxx/Debug/1m231b36/armeabi-v7a/CMakeFiles/edit_cache.dir
+E:/Grad_project/Pets_Care_App/android/app/.cxx/Debug/1m231b36/armeabi-v7a/CMakeFiles/rebuild_cache.dir

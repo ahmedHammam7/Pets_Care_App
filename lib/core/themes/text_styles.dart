@@ -149,4 +149,9 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.bold,
     color: AppColors.white,
   );
+  static TextStyle addedPetstext = TextStyle(
+    fontSize: 15.sp,
+    fontWeight: FontWeight.bold,
+    color: AppColors.primaryColor,
+  );
 }
