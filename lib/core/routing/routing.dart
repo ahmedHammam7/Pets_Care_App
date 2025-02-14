@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
+import 'package:pets_care_app/di/dependency_injection.dart';
+import 'package:pets_care_app/features/add_pets/ui/add_pets_screen.dart';
+import 'package:pets_care_app/features/auth/login/logic/cubit/login_cubit.dart';
 import 'package:pets_care_app/features/auth/login/ui/views/login_screen.dart';
+import 'package:pets_care_app/features/auth/register/logic/cubit/register_cubit.dart';
+import 'package:pets_care_app/features/auth/register/ui/views/register_doctor_screen.dart';
 import 'package:pets_care_app/features/auth/register/ui/views/register_screen.dart';
+import 'package:pets_care_app/features/auth/register/ui/views/register_store_screen.dart';
 import 'package:pets_care_app/features/cart/ui/views/cart_screen.dart';
 import 'package:pets_care_app/features/clinics/ui/clinics_screen.dart';
 import 'package:pets_care_app/features/clinics/ui/doctor_details_screen.dart';
@@ -20,7 +27,10 @@ class AppRoutes {
         );
       case Routes.loginScreen:
         return MaterialPageRoute(
-          builder: (context) => const LoginScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<LoginCubit>(),
+            child: const LoginScreen(),
+          ),
         );
       case Routes.registerScreen:
         return MaterialPageRoute(
@@ -54,7 +64,24 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (context) => const DoctorDetailsScreen(),
         );
-
+      case Routes.addPetsScreen:
+        return MaterialPageRoute(
+          builder: (context) => const AddPetsScreen(),
+        );
+      case Routes.registerDoctorScreen:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<RegisterCubit>(),
+            child: const RegisterDoctorScreen(),
+          ),
+        );
+      case Routes.registerStoreScreen:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<RegisterCubit>(),
+            child: const RegisterStoreScreen(),
+          ),
+        );
       default:
         return null;
     }

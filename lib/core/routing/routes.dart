@@ -10,4 +10,7 @@ class Routes {
   static const String cartScreen = '/cartScreen';
   static const String clinicsScreen = '/clinicsScreen';
   static const String doctorDetailsScreen = '/doctorDetailsScreen';
+  static const String addPetsScreen = '/addPetsScreen';
+  static const String registerDoctorScreen = '/registerDoctorScreen';
+  static const String registerStoreScreen = '/registerStoreScreen';
 }
