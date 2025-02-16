@@ -1,7 +1,12 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs.dart';
+import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dart';
+import 'package:pets_care_app/core/network/dio_factory.dart';
+import 'package:pets_care_app/di/dependency_injection.dart';
 import 'package:pets_care_app/features/auth/login/data/repos/login_repo.dart';
+import 'package:pets_care_app/features/profile/logic/cubit/profile_cubit.dart';
 
 part 'login_state.dart';
 part 'login_cubit.freezed.dart';
@@ -20,11 +25,29 @@ class LoginCubit extends Cubit<LoginState> {
     final result = await _loginRepo.login(
         {"email": emailController.text, "password": passwordController.text});
     result.when(
-      success: (response) {
-        emit(LoginState.success(response));
+      success: (response) async {
+        await SharedPrefHelper.setSecuredData(
+            SharedPrefsConstant.token, response.token);
+        DioFactory.addHeader();
+        await SharedPrefHelper.setData(SharedPrefsConstant.type, response.type);
+        if (response.type == "owner") {
+          await ProfileCubit(getIt()).loadUserProfile();
+        } else if (response.type == "doctor") {
+          await ProfileCubit(getIt()).loadDoctorProfile();
+        } else if (response.type == "store") {
+          await ProfileCubit(getIt()).loadStoreProfile();
+        }
+
+        emit(
+          LoginState.success(response),
+        );
       },
       failure: (message) {
-        emit(LoginState.error(message.getAllErrorMessages()));
+        emit(
+          LoginState.error(
+            message.getAllErrorMessages(),
+          ),
+        );
       },
     );
   }

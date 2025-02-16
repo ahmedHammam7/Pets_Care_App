@@ -10,10 +10,15 @@ import 'package:pets_care_app/features/auth/register/ui/views/register_doctor_sc
 import 'package:pets_care_app/features/auth/register/ui/views/register_screen.dart';
 import 'package:pets_care_app/features/auth/register/ui/views/register_store_screen.dart';
 import 'package:pets_care_app/features/cart/ui/views/cart_screen.dart';
+import 'package:pets_care_app/features/chat_bot/ui/chat_bot_screen.dart';
+import 'package:pets_care_app/features/check/ui/check_screen.dart';
 import 'package:pets_care_app/features/clinics/ui/clinics_screen.dart';
 import 'package:pets_care_app/features/clinics/ui/doctor_details_screen.dart';
 import 'package:pets_care_app/features/home/ui/views/home_screen.dart';
+import 'package:pets_care_app/features/home_layout/ui/home_layout.dart';
+import 'package:pets_care_app/features/locations/ui/location_screen.dart';
 import 'package:pets_care_app/features/onBoarding/ui/views/on_boarding_screen.dart';
+import 'package:pets_care_app/features/profile/logic/cubit/profile_cubit.dart';
 import 'package:pets_care_app/features/profile/ui/views/profile_screen.dart';
 import 'package:pets_care_app/features/store/ui/views/details_screen.dart';
 import 'package:pets_care_app/features/store/ui/views/store_screen.dart';
@@ -42,7 +47,10 @@ class AppRoutes {
         );
       case Routes.profileScreen:
         return MaterialPageRoute(
-          builder: (context) => const ProfileScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<ProfileCubit>(),
+            child: const ProfileScreen(),
+          ),
         );
       case Routes.storeScreen:
         return MaterialPageRoute(
@@ -81,6 +89,22 @@ class AppRoutes {
             create: (context) => getIt<RegisterCubit>(),
             child: const RegisterStoreScreen(),
           ),
+        );
+      case Routes.homeLayout:
+        return MaterialPageRoute(
+          builder: (context) => const HomeLayout(),
+        );
+      case Routes.checkScreen:
+        return MaterialPageRoute(
+          builder: (context) => const CheckScreen(),
+        );
+      case Routes.locationScreen:
+        return MaterialPageRoute(
+          builder: (context) => const LocationScreen(),
+        );
+      case Routes.chatBotScreen:
+        return MaterialPageRoute(
+          builder: (context) => const ChatBotScreen(),
         );
       default:
         return null;

@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/helper/constants.dart';
+import 'package:pets_care_app/core/helper/extension.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
+import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/features/home/ui/views/widgets/home_features_item.dart';
 
@@ -25,6 +27,18 @@ class _HomeRowFeaturesState extends State<HomeRowFeatures> {
                 onTap: () {
                   selectedIndex = index;
                   setState(() {});
+                  if (index == 0) {
+                    context.pushNamed(Routes.storeScreen);
+                  }
+                  if (index == 1) {
+                    context.pushNamed(Routes.clinicsScreen);
+                  }
+                  if (index == 2) {
+                    context.pushNamed(Routes.addPetsScreen);
+                  }
+                  if (index == 3) {
+                    context.pushNamed(Routes.chatBotScreen);
+                  }
                 },
                 child: selectedIndex == index
                     ? HomeFeaturesItem(

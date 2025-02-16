@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/features/store/ui/views/widgets/store_screen_body.dart';
@@ -18,7 +19,9 @@ class StoreScreen extends StatelessWidget {
         ),
         centerTitle: true,
         leading: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pop(context);
+          },
           icon: Icon(
             Icons.arrow_back_ios_new,
             size: 24.sp,
@@ -26,7 +29,9 @@ class StoreScreen extends StatelessWidget {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, Routes.cartScreen);
+            },
             icon: Icon(
               Icons.shopping_bag_rounded,
               size: 24.sp,
