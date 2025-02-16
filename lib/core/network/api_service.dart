@@ -2,6 +2,9 @@ import 'package:dio/dio.dart';
 import 'package:pets_care_app/core/network/api_constant.dart';
 import 'package:pets_care_app/features/auth/login/data/models/login_response.dart';
 import 'package:pets_care_app/features/auth/register/data/models/register_response.dart';
+import 'package:pets_care_app/features/profile/data/models/doctor_profile_response.dart';
+import 'package:pets_care_app/features/profile/data/models/profile_response.dart';
+import 'package:pets_care_app/features/profile/data/models/store_profile_response.dart';
 import 'package:retrofit/error_logger.dart';
 
 import 'package:retrofit/http.dart';
@@ -16,4 +19,13 @@ abstract class ApiService {
 
   @POST(ApiConstant.login)
   Future<LoginResponse> login(@Body() Map<String, dynamic> body);
+
+  @GET(ApiConstant.profile)
+  Future<ProfileResponse> getUserProfile();
+
+  @GET(ApiConstant.profile)
+  Future<DoctorProfileResponse> getDoctorProfile();
+
+  @GET(ApiConstant.profile)
+  Future<StoreProfileResponse> getStoreProfile();
 }

@@ -2,18 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
-import 'package:pets_care_app/features/add_pets/ui/widgets/add_pets_body.dart';
 
-class AddPetsScreen extends StatelessWidget {
-  const AddPetsScreen({super.key});
+class ChatBotScreen extends StatelessWidget {
+  const ChatBotScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.white,
-        title: Text("Add pets", style: AppTextStyles.shopTitle),
-        centerTitle: true,
         leading: IconButton(
           onPressed: () {
             Navigator.pop(context);
@@ -24,7 +21,21 @@ class AddPetsScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: const AddPetsBody(),
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.warning_amber_outlined,
+              size: 100.h,
+            ),
+            Text(
+              "Under development",
+              style: AppTextStyles.shopTitle,
+            )
+          ],
+        ),
+      ),
     );
   }
 }

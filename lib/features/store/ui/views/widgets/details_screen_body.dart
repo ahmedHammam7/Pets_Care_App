@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/helper/extension.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
+import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
 import 'package:pets_care_app/features/store/ui/views/widgets/details_screen_info.dart';
@@ -41,7 +42,9 @@ class DetailsScreenBody extends StatelessWidget {
               const QuantityWidget(),
               PrimaryButton(
                 text: "Add to Cart",
-                onTap: () {},
+                onTap: () {
+                  context.pushNamed(Routes.cartScreen);
+                },
                 textstyle: AppTextStyles.addToCartButton,
                 radius: 8,
               ),

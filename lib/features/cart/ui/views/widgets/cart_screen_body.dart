@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pets_care_app/core/helper/extension.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
@@ -19,7 +20,9 @@ class CartScreenBody extends StatelessWidget {
             Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w),
               child: IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    context.pop();
+                  },
                   icon: Icon(
                     Icons.arrow_back_ios,
                     size: 24.sp,
@@ -43,12 +46,14 @@ class CartScreenBody extends StatelessWidget {
                     .copyWith(fontSize: 18.sp, fontWeight: FontWeight.bold),
                 text2: "Rs 53,860"),
             verticalSpace(30),
-            PrimaryButton(
-              width: MediaQuery.of(context).size.width * 0.94,
-              text: "Checkout",
-              onTap: () {},
-              textstyle: AppTextStyles.addToCartButton,
-              radius: 8,
+            Center(
+              child: PrimaryButton(
+                width: MediaQuery.of(context).size.width * 0.94,
+                text: "Checkout",
+                onTap: () {},
+                textstyle: AppTextStyles.addToCartButton,
+                radius: 8,
+              ),
             ),
           ],
         ),

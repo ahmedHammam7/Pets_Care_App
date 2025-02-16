@@ -13,4 +13,7 @@ class Routes {
   static const String addPetsScreen = '/addPetsScreen';
   static const String registerDoctorScreen = '/registerDoctorScreen';
   static const String registerStoreScreen = '/registerStoreScreen';
+  static const String checkScreen = '/checkScreen';
+  static const String locationScreen = '/locationScreen';
+  static const String chatBotScreen = '/chatBotScreen';
 }
