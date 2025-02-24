@@ -92,10 +92,11 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<ProfileResponse> getUserProfile() async {
+  Future<ProfileResponse> getUserProfile(String token) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{};
+    final _headers = <String, dynamic>{r'Authorization': token};
+    _headers.removeWhere((k, v) => v == null);
     const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<ProfileResponse>(Options(
       method: 'GET',
@@ -125,10 +126,11 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<DoctorProfileResponse> getDoctorProfile() async {
+  Future<DoctorProfileResponse> getDoctorProfile(String token) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{};
+    final _headers = <String, dynamic>{r'Authorization': token};
+    _headers.removeWhere((k, v) => v == null);
     const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<DoctorProfileResponse>(Options(
       method: 'GET',
@@ -158,10 +160,11 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<StoreProfileResponse> getStoreProfile() async {
+  Future<StoreProfileResponse> getStoreProfile(String token) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
-    final _headers = <String, dynamic>{};
+    final _headers = <String, dynamic>{r'Authorization': token};
+    _headers.removeWhere((k, v) => v == null);
     const Map<String, dynamic>? _data = null;
     final _options = _setStreamType<StoreProfileResponse>(Options(
       method: 'GET',

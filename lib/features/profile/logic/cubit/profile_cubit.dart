@@ -26,10 +26,7 @@ class ProfileCubit extends Cubit<ProfileState> {
 
   Future<void> loadDoctorProfile() async {
     emit(const ProfileState.doctorLoading());
-
-    final result = await profileRepo.getDoctorProfile(
-      await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token),
-    );
+    final result = await profileRepo.getDoctorProfile();
     result.when(
       success: (response) {
         emit(ProfileState.doctorSuccess(response));
@@ -43,9 +40,7 @@ class ProfileCubit extends Cubit<ProfileState> {
   Future<void> loadStoreProfile() async {
     emit(const ProfileState.storeLoading());
 
-    final result = await profileRepo.getStoreProfile(
-      await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token),
-    );
+    final result = await profileRepo.getStoreProfile();
     result.when(
       success: (response) {
         emit(ProfileState.storeSuccess(response));
@@ -54,5 +49,24 @@ class ProfileCubit extends Cubit<ProfileState> {
         emit(ProfileState.storeError(message.getAllErrorMessages()));
       },
     );
+  }
+
+  Future<void> selectWhichProfile() async {
+    if (await SharedPrefHelper.getString(SharedPrefsConstant.type) ==
+        "doctor") {
+      await loadDoctorProfile();
+    } else if (await SharedPrefHelper.getString(SharedPrefsConstant.type) ==
+        "owner") {
+      await loadUserProfile();
+    } else if (await SharedPrefHelper.getString(SharedPrefsConstant.type) ==
+        "store") {
+      await loadStoreProfile();
+    }
+  }
+
+  @override
+  void onChange(Change<ProfileState> change) {
+    print(change);
+    super.onChange(change);
   }
 }

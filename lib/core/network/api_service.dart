@@ -21,11 +21,13 @@ abstract class ApiService {
   Future<LoginResponse> login(@Body() Map<String, dynamic> body);
 
   @GET(ApiConstant.profile)
-  Future<ProfileResponse> getUserProfile();
+  Future<ProfileResponse> getUserProfile(@Header('Authorization') String token);
 
   @GET(ApiConstant.profile)
-  Future<DoctorProfileResponse> getDoctorProfile();
+  Future<DoctorProfileResponse> getDoctorProfile(
+      @Header('Authorization') String token);
 
   @GET(ApiConstant.profile)
-  Future<StoreProfileResponse> getStoreProfile();
+  Future<StoreProfileResponse> getStoreProfile(
+      @Header('Authorization') String token);
 }

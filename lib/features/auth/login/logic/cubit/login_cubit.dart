@@ -28,16 +28,8 @@ class LoginCubit extends Cubit<LoginState> {
       success: (response) async {
         await SharedPrefHelper.setSecuredData(
             SharedPrefsConstant.token, response.token);
-        DioFactory.addHeader();
-        await SharedPrefHelper.setData(SharedPrefsConstant.type, response.type);
-        if (response.type == "owner") {
-          await ProfileCubit(getIt()).loadUserProfile();
-        } else if (response.type == "doctor") {
-          await ProfileCubit(getIt()).loadDoctorProfile();
-        } else if (response.type == "store") {
-          await ProfileCubit(getIt()).loadStoreProfile();
-        }
 
+        await SharedPrefHelper.setData(SharedPrefsConstant.type, response.type);
         emit(
           LoginState.success(response),
         );

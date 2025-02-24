@@ -18,7 +18,6 @@ class DioFactory {
         ..options.connectTimeout = timeOut
         ..options.receiveTimeout = timeOut;
       addDioInterceptor();
-      addHeader();
       return dio!;
     } else {
       return dio!;
@@ -35,7 +34,7 @@ class DioFactory {
     );
   }
 
-  static void addHeader() async {
+  static Future<void> addHeader() async {
     getDio().options.headers = {
       'content-type': 'application/json',
       "Authorization":

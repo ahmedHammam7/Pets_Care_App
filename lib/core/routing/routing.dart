@@ -18,7 +18,6 @@ import 'package:pets_care_app/features/home/ui/views/home_screen.dart';
 import 'package:pets_care_app/features/home_layout/ui/home_layout.dart';
 import 'package:pets_care_app/features/locations/ui/location_screen.dart';
 import 'package:pets_care_app/features/onBoarding/ui/views/on_boarding_screen.dart';
-import 'package:pets_care_app/features/profile/logic/cubit/profile_cubit.dart';
 import 'package:pets_care_app/features/profile/ui/views/profile_screen.dart';
 import 'package:pets_care_app/features/store/ui/views/details_screen.dart';
 import 'package:pets_care_app/features/store/ui/views/store_screen.dart';
@@ -47,10 +46,7 @@ class AppRoutes {
         );
       case Routes.profileScreen:
         return MaterialPageRoute(
-          builder: (context) => BlocProvider(
-            create: (context) => getIt<ProfileCubit>(),
-            child: const ProfileScreen(),
-          ),
+          builder: (context) => const ProfileScreen(),
         );
       case Routes.storeScreen:
         return MaterialPageRoute(

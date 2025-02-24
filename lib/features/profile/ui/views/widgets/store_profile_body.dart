@@ -3,14 +3,19 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:pets_care_app/core/helper/extension.dart';
+import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs.dart';
+import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
+import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
+import 'package:pets_care_app/features/profile/data/models/store_profile_response.dart';
 import 'package:pets_care_app/features/profile/ui/views/widgets/profile_data.dart';
 
 class StoreProfileBody extends StatefulWidget {
-  const StoreProfileBody({super.key});
-
+  const StoreProfileBody({super.key, required this.model});
+  final StoreProfileResponse model;
   @override
   State<StoreProfileBody> createState() => _ProfileScreenBodyState();
 }
@@ -67,23 +72,33 @@ class _ProfileScreenBodyState extends State<StoreProfileBody> {
                   ],
                 ),
                 verticalSpace(40),
-                const ProfileData(text: "Ahmed Hammam"),
+                ProfileData(text: widget.model.user.name),
                 verticalSpace(20),
-                const ProfileData(text: "ahmed@gmail.com"),
+                ProfileData(text: widget.model.user.email),
                 verticalSpace(20),
-                const ProfileData(text: "01273373027"),
+                ProfileData(text: widget.model.user.phone),
                 verticalSpace(20),
-                const ProfileData(text: "storeName: Dog Store"),
+                ProfileData(
+                    text: "storeName: ${widget.model.user.store.storeName}"),
                 verticalSpace(20),
-                const ProfileData(text: "address: Cairo, Egypt"),
+                ProfileData(
+                    text: "address: ${widget.model.user.store.address}"),
                 verticalSpace(20),
-                const ProfileData(text: "hotLine: 01273373027"),
+                ProfileData(text: "hotLine:${widget.model.user.store.hotLine}"),
                 verticalSpace(20),
-                const ProfileData(text: "whatsappPhone: 01273373027"),
+                ProfileData(
+                    text:
+                        "whatsappPhone: ${widget.model.user.store.whatsappPhone}"),
                 verticalSpace(60),
                 PrimaryButton(
                   text: "Logout",
-                  onTap: () {},
+                  onTap: () async {
+                    await SharedPrefHelper.removeSecuredData(
+                        SharedPrefsConstant.token);
+                    await SharedPrefHelper.removeData(SharedPrefsConstant.type);
+                    context.pushNamedAndRemoveUntil(Routes.loginScreen,
+                        predicate: (Route<dynamic> route) => false);
+                  },
                   color: AppColors.red,
                   radius: 14.r,
                   height: 50.h,
