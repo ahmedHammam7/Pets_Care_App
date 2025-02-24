@@ -42,11 +42,11 @@ DoctorProfileDoctor _$DoctorProfileDoctorFromJson(Map<String, dynamic> json) =>
     DoctorProfileDoctor(
       json['specialization'] as String,
       json['license_number'] as String,
-      json['experience_years'] as String,
+      (json['experience_years'] as num).toInt(),
       json['working_time'] as String,
       json['address'] as String,
-      json['price'] as String,
-      json['medical_syndicate_code'] as String,
+      (json['price'] as num).toInt(),
+      (json['medical_syndicate_code'] as num).toInt(),
     );
 
 Map<String, dynamic> _$DoctorProfileDoctorToJson(

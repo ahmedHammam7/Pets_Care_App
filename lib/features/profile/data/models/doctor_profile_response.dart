@@ -3,7 +3,7 @@ part 'doctor_profile_response.g.dart';
 
 @JsonSerializable()
 class DoctorProfileResponse {
-  @JsonKey(name: 'user')
+  @JsonKey(name: "user")
   final DoctorProfileUsesr user;
 
   DoctorProfileResponse(this.user);
@@ -20,9 +20,10 @@ class DoctorProfileUsesr {
   final String phone;
   final String type;
   @JsonKey(name: 'doctor')
- final DoctorProfileDoctor doctor;
+  final DoctorProfileDoctor doctor;
 
-  DoctorProfileUsesr(this.id, this.name, this.email, this.phone, this.type, this.doctor);
+  DoctorProfileUsesr(
+      this.id, this.name, this.email, this.phone, this.type, this.doctor);
 
   factory DoctorProfileUsesr.fromJson(Map<String, dynamic> json) =>
       _$DoctorProfileUsesrFromJson(json);
@@ -34,18 +35,23 @@ class DoctorProfileDoctor {
   @JsonKey(name: 'license_number')
   final String licenseNumber;
   @JsonKey(name: 'experience_years')
-  final String experienceYears;
+  final int experienceYears;
   @JsonKey(name: 'working_time')
   final String workingTime;
   final String address;
-  final String price;
+  final int price;
   @JsonKey(name: 'medical_syndicate_code')
-  final String medicalSyndicateCode;
+  final int medicalSyndicateCode;
 
-  DoctorProfileDoctor(this.specialization, this.licenseNumber, this.experienceYears, this.workingTime, this.address, this.price, this.medicalSyndicateCode);
+  DoctorProfileDoctor(
+      this.specialization,
+      this.licenseNumber,
+      this.experienceYears,
+      this.workingTime,
+      this.address,
+      this.price,
+      this.medicalSyndicateCode);
 
   factory DoctorProfileDoctor.fromJson(Map<String, dynamic> json) =>
       _$DoctorProfileDoctorFromJson(json);
-
-
 }

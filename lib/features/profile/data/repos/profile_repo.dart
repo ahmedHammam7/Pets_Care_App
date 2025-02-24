@@ -1,3 +1,5 @@
+import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs.dart';
+import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dart';
 import 'package:pets_care_app/core/network/api_error_handler.dart';
 import 'package:pets_care_app/core/network/api_result.dart';
 import 'package:pets_care_app/core/network/api_service.dart';
@@ -12,26 +14,28 @@ class ProfileRepo {
 
   Future<ApiResult<ProfileResponse>> getUserProfile() async {
     try {
-      final response = await _apiService.getUserProfile();
+      final response = await _apiService.getUserProfile(
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}');
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
 
-  Future<ApiResult<DoctorProfileResponse>> getDoctorProfile(
-      String token) async {
+  Future<ApiResult<DoctorProfileResponse>> getDoctorProfile() async {
     try {
-      final response = await _apiService.getDoctorProfile();
+      final response = await _apiService.getDoctorProfile(
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}');
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
 
-  Future<ApiResult<StoreProfileResponse>> getStoreProfile(String token) async {
+  Future<ApiResult<StoreProfileResponse>> getStoreProfile() async {
     try {
-      final response = await _apiService.getStoreProfile();
+      final response = await _apiService.getStoreProfile(
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}');
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));

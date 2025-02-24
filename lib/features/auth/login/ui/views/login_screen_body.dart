@@ -35,7 +35,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
         if (state is Success) {
           isloading = false;
           Navigator.of(context).pushNamedAndRemoveUntil(
-            Routes.profileScreen,
+            Routes.homeLayout,
             (route) => false,
           );
         }

@@ -3,14 +3,19 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:pets_care_app/core/helper/extension.dart';
+import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs.dart';
+import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
+import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
+import 'package:pets_care_app/features/profile/data/models/doctor_profile_response.dart';
 import 'package:pets_care_app/features/profile/ui/views/widgets/profile_data.dart';
 
 class DoctorProfileBody extends StatefulWidget {
-  const DoctorProfileBody({super.key});
-
+  const DoctorProfileBody({super.key, required this.model});
+  final DoctorProfileResponse model;
   @override
   State<DoctorProfileBody> createState() => _ProfileScreenBodyState();
 }
@@ -68,27 +73,44 @@ class _ProfileScreenBodyState extends State<DoctorProfileBody> {
                   ],
                 ),
                 verticalSpace(40),
-                const ProfileData(text: "Ahmed Hammam"),
+                ProfileData(text: widget.model.user.name),
                 verticalSpace(20),
-                const ProfileData(text: "ahmed@gmail.com"),
+                ProfileData(text: widget.model.user.email),
                 verticalSpace(20),
-                const ProfileData(text: "01273373027"),
+                ProfileData(text: widget.model.user.phone),
                 verticalSpace(20),
-                const ProfileData(text: "specialization: Veterinary"),
+                ProfileData(
+                    text:
+                        "specialization: ${widget.model.user.doctor.specialization}"),
                 verticalSpace(20),
-                const ProfileData(text: "licenseNumber: 123456789"),
+                ProfileData(
+                    text:
+                        "licenseNumber:${widget.model.user.doctor.licenseNumber}"),
                 verticalSpace(20),
-                const ProfileData(text: "experienceYears: 5 years"),
+                ProfileData(
+                    text:
+                        "experienceYears: ${widget.model.user.doctor.experienceYears}"),
                 verticalSpace(20),
-                const ProfileData(text: "workingTime: 9am to 6pm"),
+                ProfileData(
+                    text:
+                        "workingTime:${widget.model.user.doctor.workingTime}"),
                 verticalSpace(20),
-                const ProfileData(text: "address: Cairo"),
+                ProfileData(
+                    text: "address:${widget.model.user.doctor.address}"),
                 verticalSpace(20),
-                const ProfileData(text: "medicalSyndicateCode: 123456789"),
+                ProfileData(
+                    text:
+                        "medicalSyndicateCode: ${widget.model.user.doctor.medicalSyndicateCode}"),
                 verticalSpace(60),
                 PrimaryButton(
                   text: "Logout",
-                  onTap: () {},
+                  onTap: () async {
+                    await SharedPrefHelper.removeSecuredData(
+                        SharedPrefsConstant.token);
+                    await SharedPrefHelper.removeData(SharedPrefsConstant.type);
+                    context.pushNamedAndRemoveUntil(Routes.loginScreen,
+                        predicate: (Route<dynamic> route) => false);
+                  },
                   color: AppColors.red,
                   radius: 14.r,
                   height: 50.h,

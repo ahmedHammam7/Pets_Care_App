@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs.dart';
+import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
@@ -35,8 +37,14 @@ class HomeHeader extends StatelessWidget {
           height: 25.h,
         ),
         const Spacer(),
-        const Icon(
-          Icons.notifications_none_rounded,
+        IconButton(
+          onPressed: () async {
+            await SharedPrefHelper.removeSecuredData(SharedPrefsConstant.token);
+            await SharedPrefHelper.removeData(SharedPrefsConstant.type);
+          },
+          icon: const Icon(
+            Icons.notifications_none_rounded,
+          ),
         )
       ],
     );

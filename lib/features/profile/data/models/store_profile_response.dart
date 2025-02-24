@@ -35,13 +35,13 @@ class StoreProfileStore {
   final String storeName;
   final String address;
   @JsonKey(name: 'hot_line')
-  final String hotLine;
+  final int hotLine;
   @JsonKey(name: 'whatsapp_phone')
   final String whatsappPhone;
 
-  StoreProfileStore(this.storeName, this.address, this.hotLine, this.whatsappPhone);
+  StoreProfileStore(
+      this.storeName, this.address, this.hotLine, this.whatsappPhone);
 
   factory StoreProfileStore.fromJson(Map<String, dynamic> json) =>
       _$StoreProfileStoreFromJson(json);
-
 }

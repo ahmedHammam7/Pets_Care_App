@@ -4,15 +4,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:pets_care_app/core/helper/extension.dart';
+import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs.dart';
+import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
+import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
+import 'package:pets_care_app/features/profile/data/models/profile_response.dart';
 import 'package:pets_care_app/features/profile/logic/cubit/profile_cubit.dart';
 import 'package:pets_care_app/features/profile/ui/views/widgets/profile_data.dart';
 
 class ProfileScreenBody extends StatefulWidget {
-  const ProfileScreenBody({super.key});
-
+  const ProfileScreenBody({super.key, required this.model});
+  final ProfileResponse model;
   @override
   State<ProfileScreenBody> createState() => _ProfileScreenBodyState();
 }
@@ -69,16 +74,20 @@ class _ProfileScreenBodyState extends State<ProfileScreenBody> {
                   ],
                 ),
                 verticalSpace(40),
-                const ProfileData(text: "Ahmed Hammam"),
+                ProfileData(text: widget.model.user.name),
                 verticalSpace(20),
-                const ProfileData(text: "ahmed@gmail.com"),
+                ProfileData(text: widget.model.user.email),
                 verticalSpace(20),
-                const ProfileData(text: "01273373027"),
+                ProfileData(text: widget.model.user.phone),
                 verticalSpace(60),
                 PrimaryButton(
                   text: "Logout",
                   onTap: () async {
-                    await context.read<ProfileCubit>().loadUserProfile();
+                    await SharedPrefHelper.removeSecuredData(
+                        SharedPrefsConstant.token);
+                    await SharedPrefHelper.removeData(SharedPrefsConstant.type);
+                    context.pushNamedAndRemoveUntil(Routes.loginScreen,
+                        predicate: (Route<dynamic> route) => false);
                   },
                   color: AppColors.red,
                   radius: 14.r,

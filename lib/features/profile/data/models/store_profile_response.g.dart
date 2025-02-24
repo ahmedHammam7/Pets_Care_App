@@ -42,7 +42,7 @@ StoreProfileStore _$StoreProfileStoreFromJson(Map<String, dynamic> json) =>
     StoreProfileStore(
       json['store_name'] as String,
       json['address'] as String,
-      json['hot_line'] as String,
+      (json['hot_line'] as num).toInt(),
       json['whatsapp_phone'] as String,
     );
 
