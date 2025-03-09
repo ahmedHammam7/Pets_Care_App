@@ -64,6 +64,11 @@ class ProfileCubit extends Cubit<ProfileState> {
     }
   }
 
+  Future<void> logout() async {
+    await SharedPrefHelper.removeSecuredData(SharedPrefsConstant.token);
+    await SharedPrefHelper.removeData(SharedPrefsConstant.type);
+  }
+
   @override
   void onChange(Change<ProfileState> change) {
     print(change);

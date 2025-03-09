@@ -1,16 +1,16 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:pets_care_app/core/helper/extension.dart';
-import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs.dart';
-import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
 import 'package:pets_care_app/features/profile/data/models/store_profile_response.dart';
+import 'package:pets_care_app/features/profile/logic/cubit/profile_cubit.dart';
 import 'package:pets_care_app/features/profile/ui/views/widgets/profile_data.dart';
 
 class StoreProfileBody extends StatefulWidget {
@@ -93,11 +93,10 @@ class _ProfileScreenBodyState extends State<StoreProfileBody> {
                 PrimaryButton(
                   text: "Logout",
                   onTap: () async {
-                    await SharedPrefHelper.removeSecuredData(
-                        SharedPrefsConstant.token);
-                    await SharedPrefHelper.removeData(SharedPrefsConstant.type);
-                    context.pushNamedAndRemoveUntil(Routes.loginScreen,
-                        predicate: (Route<dynamic> route) => false);
+                    await context.read<ProfileCubit>().logout().then((v) {
+                      context.pushNamedAndRemoveUntil(Routes.loginScreen,
+                          predicate: (Route<dynamic> route) => false);
+                    });
                   },
                   color: AppColors.red,
                   radius: 14.r,

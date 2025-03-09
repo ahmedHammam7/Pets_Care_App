@@ -3,6 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pets_care_app/di/dependency_injection.dart';
 import 'package:pets_care_app/features/profile/logic/cubit/profile_cubit.dart';
 import 'package:pets_care_app/features/profile/ui/views/widgets/doctor_profile_body.dart';
+import 'package:pets_care_app/features/profile/ui/views/widgets/profile_body_loading.dart';
 import 'package:pets_care_app/features/profile/ui/views/widgets/profile_screen_body.dart';
 import 'package:pets_care_app/features/profile/ui/views/widgets/store_profile_body.dart';
 
@@ -43,7 +44,7 @@ class ProfileScreen extends StatelessWidget {
             } else if (state is Loading ||
                 state is DoctorProfileLoading ||
                 state is StoreProfileLoading) {
-              widget = const Center(child: CircularProgressIndicator());
+              widget = const ProfileBodyLoading();
             } else if (state is Error ||
                 state is DoctorProfileError ||
                 state is StoreProfileError) {

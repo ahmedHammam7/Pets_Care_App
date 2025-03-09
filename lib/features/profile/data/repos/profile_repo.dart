@@ -6,6 +6,7 @@ import 'package:pets_care_app/core/network/api_service.dart';
 import 'package:pets_care_app/features/profile/data/models/doctor_profile_response.dart';
 import 'package:pets_care_app/features/profile/data/models/profile_response.dart';
 import 'package:pets_care_app/features/profile/data/models/store_profile_response.dart';
+import 'package:pets_care_app/features/store/store/data/models/store_info_response.dart';
 
 class ProfileRepo {
   final ApiService _apiService;
@@ -32,7 +33,7 @@ class ProfileRepo {
     }
   }
 
-  Future<ApiResult<StoreProfileResponse>> getStoreProfile() async {
+  Future<ApiResult<StoreInfoResponse>> getStoreProfile() async {
     try {
       final response = await _apiService.getStoreProfile(
           'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}');

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pets_care_app/features/store/ui/views/widgets/store_icons.dart';
+import 'package:pets_care_app/features/store/client/ui/views/widgets/store_icons.dart';
 
 class StoreIconsRows extends StatelessWidget {
   const StoreIconsRows({super.key});

@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
-import 'package:pets_care_app/features/store/ui/views/widgets/recomended_text.dart';
-import 'package:pets_care_app/features/store/ui/views/widgets/search_field.dart';
-import 'package:pets_care_app/features/store/ui/views/widgets/store_icons_rows.dart';
-import 'package:pets_care_app/features/store/ui/views/widgets/store_item.dart';
+import 'package:pets_care_app/features/store/client/ui/views/widgets/recomended_text.dart';
+import 'package:pets_care_app/features/store/client/ui/views/widgets/search_field.dart';
+import 'package:pets_care_app/features/store/client/ui/views/widgets/store_icons_rows.dart';
+import 'package:pets_care_app/features/store/client/ui/views/widgets/store_item.dart';
 
 class StoreScreenBody extends StatelessWidget {
   const StoreScreenBody({super.key});
