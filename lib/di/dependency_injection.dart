@@ -10,6 +10,8 @@ import 'package:pets_care_app/features/profile/data/repos/profile_repo.dart';
 import 'package:pets_care_app/features/profile/logic/cubit/profile_cubit.dart';
 import 'package:pets_care_app/features/store/client/data/repos/store_repo.dart';
 import 'package:pets_care_app/features/store/client/logic/cubit/store_cubit.dart';
+import 'package:pets_care_app/features/store/store/data/repos/store_repos.dart';
+import 'package:pets_care_app/features/store/store/logic/cubit/store_store_cubit.dart';
 
 final getIt = GetIt.instance;
 
@@ -29,4 +31,7 @@ Future<void> setupGetit() async {
   //store
   getIt.registerLazySingleton<StoreRepo>(() => StoreRepo(getIt()));
   getIt.registerFactory<StoreCubit>(() => StoreCubit(getIt()));
+  //store store
+  getIt.registerLazySingleton<StoreRepos>(() => StoreRepos(getIt()));
+  getIt.registerFactory<StoreStoreCubit>(() => StoreStoreCubit(getIt()));
 }

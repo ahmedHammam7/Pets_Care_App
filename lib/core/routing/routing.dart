@@ -22,6 +22,7 @@ import 'package:pets_care_app/features/profile/ui/views/profile_screen.dart';
 import 'package:pets_care_app/features/store/client/logic/cubit/store_cubit.dart';
 import 'package:pets_care_app/features/store/client/ui/views/details_screen.dart';
 import 'package:pets_care_app/features/store/client/ui/views/store_screen.dart';
+import 'package:pets_care_app/features/store/store/logic/cubit/store_store_cubit.dart';
 import 'package:pets_care_app/features/store/store/ui/show_products_screen.dart';
 import 'package:pets_care_app/features/store/store/ui/add_product_screen.dart';
 import 'package:pets_care_app/features/store/store/ui/store_store_screen.dart';
@@ -124,7 +125,9 @@ class AppRoutes {
         );
       case Routes.storeUpdateInfoScreen:
         return MaterialPageRoute(
-          builder: (context) => const UpdateInfo(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<StoreStoreCubit>()..loadStoreProfile(),
+            child: const UpdateInfo(),),
         );
       default:
         return null;

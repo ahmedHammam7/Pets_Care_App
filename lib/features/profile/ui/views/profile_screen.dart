@@ -14,7 +14,6 @@ class ProfileScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Widget? widget;
     return Scaffold(
-      // body:P
       body: BlocProvider(
         create: (context) => getIt<ProfileCubit>()..selectWhichProfile(),
         child: BlocBuilder<ProfileCubit, ProfileState>(
