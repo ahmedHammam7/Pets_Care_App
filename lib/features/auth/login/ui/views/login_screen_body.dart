@@ -25,8 +25,8 @@ bool isloading = false;
 class _LoginScreenBodyState extends State<LoginScreenBody> {
   @override
   Widget build(BuildContext context) {
-    return BlocListener<LoginCubit, LoginState>(
-      listenWhen: (previous, current) =>
+    return BlocConsumer<LoginCubit, LoginState>(
+      buildWhen: (previous, current) =>
           current is Error || current is Loading || current is Success,
       listener: (context, state) {
         if (state is Loading) {
@@ -48,7 +48,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
           );
         }
       },
-      child: SingleChildScrollView(
+      builder: (context, state) => SingleChildScrollView(
         child: SafeArea(
           child: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),

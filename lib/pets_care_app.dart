@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pets_care_app/core/helper/constants.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/routing/routing.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
@@ -21,7 +22,13 @@ class PetsCareApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         onGenerateRoute: AppRoutes().onGenerateRoute,
-        initialRoute: Routes.onBoardingScreen,
+        initialRoute: isLoggedIn && isClient == true
+            ? Routes.homeLayout
+            : isLoggedIn && isStore == true
+                ? Routes.storeStoreScreen
+                : isLoggedIn && isDoctor == true
+                    ? Routes.clinicsScreen
+                    : Routes.onBoardingScreen,
       ),
     );
   }

@@ -5,7 +5,7 @@ import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
-import 'package:pets_care_app/features/store/ui/views/widgets/separated_line.dart';
+import 'package:pets_care_app/features/store/client/ui/views/widgets/separated_line.dart';
 
 class StoreItem extends StatelessWidget {
   const StoreItem(

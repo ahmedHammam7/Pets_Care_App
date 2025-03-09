@@ -27,7 +27,7 @@ bool isloading = false;
 class _RegisterScreenBodyState extends State<RegisterStoreBody> {
   @override
   Widget build(BuildContext context) {
-    return BlocListener<RegisterCubit, RegisterState>(
+    return BlocConsumer<RegisterCubit, RegisterState>(
       listenWhen: (previous, current) =>
           current is RegisterSuccessStore ||
           current is RegisterErrorStore ||
@@ -52,7 +52,7 @@ class _RegisterScreenBodyState extends State<RegisterStoreBody> {
           );
         }
       },
-      child: SingleChildScrollView(
+      builder: (context, state) => SingleChildScrollView(
         child: Padding(
           padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 40.h),
           child: SafeArea(

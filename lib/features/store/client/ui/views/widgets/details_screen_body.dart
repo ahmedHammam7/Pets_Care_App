@@ -5,8 +5,8 @@ import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
-import 'package:pets_care_app/features/store/ui/views/widgets/details_screen_info.dart';
-import 'package:pets_care_app/features/store/ui/views/widgets/quantity_widget.dart';
+import 'package:pets_care_app/features/store/client/ui/views/widgets/details_screen_info.dart';
+import 'package:pets_care_app/features/store/client/ui/views/widgets/quantity_widget.dart';
 
 class DetailsScreenBody extends StatelessWidget {
   const DetailsScreenBody({super.key});

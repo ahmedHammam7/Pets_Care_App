@@ -1,0 +1,22 @@
+import 'package:json_annotation/json_annotation.dart';
+part 'product_model.g.dart';
+
+@JsonSerializable()
+class ProductResponse {
+  final String name;
+  @JsonKey(name: 'food_type')
+  final String foodType;
+  final String price;
+  final String description;
+  final String image;
+
+  ProductResponse(
+      {required this.name,
+      required this.foodType,
+      required this.price,
+      required this.description,
+      required this.image});
+
+  factory ProductResponse.fromJson(Map<String, dynamic> json) =>
+      _$ProductResponseFromJson(json);
+}

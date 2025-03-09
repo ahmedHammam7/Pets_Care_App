@@ -27,3 +27,8 @@ class Constants {
     "assets/png/bot.png",
   ];
 }
+
+bool isLoggedIn = false;
+bool isStore = false;
+bool isDoctor = false;
+bool isClient = false;

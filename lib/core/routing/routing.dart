@@ -19,8 +19,13 @@ import 'package:pets_care_app/features/home_layout/ui/home_layout.dart';
 import 'package:pets_care_app/features/locations/ui/location_screen.dart';
 import 'package:pets_care_app/features/onBoarding/ui/views/on_boarding_screen.dart';
 import 'package:pets_care_app/features/profile/ui/views/profile_screen.dart';
-import 'package:pets_care_app/features/store/ui/views/details_screen.dart';
-import 'package:pets_care_app/features/store/ui/views/store_screen.dart';
+import 'package:pets_care_app/features/store/client/logic/cubit/store_cubit.dart';
+import 'package:pets_care_app/features/store/client/ui/views/details_screen.dart';
+import 'package:pets_care_app/features/store/client/ui/views/store_screen.dart';
+import 'package:pets_care_app/features/store/store/ui/show_products_screen.dart';
+import 'package:pets_care_app/features/store/store/ui/add_product_screen.dart';
+import 'package:pets_care_app/features/store/store/ui/store_store_screen.dart';
+import 'package:pets_care_app/features/store/store/ui/update_info_screen.dart';
 
 class AppRoutes {
   Route? onGenerateRoute(RouteSettings settings) {
@@ -50,7 +55,10 @@ class AppRoutes {
         );
       case Routes.storeScreen:
         return MaterialPageRoute(
-          builder: (context) => const StoreScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<StoreCubit>(),
+            child: const StoreScreen(),
+          ),
         );
       case Routes.detailsScreen:
         return MaterialPageRoute(
@@ -101,6 +109,22 @@ class AppRoutes {
       case Routes.chatBotScreen:
         return MaterialPageRoute(
           builder: (context) => const ChatBotScreen(),
+        );
+      case Routes.storeStoreScreen:
+        return MaterialPageRoute(
+          builder: (context) => const StoreStoreScreen(),
+        );
+      case Routes.storeAddProductScreen:
+        return MaterialPageRoute(
+          builder: (context) => const AddProductScreen(),
+        );
+      case Routes.storeShowProductsScreen:
+        return MaterialPageRoute(
+          builder: (context) => const ShowProductsScreen(),
+        );
+      case Routes.storeUpdateInfoScreen:
+        return MaterialPageRoute(
+          builder: (context) => const UpdateInfo(),
         );
       default:
         return null;

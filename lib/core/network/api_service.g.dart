@@ -160,13 +160,13 @@ class _ApiService implements ApiService {
   }
 
   @override
-  Future<StoreProfileResponse> getStoreProfile(String token) async {
+  Future<StoreInfoResponse> getStoreProfile(String token) async {
     final _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{r'Authorization': token};
     _headers.removeWhere((k, v) => v == null);
     const Map<String, dynamic>? _data = null;
-    final _options = _setStreamType<StoreProfileResponse>(Options(
+    final _options = _setStreamType<StoreInfoResponse>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -183,9 +183,46 @@ class _ApiService implements ApiService {
           baseUrl,
         )));
     final _result = await _dio.fetch<Map<String, dynamic>>(_options);
-    late StoreProfileResponse _value;
+    late StoreInfoResponse _value;
     try {
-      _value = StoreProfileResponse.fromJson(_result.data!);
+      _value = StoreInfoResponse.fromJson(_result.data!);
+    } on Object catch (e, s) {
+      errorLogger?.logError(e, s, _options);
+      rethrow;
+    }
+    return _value;
+  }
+
+  @override
+  Future<List<ProductResponse>> getAllProducts(String token) async {
+    final _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{r'Authorization': token};
+    _headers.removeWhere((k, v) => v == null);
+    const Map<String, dynamic>? _data = null;
+    final _options = _setStreamType<List<ProductResponse>>(Options(
+      method: 'GET',
+      headers: _headers,
+      extra: _extra,
+    )
+        .compose(
+          _dio.options,
+          'items',
+          queryParameters: queryParameters,
+          data: _data,
+        )
+        .copyWith(
+            baseUrl: _combineBaseUrls(
+          _dio.options.baseUrl,
+          baseUrl,
+        )));
+    final _result = await _dio.fetch<List<dynamic>>(_options);
+    late List<ProductResponse> _value;
+    try {
+      _value = _result.data!
+          .map((dynamic i) =>
+              ProductResponse.fromJson(i as Map<String, dynamic>))
+          .toList();
     } on Object catch (e, s) {
       errorLogger?.logError(e, s, _options);
       rethrow;

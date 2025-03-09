@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pets_care_app/features/store/ui/views/widgets/details_screen_body.dart';
+import 'package:pets_care_app/features/store/client/ui/views/widgets/details_screen_body.dart';
 
 class DetailsScreen extends StatelessWidget {
   const DetailsScreen({super.key});

@@ -16,4 +16,8 @@ class Routes {
   static const String checkScreen = '/checkScreen';
   static const String locationScreen = '/locationScreen';
   static const String chatBotScreen = '/chatBotScreen';
+  static const String storeStoreScreen = '/storeStoreScreen';
+  static const String storeAddProductScreen = '/storeAddProductScreen';
+  static const String storeShowProductsScreen = '/storeShowProductsScreen';
+  static const String storeUpdateInfoScreen = '/storeUpdateInfoScreen';
 }
