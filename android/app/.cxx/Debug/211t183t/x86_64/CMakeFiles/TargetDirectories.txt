@@ -1,0 +1,2 @@
+E:/Grad_project/Pets_Care_App/android/app/.cxx/Debug/211t183t/x86_64/CMakeFiles/edit_cache.dir
+E:/Grad_project/Pets_Care_App/android/app/.cxx/Debug/211t183t/x86_64/CMakeFiles/rebuild_cache.dir

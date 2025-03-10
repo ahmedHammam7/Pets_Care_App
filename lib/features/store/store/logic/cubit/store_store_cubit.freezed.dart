@@ -22,6 +22,9 @@ mixin _$StoreStoreState {
     required TResult Function() loading,
     required TResult Function(StoreInfoResponse data) success,
     required TResult Function(String message) failure,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +33,9 @@ mixin _$StoreStoreState {
     TResult? Function()? loading,
     TResult? Function(StoreInfoResponse data)? success,
     TResult? Function(String message)? failure,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +44,9 @@ mixin _$StoreStoreState {
     TResult Function()? loading,
     TResult Function(StoreInfoResponse data)? success,
     TResult Function(String message)? failure,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +56,9 @@ mixin _$StoreStoreState {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
+    required TResult Function(UpdateLoading value) updateLoading,
+    required TResult Function(UpdateSuccess value) updateSuccess,
+    required TResult Function(UpdateFailure value) updateFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +67,9 @@ mixin _$StoreStoreState {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateLoading value)? updateLoading,
+    TResult? Function(UpdateSuccess value)? updateSuccess,
+    TResult? Function(UpdateFailure value)? updateFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +78,9 @@ mixin _$StoreStoreState {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
+    TResult Function(UpdateLoading value)? updateLoading,
+    TResult Function(UpdateSuccess value)? updateSuccess,
+    TResult Function(UpdateFailure value)? updateFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -134,6 +152,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(StoreInfoResponse data) success,
     required TResult Function(String message) failure,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateFailure,
   }) {
     return initial();
   }
@@ -145,6 +166,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(StoreInfoResponse data)? success,
     TResult? Function(String message)? failure,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateFailure,
   }) {
     return initial?.call();
   }
@@ -156,6 +180,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(StoreInfoResponse data)? success,
     TResult Function(String message)? failure,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -171,6 +198,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
+    required TResult Function(UpdateLoading value) updateLoading,
+    required TResult Function(UpdateSuccess value) updateSuccess,
+    required TResult Function(UpdateFailure value) updateFailure,
   }) {
     return initial(this);
   }
@@ -182,6 +212,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateLoading value)? updateLoading,
+    TResult? Function(UpdateSuccess value)? updateSuccess,
+    TResult? Function(UpdateFailure value)? updateFailure,
   }) {
     return initial?.call(this);
   }
@@ -193,6 +226,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
+    TResult Function(UpdateLoading value)? updateLoading,
+    TResult Function(UpdateSuccess value)? updateSuccess,
+    TResult Function(UpdateFailure value)? updateFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -251,6 +287,9 @@ class _$LoadingImpl implements Loading {
     required TResult Function() loading,
     required TResult Function(StoreInfoResponse data) success,
     required TResult Function(String message) failure,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateFailure,
   }) {
     return loading();
   }
@@ -262,6 +301,9 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? loading,
     TResult? Function(StoreInfoResponse data)? success,
     TResult? Function(String message)? failure,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateFailure,
   }) {
     return loading?.call();
   }
@@ -273,6 +315,9 @@ class _$LoadingImpl implements Loading {
     TResult Function()? loading,
     TResult Function(StoreInfoResponse data)? success,
     TResult Function(String message)? failure,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateFailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -288,6 +333,9 @@ class _$LoadingImpl implements Loading {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
+    required TResult Function(UpdateLoading value) updateLoading,
+    required TResult Function(UpdateSuccess value) updateSuccess,
+    required TResult Function(UpdateFailure value) updateFailure,
   }) {
     return loading(this);
   }
@@ -299,6 +347,9 @@ class _$LoadingImpl implements Loading {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateLoading value)? updateLoading,
+    TResult? Function(UpdateSuccess value)? updateSuccess,
+    TResult? Function(UpdateFailure value)? updateFailure,
   }) {
     return loading?.call(this);
   }
@@ -310,6 +361,9 @@ class _$LoadingImpl implements Loading {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
+    TResult Function(UpdateLoading value)? updateLoading,
+    TResult Function(UpdateSuccess value)? updateSuccess,
+    TResult Function(UpdateFailure value)? updateFailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -395,6 +449,9 @@ class _$SuccessImpl implements Success {
     required TResult Function() loading,
     required TResult Function(StoreInfoResponse data) success,
     required TResult Function(String message) failure,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateFailure,
   }) {
     return success(data);
   }
@@ -406,6 +463,9 @@ class _$SuccessImpl implements Success {
     TResult? Function()? loading,
     TResult? Function(StoreInfoResponse data)? success,
     TResult? Function(String message)? failure,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateFailure,
   }) {
     return success?.call(data);
   }
@@ -417,6 +477,9 @@ class _$SuccessImpl implements Success {
     TResult Function()? loading,
     TResult Function(StoreInfoResponse data)? success,
     TResult Function(String message)? failure,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateFailure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -432,6 +495,9 @@ class _$SuccessImpl implements Success {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
+    required TResult Function(UpdateLoading value) updateLoading,
+    required TResult Function(UpdateSuccess value) updateSuccess,
+    required TResult Function(UpdateFailure value) updateFailure,
   }) {
     return success(this);
   }
@@ -443,6 +509,9 @@ class _$SuccessImpl implements Success {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateLoading value)? updateLoading,
+    TResult? Function(UpdateSuccess value)? updateSuccess,
+    TResult? Function(UpdateFailure value)? updateFailure,
   }) {
     return success?.call(this);
   }
@@ -454,6 +523,9 @@ class _$SuccessImpl implements Success {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
+    TResult Function(UpdateLoading value)? updateLoading,
+    TResult Function(UpdateSuccess value)? updateSuccess,
+    TResult Function(UpdateFailure value)? updateFailure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -547,6 +619,9 @@ class _$FailureImpl implements Failure {
     required TResult Function() loading,
     required TResult Function(StoreInfoResponse data) success,
     required TResult Function(String message) failure,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateFailure,
   }) {
     return failure(message);
   }
@@ -558,6 +633,9 @@ class _$FailureImpl implements Failure {
     TResult? Function()? loading,
     TResult? Function(StoreInfoResponse data)? success,
     TResult? Function(String message)? failure,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateFailure,
   }) {
     return failure?.call(message);
   }
@@ -569,6 +647,9 @@ class _$FailureImpl implements Failure {
     TResult Function()? loading,
     TResult Function(StoreInfoResponse data)? success,
     TResult Function(String message)? failure,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateFailure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -584,6 +665,9 @@ class _$FailureImpl implements Failure {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Failure value) failure,
+    required TResult Function(UpdateLoading value) updateLoading,
+    required TResult Function(UpdateSuccess value) updateSuccess,
+    required TResult Function(UpdateFailure value) updateFailure,
   }) {
     return failure(this);
   }
@@ -595,6 +679,9 @@ class _$FailureImpl implements Failure {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateLoading value)? updateLoading,
+    TResult? Function(UpdateSuccess value)? updateSuccess,
+    TResult? Function(UpdateFailure value)? updateFailure,
   }) {
     return failure?.call(this);
   }
@@ -606,6 +693,9 @@ class _$FailureImpl implements Failure {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Failure value)? failure,
+    TResult Function(UpdateLoading value)? updateLoading,
+    TResult Function(UpdateSuccess value)? updateSuccess,
+    TResult Function(UpdateFailure value)? updateFailure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -624,5 +714,445 @@ abstract class Failure implements StoreStoreState {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$FailureImplCopyWith<_$FailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$UpdateLoadingImplCopyWith<$Res> {
+  factory _$$UpdateLoadingImplCopyWith(
+          _$UpdateLoadingImpl value, $Res Function(_$UpdateLoadingImpl) then) =
+      __$$UpdateLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UpdateLoadingImplCopyWithImpl<$Res>
+    extends _$StoreStoreStateCopyWithImpl<$Res, _$UpdateLoadingImpl>
+    implements _$$UpdateLoadingImplCopyWith<$Res> {
+  __$$UpdateLoadingImplCopyWithImpl(
+      _$UpdateLoadingImpl _value, $Res Function(_$UpdateLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$UpdateLoadingImpl implements UpdateLoading {
+  const _$UpdateLoadingImpl();
+
+  @override
+  String toString() {
+    return 'StoreStoreState.updateLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UpdateLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(StoreInfoResponse data) success,
+    required TResult Function(String message) failure,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateFailure,
+  }) {
+    return updateLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(StoreInfoResponse data)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateFailure,
+  }) {
+    return updateLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(StoreInfoResponse data)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateFailure,
+    required TResult orElse(),
+  }) {
+    if (updateLoading != null) {
+      return updateLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(UpdateLoading value) updateLoading,
+    required TResult Function(UpdateSuccess value) updateSuccess,
+    required TResult Function(UpdateFailure value) updateFailure,
+  }) {
+    return updateLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateLoading value)? updateLoading,
+    TResult? Function(UpdateSuccess value)? updateSuccess,
+    TResult? Function(UpdateFailure value)? updateFailure,
+  }) {
+    return updateLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(UpdateLoading value)? updateLoading,
+    TResult Function(UpdateSuccess value)? updateSuccess,
+    TResult Function(UpdateFailure value)? updateFailure,
+    required TResult orElse(),
+  }) {
+    if (updateLoading != null) {
+      return updateLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateLoading implements StoreStoreState {
+  const factory UpdateLoading() = _$UpdateLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$UpdateSuccessImplCopyWith<$Res> {
+  factory _$$UpdateSuccessImplCopyWith(
+          _$UpdateSuccessImpl value, $Res Function(_$UpdateSuccessImpl) then) =
+      __$$UpdateSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$UpdateSuccessImplCopyWithImpl<$Res>
+    extends _$StoreStoreStateCopyWithImpl<$Res, _$UpdateSuccessImpl>
+    implements _$$UpdateSuccessImplCopyWith<$Res> {
+  __$$UpdateSuccessImplCopyWithImpl(
+      _$UpdateSuccessImpl _value, $Res Function(_$UpdateSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$UpdateSuccessImpl implements UpdateSuccess {
+  const _$UpdateSuccessImpl();
+
+  @override
+  String toString() {
+    return 'StoreStoreState.updateSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$UpdateSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(StoreInfoResponse data) success,
+    required TResult Function(String message) failure,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateFailure,
+  }) {
+    return updateSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(StoreInfoResponse data)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateFailure,
+  }) {
+    return updateSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(StoreInfoResponse data)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateFailure,
+    required TResult orElse(),
+  }) {
+    if (updateSuccess != null) {
+      return updateSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(UpdateLoading value) updateLoading,
+    required TResult Function(UpdateSuccess value) updateSuccess,
+    required TResult Function(UpdateFailure value) updateFailure,
+  }) {
+    return updateSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateLoading value)? updateLoading,
+    TResult? Function(UpdateSuccess value)? updateSuccess,
+    TResult? Function(UpdateFailure value)? updateFailure,
+  }) {
+    return updateSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(UpdateLoading value)? updateLoading,
+    TResult Function(UpdateSuccess value)? updateSuccess,
+    TResult Function(UpdateFailure value)? updateFailure,
+    required TResult orElse(),
+  }) {
+    if (updateSuccess != null) {
+      return updateSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateSuccess implements StoreStoreState {
+  const factory UpdateSuccess() = _$UpdateSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$UpdateFailureImplCopyWith<$Res> {
+  factory _$$UpdateFailureImplCopyWith(
+          _$UpdateFailureImpl value, $Res Function(_$UpdateFailureImpl) then) =
+      __$$UpdateFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$UpdateFailureImplCopyWithImpl<$Res>
+    extends _$StoreStoreStateCopyWithImpl<$Res, _$UpdateFailureImpl>
+    implements _$$UpdateFailureImplCopyWith<$Res> {
+  __$$UpdateFailureImplCopyWithImpl(
+      _$UpdateFailureImpl _value, $Res Function(_$UpdateFailureImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$UpdateFailureImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$UpdateFailureImpl implements UpdateFailure {
+  const _$UpdateFailureImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'StoreStoreState.updateFailure(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$UpdateFailureImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$UpdateFailureImplCopyWith<_$UpdateFailureImpl> get copyWith =>
+      __$$UpdateFailureImplCopyWithImpl<_$UpdateFailureImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(StoreInfoResponse data) success,
+    required TResult Function(String message) failure,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateFailure,
+  }) {
+    return updateFailure(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(StoreInfoResponse data)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateFailure,
+  }) {
+    return updateFailure?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(StoreInfoResponse data)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateFailure,
+    required TResult orElse(),
+  }) {
+    if (updateFailure != null) {
+      return updateFailure(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(UpdateLoading value) updateLoading,
+    required TResult Function(UpdateSuccess value) updateSuccess,
+    required TResult Function(UpdateFailure value) updateFailure,
+  }) {
+    return updateFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateLoading value)? updateLoading,
+    TResult? Function(UpdateSuccess value)? updateSuccess,
+    TResult? Function(UpdateFailure value)? updateFailure,
+  }) {
+    return updateFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(UpdateLoading value)? updateLoading,
+    TResult Function(UpdateSuccess value)? updateSuccess,
+    TResult Function(UpdateFailure value)? updateFailure,
+    required TResult orElse(),
+  }) {
+    if (updateFailure != null) {
+      return updateFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class UpdateFailure implements StoreStoreState {
+  const factory UpdateFailure(final String message) = _$UpdateFailureImpl;
+
+  String get message;
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$UpdateFailureImplCopyWith<_$UpdateFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
