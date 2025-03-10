@@ -9,16 +9,15 @@ part 'store_store_cubit.freezed.dart';
 
 class StoreStoreCubit extends Cubit<StoreStoreState> {
   StoreStoreCubit(this._storeRepo) : super(const StoreStoreState.initial());
-  final StoreRepos _storeRepo;
+  final StoreStoreRepos _storeRepo;
   //controlles
   TextEditingController storeNameController = TextEditingController();
-    TextEditingController emailController = TextEditingController();
-      TextEditingController hotLineController = TextEditingController();
+  TextEditingController emailController = TextEditingController();
+  TextEditingController hotLineController = TextEditingController();
   TextEditingController addressController = TextEditingController();
-    TextEditingController whatsappPhoneController = TextEditingController();
+  TextEditingController whatsappPhoneController = TextEditingController();
 // form key
   final formKey = GlobalKey<FormState>();
-
 
   Future<void> loadStoreProfile() async {
     emit(const StoreStoreState.loading());
@@ -37,5 +36,31 @@ class StoreStoreCubit extends Cubit<StoreStoreState> {
         emit(StoreStoreState.failure(message.getAllErrorMessages()));
       },
     );
+  }
+
+  Future<void> updateStoreProfile() async {
+    emit(const StoreStoreState.updateLoading());
+
+    final result = await _storeRepo.updateStoreProfile({
+      "store_name": storeNameController.text,
+      "email": emailController.text,
+      "hot_line": hotLineController.text,
+      "address": addressController.text,
+      "whatsapp_phone": whatsappPhoneController.text,
+    });
+    result.when(
+      success: (response) {
+        emit(const StoreStoreState.updateSuccess());
+      },
+      failure: (message) {
+        emit(StoreStoreState.updateFailure(message.getAllErrorMessages()));
+      },
+    );
+  }
+
+  @override
+  void onChange(Change<StoreStoreState> change) {
+    print(change);
+    super.onChange(change);
   }
 }

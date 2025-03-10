@@ -4,7 +4,6 @@ import 'package:pets_care_app/features/auth/login/data/models/login_response.dar
 import 'package:pets_care_app/features/auth/register/data/models/register_response.dart';
 import 'package:pets_care_app/features/profile/data/models/doctor_profile_response.dart';
 import 'package:pets_care_app/features/profile/data/models/profile_response.dart';
-import 'package:pets_care_app/features/profile/data/models/store_profile_response.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
 import 'package:pets_care_app/features/store/store/data/models/store_info_response.dart';
 import 'package:retrofit/error_logger.dart';
@@ -35,4 +34,8 @@ abstract class ApiService {
   @GET(ApiConstant.items)
   Future<List<ProductResponse>> getAllProducts(
       @Header('Authorization') String token);
+
+  @POST(ApiConstant.profile)
+  Future<dynamic> updateProfile(
+      @Header('Authorization') String token, @Body() Map<String, dynamic> body);
 }
