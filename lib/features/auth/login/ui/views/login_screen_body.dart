@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/helper/extension.dart';
+import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs.dart';
+import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
@@ -28,16 +30,30 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
     return BlocConsumer<LoginCubit, LoginState>(
       buildWhen: (previous, current) =>
           current is Error || current is Loading || current is Success,
-      listener: (context, state) {
+      listener: (context, state) async {
         if (state is Loading) {
           isloading = true;
         }
         if (state is Success) {
           isloading = false;
-          Navigator.of(context).pushNamedAndRemoveUntil(
-            Routes.homeLayout,
-            (route) => false,
-          );
+          if (await SharedPrefHelper.getString(SharedPrefsConstant.type) ==
+              "store") {
+            await context.pushNamedAndRemoveUntil(
+                Routes.storeStoreScreen, (route) => false,
+                predicate: (Route<dynamic> route) => false);
+          } else if (await SharedPrefHelper.getString(
+                  SharedPrefsConstant.type) ==
+              "doctor") {
+            await context.pushNamedAndRemoveUntil(
+                Routes.homeLayout, (route) => false,
+                predicate: (Route<dynamic> route) => false);
+          } else if (await SharedPrefHelper.getString(
+                  SharedPrefsConstant.type) ==
+              "owner") {
+            await context.pushNamedAndRemoveUntil(
+                Routes.homeLayout, (route) => false,
+                predicate: (Route<dynamic> route) => false);
+          }
         }
         if (state is Error) {
           isloading = false;
@@ -123,7 +139,8 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                     text1: 'Don’t have an account? ',
                     text2: 'Sign Up',
                     onTap: () {
-                      context.pushNamedAndRemoveUntil(Routes.registerScreen,
+                      context.pushNamedAndRemoveUntil(
+                          Routes.loginScreen, (route) => false,
                           predicate: (Route<dynamic> route) => false);
                     },
                   ),

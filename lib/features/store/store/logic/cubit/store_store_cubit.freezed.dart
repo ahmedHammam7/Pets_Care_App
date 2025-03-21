@@ -25,6 +25,13 @@ mixin _$StoreStoreState {
     required TResult Function() updateLoading,
     required TResult Function() updateSuccess,
     required TResult Function(String message) updateFailure,
+    required TResult Function() addProductLoading,
+    required TResult Function() addProductSuccess,
+    required TResult Function(String message) addProductFailure,
+    required TResult Function() logout,
+    required TResult Function() allProductsLoading,
+    required TResult Function(List<ProductResponse> data) allProductsSuccess,
+    required TResult Function(String message) allProductsFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,6 +43,13 @@ mixin _$StoreStoreState {
     TResult? Function()? updateLoading,
     TResult? Function()? updateSuccess,
     TResult? Function(String message)? updateFailure,
+    TResult? Function()? addProductLoading,
+    TResult? Function()? addProductSuccess,
+    TResult? Function(String message)? addProductFailure,
+    TResult? Function()? logout,
+    TResult? Function()? allProductsLoading,
+    TResult? Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult? Function(String message)? allProductsFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -47,6 +61,13 @@ mixin _$StoreStoreState {
     TResult Function()? updateLoading,
     TResult Function()? updateSuccess,
     TResult Function(String message)? updateFailure,
+    TResult Function()? addProductLoading,
+    TResult Function()? addProductSuccess,
+    TResult Function(String message)? addProductFailure,
+    TResult Function()? logout,
+    TResult Function()? allProductsLoading,
+    TResult Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult Function(String message)? allProductsFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -59,6 +80,13 @@ mixin _$StoreStoreState {
     required TResult Function(UpdateLoading value) updateLoading,
     required TResult Function(UpdateSuccess value) updateSuccess,
     required TResult Function(UpdateFailure value) updateFailure,
+    required TResult Function(AddProductLoading value) addProductLoading,
+    required TResult Function(AddProductSuccess value) addProductSuccess,
+    required TResult Function(AddProductFailure value) addProductFailure,
+    required TResult Function(Logout value) logout,
+    required TResult Function(AllProductsLoading value) allProductsLoading,
+    required TResult Function(AllProductsSuccess value) allProductsSuccess,
+    required TResult Function(AllProductsFailure value) allProductsFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -70,6 +98,13 @@ mixin _$StoreStoreState {
     TResult? Function(UpdateLoading value)? updateLoading,
     TResult? Function(UpdateSuccess value)? updateSuccess,
     TResult? Function(UpdateFailure value)? updateFailure,
+    TResult? Function(AddProductLoading value)? addProductLoading,
+    TResult? Function(AddProductSuccess value)? addProductSuccess,
+    TResult? Function(AddProductFailure value)? addProductFailure,
+    TResult? Function(Logout value)? logout,
+    TResult? Function(AllProductsLoading value)? allProductsLoading,
+    TResult? Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult? Function(AllProductsFailure value)? allProductsFailure,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -81,6 +116,13 @@ mixin _$StoreStoreState {
     TResult Function(UpdateLoading value)? updateLoading,
     TResult Function(UpdateSuccess value)? updateSuccess,
     TResult Function(UpdateFailure value)? updateFailure,
+    TResult Function(AddProductLoading value)? addProductLoading,
+    TResult Function(AddProductSuccess value)? addProductSuccess,
+    TResult Function(AddProductFailure value)? addProductFailure,
+    TResult Function(Logout value)? logout,
+    TResult Function(AllProductsLoading value)? allProductsLoading,
+    TResult Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult Function(AllProductsFailure value)? allProductsFailure,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -155,6 +197,13 @@ class _$InitialImpl implements _Initial {
     required TResult Function() updateLoading,
     required TResult Function() updateSuccess,
     required TResult Function(String message) updateFailure,
+    required TResult Function() addProductLoading,
+    required TResult Function() addProductSuccess,
+    required TResult Function(String message) addProductFailure,
+    required TResult Function() logout,
+    required TResult Function() allProductsLoading,
+    required TResult Function(List<ProductResponse> data) allProductsSuccess,
+    required TResult Function(String message) allProductsFailure,
   }) {
     return initial();
   }
@@ -169,6 +218,13 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? updateLoading,
     TResult? Function()? updateSuccess,
     TResult? Function(String message)? updateFailure,
+    TResult? Function()? addProductLoading,
+    TResult? Function()? addProductSuccess,
+    TResult? Function(String message)? addProductFailure,
+    TResult? Function()? logout,
+    TResult? Function()? allProductsLoading,
+    TResult? Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult? Function(String message)? allProductsFailure,
   }) {
     return initial?.call();
   }
@@ -183,6 +239,13 @@ class _$InitialImpl implements _Initial {
     TResult Function()? updateLoading,
     TResult Function()? updateSuccess,
     TResult Function(String message)? updateFailure,
+    TResult Function()? addProductLoading,
+    TResult Function()? addProductSuccess,
+    TResult Function(String message)? addProductFailure,
+    TResult Function()? logout,
+    TResult Function()? allProductsLoading,
+    TResult Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult Function(String message)? allProductsFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -201,6 +264,13 @@ class _$InitialImpl implements _Initial {
     required TResult Function(UpdateLoading value) updateLoading,
     required TResult Function(UpdateSuccess value) updateSuccess,
     required TResult Function(UpdateFailure value) updateFailure,
+    required TResult Function(AddProductLoading value) addProductLoading,
+    required TResult Function(AddProductSuccess value) addProductSuccess,
+    required TResult Function(AddProductFailure value) addProductFailure,
+    required TResult Function(Logout value) logout,
+    required TResult Function(AllProductsLoading value) allProductsLoading,
+    required TResult Function(AllProductsSuccess value) allProductsSuccess,
+    required TResult Function(AllProductsFailure value) allProductsFailure,
   }) {
     return initial(this);
   }
@@ -215,6 +285,13 @@ class _$InitialImpl implements _Initial {
     TResult? Function(UpdateLoading value)? updateLoading,
     TResult? Function(UpdateSuccess value)? updateSuccess,
     TResult? Function(UpdateFailure value)? updateFailure,
+    TResult? Function(AddProductLoading value)? addProductLoading,
+    TResult? Function(AddProductSuccess value)? addProductSuccess,
+    TResult? Function(AddProductFailure value)? addProductFailure,
+    TResult? Function(Logout value)? logout,
+    TResult? Function(AllProductsLoading value)? allProductsLoading,
+    TResult? Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult? Function(AllProductsFailure value)? allProductsFailure,
   }) {
     return initial?.call(this);
   }
@@ -229,6 +306,13 @@ class _$InitialImpl implements _Initial {
     TResult Function(UpdateLoading value)? updateLoading,
     TResult Function(UpdateSuccess value)? updateSuccess,
     TResult Function(UpdateFailure value)? updateFailure,
+    TResult Function(AddProductLoading value)? addProductLoading,
+    TResult Function(AddProductSuccess value)? addProductSuccess,
+    TResult Function(AddProductFailure value)? addProductFailure,
+    TResult Function(Logout value)? logout,
+    TResult Function(AllProductsLoading value)? allProductsLoading,
+    TResult Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult Function(AllProductsFailure value)? allProductsFailure,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -290,6 +374,13 @@ class _$LoadingImpl implements Loading {
     required TResult Function() updateLoading,
     required TResult Function() updateSuccess,
     required TResult Function(String message) updateFailure,
+    required TResult Function() addProductLoading,
+    required TResult Function() addProductSuccess,
+    required TResult Function(String message) addProductFailure,
+    required TResult Function() logout,
+    required TResult Function() allProductsLoading,
+    required TResult Function(List<ProductResponse> data) allProductsSuccess,
+    required TResult Function(String message) allProductsFailure,
   }) {
     return loading();
   }
@@ -304,6 +395,13 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? updateLoading,
     TResult? Function()? updateSuccess,
     TResult? Function(String message)? updateFailure,
+    TResult? Function()? addProductLoading,
+    TResult? Function()? addProductSuccess,
+    TResult? Function(String message)? addProductFailure,
+    TResult? Function()? logout,
+    TResult? Function()? allProductsLoading,
+    TResult? Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult? Function(String message)? allProductsFailure,
   }) {
     return loading?.call();
   }
@@ -318,6 +416,13 @@ class _$LoadingImpl implements Loading {
     TResult Function()? updateLoading,
     TResult Function()? updateSuccess,
     TResult Function(String message)? updateFailure,
+    TResult Function()? addProductLoading,
+    TResult Function()? addProductSuccess,
+    TResult Function(String message)? addProductFailure,
+    TResult Function()? logout,
+    TResult Function()? allProductsLoading,
+    TResult Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult Function(String message)? allProductsFailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -336,6 +441,13 @@ class _$LoadingImpl implements Loading {
     required TResult Function(UpdateLoading value) updateLoading,
     required TResult Function(UpdateSuccess value) updateSuccess,
     required TResult Function(UpdateFailure value) updateFailure,
+    required TResult Function(AddProductLoading value) addProductLoading,
+    required TResult Function(AddProductSuccess value) addProductSuccess,
+    required TResult Function(AddProductFailure value) addProductFailure,
+    required TResult Function(Logout value) logout,
+    required TResult Function(AllProductsLoading value) allProductsLoading,
+    required TResult Function(AllProductsSuccess value) allProductsSuccess,
+    required TResult Function(AllProductsFailure value) allProductsFailure,
   }) {
     return loading(this);
   }
@@ -350,6 +462,13 @@ class _$LoadingImpl implements Loading {
     TResult? Function(UpdateLoading value)? updateLoading,
     TResult? Function(UpdateSuccess value)? updateSuccess,
     TResult? Function(UpdateFailure value)? updateFailure,
+    TResult? Function(AddProductLoading value)? addProductLoading,
+    TResult? Function(AddProductSuccess value)? addProductSuccess,
+    TResult? Function(AddProductFailure value)? addProductFailure,
+    TResult? Function(Logout value)? logout,
+    TResult? Function(AllProductsLoading value)? allProductsLoading,
+    TResult? Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult? Function(AllProductsFailure value)? allProductsFailure,
   }) {
     return loading?.call(this);
   }
@@ -364,6 +483,13 @@ class _$LoadingImpl implements Loading {
     TResult Function(UpdateLoading value)? updateLoading,
     TResult Function(UpdateSuccess value)? updateSuccess,
     TResult Function(UpdateFailure value)? updateFailure,
+    TResult Function(AddProductLoading value)? addProductLoading,
+    TResult Function(AddProductSuccess value)? addProductSuccess,
+    TResult Function(AddProductFailure value)? addProductFailure,
+    TResult Function(Logout value)? logout,
+    TResult Function(AllProductsLoading value)? allProductsLoading,
+    TResult Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult Function(AllProductsFailure value)? allProductsFailure,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -452,6 +578,13 @@ class _$SuccessImpl implements Success {
     required TResult Function() updateLoading,
     required TResult Function() updateSuccess,
     required TResult Function(String message) updateFailure,
+    required TResult Function() addProductLoading,
+    required TResult Function() addProductSuccess,
+    required TResult Function(String message) addProductFailure,
+    required TResult Function() logout,
+    required TResult Function() allProductsLoading,
+    required TResult Function(List<ProductResponse> data) allProductsSuccess,
+    required TResult Function(String message) allProductsFailure,
   }) {
     return success(data);
   }
@@ -466,6 +599,13 @@ class _$SuccessImpl implements Success {
     TResult? Function()? updateLoading,
     TResult? Function()? updateSuccess,
     TResult? Function(String message)? updateFailure,
+    TResult? Function()? addProductLoading,
+    TResult? Function()? addProductSuccess,
+    TResult? Function(String message)? addProductFailure,
+    TResult? Function()? logout,
+    TResult? Function()? allProductsLoading,
+    TResult? Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult? Function(String message)? allProductsFailure,
   }) {
     return success?.call(data);
   }
@@ -480,6 +620,13 @@ class _$SuccessImpl implements Success {
     TResult Function()? updateLoading,
     TResult Function()? updateSuccess,
     TResult Function(String message)? updateFailure,
+    TResult Function()? addProductLoading,
+    TResult Function()? addProductSuccess,
+    TResult Function(String message)? addProductFailure,
+    TResult Function()? logout,
+    TResult Function()? allProductsLoading,
+    TResult Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult Function(String message)? allProductsFailure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -498,6 +645,13 @@ class _$SuccessImpl implements Success {
     required TResult Function(UpdateLoading value) updateLoading,
     required TResult Function(UpdateSuccess value) updateSuccess,
     required TResult Function(UpdateFailure value) updateFailure,
+    required TResult Function(AddProductLoading value) addProductLoading,
+    required TResult Function(AddProductSuccess value) addProductSuccess,
+    required TResult Function(AddProductFailure value) addProductFailure,
+    required TResult Function(Logout value) logout,
+    required TResult Function(AllProductsLoading value) allProductsLoading,
+    required TResult Function(AllProductsSuccess value) allProductsSuccess,
+    required TResult Function(AllProductsFailure value) allProductsFailure,
   }) {
     return success(this);
   }
@@ -512,6 +666,13 @@ class _$SuccessImpl implements Success {
     TResult? Function(UpdateLoading value)? updateLoading,
     TResult? Function(UpdateSuccess value)? updateSuccess,
     TResult? Function(UpdateFailure value)? updateFailure,
+    TResult? Function(AddProductLoading value)? addProductLoading,
+    TResult? Function(AddProductSuccess value)? addProductSuccess,
+    TResult? Function(AddProductFailure value)? addProductFailure,
+    TResult? Function(Logout value)? logout,
+    TResult? Function(AllProductsLoading value)? allProductsLoading,
+    TResult? Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult? Function(AllProductsFailure value)? allProductsFailure,
   }) {
     return success?.call(this);
   }
@@ -526,6 +687,13 @@ class _$SuccessImpl implements Success {
     TResult Function(UpdateLoading value)? updateLoading,
     TResult Function(UpdateSuccess value)? updateSuccess,
     TResult Function(UpdateFailure value)? updateFailure,
+    TResult Function(AddProductLoading value)? addProductLoading,
+    TResult Function(AddProductSuccess value)? addProductSuccess,
+    TResult Function(AddProductFailure value)? addProductFailure,
+    TResult Function(Logout value)? logout,
+    TResult Function(AllProductsLoading value)? allProductsLoading,
+    TResult Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult Function(AllProductsFailure value)? allProductsFailure,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -622,6 +790,13 @@ class _$FailureImpl implements Failure {
     required TResult Function() updateLoading,
     required TResult Function() updateSuccess,
     required TResult Function(String message) updateFailure,
+    required TResult Function() addProductLoading,
+    required TResult Function() addProductSuccess,
+    required TResult Function(String message) addProductFailure,
+    required TResult Function() logout,
+    required TResult Function() allProductsLoading,
+    required TResult Function(List<ProductResponse> data) allProductsSuccess,
+    required TResult Function(String message) allProductsFailure,
   }) {
     return failure(message);
   }
@@ -636,6 +811,13 @@ class _$FailureImpl implements Failure {
     TResult? Function()? updateLoading,
     TResult? Function()? updateSuccess,
     TResult? Function(String message)? updateFailure,
+    TResult? Function()? addProductLoading,
+    TResult? Function()? addProductSuccess,
+    TResult? Function(String message)? addProductFailure,
+    TResult? Function()? logout,
+    TResult? Function()? allProductsLoading,
+    TResult? Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult? Function(String message)? allProductsFailure,
   }) {
     return failure?.call(message);
   }
@@ -650,6 +832,13 @@ class _$FailureImpl implements Failure {
     TResult Function()? updateLoading,
     TResult Function()? updateSuccess,
     TResult Function(String message)? updateFailure,
+    TResult Function()? addProductLoading,
+    TResult Function()? addProductSuccess,
+    TResult Function(String message)? addProductFailure,
+    TResult Function()? logout,
+    TResult Function()? allProductsLoading,
+    TResult Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult Function(String message)? allProductsFailure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -668,6 +857,13 @@ class _$FailureImpl implements Failure {
     required TResult Function(UpdateLoading value) updateLoading,
     required TResult Function(UpdateSuccess value) updateSuccess,
     required TResult Function(UpdateFailure value) updateFailure,
+    required TResult Function(AddProductLoading value) addProductLoading,
+    required TResult Function(AddProductSuccess value) addProductSuccess,
+    required TResult Function(AddProductFailure value) addProductFailure,
+    required TResult Function(Logout value) logout,
+    required TResult Function(AllProductsLoading value) allProductsLoading,
+    required TResult Function(AllProductsSuccess value) allProductsSuccess,
+    required TResult Function(AllProductsFailure value) allProductsFailure,
   }) {
     return failure(this);
   }
@@ -682,6 +878,13 @@ class _$FailureImpl implements Failure {
     TResult? Function(UpdateLoading value)? updateLoading,
     TResult? Function(UpdateSuccess value)? updateSuccess,
     TResult? Function(UpdateFailure value)? updateFailure,
+    TResult? Function(AddProductLoading value)? addProductLoading,
+    TResult? Function(AddProductSuccess value)? addProductSuccess,
+    TResult? Function(AddProductFailure value)? addProductFailure,
+    TResult? Function(Logout value)? logout,
+    TResult? Function(AllProductsLoading value)? allProductsLoading,
+    TResult? Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult? Function(AllProductsFailure value)? allProductsFailure,
   }) {
     return failure?.call(this);
   }
@@ -696,6 +899,13 @@ class _$FailureImpl implements Failure {
     TResult Function(UpdateLoading value)? updateLoading,
     TResult Function(UpdateSuccess value)? updateSuccess,
     TResult Function(UpdateFailure value)? updateFailure,
+    TResult Function(AddProductLoading value)? addProductLoading,
+    TResult Function(AddProductSuccess value)? addProductSuccess,
+    TResult Function(AddProductFailure value)? addProductFailure,
+    TResult Function(Logout value)? logout,
+    TResult Function(AllProductsLoading value)? allProductsLoading,
+    TResult Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult Function(AllProductsFailure value)? allProductsFailure,
     required TResult orElse(),
   }) {
     if (failure != null) {
@@ -765,6 +975,13 @@ class _$UpdateLoadingImpl implements UpdateLoading {
     required TResult Function() updateLoading,
     required TResult Function() updateSuccess,
     required TResult Function(String message) updateFailure,
+    required TResult Function() addProductLoading,
+    required TResult Function() addProductSuccess,
+    required TResult Function(String message) addProductFailure,
+    required TResult Function() logout,
+    required TResult Function() allProductsLoading,
+    required TResult Function(List<ProductResponse> data) allProductsSuccess,
+    required TResult Function(String message) allProductsFailure,
   }) {
     return updateLoading();
   }
@@ -779,6 +996,13 @@ class _$UpdateLoadingImpl implements UpdateLoading {
     TResult? Function()? updateLoading,
     TResult? Function()? updateSuccess,
     TResult? Function(String message)? updateFailure,
+    TResult? Function()? addProductLoading,
+    TResult? Function()? addProductSuccess,
+    TResult? Function(String message)? addProductFailure,
+    TResult? Function()? logout,
+    TResult? Function()? allProductsLoading,
+    TResult? Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult? Function(String message)? allProductsFailure,
   }) {
     return updateLoading?.call();
   }
@@ -793,6 +1017,13 @@ class _$UpdateLoadingImpl implements UpdateLoading {
     TResult Function()? updateLoading,
     TResult Function()? updateSuccess,
     TResult Function(String message)? updateFailure,
+    TResult Function()? addProductLoading,
+    TResult Function()? addProductSuccess,
+    TResult Function(String message)? addProductFailure,
+    TResult Function()? logout,
+    TResult Function()? allProductsLoading,
+    TResult Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult Function(String message)? allProductsFailure,
     required TResult orElse(),
   }) {
     if (updateLoading != null) {
@@ -811,6 +1042,13 @@ class _$UpdateLoadingImpl implements UpdateLoading {
     required TResult Function(UpdateLoading value) updateLoading,
     required TResult Function(UpdateSuccess value) updateSuccess,
     required TResult Function(UpdateFailure value) updateFailure,
+    required TResult Function(AddProductLoading value) addProductLoading,
+    required TResult Function(AddProductSuccess value) addProductSuccess,
+    required TResult Function(AddProductFailure value) addProductFailure,
+    required TResult Function(Logout value) logout,
+    required TResult Function(AllProductsLoading value) allProductsLoading,
+    required TResult Function(AllProductsSuccess value) allProductsSuccess,
+    required TResult Function(AllProductsFailure value) allProductsFailure,
   }) {
     return updateLoading(this);
   }
@@ -825,6 +1063,13 @@ class _$UpdateLoadingImpl implements UpdateLoading {
     TResult? Function(UpdateLoading value)? updateLoading,
     TResult? Function(UpdateSuccess value)? updateSuccess,
     TResult? Function(UpdateFailure value)? updateFailure,
+    TResult? Function(AddProductLoading value)? addProductLoading,
+    TResult? Function(AddProductSuccess value)? addProductSuccess,
+    TResult? Function(AddProductFailure value)? addProductFailure,
+    TResult? Function(Logout value)? logout,
+    TResult? Function(AllProductsLoading value)? allProductsLoading,
+    TResult? Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult? Function(AllProductsFailure value)? allProductsFailure,
   }) {
     return updateLoading?.call(this);
   }
@@ -839,6 +1084,13 @@ class _$UpdateLoadingImpl implements UpdateLoading {
     TResult Function(UpdateLoading value)? updateLoading,
     TResult Function(UpdateSuccess value)? updateSuccess,
     TResult Function(UpdateFailure value)? updateFailure,
+    TResult Function(AddProductLoading value)? addProductLoading,
+    TResult Function(AddProductSuccess value)? addProductSuccess,
+    TResult Function(AddProductFailure value)? addProductFailure,
+    TResult Function(Logout value)? logout,
+    TResult Function(AllProductsLoading value)? allProductsLoading,
+    TResult Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult Function(AllProductsFailure value)? allProductsFailure,
     required TResult orElse(),
   }) {
     if (updateLoading != null) {
@@ -900,6 +1152,13 @@ class _$UpdateSuccessImpl implements UpdateSuccess {
     required TResult Function() updateLoading,
     required TResult Function() updateSuccess,
     required TResult Function(String message) updateFailure,
+    required TResult Function() addProductLoading,
+    required TResult Function() addProductSuccess,
+    required TResult Function(String message) addProductFailure,
+    required TResult Function() logout,
+    required TResult Function() allProductsLoading,
+    required TResult Function(List<ProductResponse> data) allProductsSuccess,
+    required TResult Function(String message) allProductsFailure,
   }) {
     return updateSuccess();
   }
@@ -914,6 +1173,13 @@ class _$UpdateSuccessImpl implements UpdateSuccess {
     TResult? Function()? updateLoading,
     TResult? Function()? updateSuccess,
     TResult? Function(String message)? updateFailure,
+    TResult? Function()? addProductLoading,
+    TResult? Function()? addProductSuccess,
+    TResult? Function(String message)? addProductFailure,
+    TResult? Function()? logout,
+    TResult? Function()? allProductsLoading,
+    TResult? Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult? Function(String message)? allProductsFailure,
   }) {
     return updateSuccess?.call();
   }
@@ -928,6 +1194,13 @@ class _$UpdateSuccessImpl implements UpdateSuccess {
     TResult Function()? updateLoading,
     TResult Function()? updateSuccess,
     TResult Function(String message)? updateFailure,
+    TResult Function()? addProductLoading,
+    TResult Function()? addProductSuccess,
+    TResult Function(String message)? addProductFailure,
+    TResult Function()? logout,
+    TResult Function()? allProductsLoading,
+    TResult Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult Function(String message)? allProductsFailure,
     required TResult orElse(),
   }) {
     if (updateSuccess != null) {
@@ -946,6 +1219,13 @@ class _$UpdateSuccessImpl implements UpdateSuccess {
     required TResult Function(UpdateLoading value) updateLoading,
     required TResult Function(UpdateSuccess value) updateSuccess,
     required TResult Function(UpdateFailure value) updateFailure,
+    required TResult Function(AddProductLoading value) addProductLoading,
+    required TResult Function(AddProductSuccess value) addProductSuccess,
+    required TResult Function(AddProductFailure value) addProductFailure,
+    required TResult Function(Logout value) logout,
+    required TResult Function(AllProductsLoading value) allProductsLoading,
+    required TResult Function(AllProductsSuccess value) allProductsSuccess,
+    required TResult Function(AllProductsFailure value) allProductsFailure,
   }) {
     return updateSuccess(this);
   }
@@ -960,6 +1240,13 @@ class _$UpdateSuccessImpl implements UpdateSuccess {
     TResult? Function(UpdateLoading value)? updateLoading,
     TResult? Function(UpdateSuccess value)? updateSuccess,
     TResult? Function(UpdateFailure value)? updateFailure,
+    TResult? Function(AddProductLoading value)? addProductLoading,
+    TResult? Function(AddProductSuccess value)? addProductSuccess,
+    TResult? Function(AddProductFailure value)? addProductFailure,
+    TResult? Function(Logout value)? logout,
+    TResult? Function(AllProductsLoading value)? allProductsLoading,
+    TResult? Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult? Function(AllProductsFailure value)? allProductsFailure,
   }) {
     return updateSuccess?.call(this);
   }
@@ -974,6 +1261,13 @@ class _$UpdateSuccessImpl implements UpdateSuccess {
     TResult Function(UpdateLoading value)? updateLoading,
     TResult Function(UpdateSuccess value)? updateSuccess,
     TResult Function(UpdateFailure value)? updateFailure,
+    TResult Function(AddProductLoading value)? addProductLoading,
+    TResult Function(AddProductSuccess value)? addProductSuccess,
+    TResult Function(AddProductFailure value)? addProductFailure,
+    TResult Function(Logout value)? logout,
+    TResult Function(AllProductsLoading value)? allProductsLoading,
+    TResult Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult Function(AllProductsFailure value)? allProductsFailure,
     required TResult orElse(),
   }) {
     if (updateSuccess != null) {
@@ -1062,6 +1356,13 @@ class _$UpdateFailureImpl implements UpdateFailure {
     required TResult Function() updateLoading,
     required TResult Function() updateSuccess,
     required TResult Function(String message) updateFailure,
+    required TResult Function() addProductLoading,
+    required TResult Function() addProductSuccess,
+    required TResult Function(String message) addProductFailure,
+    required TResult Function() logout,
+    required TResult Function() allProductsLoading,
+    required TResult Function(List<ProductResponse> data) allProductsSuccess,
+    required TResult Function(String message) allProductsFailure,
   }) {
     return updateFailure(message);
   }
@@ -1076,6 +1377,13 @@ class _$UpdateFailureImpl implements UpdateFailure {
     TResult? Function()? updateLoading,
     TResult? Function()? updateSuccess,
     TResult? Function(String message)? updateFailure,
+    TResult? Function()? addProductLoading,
+    TResult? Function()? addProductSuccess,
+    TResult? Function(String message)? addProductFailure,
+    TResult? Function()? logout,
+    TResult? Function()? allProductsLoading,
+    TResult? Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult? Function(String message)? allProductsFailure,
   }) {
     return updateFailure?.call(message);
   }
@@ -1090,6 +1398,13 @@ class _$UpdateFailureImpl implements UpdateFailure {
     TResult Function()? updateLoading,
     TResult Function()? updateSuccess,
     TResult Function(String message)? updateFailure,
+    TResult Function()? addProductLoading,
+    TResult Function()? addProductSuccess,
+    TResult Function(String message)? addProductFailure,
+    TResult Function()? logout,
+    TResult Function()? allProductsLoading,
+    TResult Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult Function(String message)? allProductsFailure,
     required TResult orElse(),
   }) {
     if (updateFailure != null) {
@@ -1108,6 +1423,13 @@ class _$UpdateFailureImpl implements UpdateFailure {
     required TResult Function(UpdateLoading value) updateLoading,
     required TResult Function(UpdateSuccess value) updateSuccess,
     required TResult Function(UpdateFailure value) updateFailure,
+    required TResult Function(AddProductLoading value) addProductLoading,
+    required TResult Function(AddProductSuccess value) addProductSuccess,
+    required TResult Function(AddProductFailure value) addProductFailure,
+    required TResult Function(Logout value) logout,
+    required TResult Function(AllProductsLoading value) allProductsLoading,
+    required TResult Function(AllProductsSuccess value) allProductsSuccess,
+    required TResult Function(AllProductsFailure value) allProductsFailure,
   }) {
     return updateFailure(this);
   }
@@ -1122,6 +1444,13 @@ class _$UpdateFailureImpl implements UpdateFailure {
     TResult? Function(UpdateLoading value)? updateLoading,
     TResult? Function(UpdateSuccess value)? updateSuccess,
     TResult? Function(UpdateFailure value)? updateFailure,
+    TResult? Function(AddProductLoading value)? addProductLoading,
+    TResult? Function(AddProductSuccess value)? addProductSuccess,
+    TResult? Function(AddProductFailure value)? addProductFailure,
+    TResult? Function(Logout value)? logout,
+    TResult? Function(AllProductsLoading value)? allProductsLoading,
+    TResult? Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult? Function(AllProductsFailure value)? allProductsFailure,
   }) {
     return updateFailure?.call(this);
   }
@@ -1136,6 +1465,13 @@ class _$UpdateFailureImpl implements UpdateFailure {
     TResult Function(UpdateLoading value)? updateLoading,
     TResult Function(UpdateSuccess value)? updateSuccess,
     TResult Function(UpdateFailure value)? updateFailure,
+    TResult Function(AddProductLoading value)? addProductLoading,
+    TResult Function(AddProductSuccess value)? addProductSuccess,
+    TResult Function(AddProductFailure value)? addProductFailure,
+    TResult Function(Logout value)? logout,
+    TResult Function(AllProductsLoading value)? allProductsLoading,
+    TResult Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult Function(AllProductsFailure value)? allProductsFailure,
     required TResult orElse(),
   }) {
     if (updateFailure != null) {
@@ -1154,5 +1490,1362 @@ abstract class UpdateFailure implements StoreStoreState {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdateFailureImplCopyWith<_$UpdateFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddProductLoadingImplCopyWith<$Res> {
+  factory _$$AddProductLoadingImplCopyWith(_$AddProductLoadingImpl value,
+          $Res Function(_$AddProductLoadingImpl) then) =
+      __$$AddProductLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddProductLoadingImplCopyWithImpl<$Res>
+    extends _$StoreStoreStateCopyWithImpl<$Res, _$AddProductLoadingImpl>
+    implements _$$AddProductLoadingImplCopyWith<$Res> {
+  __$$AddProductLoadingImplCopyWithImpl(_$AddProductLoadingImpl _value,
+      $Res Function(_$AddProductLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AddProductLoadingImpl implements AddProductLoading {
+  const _$AddProductLoadingImpl();
+
+  @override
+  String toString() {
+    return 'StoreStoreState.addProductLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AddProductLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(StoreInfoResponse data) success,
+    required TResult Function(String message) failure,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateFailure,
+    required TResult Function() addProductLoading,
+    required TResult Function() addProductSuccess,
+    required TResult Function(String message) addProductFailure,
+    required TResult Function() logout,
+    required TResult Function() allProductsLoading,
+    required TResult Function(List<ProductResponse> data) allProductsSuccess,
+    required TResult Function(String message) allProductsFailure,
+  }) {
+    return addProductLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(StoreInfoResponse data)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateFailure,
+    TResult? Function()? addProductLoading,
+    TResult? Function()? addProductSuccess,
+    TResult? Function(String message)? addProductFailure,
+    TResult? Function()? logout,
+    TResult? Function()? allProductsLoading,
+    TResult? Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult? Function(String message)? allProductsFailure,
+  }) {
+    return addProductLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(StoreInfoResponse data)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateFailure,
+    TResult Function()? addProductLoading,
+    TResult Function()? addProductSuccess,
+    TResult Function(String message)? addProductFailure,
+    TResult Function()? logout,
+    TResult Function()? allProductsLoading,
+    TResult Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult Function(String message)? allProductsFailure,
+    required TResult orElse(),
+  }) {
+    if (addProductLoading != null) {
+      return addProductLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(UpdateLoading value) updateLoading,
+    required TResult Function(UpdateSuccess value) updateSuccess,
+    required TResult Function(UpdateFailure value) updateFailure,
+    required TResult Function(AddProductLoading value) addProductLoading,
+    required TResult Function(AddProductSuccess value) addProductSuccess,
+    required TResult Function(AddProductFailure value) addProductFailure,
+    required TResult Function(Logout value) logout,
+    required TResult Function(AllProductsLoading value) allProductsLoading,
+    required TResult Function(AllProductsSuccess value) allProductsSuccess,
+    required TResult Function(AllProductsFailure value) allProductsFailure,
+  }) {
+    return addProductLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateLoading value)? updateLoading,
+    TResult? Function(UpdateSuccess value)? updateSuccess,
+    TResult? Function(UpdateFailure value)? updateFailure,
+    TResult? Function(AddProductLoading value)? addProductLoading,
+    TResult? Function(AddProductSuccess value)? addProductSuccess,
+    TResult? Function(AddProductFailure value)? addProductFailure,
+    TResult? Function(Logout value)? logout,
+    TResult? Function(AllProductsLoading value)? allProductsLoading,
+    TResult? Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult? Function(AllProductsFailure value)? allProductsFailure,
+  }) {
+    return addProductLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(UpdateLoading value)? updateLoading,
+    TResult Function(UpdateSuccess value)? updateSuccess,
+    TResult Function(UpdateFailure value)? updateFailure,
+    TResult Function(AddProductLoading value)? addProductLoading,
+    TResult Function(AddProductSuccess value)? addProductSuccess,
+    TResult Function(AddProductFailure value)? addProductFailure,
+    TResult Function(Logout value)? logout,
+    TResult Function(AllProductsLoading value)? allProductsLoading,
+    TResult Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult Function(AllProductsFailure value)? allProductsFailure,
+    required TResult orElse(),
+  }) {
+    if (addProductLoading != null) {
+      return addProductLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddProductLoading implements StoreStoreState {
+  const factory AddProductLoading() = _$AddProductLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$AddProductSuccessImplCopyWith<$Res> {
+  factory _$$AddProductSuccessImplCopyWith(_$AddProductSuccessImpl value,
+          $Res Function(_$AddProductSuccessImpl) then) =
+      __$$AddProductSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddProductSuccessImplCopyWithImpl<$Res>
+    extends _$StoreStoreStateCopyWithImpl<$Res, _$AddProductSuccessImpl>
+    implements _$$AddProductSuccessImplCopyWith<$Res> {
+  __$$AddProductSuccessImplCopyWithImpl(_$AddProductSuccessImpl _value,
+      $Res Function(_$AddProductSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AddProductSuccessImpl implements AddProductSuccess {
+  const _$AddProductSuccessImpl();
+
+  @override
+  String toString() {
+    return 'StoreStoreState.addProductSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AddProductSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(StoreInfoResponse data) success,
+    required TResult Function(String message) failure,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateFailure,
+    required TResult Function() addProductLoading,
+    required TResult Function() addProductSuccess,
+    required TResult Function(String message) addProductFailure,
+    required TResult Function() logout,
+    required TResult Function() allProductsLoading,
+    required TResult Function(List<ProductResponse> data) allProductsSuccess,
+    required TResult Function(String message) allProductsFailure,
+  }) {
+    return addProductSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(StoreInfoResponse data)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateFailure,
+    TResult? Function()? addProductLoading,
+    TResult? Function()? addProductSuccess,
+    TResult? Function(String message)? addProductFailure,
+    TResult? Function()? logout,
+    TResult? Function()? allProductsLoading,
+    TResult? Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult? Function(String message)? allProductsFailure,
+  }) {
+    return addProductSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(StoreInfoResponse data)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateFailure,
+    TResult Function()? addProductLoading,
+    TResult Function()? addProductSuccess,
+    TResult Function(String message)? addProductFailure,
+    TResult Function()? logout,
+    TResult Function()? allProductsLoading,
+    TResult Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult Function(String message)? allProductsFailure,
+    required TResult orElse(),
+  }) {
+    if (addProductSuccess != null) {
+      return addProductSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(UpdateLoading value) updateLoading,
+    required TResult Function(UpdateSuccess value) updateSuccess,
+    required TResult Function(UpdateFailure value) updateFailure,
+    required TResult Function(AddProductLoading value) addProductLoading,
+    required TResult Function(AddProductSuccess value) addProductSuccess,
+    required TResult Function(AddProductFailure value) addProductFailure,
+    required TResult Function(Logout value) logout,
+    required TResult Function(AllProductsLoading value) allProductsLoading,
+    required TResult Function(AllProductsSuccess value) allProductsSuccess,
+    required TResult Function(AllProductsFailure value) allProductsFailure,
+  }) {
+    return addProductSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateLoading value)? updateLoading,
+    TResult? Function(UpdateSuccess value)? updateSuccess,
+    TResult? Function(UpdateFailure value)? updateFailure,
+    TResult? Function(AddProductLoading value)? addProductLoading,
+    TResult? Function(AddProductSuccess value)? addProductSuccess,
+    TResult? Function(AddProductFailure value)? addProductFailure,
+    TResult? Function(Logout value)? logout,
+    TResult? Function(AllProductsLoading value)? allProductsLoading,
+    TResult? Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult? Function(AllProductsFailure value)? allProductsFailure,
+  }) {
+    return addProductSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(UpdateLoading value)? updateLoading,
+    TResult Function(UpdateSuccess value)? updateSuccess,
+    TResult Function(UpdateFailure value)? updateFailure,
+    TResult Function(AddProductLoading value)? addProductLoading,
+    TResult Function(AddProductSuccess value)? addProductSuccess,
+    TResult Function(AddProductFailure value)? addProductFailure,
+    TResult Function(Logout value)? logout,
+    TResult Function(AllProductsLoading value)? allProductsLoading,
+    TResult Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult Function(AllProductsFailure value)? allProductsFailure,
+    required TResult orElse(),
+  }) {
+    if (addProductSuccess != null) {
+      return addProductSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddProductSuccess implements StoreStoreState {
+  const factory AddProductSuccess() = _$AddProductSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$AddProductFailureImplCopyWith<$Res> {
+  factory _$$AddProductFailureImplCopyWith(_$AddProductFailureImpl value,
+          $Res Function(_$AddProductFailureImpl) then) =
+      __$$AddProductFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$AddProductFailureImplCopyWithImpl<$Res>
+    extends _$StoreStoreStateCopyWithImpl<$Res, _$AddProductFailureImpl>
+    implements _$$AddProductFailureImplCopyWith<$Res> {
+  __$$AddProductFailureImplCopyWithImpl(_$AddProductFailureImpl _value,
+      $Res Function(_$AddProductFailureImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$AddProductFailureImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddProductFailureImpl implements AddProductFailure {
+  const _$AddProductFailureImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'StoreStoreState.addProductFailure(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddProductFailureImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddProductFailureImplCopyWith<_$AddProductFailureImpl> get copyWith =>
+      __$$AddProductFailureImplCopyWithImpl<_$AddProductFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(StoreInfoResponse data) success,
+    required TResult Function(String message) failure,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateFailure,
+    required TResult Function() addProductLoading,
+    required TResult Function() addProductSuccess,
+    required TResult Function(String message) addProductFailure,
+    required TResult Function() logout,
+    required TResult Function() allProductsLoading,
+    required TResult Function(List<ProductResponse> data) allProductsSuccess,
+    required TResult Function(String message) allProductsFailure,
+  }) {
+    return addProductFailure(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(StoreInfoResponse data)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateFailure,
+    TResult? Function()? addProductLoading,
+    TResult? Function()? addProductSuccess,
+    TResult? Function(String message)? addProductFailure,
+    TResult? Function()? logout,
+    TResult? Function()? allProductsLoading,
+    TResult? Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult? Function(String message)? allProductsFailure,
+  }) {
+    return addProductFailure?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(StoreInfoResponse data)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateFailure,
+    TResult Function()? addProductLoading,
+    TResult Function()? addProductSuccess,
+    TResult Function(String message)? addProductFailure,
+    TResult Function()? logout,
+    TResult Function()? allProductsLoading,
+    TResult Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult Function(String message)? allProductsFailure,
+    required TResult orElse(),
+  }) {
+    if (addProductFailure != null) {
+      return addProductFailure(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(UpdateLoading value) updateLoading,
+    required TResult Function(UpdateSuccess value) updateSuccess,
+    required TResult Function(UpdateFailure value) updateFailure,
+    required TResult Function(AddProductLoading value) addProductLoading,
+    required TResult Function(AddProductSuccess value) addProductSuccess,
+    required TResult Function(AddProductFailure value) addProductFailure,
+    required TResult Function(Logout value) logout,
+    required TResult Function(AllProductsLoading value) allProductsLoading,
+    required TResult Function(AllProductsSuccess value) allProductsSuccess,
+    required TResult Function(AllProductsFailure value) allProductsFailure,
+  }) {
+    return addProductFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateLoading value)? updateLoading,
+    TResult? Function(UpdateSuccess value)? updateSuccess,
+    TResult? Function(UpdateFailure value)? updateFailure,
+    TResult? Function(AddProductLoading value)? addProductLoading,
+    TResult? Function(AddProductSuccess value)? addProductSuccess,
+    TResult? Function(AddProductFailure value)? addProductFailure,
+    TResult? Function(Logout value)? logout,
+    TResult? Function(AllProductsLoading value)? allProductsLoading,
+    TResult? Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult? Function(AllProductsFailure value)? allProductsFailure,
+  }) {
+    return addProductFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(UpdateLoading value)? updateLoading,
+    TResult Function(UpdateSuccess value)? updateSuccess,
+    TResult Function(UpdateFailure value)? updateFailure,
+    TResult Function(AddProductLoading value)? addProductLoading,
+    TResult Function(AddProductSuccess value)? addProductSuccess,
+    TResult Function(AddProductFailure value)? addProductFailure,
+    TResult Function(Logout value)? logout,
+    TResult Function(AllProductsLoading value)? allProductsLoading,
+    TResult Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult Function(AllProductsFailure value)? allProductsFailure,
+    required TResult orElse(),
+  }) {
+    if (addProductFailure != null) {
+      return addProductFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddProductFailure implements StoreStoreState {
+  const factory AddProductFailure(final String message) =
+      _$AddProductFailureImpl;
+
+  String get message;
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddProductFailureImplCopyWith<_$AddProductFailureImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$LogoutImplCopyWith<$Res> {
+  factory _$$LogoutImplCopyWith(
+          _$LogoutImpl value, $Res Function(_$LogoutImpl) then) =
+      __$$LogoutImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$LogoutImplCopyWithImpl<$Res>
+    extends _$StoreStoreStateCopyWithImpl<$Res, _$LogoutImpl>
+    implements _$$LogoutImplCopyWith<$Res> {
+  __$$LogoutImplCopyWithImpl(
+      _$LogoutImpl _value, $Res Function(_$LogoutImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$LogoutImpl implements Logout {
+  const _$LogoutImpl();
+
+  @override
+  String toString() {
+    return 'StoreStoreState.logout()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$LogoutImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(StoreInfoResponse data) success,
+    required TResult Function(String message) failure,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateFailure,
+    required TResult Function() addProductLoading,
+    required TResult Function() addProductSuccess,
+    required TResult Function(String message) addProductFailure,
+    required TResult Function() logout,
+    required TResult Function() allProductsLoading,
+    required TResult Function(List<ProductResponse> data) allProductsSuccess,
+    required TResult Function(String message) allProductsFailure,
+  }) {
+    return logout();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(StoreInfoResponse data)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateFailure,
+    TResult? Function()? addProductLoading,
+    TResult? Function()? addProductSuccess,
+    TResult? Function(String message)? addProductFailure,
+    TResult? Function()? logout,
+    TResult? Function()? allProductsLoading,
+    TResult? Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult? Function(String message)? allProductsFailure,
+  }) {
+    return logout?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(StoreInfoResponse data)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateFailure,
+    TResult Function()? addProductLoading,
+    TResult Function()? addProductSuccess,
+    TResult Function(String message)? addProductFailure,
+    TResult Function()? logout,
+    TResult Function()? allProductsLoading,
+    TResult Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult Function(String message)? allProductsFailure,
+    required TResult orElse(),
+  }) {
+    if (logout != null) {
+      return logout();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(UpdateLoading value) updateLoading,
+    required TResult Function(UpdateSuccess value) updateSuccess,
+    required TResult Function(UpdateFailure value) updateFailure,
+    required TResult Function(AddProductLoading value) addProductLoading,
+    required TResult Function(AddProductSuccess value) addProductSuccess,
+    required TResult Function(AddProductFailure value) addProductFailure,
+    required TResult Function(Logout value) logout,
+    required TResult Function(AllProductsLoading value) allProductsLoading,
+    required TResult Function(AllProductsSuccess value) allProductsSuccess,
+    required TResult Function(AllProductsFailure value) allProductsFailure,
+  }) {
+    return logout(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateLoading value)? updateLoading,
+    TResult? Function(UpdateSuccess value)? updateSuccess,
+    TResult? Function(UpdateFailure value)? updateFailure,
+    TResult? Function(AddProductLoading value)? addProductLoading,
+    TResult? Function(AddProductSuccess value)? addProductSuccess,
+    TResult? Function(AddProductFailure value)? addProductFailure,
+    TResult? Function(Logout value)? logout,
+    TResult? Function(AllProductsLoading value)? allProductsLoading,
+    TResult? Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult? Function(AllProductsFailure value)? allProductsFailure,
+  }) {
+    return logout?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(UpdateLoading value)? updateLoading,
+    TResult Function(UpdateSuccess value)? updateSuccess,
+    TResult Function(UpdateFailure value)? updateFailure,
+    TResult Function(AddProductLoading value)? addProductLoading,
+    TResult Function(AddProductSuccess value)? addProductSuccess,
+    TResult Function(AddProductFailure value)? addProductFailure,
+    TResult Function(Logout value)? logout,
+    TResult Function(AllProductsLoading value)? allProductsLoading,
+    TResult Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult Function(AllProductsFailure value)? allProductsFailure,
+    required TResult orElse(),
+  }) {
+    if (logout != null) {
+      return logout(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class Logout implements StoreStoreState {
+  const factory Logout() = _$LogoutImpl;
+}
+
+/// @nodoc
+abstract class _$$AllProductsLoadingImplCopyWith<$Res> {
+  factory _$$AllProductsLoadingImplCopyWith(_$AllProductsLoadingImpl value,
+          $Res Function(_$AllProductsLoadingImpl) then) =
+      __$$AllProductsLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AllProductsLoadingImplCopyWithImpl<$Res>
+    extends _$StoreStoreStateCopyWithImpl<$Res, _$AllProductsLoadingImpl>
+    implements _$$AllProductsLoadingImplCopyWith<$Res> {
+  __$$AllProductsLoadingImplCopyWithImpl(_$AllProductsLoadingImpl _value,
+      $Res Function(_$AllProductsLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AllProductsLoadingImpl implements AllProductsLoading {
+  const _$AllProductsLoadingImpl();
+
+  @override
+  String toString() {
+    return 'StoreStoreState.allProductsLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AllProductsLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(StoreInfoResponse data) success,
+    required TResult Function(String message) failure,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateFailure,
+    required TResult Function() addProductLoading,
+    required TResult Function() addProductSuccess,
+    required TResult Function(String message) addProductFailure,
+    required TResult Function() logout,
+    required TResult Function() allProductsLoading,
+    required TResult Function(List<ProductResponse> data) allProductsSuccess,
+    required TResult Function(String message) allProductsFailure,
+  }) {
+    return allProductsLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(StoreInfoResponse data)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateFailure,
+    TResult? Function()? addProductLoading,
+    TResult? Function()? addProductSuccess,
+    TResult? Function(String message)? addProductFailure,
+    TResult? Function()? logout,
+    TResult? Function()? allProductsLoading,
+    TResult? Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult? Function(String message)? allProductsFailure,
+  }) {
+    return allProductsLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(StoreInfoResponse data)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateFailure,
+    TResult Function()? addProductLoading,
+    TResult Function()? addProductSuccess,
+    TResult Function(String message)? addProductFailure,
+    TResult Function()? logout,
+    TResult Function()? allProductsLoading,
+    TResult Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult Function(String message)? allProductsFailure,
+    required TResult orElse(),
+  }) {
+    if (allProductsLoading != null) {
+      return allProductsLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(UpdateLoading value) updateLoading,
+    required TResult Function(UpdateSuccess value) updateSuccess,
+    required TResult Function(UpdateFailure value) updateFailure,
+    required TResult Function(AddProductLoading value) addProductLoading,
+    required TResult Function(AddProductSuccess value) addProductSuccess,
+    required TResult Function(AddProductFailure value) addProductFailure,
+    required TResult Function(Logout value) logout,
+    required TResult Function(AllProductsLoading value) allProductsLoading,
+    required TResult Function(AllProductsSuccess value) allProductsSuccess,
+    required TResult Function(AllProductsFailure value) allProductsFailure,
+  }) {
+    return allProductsLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateLoading value)? updateLoading,
+    TResult? Function(UpdateSuccess value)? updateSuccess,
+    TResult? Function(UpdateFailure value)? updateFailure,
+    TResult? Function(AddProductLoading value)? addProductLoading,
+    TResult? Function(AddProductSuccess value)? addProductSuccess,
+    TResult? Function(AddProductFailure value)? addProductFailure,
+    TResult? Function(Logout value)? logout,
+    TResult? Function(AllProductsLoading value)? allProductsLoading,
+    TResult? Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult? Function(AllProductsFailure value)? allProductsFailure,
+  }) {
+    return allProductsLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(UpdateLoading value)? updateLoading,
+    TResult Function(UpdateSuccess value)? updateSuccess,
+    TResult Function(UpdateFailure value)? updateFailure,
+    TResult Function(AddProductLoading value)? addProductLoading,
+    TResult Function(AddProductSuccess value)? addProductSuccess,
+    TResult Function(AddProductFailure value)? addProductFailure,
+    TResult Function(Logout value)? logout,
+    TResult Function(AllProductsLoading value)? allProductsLoading,
+    TResult Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult Function(AllProductsFailure value)? allProductsFailure,
+    required TResult orElse(),
+  }) {
+    if (allProductsLoading != null) {
+      return allProductsLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AllProductsLoading implements StoreStoreState {
+  const factory AllProductsLoading() = _$AllProductsLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$AllProductsSuccessImplCopyWith<$Res> {
+  factory _$$AllProductsSuccessImplCopyWith(_$AllProductsSuccessImpl value,
+          $Res Function(_$AllProductsSuccessImpl) then) =
+      __$$AllProductsSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<ProductResponse> data});
+}
+
+/// @nodoc
+class __$$AllProductsSuccessImplCopyWithImpl<$Res>
+    extends _$StoreStoreStateCopyWithImpl<$Res, _$AllProductsSuccessImpl>
+    implements _$$AllProductsSuccessImplCopyWith<$Res> {
+  __$$AllProductsSuccessImplCopyWithImpl(_$AllProductsSuccessImpl _value,
+      $Res Function(_$AllProductsSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? data = null,
+  }) {
+    return _then(_$AllProductsSuccessImpl(
+      null == data
+          ? _value._data
+          : data // ignore: cast_nullable_to_non_nullable
+              as List<ProductResponse>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AllProductsSuccessImpl implements AllProductsSuccess {
+  const _$AllProductsSuccessImpl(final List<ProductResponse> data)
+      : _data = data;
+
+  final List<ProductResponse> _data;
+  @override
+  List<ProductResponse> get data {
+    if (_data is EqualUnmodifiableListView) return _data;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_data);
+  }
+
+  @override
+  String toString() {
+    return 'StoreStoreState.allProductsSuccess(data: $data)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AllProductsSuccessImpl &&
+            const DeepCollectionEquality().equals(other._data, _data));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_data));
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AllProductsSuccessImplCopyWith<_$AllProductsSuccessImpl> get copyWith =>
+      __$$AllProductsSuccessImplCopyWithImpl<_$AllProductsSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(StoreInfoResponse data) success,
+    required TResult Function(String message) failure,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateFailure,
+    required TResult Function() addProductLoading,
+    required TResult Function() addProductSuccess,
+    required TResult Function(String message) addProductFailure,
+    required TResult Function() logout,
+    required TResult Function() allProductsLoading,
+    required TResult Function(List<ProductResponse> data) allProductsSuccess,
+    required TResult Function(String message) allProductsFailure,
+  }) {
+    return allProductsSuccess(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(StoreInfoResponse data)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateFailure,
+    TResult? Function()? addProductLoading,
+    TResult? Function()? addProductSuccess,
+    TResult? Function(String message)? addProductFailure,
+    TResult? Function()? logout,
+    TResult? Function()? allProductsLoading,
+    TResult? Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult? Function(String message)? allProductsFailure,
+  }) {
+    return allProductsSuccess?.call(data);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(StoreInfoResponse data)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateFailure,
+    TResult Function()? addProductLoading,
+    TResult Function()? addProductSuccess,
+    TResult Function(String message)? addProductFailure,
+    TResult Function()? logout,
+    TResult Function()? allProductsLoading,
+    TResult Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult Function(String message)? allProductsFailure,
+    required TResult orElse(),
+  }) {
+    if (allProductsSuccess != null) {
+      return allProductsSuccess(data);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(UpdateLoading value) updateLoading,
+    required TResult Function(UpdateSuccess value) updateSuccess,
+    required TResult Function(UpdateFailure value) updateFailure,
+    required TResult Function(AddProductLoading value) addProductLoading,
+    required TResult Function(AddProductSuccess value) addProductSuccess,
+    required TResult Function(AddProductFailure value) addProductFailure,
+    required TResult Function(Logout value) logout,
+    required TResult Function(AllProductsLoading value) allProductsLoading,
+    required TResult Function(AllProductsSuccess value) allProductsSuccess,
+    required TResult Function(AllProductsFailure value) allProductsFailure,
+  }) {
+    return allProductsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateLoading value)? updateLoading,
+    TResult? Function(UpdateSuccess value)? updateSuccess,
+    TResult? Function(UpdateFailure value)? updateFailure,
+    TResult? Function(AddProductLoading value)? addProductLoading,
+    TResult? Function(AddProductSuccess value)? addProductSuccess,
+    TResult? Function(AddProductFailure value)? addProductFailure,
+    TResult? Function(Logout value)? logout,
+    TResult? Function(AllProductsLoading value)? allProductsLoading,
+    TResult? Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult? Function(AllProductsFailure value)? allProductsFailure,
+  }) {
+    return allProductsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(UpdateLoading value)? updateLoading,
+    TResult Function(UpdateSuccess value)? updateSuccess,
+    TResult Function(UpdateFailure value)? updateFailure,
+    TResult Function(AddProductLoading value)? addProductLoading,
+    TResult Function(AddProductSuccess value)? addProductSuccess,
+    TResult Function(AddProductFailure value)? addProductFailure,
+    TResult Function(Logout value)? logout,
+    TResult Function(AllProductsLoading value)? allProductsLoading,
+    TResult Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult Function(AllProductsFailure value)? allProductsFailure,
+    required TResult orElse(),
+  }) {
+    if (allProductsSuccess != null) {
+      return allProductsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AllProductsSuccess implements StoreStoreState {
+  const factory AllProductsSuccess(final List<ProductResponse> data) =
+      _$AllProductsSuccessImpl;
+
+  List<ProductResponse> get data;
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AllProductsSuccessImplCopyWith<_$AllProductsSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AllProductsFailureImplCopyWith<$Res> {
+  factory _$$AllProductsFailureImplCopyWith(_$AllProductsFailureImpl value,
+          $Res Function(_$AllProductsFailureImpl) then) =
+      __$$AllProductsFailureImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$AllProductsFailureImplCopyWithImpl<$Res>
+    extends _$StoreStoreStateCopyWithImpl<$Res, _$AllProductsFailureImpl>
+    implements _$$AllProductsFailureImplCopyWith<$Res> {
+  __$$AllProductsFailureImplCopyWithImpl(_$AllProductsFailureImpl _value,
+      $Res Function(_$AllProductsFailureImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$AllProductsFailureImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AllProductsFailureImpl implements AllProductsFailure {
+  const _$AllProductsFailureImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'StoreStoreState.allProductsFailure(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AllProductsFailureImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AllProductsFailureImplCopyWith<_$AllProductsFailureImpl> get copyWith =>
+      __$$AllProductsFailureImplCopyWithImpl<_$AllProductsFailureImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(StoreInfoResponse data) success,
+    required TResult Function(String message) failure,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateFailure,
+    required TResult Function() addProductLoading,
+    required TResult Function() addProductSuccess,
+    required TResult Function(String message) addProductFailure,
+    required TResult Function() logout,
+    required TResult Function() allProductsLoading,
+    required TResult Function(List<ProductResponse> data) allProductsSuccess,
+    required TResult Function(String message) allProductsFailure,
+  }) {
+    return allProductsFailure(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(StoreInfoResponse data)? success,
+    TResult? Function(String message)? failure,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateFailure,
+    TResult? Function()? addProductLoading,
+    TResult? Function()? addProductSuccess,
+    TResult? Function(String message)? addProductFailure,
+    TResult? Function()? logout,
+    TResult? Function()? allProductsLoading,
+    TResult? Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult? Function(String message)? allProductsFailure,
+  }) {
+    return allProductsFailure?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(StoreInfoResponse data)? success,
+    TResult Function(String message)? failure,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateFailure,
+    TResult Function()? addProductLoading,
+    TResult Function()? addProductSuccess,
+    TResult Function(String message)? addProductFailure,
+    TResult Function()? logout,
+    TResult Function()? allProductsLoading,
+    TResult Function(List<ProductResponse> data)? allProductsSuccess,
+    TResult Function(String message)? allProductsFailure,
+    required TResult orElse(),
+  }) {
+    if (allProductsFailure != null) {
+      return allProductsFailure(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Failure value) failure,
+    required TResult Function(UpdateLoading value) updateLoading,
+    required TResult Function(UpdateSuccess value) updateSuccess,
+    required TResult Function(UpdateFailure value) updateFailure,
+    required TResult Function(AddProductLoading value) addProductLoading,
+    required TResult Function(AddProductSuccess value) addProductSuccess,
+    required TResult Function(AddProductFailure value) addProductFailure,
+    required TResult Function(Logout value) logout,
+    required TResult Function(AllProductsLoading value) allProductsLoading,
+    required TResult Function(AllProductsSuccess value) allProductsSuccess,
+    required TResult Function(AllProductsFailure value) allProductsFailure,
+  }) {
+    return allProductsFailure(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Failure value)? failure,
+    TResult? Function(UpdateLoading value)? updateLoading,
+    TResult? Function(UpdateSuccess value)? updateSuccess,
+    TResult? Function(UpdateFailure value)? updateFailure,
+    TResult? Function(AddProductLoading value)? addProductLoading,
+    TResult? Function(AddProductSuccess value)? addProductSuccess,
+    TResult? Function(AddProductFailure value)? addProductFailure,
+    TResult? Function(Logout value)? logout,
+    TResult? Function(AllProductsLoading value)? allProductsLoading,
+    TResult? Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult? Function(AllProductsFailure value)? allProductsFailure,
+  }) {
+    return allProductsFailure?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Failure value)? failure,
+    TResult Function(UpdateLoading value)? updateLoading,
+    TResult Function(UpdateSuccess value)? updateSuccess,
+    TResult Function(UpdateFailure value)? updateFailure,
+    TResult Function(AddProductLoading value)? addProductLoading,
+    TResult Function(AddProductSuccess value)? addProductSuccess,
+    TResult Function(AddProductFailure value)? addProductFailure,
+    TResult Function(Logout value)? logout,
+    TResult Function(AllProductsLoading value)? allProductsLoading,
+    TResult Function(AllProductsSuccess value)? allProductsSuccess,
+    TResult Function(AllProductsFailure value)? allProductsFailure,
+    required TResult orElse(),
+  }) {
+    if (allProductsFailure != null) {
+      return allProductsFailure(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AllProductsFailure implements StoreStoreState {
+  const factory AllProductsFailure(final String message) =
+      _$AllProductsFailureImpl;
+
+  String get message;
+
+  /// Create a copy of StoreStoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AllProductsFailureImplCopyWith<_$AllProductsFailureImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

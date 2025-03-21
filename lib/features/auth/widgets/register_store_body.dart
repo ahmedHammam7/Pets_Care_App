@@ -177,7 +177,7 @@ class _RegisterScreenBodyState extends State<RegisterStoreBody> {
                         text: "Doctor",
                         onPressed: () {
                           context.pushNamedAndRemoveUntil(
-                              Routes.registerDoctorScreen,
+                              Routes.loginScreen, (route) => false,
                               predicate: (Route<dynamic> route) => false);
                         },
                       ),
@@ -185,7 +185,8 @@ class _RegisterScreenBodyState extends State<RegisterStoreBody> {
                       PrimaryTextButton(
                         text: "User",
                         onPressed: () {
-                          context.pushNamedAndRemoveUntil(Routes.registerScreen,
+                          context.pushNamedAndRemoveUntil(
+                              Routes.loginScreen, (route) => false,
                               predicate: (Route<dynamic> route) => false);
                         },
                       ),
@@ -217,7 +218,8 @@ class _RegisterScreenBodyState extends State<RegisterStoreBody> {
                     text1: "Already have an account?",
                     text2: " Login",
                     onTap: () {
-                      context.pushNamedAndRemoveUntil(Routes.loginScreen,
+                      context.pushNamedAndRemoveUntil(
+                          Routes.loginScreen, (route) => false,
                           predicate: (Route<dynamic> route) => false);
                     },
                   ),

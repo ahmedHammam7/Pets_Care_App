@@ -14,7 +14,7 @@ class ApiErrorHandler {
         case DioExceptionType.unknown:
           return ApiErrorModel(
               message:
-                  "Connection to the server failed due to internet connection");
+                  "Connection to the server failed due to an unknown error");
         case DioExceptionType.receiveTimeout:
           return ApiErrorModel(
               message: "Receive timeout in connection with the server");

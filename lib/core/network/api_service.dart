@@ -38,4 +38,8 @@ abstract class ApiService {
   @POST(ApiConstant.profile)
   Future<dynamic> updateProfile(
       @Header('Authorization') String token, @Body() Map<String, dynamic> body);
+
+  @POST(ApiConstant.items)
+  Future<dynamic> addProduct(
+      @Header('Authorization') String token, @Body() Map<String, dynamic> body);
 }

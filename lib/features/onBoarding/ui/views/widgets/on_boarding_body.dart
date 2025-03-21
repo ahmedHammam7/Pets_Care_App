@@ -38,7 +38,8 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
                     children: [
                       InkWell(
                         onTap: () {
-                          context.pushNamedAndRemoveUntil(Routes.loginScreen,
+                          context.pushNamedAndRemoveUntil(
+                              Routes.loginScreen, (route) => false,
                               predicate: (Route<dynamic> route) => false);
                         },
                         child: Text(
@@ -89,7 +90,8 @@ class _OnBoardingBodyState extends State<OnBoardingBody> {
                       NextButton(
                         onTap: () {
                           if (index == 2) {
-                            context.pushNamedAndRemoveUntil(Routes.loginScreen,
+                            context.pushNamedAndRemoveUntil(
+                                Routes.loginScreen, (route) => false,
                                 predicate: (Route<dynamic> route) => false);
                           }
                           controller.nextPage(

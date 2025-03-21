@@ -17,20 +17,17 @@ Future<void> checkLoggedIn() async {
       await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token);
   String type = await SharedPrefHelper.getString(SharedPrefsConstant.type);
 
-  if (token.isNotEmpty || token != "") {
-    if (type == "owner") {
-      isLoggedIn = true;
-      isClient = true;
-    }
-
-    if (type == "doctor") {
-      isLoggedIn = true;
-      isDoctor = true;
-    }
-
+  if (token.isNotEmpty && token != "" && type.isNotEmpty && type != "") {
     if (type == "store") {
       isLoggedIn = true;
       isStore = true;
+    } else if (type == "doctor") {
+      isLoggedIn = true;
+      isDoctor = true;
+    } else if (type == "owner") {
+      isLoggedIn = true;
+
+      isClient = true;
     }
   } else {
     isLoggedIn = false;

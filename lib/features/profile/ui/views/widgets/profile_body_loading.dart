@@ -49,11 +49,12 @@ class ProfileBodyLoading extends StatelessWidget {
                     verticalSpace(60),
                     PrimaryButton(
                       text: "Logout",
-                      onTap: ()async {
-                                            await context.read<ProfileCubit>().logout().then((v) {
-                      context.pushNamedAndRemoveUntil(Routes.loginScreen,
-                          predicate: (Route<dynamic> route) => false);
-                    });
+                      onTap: () async {
+                        await context.read<ProfileCubit>().logout().then((v) {
+                          context.pushNamedAndRemoveUntil(
+                              Routes.loginScreen, (route) => false,
+                              predicate: (Route<dynamic> route) => false);
+                        });
                       },
                       color: AppColors.red,
                       radius: 14.r,

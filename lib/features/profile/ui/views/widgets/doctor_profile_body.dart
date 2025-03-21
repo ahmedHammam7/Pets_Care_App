@@ -106,7 +106,8 @@ class _ProfileScreenBodyState extends State<DoctorProfileBody> {
                   text: "Logout",
                   onTap: () async {
                     await context.read<ProfileCubit>().logout().then((v) {
-                      context.pushNamedAndRemoveUntil(Routes.loginScreen,
+                      context.pushNamedAndRemoveUntil(
+                          Routes.loginScreen, (route) => false,
                           predicate: (Route<dynamic> route) => false);
                     });
                   },
