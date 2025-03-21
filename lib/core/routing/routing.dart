@@ -113,21 +113,31 @@ class AppRoutes {
         );
       case Routes.storeStoreScreen:
         return MaterialPageRoute(
-          builder: (context) => const StoreStoreScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<StoreStoreCubit>(),
+            child: const StoreStoreScreen(),
+          ),
         );
       case Routes.storeAddProductScreen:
         return MaterialPageRoute(
-          builder: (context) => const AddProductScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<StoreStoreCubit>(),
+            child: const AddProductScreen(),
+          ),
         );
       case Routes.storeShowProductsScreen:
         return MaterialPageRoute(
-          builder: (context) => const ShowProductsScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<StoreStoreCubit>()..loadAllProducts(),
+            child: const ShowProductsScreen(),
+          ),
         );
       case Routes.storeUpdateInfoScreen:
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
             create: (context) => getIt<StoreStoreCubit>()..loadStoreProfile(),
-            child: const UpdateInfo(),),
+            child: const UpdateInfo(),
+          ),
         );
       default:
         return null;

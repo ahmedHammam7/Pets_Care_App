@@ -22,11 +22,11 @@ class PetsCareApp extends StatelessWidget {
         ),
         debugShowCheckedModeBanner: false,
         onGenerateRoute: AppRoutes().onGenerateRoute,
-        initialRoute: isLoggedIn && isClient == true
-            ? Routes.homeLayout
-            : isLoggedIn && isStore == true
-                ? Routes.storeStoreScreen
-                : isLoggedIn && isDoctor == true
+        initialRoute: isStore == true
+            ? Routes.storeStoreScreen
+            : isClient == true
+                ? Routes.homeLayout
+                : isDoctor == true
                     ? Routes.clinicsScreen
                     : Routes.onBoardingScreen,
       ),

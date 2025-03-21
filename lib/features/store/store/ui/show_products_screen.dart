@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
+import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
+import 'package:pets_care_app/features/store/store/logic/cubit/store_store_cubit.dart';
+import 'package:pets_care_app/features/store/store/ui/widgets/products_loading.dart';
 
 class ShowProductsScreen extends StatelessWidget {
   const ShowProductsScreen({super.key});
@@ -22,16 +26,38 @@ class ShowProductsScreen extends StatelessWidget {
           ),
         ),
       ),
-      body: ListView.builder(
-          itemBuilder: (context, index) => const StoreProductsListItem(),
-          itemCount: 10),
+      body: BlocBuilder<StoreStoreCubit, StoreStoreState>(
+        builder: (context, state) {
+          if (state is AllProductsLoading) {
+            return const ProductsLoading();
+          } else if (state is AllProductsSuccess) {
+            return ListView.builder(
+              itemBuilder: (context, index) => StoreProductsListItem(
+                data: state.data[index],
+              ),
+              itemCount: state.data.length,
+            );
+          } else if (state is AllProductsFailure) {
+            return Center(
+              child: Text(
+                state.message,
+                style: AppTextStyles.homeContainerText.copyWith(
+                  color: AppColors.primaryColor,
+                ),
+              ),
+            );
+          }
+
+          return const SizedBox.shrink();
+        },
+      ),
     );
   }
 }
 
 class StoreProductsListItem extends StatelessWidget {
-  const StoreProductsListItem({super.key});
-
+  const StoreProductsListItem({super.key, required this.data});
+  final ProductResponse data;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -56,13 +82,13 @@ class StoreProductsListItem extends StatelessWidget {
                 SizedBox(
                   width: 70.w,
                   child: Text(
-                    "Dry Food",
+                    data.name,
                     overflow: TextOverflow.ellipsis,
                     style: AppTextStyles.homeContainerText,
                   ),
                 ),
                 Text(
-                  "\$50",
+                  "\$ ${data.price}",
                   style: AppTextStyles.homeContainerText,
                 ),
               ],
@@ -76,7 +102,7 @@ class StoreProductsListItem extends StatelessWidget {
                   style: AppTextStyles.homeContainerText,
                 ),
                 Text(
-                  "Dog Food",
+                  data.foodType,
                   style: AppTextStyles.homeContainerText,
                 ),
               ],
