@@ -1,0 +1,2 @@
+C:/petsCare/android/app/.cxx/Debug/26y542g2/x86/CMakeFiles/edit_cache.dir
+C:/petsCare/android/app/.cxx/Debug/26y542g2/x86/CMakeFiles/rebuild_cache.dir

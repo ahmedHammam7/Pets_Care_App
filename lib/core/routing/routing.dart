@@ -27,6 +27,7 @@ import 'package:pets_care_app/features/store/store/ui/show_products_screen.dart'
 import 'package:pets_care_app/features/store/store/ui/add_product_screen.dart';
 import 'package:pets_care_app/features/store/store/ui/store_store_screen.dart';
 import 'package:pets_care_app/features/store/store/ui/update_info_screen.dart';
+import 'package:pets_care_app/features/store/store/ui/update_product_screen.dart';
 
 class AppRoutes {
   Route? onGenerateRoute(RouteSettings settings) {
@@ -138,6 +139,10 @@ class AppRoutes {
             create: (context) => getIt<StoreStoreCubit>()..loadStoreProfile(),
             child: const UpdateInfo(),
           ),
+        );
+          case Routes.updateProductScreen:
+        return MaterialPageRoute(
+          builder: (context) => const UpdateProductScreen(),
         );
       default:
         return null;

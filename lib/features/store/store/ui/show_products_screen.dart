@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pets_care_app/core/helper/extension.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
+import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
@@ -71,10 +73,11 @@ class StoreProductsListItem extends StatelessWidget {
         ),
         child: Row(
           children: [
+            data.image.isEmpty?
             Image.asset(
               "assets/png/food.png",
               height: 100.h,
-            ),
+            ): Image.network(data.image,height: 100.h,),
             horizontalSpace(10),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -109,7 +112,9 @@ class StoreProductsListItem extends StatelessWidget {
             ),
             horizontalSpace(20),
             IconButton(
-              onPressed: () {},
+              onPressed: () {
+                context.pushNamed(Routes.updateProductScreen);
+              },
               icon: const Icon(
                 Icons.edit,
                 color: AppColors.white,

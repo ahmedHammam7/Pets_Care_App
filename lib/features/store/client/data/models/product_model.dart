@@ -8,6 +8,7 @@ class ProductResponse {
   final String foodType;
   final String price;
   final String description;
+  @JsonKey(name: 'image_url')
   final String image;
 
   ProductResponse(

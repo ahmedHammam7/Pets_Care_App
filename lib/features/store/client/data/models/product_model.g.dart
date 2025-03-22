@@ -12,7 +12,7 @@ ProductResponse _$ProductResponseFromJson(Map<String, dynamic> json) =>
       foodType: json['food_type'] as String,
       price: json['price'] as String,
       description: json['description'] as String,
-      image: json['image'] as String,
+      image: json['image_url'] as String,
     );
 
 Map<String, dynamic> _$ProductResponseToJson(ProductResponse instance) =>
@@ -21,5 +21,5 @@ Map<String, dynamic> _$ProductResponseToJson(ProductResponse instance) =>
       'food_type': instance.foodType,
       'price': instance.price,
       'description': instance.description,
-      'image': instance.image,
+      'image_url': instance.image,
     };

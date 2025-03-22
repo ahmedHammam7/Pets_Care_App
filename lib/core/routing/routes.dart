@@ -20,4 +20,6 @@ class Routes {
   static const String storeAddProductScreen = '/storeAddProductScreen';
   static const String storeShowProductsScreen = '/storeShowProductsScreen';
   static const String storeUpdateInfoScreen = '/storeUpdateInfoScreen';
+    static const String updateProductScreen = '/updateProductScreen';
+
 }
