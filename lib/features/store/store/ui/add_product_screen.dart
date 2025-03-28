@@ -1,4 +1,3 @@
-import 'dart:convert';
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -8,7 +7,6 @@ import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/widgets/app_drop_down_menu.dart';
 import 'package:pets_care_app/core/widgets/app_text_field.dart';
-import 'package:pets_care_app/features/auth/widgets/add_certificate.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
 import 'package:pets_care_app/features/profile/ui/views/widgets/profile_body_loading.dart';
 import 'package:pets_care_app/features/store/store/logic/cubit/store_store_cubit.dart';
@@ -136,37 +134,22 @@ class _AddProductScreenState extends State<AddProductScreen> {
                           CircleAvatar(
                             radius: 100.r,
                             backgroundColor: AppColors.primaryColor,
-                            child: CircleAvatar(
-                              radius: 96.r,
-                              backgroundColor: AppColors.white,
-                              child:
-                                  context.read<StoreStoreCubit>().image != null
-                                      ? Image.file(File(context
-                                          .read<StoreStoreCubit>()
-                                          .image!
-                                          .path))
-                                      : const Icon(Icons.add_a_photo_outlined),
-                            ),
-                          ),
-                          Positioned(
-                            bottom: 6,
-                            right: 19,
-                            child: CircleAvatar(
-                              backgroundColor: AppColors.primaryColor,
-                              radius: 18.r,
+                            child: GestureDetector(
+                              onTap: () async {
+                                await pickImage();
+                              },
                               child: CircleAvatar(
-                                radius: 16.r,
+                                radius: 96.r,
                                 backgroundColor: AppColors.white,
-                                child: InkWell(
-                                  onTap: () async {
-                                    await pickImage();
-                                  },
-                                  child: Icon(
-                                    Icons.edit_outlined,
-                                    color: AppColors.primaryColor,
-                                    size: 25.sp,
-                                  ),
-                                ),
+                                backgroundImage: context
+                                            .read<StoreStoreCubit>()
+                                            .image ==
+                                        null
+                                    ? const AssetImage("assets/png/profile.png")
+                                    : FileImage(File(context
+                                        .read<StoreStoreCubit>()
+                                        .image!
+                                        .path)),
                               ),
                             ),
                           ),

@@ -3,6 +3,7 @@ part 'product_model.g.dart';
 
 @JsonSerializable()
 class ProductResponse {
+  final int id;
   final String name;
   @JsonKey(name: 'food_type')
   final String foodType;
@@ -16,6 +17,7 @@ class ProductResponse {
       required this.foodType,
       required this.price,
       required this.description,
+      required this.id,
       required this.image});
 
   factory ProductResponse.fromJson(Map<String, dynamic> json) =>

@@ -30,8 +30,10 @@ class ShowProductsScreen extends StatelessWidget {
       ),
       body: BlocBuilder<StoreStoreCubit, StoreStoreState>(
         builder: (context, state) {
-          if (state is AllProductsLoading) {
+          if (state is AllProductsLoading || state is DeleteProductLoading) {
             return const ProductsLoading();
+          } else if (state is DeleteProductSuccess) {
+            context.pop();
           } else if (state is AllProductsSuccess) {
             return ListView.builder(
               itemBuilder: (context, index) => StoreProductsListItem(
@@ -40,6 +42,15 @@ class ShowProductsScreen extends StatelessWidget {
               itemCount: state.data.length,
             );
           } else if (state is AllProductsFailure) {
+            return Center(
+              child: Text(
+                state.message,
+                style: AppTextStyles.homeContainerText.copyWith(
+                  color: AppColors.primaryColor,
+                ),
+              ),
+            );
+          } else if (state is DeleteProductFailure) {
             return Center(
               child: Text(
                 state.message,
@@ -73,11 +84,16 @@ class StoreProductsListItem extends StatelessWidget {
         ),
         child: Row(
           children: [
-            data.image.isEmpty?
-            Image.asset(
-              "assets/png/food.png",
-              height: 100.h,
-            ): Image.network(data.image,height: 100.h,),
+            data.image == ""
+                ? Image.asset(
+                    "assets/png/food.png",
+                    height: 100.h,
+                  )
+                : Image.network(
+                    data.image,
+                    height: 70.h,
+                    width: 70.w,
+                  ),
             horizontalSpace(10),
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -113,7 +129,7 @@ class StoreProductsListItem extends StatelessWidget {
             horizontalSpace(20),
             IconButton(
               onPressed: () {
-                context.pushNamed(Routes.updateProductScreen);
+                context.pushNamed(Routes.updateProductScreen, arguments: data);
               },
               icon: const Icon(
                 Icons.edit,
@@ -123,7 +139,11 @@ class StoreProductsListItem extends StatelessWidget {
             horizontalSpace(5),
             Expanded(
               child: IconButton(
-                onPressed: () {},
+                onPressed: () async {
+                  await context
+                      .read<StoreStoreCubit>()
+                      .deleteProduct(data.id.toString());
+                },
                 icon: const Icon(
                   Icons.delete,
                   color: AppColors.red,

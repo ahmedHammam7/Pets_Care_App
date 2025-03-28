@@ -4,6 +4,7 @@ import 'package:pets_care_app/core/network/api_error_handler.dart';
 import 'package:pets_care_app/core/network/api_result.dart';
 import 'package:pets_care_app/core/network/api_service.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
+import 'package:pets_care_app/features/store/store/data/models/product_body.dart';
 import 'package:pets_care_app/features/store/store/data/models/store_info_response.dart';
 
 class StoreStoreRepos {
@@ -47,6 +48,28 @@ class StoreStoreRepos {
     try {
       final response = await _apiService.getAllProducts(
           'Bearer 130|AtF3ZyBqdSTCJcWjcZVlaADDZf5vUNMhE6qGS7ji53a73628');
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  Future<ApiResult<dynamic>> deleteProduct(String id) async {
+    try {
+      final response = await _apiService.deleteProduct(
+          'Bearer 130|AtF3ZyBqdSTCJcWjcZVlaADDZf5vUNMhE6qGS7ji53a73628', id);
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  Future<ApiResult<dynamic>> updateProduct(String id, ProductBody body) async {
+    try {
+      final response = await _apiService.updateProduct(
+          'Bearer 130|AtF3ZyBqdSTCJcWjcZVlaADDZf5vUNMhE6qGS7ji53a73628',
+          id,
+          body);
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));

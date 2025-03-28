@@ -19,6 +19,7 @@ import 'package:pets_care_app/features/home_layout/ui/home_layout.dart';
 import 'package:pets_care_app/features/locations/ui/location_screen.dart';
 import 'package:pets_care_app/features/onBoarding/ui/views/on_boarding_screen.dart';
 import 'package:pets_care_app/features/profile/ui/views/profile_screen.dart';
+import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
 import 'package:pets_care_app/features/store/client/logic/cubit/store_cubit.dart';
 import 'package:pets_care_app/features/store/client/ui/views/details_screen.dart';
 import 'package:pets_care_app/features/store/client/ui/views/store_screen.dart';
@@ -31,6 +32,7 @@ import 'package:pets_care_app/features/store/store/ui/update_product_screen.dart
 
 class AppRoutes {
   Route? onGenerateRoute(RouteSettings settings) {
+    final args = settings.arguments;
     switch (settings.name) {
       case Routes.onBoardingScreen:
         return MaterialPageRoute(
@@ -140,9 +142,14 @@ class AppRoutes {
             child: const UpdateInfo(),
           ),
         );
-          case Routes.updateProductScreen:
+      case Routes.updateProductScreen:
         return MaterialPageRoute(
-          builder: (context) => const UpdateProductScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<StoreStoreCubit>(),
+            child: UpdateProductScreen(
+              data: args as ProductResponse,
+            ),
+          ),
         );
       default:
         return null;

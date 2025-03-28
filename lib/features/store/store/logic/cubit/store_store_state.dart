@@ -24,4 +24,15 @@ class StoreStoreState with _$StoreStoreState {
       AllProductsSuccess;
   const factory StoreStoreState.allProductsFailure(String message) =
       AllProductsFailure;
+
+  // delete product
+  const factory StoreStoreState.deleteProductLoading() = DeleteProductLoading;
+  const factory StoreStoreState.deleteProductSuccess() = DeleteProductSuccess;
+  const factory StoreStoreState.deleteProductFailure(String message) =
+      DeleteProductFailure;
+  //upadte product
+  const factory StoreStoreState.updateProductLoading() = UpdateProductLoading;
+  const factory StoreStoreState.updateProductSuccess() = UpdateProductSuccess;
+  const factory StoreStoreState.updateProductFailure(String message) =
+      UpdateProductFailure;
 }

@@ -23,11 +23,6 @@ class StoreStoreScreen extends StatelessWidget {
           }
         },
         child: Scaffold(
-          appBar: AppBar(
-            backgroundColor: AppColors.white,
-            title: const Text("Store Store"),
-            centerTitle: true,
-          ),
           body: Padding(
             padding: EdgeInsets.symmetric(horizontal: 20.w),
             child: Column(

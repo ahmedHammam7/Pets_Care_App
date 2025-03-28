@@ -5,6 +5,7 @@ import 'package:pets_care_app/features/auth/register/data/models/register_respon
 import 'package:pets_care_app/features/profile/data/models/doctor_profile_response.dart';
 import 'package:pets_care_app/features/profile/data/models/profile_response.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
+import 'package:pets_care_app/features/store/store/data/models/product_body.dart';
 import 'package:pets_care_app/features/store/store/data/models/store_info_response.dart';
 import 'package:retrofit/error_logger.dart';
 
@@ -42,4 +43,11 @@ abstract class ApiService {
   @POST(ApiConstant.items)
   Future<dynamic> addProduct(
       @Header('Authorization') String token, @Body() Map<String, dynamic> body);
+
+  @DELETE('${ApiConstant.items}/{id}')
+  Future<dynamic> deleteProduct(
+      @Header('Authorization') String token, @Path('id') String id);
+  @POST('${ApiConstant.items}/{id}')
+  Future<dynamic> updateProduct(@Header('Authorization') String token,
+      @Path('id') String id, @Body() ProductBody body);
 }

@@ -6,6 +6,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs.dart';
 import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
+import 'package:pets_care_app/features/store/store/data/models/product_body.dart';
 import 'package:pets_care_app/features/store/store/data/models/store_info_response.dart';
 import 'package:pets_care_app/features/store/store/data/repos/store_repos.dart';
 
@@ -110,6 +111,34 @@ class StoreStoreCubit extends Cubit<StoreStoreState> {
     await SharedPrefHelper.removeSecuredData(SharedPrefsConstant.token);
     await SharedPrefHelper.removeData(SharedPrefsConstant.type);
     emit(const StoreStoreState.logout());
+  }
+
+  Future<void> deleteProduct(String id) async {
+    emit(const StoreStoreState.deleteProductLoading());
+    final result = await _storeRepo.deleteProduct(id);
+    result.when(success: (response) {
+      emit(const StoreStoreState.deleteProductSuccess());
+    }, failure: (message) {
+      emit(StoreStoreState.deleteProductFailure(message.getAllErrorMessages()));
+    });
+  }
+
+  Future<void> updateProduct(String id) async {
+    emit(const StoreStoreState.updateProductLoading());
+    ProductBody body = ProductBody(
+      name: nameController.text,
+      category: categoryController.text,
+      foodType: typeController.text,
+      price: priceController.text,
+      description: descriptionController.text,
+      // image: await MultipartFile.fromFile(image!.path, filename: "image.jpg"),
+    );
+    final result = await _storeRepo.updateProduct(id, body);
+    result.when(success: (response) {
+      emit(const StoreStoreState.updateProductSuccess());
+    }, failure: (message) {
+      emit(StoreStoreState.updateProductFailure(message.getAllErrorMessages()));
+    });
   }
 
   @override

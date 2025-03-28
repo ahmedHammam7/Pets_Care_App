@@ -12,11 +12,13 @@ ProductResponse _$ProductResponseFromJson(Map<String, dynamic> json) =>
       foodType: json['food_type'] as String,
       price: json['price'] as String,
       description: json['description'] as String,
+      id: (json['id'] as num).toInt(),
       image: json['image_url'] as String,
     );
 
 Map<String, dynamic> _$ProductResponseToJson(ProductResponse instance) =>
     <String, dynamic>{
+      'id': instance.id,
       'name': instance.name,
       'food_type': instance.foodType,
       'price': instance.price,
