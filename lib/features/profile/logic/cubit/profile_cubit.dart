@@ -24,19 +24,6 @@ class ProfileCubit extends Cubit<ProfileState> {
     );
   }
 
-  Future<void> loadDoctorProfile() async {
-    emit(const ProfileState.doctorLoading());
-    final result = await profileRepo.getDoctorProfile();
-    result.when(
-      success: (response) {
-        emit(ProfileState.doctorSuccess(response));
-      },
-      failure: (message) {
-        emit(ProfileState.doctorError(message.getAllErrorMessages()));
-      },
-    );
-  }
-
   Future<void> loadStoreProfile() async {
     emit(const ProfileState.storeLoading());
 
@@ -49,19 +36,6 @@ class ProfileCubit extends Cubit<ProfileState> {
         emit(ProfileState.storeError(message.getAllErrorMessages()));
       },
     );
-  }
-
-  Future<void> selectWhichProfile() async {
-    if (await SharedPrefHelper.getString(SharedPrefsConstant.type) ==
-        "doctor") {
-      await loadDoctorProfile();
-    } else if (await SharedPrefHelper.getString(SharedPrefsConstant.type) ==
-        "owner") {
-      await loadUserProfile();
-    } else if (await SharedPrefHelper.getString(SharedPrefsConstant.type) ==
-        "store") {
-      await loadStoreProfile();
-    }
   }
 
   Future<void> logout() async {

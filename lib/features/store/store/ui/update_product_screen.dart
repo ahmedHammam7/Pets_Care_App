@@ -9,8 +9,8 @@ import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/widgets/app_text_field.dart';
+import 'package:pets_care_app/core/widgets/custom_app_bar.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
-import 'package:pets_care_app/features/profile/ui/views/widgets/profile_body_loading.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
 import 'package:pets_care_app/features/store/store/logic/cubit/store_store_cubit.dart';
 
@@ -20,18 +20,7 @@ class UpdateProductScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: AppColors.white,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.arrow_back_ios_new,
-            size: 24.sp,
-          ),
-        ),
-      ),
+      appBar: customAppBar(context),
       body: SafeArea(
           child: BlocListener<StoreStoreCubit, StoreStoreState>(
         listenWhen: (previous, current) =>
@@ -41,6 +30,7 @@ class UpdateProductScreen extends StatelessWidget {
         listener: (context, state) async {
           if (state is UpdateProductSuccess) {
             await context.pushNamed(Routes.storeShowProductsScreen);
+            // ignore: use_build_context_synchronously
             ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
               content: Text("Product Updated Successfully"),
               backgroundColor: Colors.green,

@@ -9,7 +9,6 @@ class Routes {
   static const String detailsScreen = '/detailsScreen';
   static const String cartScreen = '/cartScreen';
   static const String clinicsScreen = '/clinicsScreen';
-  static const String doctorDetailsScreen = '/doctorDetailsScreen';
   static const String addPetsScreen = '/addPetsScreen';
   static const String registerDoctorScreen = '/registerDoctorScreen';
   static const String registerStoreScreen = '/registerStoreScreen';
@@ -20,6 +19,9 @@ class Routes {
   static const String storeAddProductScreen = '/storeAddProductScreen';
   static const String storeShowProductsScreen = '/storeShowProductsScreen';
   static const String storeUpdateInfoScreen = '/storeUpdateInfoScreen';
-    static const String updateProductScreen = '/updateProductScreen';
-
+  static const String updateProductScreen = '/updateProductScreen';
+  static const String doctorClincsScreen = '/doctorClincsScreen';
+  static const String doctorAddClinicScreen = '/doctorAddClinicScreen';
+  static const String doctorShowClinicsScreen = '/doctorShowClinicsScreen';
+  static const String doctorUpdateInfoScreen = '/doctorUpdateInfoScreen';
 }

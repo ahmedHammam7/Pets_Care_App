@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
-import 'package:pets_care_app/features/clinics/ui/widgets/clinics_screen_body.dart';
+import 'package:pets_care_app/features/clinics/client/ui/widgets/clinics_screen_body.dart';
 
 class ClinicsScreen extends StatelessWidget {
   const ClinicsScreen({super.key});

@@ -12,8 +12,12 @@ import 'package:pets_care_app/features/auth/register/ui/views/register_store_scr
 import 'package:pets_care_app/features/cart/ui/views/cart_screen.dart';
 import 'package:pets_care_app/features/chat_bot/ui/chat_bot_screen.dart';
 import 'package:pets_care_app/features/check/ui/check_screen.dart';
-import 'package:pets_care_app/features/clinics/ui/clinics_screen.dart';
-import 'package:pets_care_app/features/clinics/ui/doctor_details_screen.dart';
+import 'package:pets_care_app/features/clinics/client/ui/clinics_screen.dart';
+import 'package:pets_care_app/features/clinics/doctor/logic/cubit/doctor_clinic_cubit.dart';
+import 'package:pets_care_app/features/clinics/doctor/ui/add_clinic_screen.dart';
+import 'package:pets_care_app/features/clinics/doctor/ui/doctor_clincs_screen.dart';
+import 'package:pets_care_app/features/clinics/doctor/ui/show_clincs_screen.dart';
+import 'package:pets_care_app/features/clinics/doctor/ui/update_info_screen.dart';
 import 'package:pets_care_app/features/home/ui/views/home_screen.dart';
 import 'package:pets_care_app/features/home_layout/ui/home_layout.dart';
 import 'package:pets_care_app/features/locations/ui/location_screen.dart';
@@ -76,10 +80,7 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (context) => const ClinicsScreen(),
         );
-      case Routes.doctorDetailsScreen:
-        return MaterialPageRoute(
-          builder: (context) => const DoctorDetailsScreen(),
-        );
+
       case Routes.addPetsScreen:
         return MaterialPageRoute(
           builder: (context) => const AddPetsScreen(),
@@ -149,6 +150,26 @@ class AppRoutes {
             child: UpdateProductScreen(
               data: args as ProductResponse,
             ),
+          ),
+        );
+      case Routes.doctorClincsScreen:
+        return MaterialPageRoute(
+          builder: (context) => const DoctorClincsScreen(),
+        );
+      case Routes.doctorAddClinicScreen:
+        return MaterialPageRoute(
+          builder: (context) => const AddClinicScreen(),
+        );
+      case Routes.doctorShowClinicsScreen:
+        return MaterialPageRoute(
+          builder: (context) => const ShowClincsScreen(),
+        );
+      case Routes.doctorUpdateInfoScreen:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) =>
+                getIt<DoctorClinicCubit>()..loadDoctorProfile(),
+            child: const DoctorUpdateInfoScreen(),
           ),
         );
       default:

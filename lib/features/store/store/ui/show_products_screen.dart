@@ -6,6 +6,7 @@ import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
+import 'package:pets_care_app/core/widgets/custom_app_bar.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
 import 'package:pets_care_app/features/store/store/logic/cubit/store_store_cubit.dart';
 import 'package:pets_care_app/features/store/store/ui/widgets/products_loading.dart';
@@ -16,18 +17,7 @@ class ShowProductsScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: AppColors.white,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.arrow_back_ios_new,
-            size: 24.sp,
-          ),
-        ),
-      ),
+      appBar: customAppBar(context),
       body: BlocBuilder<StoreStoreCubit, StoreStoreState>(
         builder: (context, state) {
           if (state is AllProductsLoading || state is DeleteProductLoading) {

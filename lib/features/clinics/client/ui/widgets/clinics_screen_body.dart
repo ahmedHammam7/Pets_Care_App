@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
-import 'package:pets_care_app/features/clinics/ui/widgets/clinics_item.dart';
+import 'package:pets_care_app/features/clinics/client/ui/widgets/clinics_item.dart';
 import 'package:pets_care_app/features/store/client/ui/views/widgets/search_field.dart';
 
 class ClinicsScreenBody extends StatelessWidget {

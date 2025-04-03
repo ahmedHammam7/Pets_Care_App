@@ -47,7 +47,7 @@ class StoreStoreRepos {
   Future<ApiResult<List<ProductResponse>>> getAllProducts() async {
     try {
       final response = await _apiService.getAllProducts(
-          'Bearer 130|AtF3ZyBqdSTCJcWjcZVlaADDZf5vUNMhE6qGS7ji53a73628');
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}');
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));
@@ -57,7 +57,8 @@ class StoreStoreRepos {
   Future<ApiResult<dynamic>> deleteProduct(String id) async {
     try {
       final response = await _apiService.deleteProduct(
-          'Bearer 130|AtF3ZyBqdSTCJcWjcZVlaADDZf5vUNMhE6qGS7ji53a73628', id);
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}',
+          id);
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));
@@ -67,7 +68,7 @@ class StoreStoreRepos {
   Future<ApiResult<dynamic>> updateProduct(String id, ProductBody body) async {
     try {
       final response = await _apiService.updateProduct(
-          'Bearer 130|AtF3ZyBqdSTCJcWjcZVlaADDZf5vUNMhE6qGS7ji53a73628',
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}',
           id,
           body);
       return ApiResult.success(response);

@@ -1,3 +1,5 @@
+// ignore_for_file: use_build_context_synchronously
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -45,7 +47,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                   SharedPrefsConstant.type) ==
               "doctor") {
             await context.pushNamedAndRemoveUntil(
-                Routes.homeLayout, (route) => false,
+                Routes.doctorClincsScreen, (route) => false,
                 predicate: (Route<dynamic> route) => false);
           } else if (await SharedPrefHelper.getString(
                   SharedPrefsConstant.type) ==
@@ -140,7 +142,7 @@ class _LoginScreenBodyState extends State<LoginScreenBody> {
                     text2: 'Sign Up',
                     onTap: () {
                       context.pushNamedAndRemoveUntil(
-                          Routes.loginScreen, (route) => false,
+                          Routes.registerScreen, (route) => false,
                           predicate: (Route<dynamic> route) => false);
                     },
                   ),

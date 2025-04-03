@@ -5,8 +5,8 @@ import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
-import 'package:pets_care_app/features/clinics/ui/widgets/choase_appointment_widget.dart';
-import 'package:pets_care_app/features/clinics/ui/widgets/doctor_details_info.dart';
+import 'package:pets_care_app/features/clinics/client/ui/widgets/choase_appointment_widget.dart';
+import 'package:pets_care_app/features/clinics/client/ui/widgets/doctor_details_info.dart';
 
 class DoctorDetailsBody extends StatelessWidget {
   const DoctorDetailsBody({super.key});

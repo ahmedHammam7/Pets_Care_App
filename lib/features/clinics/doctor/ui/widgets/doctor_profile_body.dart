@@ -7,52 +7,46 @@ import 'package:image_picker/image_picker.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/widgets/app_text_field.dart';
-import 'package:pets_care_app/core/widgets/custom_app_bar.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
+import 'package:pets_care_app/features/clinics/doctor/logic/cubit/doctor_clinic_cubit.dart';
 import 'package:pets_care_app/features/profile/ui/views/widgets/profile_body_loading.dart';
-import 'package:pets_care_app/features/store/store/logic/cubit/store_store_cubit.dart';
 
-class UpdateInfo extends StatefulWidget {
-  const UpdateInfo({super.key});
+class DoctorProfileBody extends StatefulWidget {
+  const DoctorProfileBody({
+    super.key,
+  });
 
   @override
-  State<UpdateInfo> createState() => _UpdateInfoState();
+  State<DoctorProfileBody> createState() => _ProfileScreenBodyState();
 }
 
 File? image;
 
-class _UpdateInfoState extends State<UpdateInfo> {
+class _ProfileScreenBodyState extends State<DoctorProfileBody> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: customAppBar(context),
-      body: Padding(
+    return SingleChildScrollView(
+      child: Padding(
         padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
         child: SingleChildScrollView(
-          child: BlocConsumer<StoreStoreCubit, StoreStoreState>(
+          child: BlocConsumer<DoctorClinicCubit, DoctorClinicState>(
               buildWhen: (previous, current) =>
-                  current is Loading ||
-                  current is Error ||
-                  current is Success ||
-                  current is UpdateSuccess ||
-                  current is UpdateFailure ||
-                  current is UpdateLoading,
+                  current is loadDoctorProfileLoading ||
+                  current is loadDoctorProfileError ||
+                  current is loadDoctorProfileSuccess,
               listenWhen: (previous, current) =>
-                  current is Loading ||
-                  current is Error ||
-                  current is Success ||
-                  current is UpdateSuccess ||
-                  current is UpdateFailure ||
-                  current is UpdateLoading,
+                  current is loadDoctorProfileLoading ||
+                  current is loadDoctorProfileError ||
+                  current is loadDoctorProfileSuccess,
               listener: (context, state) {
-                if (state is UpdateSuccess) {
+                if (state is loadDoctorProfileSuccess) {
                   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                     content: Text("Updated Successfully"),
                     backgroundColor: Colors.green,
                   ));
                   Navigator.pop(context);
                 }
-                if (state is UpdateFailure) {
+                if (state is loadDoctorProfileError) {
                   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                     content: Text(state.message.toString()),
                     backgroundColor: Colors.red,
@@ -60,11 +54,11 @@ class _UpdateInfoState extends State<UpdateInfo> {
                 }
               },
               builder: (context, state) {
-                if (state is Loading || state is UpdateLoading) {
+                if (state is loadDoctorProfileLoading) {
                   return const ProfileBodyLoading();
                 } else {
                   return Form(
-                    key: context.read<StoreStoreCubit>().formKey,
+                    key: context.read<DoctorClinicCubit>().formKey,
                     child: Column(
                       children: [
                         Stack(
@@ -76,7 +70,8 @@ class _UpdateInfoState extends State<UpdateInfo> {
                                 radius: 96.r,
                                 backgroundColor: AppColors.white,
                                 backgroundImage: image == null
-                                    ? const AssetImage("assets/png/profile.png")
+                                    ? const AssetImage(
+                                        "assets/png/portrait-3d-male-doctor.png")
                                     : FileImage(image!),
                               ),
                             ),
@@ -105,13 +100,12 @@ class _UpdateInfoState extends State<UpdateInfo> {
                           ],
                         ),
                         AppTextField.outsideHint(
-                          hint: "Store Name",
-                          controller: context
-                              .read<StoreStoreCubit>()
-                              .storeNameController,
+                          hint: "Doctor Name",
+                          controller:
+                              context.read<DoctorClinicCubit>().nameController,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
-                              return "Please enter Store Name";
+                              return "Please enter Doctor Name";
                             }
                             return null;
                           },
@@ -120,7 +114,7 @@ class _UpdateInfoState extends State<UpdateInfo> {
                         AppTextField.outsideHint(
                           hint: "Email",
                           controller:
-                              context.read<StoreStoreCubit>().emailController,
+                              context.read<DoctorClinicCubit>().emailController,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
                               return "Please enter email";
@@ -130,14 +124,14 @@ class _UpdateInfoState extends State<UpdateInfo> {
                         ),
                         verticalSpace(10),
                         AppTextField.outsideHint(
-                          hint: "Hotline",
+                          hint: "Phone Number",
                           keyboardType: TextInputType.number,
                           numeric: true,
                           controller:
-                              context.read<StoreStoreCubit>().hotLineController,
+                              context.read<DoctorClinicCubit>().phoneController,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
-                              return "Please enter Hotline";
+                              return "Please enter Phone Number";
                             }
                             return null;
                           },
@@ -145,8 +139,9 @@ class _UpdateInfoState extends State<UpdateInfo> {
                         verticalSpace(10),
                         AppTextField.outsideHint(
                           hint: "Address",
-                          controller:
-                              context.read<StoreStoreCubit>().addressController,
+                          controller: context
+                              .read<DoctorClinicCubit>()
+                              .addressController,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
                               return "Please enter Address";
@@ -156,15 +151,73 @@ class _UpdateInfoState extends State<UpdateInfo> {
                         ),
                         verticalSpace(10),
                         AppTextField.outsideHint(
-                          hint: "Whatsapp Number",
+                          hint: "Specialization",
+                          numeric: true,
+                          controller: context
+                              .read<DoctorClinicCubit>()
+                              .specializationController,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return "Please enter Specialization";
+                            }
+                            return null;
+                          },
+                        ),
+                        verticalSpace(10),
+                        AppTextField.outsideHint(
+                          hint: "Liscense Number",
                           keyboardType: TextInputType.number,
                           numeric: true,
                           controller: context
-                              .read<StoreStoreCubit>()
-                              .whatsappPhoneController,
+                              .read<DoctorClinicCubit>()
+                              .licenseNumberController,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
-                              return "Please enter Whatsapp Number";
+                              return "Please enter Liscense Number";
+                            }
+                            return null;
+                          },
+                        ),
+                        verticalSpace(10),
+                        AppTextField.outsideHint(
+                          hint: "Experience Years",
+                          keyboardType: TextInputType.number,
+                          numeric: true,
+                          controller: context
+                              .read<DoctorClinicCubit>()
+                              .experienceController,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return "Please enter experience years";
+                            }
+                            return null;
+                          },
+                        ),
+                        verticalSpace(10),
+                        AppTextField.outsideHint(
+                          hint: "Working Time",
+                          numeric: true,
+                          controller: context
+                              .read<DoctorClinicCubit>()
+                              .workingHoursController,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return "Please enter Working Time";
+                            }
+                            return null;
+                          },
+                        ),
+                        verticalSpace(10),
+                        AppTextField.outsideHint(
+                          hint: "Medical Syndicate Code",
+                          keyboardType: TextInputType.number,
+                          numeric: true,
+                          controller: context
+                              .read<DoctorClinicCubit>()
+                              .medicalSyndicateCodeController,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return "Please enter Medical Syndicate Code";
                             }
                             return null;
                           },
@@ -174,14 +227,10 @@ class _UpdateInfoState extends State<UpdateInfo> {
                             text: "Update",
                             onTap: () async {
                               if (context
-                                  .read<StoreStoreCubit>()
+                                  .read<DoctorClinicCubit>()
                                   .formKey
                                   .currentState!
-                                  .validate()) {
-                                await context
-                                    .read<StoreStoreCubit>()
-                                    .updateStoreProfile();
-                              }
+                                  .validate()) {}
                             })
                       ],
                     ),

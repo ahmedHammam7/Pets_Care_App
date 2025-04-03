@@ -28,6 +28,8 @@ class StoreStoreScreen extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                Image.asset("assets/png/store.png", height: 150.h),
+                verticalSpace(30),
                 PrimaryButton(
                   text: "Add Product",
                   onTap: () {

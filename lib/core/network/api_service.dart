@@ -2,7 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:pets_care_app/core/network/api_constant.dart';
 import 'package:pets_care_app/features/auth/login/data/models/login_response.dart';
 import 'package:pets_care_app/features/auth/register/data/models/register_response.dart';
-import 'package:pets_care_app/features/profile/data/models/doctor_profile_response.dart';
+import 'package:pets_care_app/features/clinics/doctor/data/models/doctor_profile_response.dart';
 import 'package:pets_care_app/features/profile/data/models/profile_response.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
 import 'package:pets_care_app/features/store/store/data/models/product_body.dart';

@@ -177,7 +177,7 @@ class _RegisterScreenBodyState extends State<RegisterStoreBody> {
                         text: "Doctor",
                         onPressed: () {
                           context.pushNamedAndRemoveUntil(
-                              Routes.loginScreen, (route) => false,
+                              Routes.registerDoctorScreen, (route) => false,
                               predicate: (Route<dynamic> route) => false);
                         },
                       ),
@@ -186,7 +186,7 @@ class _RegisterScreenBodyState extends State<RegisterStoreBody> {
                         text: "User",
                         onPressed: () {
                           context.pushNamedAndRemoveUntil(
-                              Routes.loginScreen, (route) => false,
+                              Routes.registerScreen, (route) => false,
                               predicate: (Route<dynamic> route) => false);
                         },
                       ),

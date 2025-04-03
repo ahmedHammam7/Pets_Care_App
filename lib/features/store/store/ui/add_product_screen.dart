@@ -7,6 +7,7 @@ import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/widgets/app_drop_down_menu.dart';
 import 'package:pets_care_app/core/widgets/app_text_field.dart';
+import 'package:pets_care_app/core/widgets/custom_app_bar.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
 import 'package:pets_care_app/features/profile/ui/views/widgets/profile_body_loading.dart';
 import 'package:pets_care_app/features/store/store/logic/cubit/store_store_cubit.dart';
@@ -22,18 +23,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: AppColors.white,
-        leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
-          },
-          icon: Icon(
-            Icons.arrow_back_ios_new,
-            size: 24.sp,
-          ),
-        ),
-      ),
+      appBar: customAppBar(context),
       body: BlocConsumer<StoreStoreCubit, StoreStoreState>(
         buildWhen: (previous, current) =>
             current is AddProductSuccess ||

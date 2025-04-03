@@ -27,7 +27,7 @@ class PetsCareApp extends StatelessWidget {
             : isClient == true
                 ? Routes.homeLayout
                 : isDoctor == true
-                    ? Routes.clinicsScreen
+                    ? Routes.doctorClincsScreen
                     : Routes.onBoardingScreen,
       ),
     );

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
-import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 
@@ -13,9 +12,7 @@ class ClinicsItem extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
       child: GestureDetector(
-        onTap: () {
-          Navigator.pushNamed(context, Routes.doctorDetailsScreen);
-        },
+        onTap: () {},
         child: Card(
           color: AppColors.white,
           margin: EdgeInsets.zero,
