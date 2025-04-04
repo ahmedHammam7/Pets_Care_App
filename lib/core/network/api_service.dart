@@ -50,4 +50,7 @@ abstract class ApiService {
   @POST('${ApiConstant.items}/{id}')
   Future<dynamic> updateProduct(@Header('Authorization') String token,
       @Path('id') String id, @Body() ProductBody body);
+  @DELETE('${ApiConstant.clinics}/{id}')
+  Future<dynamic> deleteClinic(
+      @Header('Authorization') String token, @Path('id') String id);
 }

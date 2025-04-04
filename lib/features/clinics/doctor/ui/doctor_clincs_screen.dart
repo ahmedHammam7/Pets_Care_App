@@ -13,51 +13,47 @@ class DoctorClincsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: SizedBox(
-          width: double.infinity,
-          child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 20.w),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Image.asset(
-                  "assets/png/doctor.png",
-                  height: 150.h,
-                ),
-                verticalSpace(30),
-                PrimaryButton(
-                  text: "Add Clinic",
-                  onTap: () async {
-                    await context.pushNamed(Routes.doctorAddClinicScreen);
-                  },
-                ),
-                verticalSpace(20),
-                PrimaryButton(
-                  text: "Show Clinics",
-                  onTap: () async {
-                    await context.pushNamed(Routes.doctorShowClinicsScreen);
-                  },
-                ),
-                verticalSpace(20),
-                PrimaryButton(
-                  text: "Show Appointments",
-                  onTap: () {},
-                ),
-                verticalSpace(20),
-                PrimaryButton(
-                  text: "Update Info",
-                  onTap: () async {
-                    await context.pushNamed(Routes.doctorUpdateInfoScreen);
-                  },
-                ),
-                verticalSpace(20),
-                PrimaryButton(
-                  text: "Logout",
-                  onTap: () async {},
-                  color: AppColors.red,
-                )
-              ],
-            ),
+        child: SingleChildScrollView(
+          padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
+          child: Column(
+            children: [
+              Image.asset(
+                "assets/png/doctor.png",
+                height: 150.h,
+              ),
+              verticalSpace(30),
+              PrimaryButton(
+                text: "Add Clinic",
+                onTap: () async {
+                  await context.pushNamed(Routes.doctorAddClinicScreen);
+                },
+              ),
+              verticalSpace(20),
+              PrimaryButton(
+                text: "Show Clinics",
+                onTap: () async {
+                  await context.pushNamed(Routes.doctorShowClinicsScreen);
+                },
+              ),
+              verticalSpace(20),
+              PrimaryButton(
+                text: "Show Appointments",
+                onTap: () {},
+              ),
+              verticalSpace(20),
+              PrimaryButton(
+                text: "Update Info",
+                onTap: () async {
+                  await context.pushNamed(Routes.doctorUpdateInfoScreen);
+                },
+              ),
+              verticalSpace(20),
+              PrimaryButton(
+                text: "Logout",
+                onTap: () async {},
+                color: AppColors.red,
+              )
+            ],
           ),
         ),
       ),

@@ -14,4 +14,9 @@ class DoctorClinicState with _$DoctorClinicState {
   const factory DoctorClinicState.updateSuccess() = updateDoctorProfileSuccess;
   const factory DoctorClinicState.updateError(String message) =
       updateDoctorProfileError;
+  // delete Clinic
+  const factory DoctorClinicState.deleteLoading() = deleteDoctorClinicLoading;
+  const factory DoctorClinicState.deleteSuccess() = deleteDoctorClinicSuccess;
+  const factory DoctorClinicState.deleteError(String message) =
+      deleteDoctorClinicError;
 }

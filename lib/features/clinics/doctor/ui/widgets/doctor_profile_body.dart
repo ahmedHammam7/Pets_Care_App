@@ -154,7 +154,6 @@ class _ProfileScreenBodyState extends State<DoctorProfileBody> {
                         verticalSpace(10),
                         AppTextField.outsideHint(
                           hint: "Specialization",
-                          numeric: true,
                           controller: context
                               .read<DoctorClinicCubit>()
                               .specializationController,
@@ -212,7 +211,6 @@ class _ProfileScreenBodyState extends State<DoctorProfileBody> {
                         verticalSpace(10),
                         AppTextField.outsideHint(
                           hint: "Working Time",
-                          numeric: true,
                           controller: context
                               .read<DoctorClinicCubit>()
                               .workingHoursController,

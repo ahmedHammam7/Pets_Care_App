@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -78,5 +76,15 @@ class DoctorClinicCubit extends Cubit<DoctorClinicState> {
         emit(DoctorClinicState.updateError(message.getAllErrorMessages()));
       },
     );
+  }
+
+  Future<void> deleteClinic(String id) async {
+    emit(const DoctorClinicState.deleteLoading());
+    final result = await doctorClinicRepo.deleteClinic(id);
+    result.when(success: (response) {
+      emit(const DoctorClinicState.deleteSuccess());
+    }, failure: (message) {
+      emit(DoctorClinicState.deleteError(message.getAllErrorMessages()));
+    });
   }
 }

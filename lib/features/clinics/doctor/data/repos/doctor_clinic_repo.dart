@@ -30,4 +30,15 @@ class DoctorClinicRepo {
       return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
+
+  Future<ApiResult<dynamic>> deleteClinic(String id) async {
+    try {
+      final response = await _apiService.deleteClinic(
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}',
+          id);
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
 }
