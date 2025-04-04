@@ -9,4 +9,9 @@ class DoctorClinicState with _$DoctorClinicState {
   ) = loadDoctorProfileSuccess;
   const factory DoctorClinicState.profileError(String message) =
       loadDoctorProfileError;
+  //update profile
+  const factory DoctorClinicState.updateLoading() = updateDoctorProfileLoading;
+  const factory DoctorClinicState.updateSuccess() = updateDoctorProfileSuccess;
+  const factory DoctorClinicState.updateError(String message) =
+      updateDoctorProfileError;
 }

@@ -18,4 +18,16 @@ class DoctorClinicRepo {
       return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
+
+  Future<ApiResult<dynamic>> updateDoctorProfile(
+      Map<String, dynamic> body) async {
+    try {
+      final response = await _apiService.updateProfile(
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}',
+          body);
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
 }

@@ -5,7 +5,6 @@ import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs.dart';
 import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dart';
 
 import 'package:pets_care_app/features/auth/login/data/repos/login_repo.dart';
-import 'package:pets_care_app/main.dart';
 
 part 'login_state.dart';
 part 'login_cubit.freezed.dart';

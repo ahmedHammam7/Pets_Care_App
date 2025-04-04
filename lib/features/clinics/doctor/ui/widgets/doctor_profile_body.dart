@@ -37,16 +37,18 @@ class _ProfileScreenBodyState extends State<DoctorProfileBody> {
               listenWhen: (previous, current) =>
                   current is loadDoctorProfileLoading ||
                   current is loadDoctorProfileError ||
-                  current is loadDoctorProfileSuccess,
+                  current is loadDoctorProfileSuccess ||
+                  current is updateDoctorProfileSuccess ||
+                  current is updateDoctorProfileError,
               listener: (context, state) {
-                if (state is loadDoctorProfileSuccess) {
+                if (state is updateDoctorProfileSuccess) {
                   ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
                     content: Text("Updated Successfully"),
                     backgroundColor: Colors.green,
                   ));
                   Navigator.pop(context);
                 }
-                if (state is loadDoctorProfileError) {
+                if (state is updateDoctorProfileError) {
                   ScaffoldMessenger.of(context).showSnackBar(SnackBar(
                     content: Text(state.message.toString()),
                     backgroundColor: Colors.red,
@@ -165,6 +167,20 @@ class _ProfileScreenBodyState extends State<DoctorProfileBody> {
                         ),
                         verticalSpace(10),
                         AppTextField.outsideHint(
+                          hint: "Price",
+                          numeric: true,
+                          keyboardType: TextInputType.number,
+                          controller:
+                              context.read<DoctorClinicCubit>().priceController,
+                          validator: (value) {
+                            if (value == null || value.isEmpty) {
+                              return "Please enter Price";
+                            }
+                            return null;
+                          },
+                        ),
+                        verticalSpace(10),
+                        AppTextField.outsideHint(
                           hint: "Liscense Number",
                           keyboardType: TextInputType.number,
                           numeric: true,
@@ -230,7 +246,11 @@ class _ProfileScreenBodyState extends State<DoctorProfileBody> {
                                   .read<DoctorClinicCubit>()
                                   .formKey
                                   .currentState!
-                                  .validate()) {}
+                                  .validate()) {
+                                await context
+                                    .read<DoctorClinicCubit>()
+                                    .updateDoctorProfile();
+                              }
                             })
                       ],
                     ),

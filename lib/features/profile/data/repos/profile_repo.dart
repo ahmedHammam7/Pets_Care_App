@@ -3,7 +3,6 @@ import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dar
 import 'package:pets_care_app/core/network/api_error_handler.dart';
 import 'package:pets_care_app/core/network/api_result.dart';
 import 'package:pets_care_app/core/network/api_service.dart';
-import 'package:pets_care_app/features/clinics/doctor/data/models/doctor_profile_response.dart';
 import 'package:pets_care_app/features/profile/data/models/profile_response.dart';
 import 'package:pets_care_app/features/store/store/data/models/store_info_response.dart';
 

@@ -22,6 +22,9 @@ mixin _$DoctorClinicState {
     required TResult Function() profileLoading,
     required TResult Function(DoctorProfileResponse data) profileSuccess,
     required TResult Function(String message) profileError,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +33,9 @@ mixin _$DoctorClinicState {
     TResult? Function()? profileLoading,
     TResult? Function(DoctorProfileResponse data)? profileSuccess,
     TResult? Function(String message)? profileError,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +44,9 @@ mixin _$DoctorClinicState {
     TResult Function()? profileLoading,
     TResult Function(DoctorProfileResponse data)? profileSuccess,
     TResult Function(String message)? profileError,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +56,9 @@ mixin _$DoctorClinicState {
     required TResult Function(loadDoctorProfileLoading value) profileLoading,
     required TResult Function(loadDoctorProfileSuccess value) profileSuccess,
     required TResult Function(loadDoctorProfileError value) profileError,
+    required TResult Function(updateDoctorProfileLoading value) updateLoading,
+    required TResult Function(updateDoctorProfileSuccess value) updateSuccess,
+    required TResult Function(updateDoctorProfileError value) updateError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +67,9 @@ mixin _$DoctorClinicState {
     TResult? Function(loadDoctorProfileLoading value)? profileLoading,
     TResult? Function(loadDoctorProfileSuccess value)? profileSuccess,
     TResult? Function(loadDoctorProfileError value)? profileError,
+    TResult? Function(updateDoctorProfileLoading value)? updateLoading,
+    TResult? Function(updateDoctorProfileSuccess value)? updateSuccess,
+    TResult? Function(updateDoctorProfileError value)? updateError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +78,9 @@ mixin _$DoctorClinicState {
     TResult Function(loadDoctorProfileLoading value)? profileLoading,
     TResult Function(loadDoctorProfileSuccess value)? profileSuccess,
     TResult Function(loadDoctorProfileError value)? profileError,
+    TResult Function(updateDoctorProfileLoading value)? updateLoading,
+    TResult Function(updateDoctorProfileSuccess value)? updateSuccess,
+    TResult Function(updateDoctorProfileError value)? updateError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -134,6 +152,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function() profileLoading,
     required TResult Function(DoctorProfileResponse data) profileSuccess,
     required TResult Function(String message) profileError,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateError,
   }) {
     return initial();
   }
@@ -145,6 +166,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? profileLoading,
     TResult? Function(DoctorProfileResponse data)? profileSuccess,
     TResult? Function(String message)? profileError,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateError,
   }) {
     return initial?.call();
   }
@@ -156,6 +180,9 @@ class _$InitialImpl implements _Initial {
     TResult Function()? profileLoading,
     TResult Function(DoctorProfileResponse data)? profileSuccess,
     TResult Function(String message)? profileError,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -171,6 +198,9 @@ class _$InitialImpl implements _Initial {
     required TResult Function(loadDoctorProfileLoading value) profileLoading,
     required TResult Function(loadDoctorProfileSuccess value) profileSuccess,
     required TResult Function(loadDoctorProfileError value) profileError,
+    required TResult Function(updateDoctorProfileLoading value) updateLoading,
+    required TResult Function(updateDoctorProfileSuccess value) updateSuccess,
+    required TResult Function(updateDoctorProfileError value) updateError,
   }) {
     return initial(this);
   }
@@ -182,6 +212,9 @@ class _$InitialImpl implements _Initial {
     TResult? Function(loadDoctorProfileLoading value)? profileLoading,
     TResult? Function(loadDoctorProfileSuccess value)? profileSuccess,
     TResult? Function(loadDoctorProfileError value)? profileError,
+    TResult? Function(updateDoctorProfileLoading value)? updateLoading,
+    TResult? Function(updateDoctorProfileSuccess value)? updateSuccess,
+    TResult? Function(updateDoctorProfileError value)? updateError,
   }) {
     return initial?.call(this);
   }
@@ -193,6 +226,9 @@ class _$InitialImpl implements _Initial {
     TResult Function(loadDoctorProfileLoading value)? profileLoading,
     TResult Function(loadDoctorProfileSuccess value)? profileSuccess,
     TResult Function(loadDoctorProfileError value)? profileError,
+    TResult Function(updateDoctorProfileLoading value)? updateLoading,
+    TResult Function(updateDoctorProfileSuccess value)? updateSuccess,
+    TResult Function(updateDoctorProfileError value)? updateError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -255,6 +291,9 @@ class _$loadDoctorProfileLoadingImpl implements loadDoctorProfileLoading {
     required TResult Function() profileLoading,
     required TResult Function(DoctorProfileResponse data) profileSuccess,
     required TResult Function(String message) profileError,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateError,
   }) {
     return profileLoading();
   }
@@ -266,6 +305,9 @@ class _$loadDoctorProfileLoadingImpl implements loadDoctorProfileLoading {
     TResult? Function()? profileLoading,
     TResult? Function(DoctorProfileResponse data)? profileSuccess,
     TResult? Function(String message)? profileError,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateError,
   }) {
     return profileLoading?.call();
   }
@@ -277,6 +319,9 @@ class _$loadDoctorProfileLoadingImpl implements loadDoctorProfileLoading {
     TResult Function()? profileLoading,
     TResult Function(DoctorProfileResponse data)? profileSuccess,
     TResult Function(String message)? profileError,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateError,
     required TResult orElse(),
   }) {
     if (profileLoading != null) {
@@ -292,6 +337,9 @@ class _$loadDoctorProfileLoadingImpl implements loadDoctorProfileLoading {
     required TResult Function(loadDoctorProfileLoading value) profileLoading,
     required TResult Function(loadDoctorProfileSuccess value) profileSuccess,
     required TResult Function(loadDoctorProfileError value) profileError,
+    required TResult Function(updateDoctorProfileLoading value) updateLoading,
+    required TResult Function(updateDoctorProfileSuccess value) updateSuccess,
+    required TResult Function(updateDoctorProfileError value) updateError,
   }) {
     return profileLoading(this);
   }
@@ -303,6 +351,9 @@ class _$loadDoctorProfileLoadingImpl implements loadDoctorProfileLoading {
     TResult? Function(loadDoctorProfileLoading value)? profileLoading,
     TResult? Function(loadDoctorProfileSuccess value)? profileSuccess,
     TResult? Function(loadDoctorProfileError value)? profileError,
+    TResult? Function(updateDoctorProfileLoading value)? updateLoading,
+    TResult? Function(updateDoctorProfileSuccess value)? updateSuccess,
+    TResult? Function(updateDoctorProfileError value)? updateError,
   }) {
     return profileLoading?.call(this);
   }
@@ -314,6 +365,9 @@ class _$loadDoctorProfileLoadingImpl implements loadDoctorProfileLoading {
     TResult Function(loadDoctorProfileLoading value)? profileLoading,
     TResult Function(loadDoctorProfileSuccess value)? profileSuccess,
     TResult Function(loadDoctorProfileError value)? profileError,
+    TResult Function(updateDoctorProfileLoading value)? updateLoading,
+    TResult Function(updateDoctorProfileSuccess value)? updateSuccess,
+    TResult Function(updateDoctorProfileError value)? updateError,
     required TResult orElse(),
   }) {
     if (profileLoading != null) {
@@ -403,6 +457,9 @@ class _$loadDoctorProfileSuccessImpl implements loadDoctorProfileSuccess {
     required TResult Function() profileLoading,
     required TResult Function(DoctorProfileResponse data) profileSuccess,
     required TResult Function(String message) profileError,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateError,
   }) {
     return profileSuccess(data);
   }
@@ -414,6 +471,9 @@ class _$loadDoctorProfileSuccessImpl implements loadDoctorProfileSuccess {
     TResult? Function()? profileLoading,
     TResult? Function(DoctorProfileResponse data)? profileSuccess,
     TResult? Function(String message)? profileError,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateError,
   }) {
     return profileSuccess?.call(data);
   }
@@ -425,6 +485,9 @@ class _$loadDoctorProfileSuccessImpl implements loadDoctorProfileSuccess {
     TResult Function()? profileLoading,
     TResult Function(DoctorProfileResponse data)? profileSuccess,
     TResult Function(String message)? profileError,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateError,
     required TResult orElse(),
   }) {
     if (profileSuccess != null) {
@@ -440,6 +503,9 @@ class _$loadDoctorProfileSuccessImpl implements loadDoctorProfileSuccess {
     required TResult Function(loadDoctorProfileLoading value) profileLoading,
     required TResult Function(loadDoctorProfileSuccess value) profileSuccess,
     required TResult Function(loadDoctorProfileError value) profileError,
+    required TResult Function(updateDoctorProfileLoading value) updateLoading,
+    required TResult Function(updateDoctorProfileSuccess value) updateSuccess,
+    required TResult Function(updateDoctorProfileError value) updateError,
   }) {
     return profileSuccess(this);
   }
@@ -451,6 +517,9 @@ class _$loadDoctorProfileSuccessImpl implements loadDoctorProfileSuccess {
     TResult? Function(loadDoctorProfileLoading value)? profileLoading,
     TResult? Function(loadDoctorProfileSuccess value)? profileSuccess,
     TResult? Function(loadDoctorProfileError value)? profileError,
+    TResult? Function(updateDoctorProfileLoading value)? updateLoading,
+    TResult? Function(updateDoctorProfileSuccess value)? updateSuccess,
+    TResult? Function(updateDoctorProfileError value)? updateError,
   }) {
     return profileSuccess?.call(this);
   }
@@ -462,6 +531,9 @@ class _$loadDoctorProfileSuccessImpl implements loadDoctorProfileSuccess {
     TResult Function(loadDoctorProfileLoading value)? profileLoading,
     TResult Function(loadDoctorProfileSuccess value)? profileSuccess,
     TResult Function(loadDoctorProfileError value)? profileError,
+    TResult Function(updateDoctorProfileLoading value)? updateLoading,
+    TResult Function(updateDoctorProfileSuccess value)? updateSuccess,
+    TResult Function(updateDoctorProfileError value)? updateError,
     required TResult orElse(),
   }) {
     if (profileSuccess != null) {
@@ -559,6 +631,9 @@ class _$loadDoctorProfileErrorImpl implements loadDoctorProfileError {
     required TResult Function() profileLoading,
     required TResult Function(DoctorProfileResponse data) profileSuccess,
     required TResult Function(String message) profileError,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateError,
   }) {
     return profileError(message);
   }
@@ -570,6 +645,9 @@ class _$loadDoctorProfileErrorImpl implements loadDoctorProfileError {
     TResult? Function()? profileLoading,
     TResult? Function(DoctorProfileResponse data)? profileSuccess,
     TResult? Function(String message)? profileError,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateError,
   }) {
     return profileError?.call(message);
   }
@@ -581,6 +659,9 @@ class _$loadDoctorProfileErrorImpl implements loadDoctorProfileError {
     TResult Function()? profileLoading,
     TResult Function(DoctorProfileResponse data)? profileSuccess,
     TResult Function(String message)? profileError,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateError,
     required TResult orElse(),
   }) {
     if (profileError != null) {
@@ -596,6 +677,9 @@ class _$loadDoctorProfileErrorImpl implements loadDoctorProfileError {
     required TResult Function(loadDoctorProfileLoading value) profileLoading,
     required TResult Function(loadDoctorProfileSuccess value) profileSuccess,
     required TResult Function(loadDoctorProfileError value) profileError,
+    required TResult Function(updateDoctorProfileLoading value) updateLoading,
+    required TResult Function(updateDoctorProfileSuccess value) updateSuccess,
+    required TResult Function(updateDoctorProfileError value) updateError,
   }) {
     return profileError(this);
   }
@@ -607,6 +691,9 @@ class _$loadDoctorProfileErrorImpl implements loadDoctorProfileError {
     TResult? Function(loadDoctorProfileLoading value)? profileLoading,
     TResult? Function(loadDoctorProfileSuccess value)? profileSuccess,
     TResult? Function(loadDoctorProfileError value)? profileError,
+    TResult? Function(updateDoctorProfileLoading value)? updateLoading,
+    TResult? Function(updateDoctorProfileSuccess value)? updateSuccess,
+    TResult? Function(updateDoctorProfileError value)? updateError,
   }) {
     return profileError?.call(this);
   }
@@ -618,6 +705,9 @@ class _$loadDoctorProfileErrorImpl implements loadDoctorProfileError {
     TResult Function(loadDoctorProfileLoading value)? profileLoading,
     TResult Function(loadDoctorProfileSuccess value)? profileSuccess,
     TResult Function(loadDoctorProfileError value)? profileError,
+    TResult Function(updateDoctorProfileLoading value)? updateLoading,
+    TResult Function(updateDoctorProfileSuccess value)? updateSuccess,
+    TResult Function(updateDoctorProfileError value)? updateError,
     required TResult orElse(),
   }) {
     if (profileError != null) {
@@ -637,5 +727,458 @@ abstract class loadDoctorProfileError implements DoctorClinicState {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$loadDoctorProfileErrorImplCopyWith<_$loadDoctorProfileErrorImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$updateDoctorProfileLoadingImplCopyWith<$Res> {
+  factory _$$updateDoctorProfileLoadingImplCopyWith(
+          _$updateDoctorProfileLoadingImpl value,
+          $Res Function(_$updateDoctorProfileLoadingImpl) then) =
+      __$$updateDoctorProfileLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$updateDoctorProfileLoadingImplCopyWithImpl<$Res>
+    extends _$DoctorClinicStateCopyWithImpl<$Res,
+        _$updateDoctorProfileLoadingImpl>
+    implements _$$updateDoctorProfileLoadingImplCopyWith<$Res> {
+  __$$updateDoctorProfileLoadingImplCopyWithImpl(
+      _$updateDoctorProfileLoadingImpl _value,
+      $Res Function(_$updateDoctorProfileLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of DoctorClinicState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$updateDoctorProfileLoadingImpl implements updateDoctorProfileLoading {
+  const _$updateDoctorProfileLoadingImpl();
+
+  @override
+  String toString() {
+    return 'DoctorClinicState.updateLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$updateDoctorProfileLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() profileLoading,
+    required TResult Function(DoctorProfileResponse data) profileSuccess,
+    required TResult Function(String message) profileError,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateError,
+  }) {
+    return updateLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? profileLoading,
+    TResult? Function(DoctorProfileResponse data)? profileSuccess,
+    TResult? Function(String message)? profileError,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateError,
+  }) {
+    return updateLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? profileLoading,
+    TResult Function(DoctorProfileResponse data)? profileSuccess,
+    TResult Function(String message)? profileError,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateError,
+    required TResult orElse(),
+  }) {
+    if (updateLoading != null) {
+      return updateLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(loadDoctorProfileLoading value) profileLoading,
+    required TResult Function(loadDoctorProfileSuccess value) profileSuccess,
+    required TResult Function(loadDoctorProfileError value) profileError,
+    required TResult Function(updateDoctorProfileLoading value) updateLoading,
+    required TResult Function(updateDoctorProfileSuccess value) updateSuccess,
+    required TResult Function(updateDoctorProfileError value) updateError,
+  }) {
+    return updateLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(loadDoctorProfileLoading value)? profileLoading,
+    TResult? Function(loadDoctorProfileSuccess value)? profileSuccess,
+    TResult? Function(loadDoctorProfileError value)? profileError,
+    TResult? Function(updateDoctorProfileLoading value)? updateLoading,
+    TResult? Function(updateDoctorProfileSuccess value)? updateSuccess,
+    TResult? Function(updateDoctorProfileError value)? updateError,
+  }) {
+    return updateLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(loadDoctorProfileLoading value)? profileLoading,
+    TResult Function(loadDoctorProfileSuccess value)? profileSuccess,
+    TResult Function(loadDoctorProfileError value)? profileError,
+    TResult Function(updateDoctorProfileLoading value)? updateLoading,
+    TResult Function(updateDoctorProfileSuccess value)? updateSuccess,
+    TResult Function(updateDoctorProfileError value)? updateError,
+    required TResult orElse(),
+  }) {
+    if (updateLoading != null) {
+      return updateLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class updateDoctorProfileLoading implements DoctorClinicState {
+  const factory updateDoctorProfileLoading() = _$updateDoctorProfileLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$updateDoctorProfileSuccessImplCopyWith<$Res> {
+  factory _$$updateDoctorProfileSuccessImplCopyWith(
+          _$updateDoctorProfileSuccessImpl value,
+          $Res Function(_$updateDoctorProfileSuccessImpl) then) =
+      __$$updateDoctorProfileSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$updateDoctorProfileSuccessImplCopyWithImpl<$Res>
+    extends _$DoctorClinicStateCopyWithImpl<$Res,
+        _$updateDoctorProfileSuccessImpl>
+    implements _$$updateDoctorProfileSuccessImplCopyWith<$Res> {
+  __$$updateDoctorProfileSuccessImplCopyWithImpl(
+      _$updateDoctorProfileSuccessImpl _value,
+      $Res Function(_$updateDoctorProfileSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of DoctorClinicState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$updateDoctorProfileSuccessImpl implements updateDoctorProfileSuccess {
+  const _$updateDoctorProfileSuccessImpl();
+
+  @override
+  String toString() {
+    return 'DoctorClinicState.updateSuccess()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$updateDoctorProfileSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() profileLoading,
+    required TResult Function(DoctorProfileResponse data) profileSuccess,
+    required TResult Function(String message) profileError,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateError,
+  }) {
+    return updateSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? profileLoading,
+    TResult? Function(DoctorProfileResponse data)? profileSuccess,
+    TResult? Function(String message)? profileError,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateError,
+  }) {
+    return updateSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? profileLoading,
+    TResult Function(DoctorProfileResponse data)? profileSuccess,
+    TResult Function(String message)? profileError,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateError,
+    required TResult orElse(),
+  }) {
+    if (updateSuccess != null) {
+      return updateSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(loadDoctorProfileLoading value) profileLoading,
+    required TResult Function(loadDoctorProfileSuccess value) profileSuccess,
+    required TResult Function(loadDoctorProfileError value) profileError,
+    required TResult Function(updateDoctorProfileLoading value) updateLoading,
+    required TResult Function(updateDoctorProfileSuccess value) updateSuccess,
+    required TResult Function(updateDoctorProfileError value) updateError,
+  }) {
+    return updateSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(loadDoctorProfileLoading value)? profileLoading,
+    TResult? Function(loadDoctorProfileSuccess value)? profileSuccess,
+    TResult? Function(loadDoctorProfileError value)? profileError,
+    TResult? Function(updateDoctorProfileLoading value)? updateLoading,
+    TResult? Function(updateDoctorProfileSuccess value)? updateSuccess,
+    TResult? Function(updateDoctorProfileError value)? updateError,
+  }) {
+    return updateSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(loadDoctorProfileLoading value)? profileLoading,
+    TResult Function(loadDoctorProfileSuccess value)? profileSuccess,
+    TResult Function(loadDoctorProfileError value)? profileError,
+    TResult Function(updateDoctorProfileLoading value)? updateLoading,
+    TResult Function(updateDoctorProfileSuccess value)? updateSuccess,
+    TResult Function(updateDoctorProfileError value)? updateError,
+    required TResult orElse(),
+  }) {
+    if (updateSuccess != null) {
+      return updateSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class updateDoctorProfileSuccess implements DoctorClinicState {
+  const factory updateDoctorProfileSuccess() = _$updateDoctorProfileSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$updateDoctorProfileErrorImplCopyWith<$Res> {
+  factory _$$updateDoctorProfileErrorImplCopyWith(
+          _$updateDoctorProfileErrorImpl value,
+          $Res Function(_$updateDoctorProfileErrorImpl) then) =
+      __$$updateDoctorProfileErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$updateDoctorProfileErrorImplCopyWithImpl<$Res>
+    extends _$DoctorClinicStateCopyWithImpl<$Res,
+        _$updateDoctorProfileErrorImpl>
+    implements _$$updateDoctorProfileErrorImplCopyWith<$Res> {
+  __$$updateDoctorProfileErrorImplCopyWithImpl(
+      _$updateDoctorProfileErrorImpl _value,
+      $Res Function(_$updateDoctorProfileErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of DoctorClinicState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$updateDoctorProfileErrorImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$updateDoctorProfileErrorImpl implements updateDoctorProfileError {
+  const _$updateDoctorProfileErrorImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'DoctorClinicState.updateError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$updateDoctorProfileErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of DoctorClinicState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$updateDoctorProfileErrorImplCopyWith<_$updateDoctorProfileErrorImpl>
+      get copyWith => __$$updateDoctorProfileErrorImplCopyWithImpl<
+          _$updateDoctorProfileErrorImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() profileLoading,
+    required TResult Function(DoctorProfileResponse data) profileSuccess,
+    required TResult Function(String message) profileError,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateError,
+  }) {
+    return updateError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? profileLoading,
+    TResult? Function(DoctorProfileResponse data)? profileSuccess,
+    TResult? Function(String message)? profileError,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateError,
+  }) {
+    return updateError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? profileLoading,
+    TResult Function(DoctorProfileResponse data)? profileSuccess,
+    TResult Function(String message)? profileError,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateError,
+    required TResult orElse(),
+  }) {
+    if (updateError != null) {
+      return updateError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(loadDoctorProfileLoading value) profileLoading,
+    required TResult Function(loadDoctorProfileSuccess value) profileSuccess,
+    required TResult Function(loadDoctorProfileError value) profileError,
+    required TResult Function(updateDoctorProfileLoading value) updateLoading,
+    required TResult Function(updateDoctorProfileSuccess value) updateSuccess,
+    required TResult Function(updateDoctorProfileError value) updateError,
+  }) {
+    return updateError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(loadDoctorProfileLoading value)? profileLoading,
+    TResult? Function(loadDoctorProfileSuccess value)? profileSuccess,
+    TResult? Function(loadDoctorProfileError value)? profileError,
+    TResult? Function(updateDoctorProfileLoading value)? updateLoading,
+    TResult? Function(updateDoctorProfileSuccess value)? updateSuccess,
+    TResult? Function(updateDoctorProfileError value)? updateError,
+  }) {
+    return updateError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(loadDoctorProfileLoading value)? profileLoading,
+    TResult Function(loadDoctorProfileSuccess value)? profileSuccess,
+    TResult Function(loadDoctorProfileError value)? profileError,
+    TResult Function(updateDoctorProfileLoading value)? updateLoading,
+    TResult Function(updateDoctorProfileSuccess value)? updateSuccess,
+    TResult Function(updateDoctorProfileError value)? updateError,
+    required TResult orElse(),
+  }) {
+    if (updateError != null) {
+      return updateError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class updateDoctorProfileError implements DoctorClinicState {
+  const factory updateDoctorProfileError(final String message) =
+      _$updateDoctorProfileErrorImpl;
+
+  String get message;
+
+  /// Create a copy of DoctorClinicState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$updateDoctorProfileErrorImplCopyWith<_$updateDoctorProfileErrorImpl>
       get copyWith => throw _privateConstructorUsedError;
 }
