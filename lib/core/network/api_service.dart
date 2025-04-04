@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:pets_care_app/core/network/api_constant.dart';
 import 'package:pets_care_app/features/auth/login/data/models/login_response.dart';
 import 'package:pets_care_app/features/auth/register/data/models/register_response.dart';
+import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/doctor_profile_response.dart';
 import 'package:pets_care_app/features/profile/data/models/profile_response.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
@@ -53,4 +54,7 @@ abstract class ApiService {
   @DELETE('${ApiConstant.clinics}/{id}')
   Future<dynamic> deleteClinic(
       @Header('Authorization') String token, @Path('id') String id);
+  @GET(ApiConstant.clinics)
+  Future<List<ClinicResponse>> getAllClinics(
+      @Header('Authorization') String token);    
 }

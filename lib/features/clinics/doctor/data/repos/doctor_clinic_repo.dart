@@ -3,6 +3,7 @@ import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dar
 import 'package:pets_care_app/core/network/api_error_handler.dart';
 import 'package:pets_care_app/core/network/api_result.dart';
 import 'package:pets_care_app/core/network/api_service.dart';
+import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/doctor_profile_response.dart';
 
 class DoctorClinicRepo {
@@ -36,6 +37,15 @@ class DoctorClinicRepo {
       final response = await _apiService.deleteClinic(
           'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}',
           id);
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+    Future<ApiResult<List<ClinicResponse> >> getAllClinics() async {
+    try {
+      final response = await _apiService.getAllClinics(
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}');
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));
