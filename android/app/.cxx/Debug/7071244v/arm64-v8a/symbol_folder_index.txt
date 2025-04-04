@@ -1,0 +1,1 @@
+C:\petsCareApp\build\app\intermediates\cxx\Debug\7071244v\obj\arm64-v8a
