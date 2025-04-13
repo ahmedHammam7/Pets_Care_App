@@ -6,7 +6,6 @@ import 'package:image_picker/image_picker.dart';
 import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs.dart';
 import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
-import 'package:pets_care_app/features/store/store/data/models/product_body.dart';
 import 'package:pets_care_app/features/store/store/data/models/store_info_response.dart';
 import 'package:pets_care_app/features/store/store/data/repos/store_repos.dart';
 
@@ -28,6 +27,7 @@ class StoreStoreCubit extends Cubit<StoreStoreState> {
   TextEditingController priceController = TextEditingController();
   TextEditingController typeController = TextEditingController();
   TextEditingController nameController = TextEditingController();
+
   XFile? image;
 
 // form key
@@ -72,17 +72,39 @@ class StoreStoreCubit extends Cubit<StoreStoreState> {
     );
   }
 
-  Future<void> addProduct() async {
+  Future<void> addProductt() async {
+    if (nameController.text.isEmpty ||
+        categoryController.text.isEmpty ||
+        typeController.text.isEmpty ||
+        priceController.text.isEmpty ||
+        descriptionController.text.isEmpty) {
+      emit(const StoreStoreState.addProductFailure(
+          "All required fields must be filled"));
+      return;
+    }
+    final price = double.tryParse(priceController.text);
+    if (price == null || price <= 0) {
+      emit(const StoreStoreState.addProductFailure("Invalid price"));
+      return;
+    }
     emit(const StoreStoreState.addProductLoading());
-
-    final result = await _storeRepo.addProduct({
-      "name": nameController.text,
-      "category": categoryController.text,
-      "food_type": typeController.text,
-      "price": priceController.text,
-      "description": descriptionController.text,
-      "image": await MultipartFile.fromFile(image!.path, filename: "image.jpg"),
+    final formData = FormData.fromMap({
+      "name": nameController.text.trim(),
+      "category": categoryController.text.trim(),
+      "food_type": typeController.text.trim(),
+      "price": price,
+      "description": descriptionController.text.trim().isNotEmpty
+          ? descriptionController.text.trim()
+          : null,
+      "image": image != null
+          ? await MultipartFile.fromFile(
+              image!.path,
+              filename: "image.jpg",
+            )
+          : null,
     });
+
+    final result = await _storeRepo.addProduct(formData);
     result.when(
       success: (response) {
         emit(const StoreStoreState.addProductSuccess());
@@ -113,7 +135,9 @@ class StoreStoreCubit extends Cubit<StoreStoreState> {
     emit(const StoreStoreState.logout());
   }
 
-  Future<void> deleteProduct(String id) async {
+  Future<void> deleteProduct(
+    String id,
+  ) async {
     emit(const StoreStoreState.deleteProductLoading());
     final result = await _storeRepo.deleteProduct(id);
     result.when(success: (response) {
@@ -124,16 +148,26 @@ class StoreStoreCubit extends Cubit<StoreStoreState> {
   }
 
   Future<void> updateProduct(String id) async {
+    final price = double.tryParse(priceController.text);
+    if (price == null || price <= 0) {
+      emit(const StoreStoreState.addProductFailure("Invalid price"));
+      return;
+    }
     emit(const StoreStoreState.updateProductLoading());
-    ProductBody body = ProductBody(
-      name: nameController.text,
-      category: categoryController.text,
-      foodType: typeController.text,
-      price: priceController.text,
-      description: descriptionController.text,
-      // image: await MultipartFile.fromFile(image!.path, filename: "image.jpg"),
-    );
-    final result = await _storeRepo.updateProduct(id, body);
+    final formData = FormData.fromMap({
+      "name": nameController.text.trim(),
+      "category": categoryController.text.trim(),
+      "food_type": typeController.text.trim(),
+      "price": price,
+      "description": descriptionController.text.trim(),
+      "image": image != null
+          ? await MultipartFile.fromFile(
+              image!.path,
+              filename: "image.jpg",
+            )
+          : null,
+    });
+    final result = await _storeRepo.updateProduct(id, formData);
     result.when(success: (response) {
       emit(const StoreStoreState.updateProductSuccess());
     }, failure: (message) {

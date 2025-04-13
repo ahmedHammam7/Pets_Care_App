@@ -24,4 +24,8 @@ class Routes {
   static const String doctorAddClinicScreen = '/doctorAddClinicScreen';
   static const String doctorShowClinicsScreen = '/doctorShowClinicsScreen';
   static const String doctorUpdateInfoScreen = '/doctorUpdateInfoScreen';
+  static const String doctorShowAppointmentsScreen =
+      '/doctorShowAppointmentsScreen';
+  static const String doctorAppointmentsDetailsScreen =
+      '/doctorAppointmentsDetailsScreen';
 }

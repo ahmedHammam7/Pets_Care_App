@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs.dart';
+import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dart';
+import 'package:pets_care_app/features/clinics/doctor/data/models/appoinment_doc_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/doctor_profile_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/repos/doctor_clinic_repo.dart';
@@ -79,6 +82,16 @@ class DoctorClinicCubit extends Cubit<DoctorClinicState> {
     );
   }
 
+  Future<void> getAllClinics() async {
+    emit(const DoctorClinicState.clinicsLoading());
+    final result = await doctorClinicRepo.getAllClinics();
+    result.when(success: (response) {
+      emit(DoctorClinicState.clinicsSuccess(response));
+    }, failure: (message) {
+      emit(DoctorClinicState.clinicsError(message.getAllErrorMessages()));
+    });
+  }
+
   Future<void> deleteClinic(String id) async {
     emit(const DoctorClinicState.deleteLoading());
     final result = await doctorClinicRepo.deleteClinic(id);
@@ -87,5 +100,21 @@ class DoctorClinicCubit extends Cubit<DoctorClinicState> {
     }, failure: (message) {
       emit(DoctorClinicState.deleteError(message.getAllErrorMessages()));
     });
+  }
+
+  Future<void> getAllDoctorAppointments() async {
+    emit(const DoctorClinicState.appointmentsLoading());
+    final result = await doctorClinicRepo.getAllDoctorAppointments();
+    result.when(success: (response) {
+      emit(DoctorClinicState.appointmentsSuccess(response));
+    }, failure: (message) {
+      emit(DoctorClinicState.appointmentsError(message.getAllErrorMessages()));
+    });
+  }
+
+  Future<void> logout() async {
+    await SharedPrefHelper.removeSecuredData(SharedPrefsConstant.token);
+    await SharedPrefHelper.removeData(SharedPrefsConstant.type);
+    emit(const DoctorClinicState.logoutSuccess());
   }
 }

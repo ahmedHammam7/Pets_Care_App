@@ -8,6 +8,7 @@ import 'package:pets_care_app/core/helper/extension.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
+import 'package:pets_care_app/core/widgets/app_drop_down_menu.dart';
 import 'package:pets_care_app/core/widgets/app_text_field.dart';
 import 'package:pets_care_app/core/widgets/custom_app_bar.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
@@ -29,7 +30,7 @@ class UpdateProductScreen extends StatelessWidget {
             current is UpdateProductLoading,
         listener: (context, state) async {
           if (state is UpdateProductSuccess) {
-            await context.pushNamed(Routes.storeShowProductsScreen);
+            await context.pushNamed(Routes.storeStoreScreen);
             // ignore: use_build_context_synchronously
             ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
               content: Text("Product Updated Successfully"),
@@ -76,9 +77,11 @@ class _UpdateProductBodyState extends State<UpdateProductBody> {
                   child: CircleAvatar(
                     radius: 96.r,
                     backgroundColor: AppColors.white,
-                    backgroundImage: image == null
+                    backgroundImage: context.read<StoreStoreCubit>().image ==
+                            null
                         ? NetworkImage(widget.data.image)
-                        : FileImage(image!),
+                        : FileImage(
+                            File(context.read<StoreStoreCubit>().image!.path)),
                   ),
                 ),
                 Positioned(
@@ -139,16 +142,27 @@ class _UpdateProductBodyState extends State<UpdateProductBody> {
                 return null;
               },
             ),
-            verticalSpace(10),
-            AppTextField.outsideHint(
-              hint: "Category",
-              controller: context.read<StoreStoreCubit>().categoryController,
-              validator: (value) {
-                if (value == null || value.isEmpty) {
-                  return "Please enter Category";
-                }
-                return null;
-              },
+            verticalSpace(20),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15.w),
+              child: AppDropDownMenu(
+                hint: "Type",
+                initialSelection:
+                    context.read<StoreStoreCubit>().typeController.text,
+                items: const ["dog", "cat"],
+                controller: context.read<StoreStoreCubit>().typeController,
+              ),
+            ),
+            verticalSpace(20),
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 15.w),
+              child: AppDropDownMenu(
+                hint: "Category",
+                initialSelection:
+                    context.read<StoreStoreCubit>().categoryController.text,
+                items: const ["food", "vititems", "accessory", "smart_device"],
+                controller: context.read<StoreStoreCubit>().categoryController,
+              ),
             ),
             verticalSpace(20),
             Padding(
@@ -173,14 +187,17 @@ class _UpdateProductBodyState extends State<UpdateProductBody> {
     );
   }
 
-  void pickImage() {
-    ImagePicker().pickImage(source: ImageSource.gallery).then((value) {
-      image = File(value!.path);
-    }).then(
-      (value) {
-        setState(() {});
-      },
-    );
+  Future<File?> pickImage() async {
+    final picker = ImagePicker();
+    final pickedFile = await picker.pickImage(source: ImageSource.gallery);
+    if (pickedFile != null) {
+      setState(() {
+        context.read<StoreStoreCubit>().image = pickedFile;
+      });
+      return File(pickedFile.path);
+    }
+
+    return null;
   }
 
   @override
@@ -189,9 +206,10 @@ class _UpdateProductBodyState extends State<UpdateProductBody> {
     context.read<StoreStoreCubit>().descriptionController.text =
         widget.data.description;
     context.read<StoreStoreCubit>().priceController.text = widget.data.price;
-    context.read<StoreStoreCubit>().categoryController.text = "food";
+    context.read<StoreStoreCubit>().categoryController.text =
+        widget.data.category == "" ? "food" : widget.data.category;
     context.read<StoreStoreCubit>().typeController.text = widget.data.foodType;
-
+    Image.network(widget.data.image);
     super.initState();
   }
 }

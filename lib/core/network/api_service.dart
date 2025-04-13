@@ -2,11 +2,12 @@ import 'package:dio/dio.dart';
 import 'package:pets_care_app/core/network/api_constant.dart';
 import 'package:pets_care_app/features/auth/login/data/models/login_response.dart';
 import 'package:pets_care_app/features/auth/register/data/models/register_response.dart';
+import 'package:pets_care_app/features/clinics/doctor/data/models/appoinment_doc_response.dart';
+import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_request.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/doctor_profile_response.dart';
 import 'package:pets_care_app/features/profile/data/models/profile_response.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
-import 'package:pets_care_app/features/store/store/data/models/product_body.dart';
 import 'package:pets_care_app/features/store/store/data/models/store_info_response.dart';
 import 'package:retrofit/error_logger.dart';
 
@@ -43,18 +44,24 @@ abstract class ApiService {
 
   @POST(ApiConstant.items)
   Future<dynamic> addProduct(
-      @Header('Authorization') String token, @Body() Map<String, dynamic> body);
+      @Header('Authorization') String token, @Body() dynamic body);
 
   @DELETE('${ApiConstant.items}/{id}')
   Future<dynamic> deleteProduct(
       @Header('Authorization') String token, @Path('id') String id);
   @POST('${ApiConstant.items}/{id}')
   Future<dynamic> updateProduct(@Header('Authorization') String token,
-      @Path('id') String id, @Body() ProductBody body);
+      @Path('id') String id, @Body() dynamic body);
   @DELETE('${ApiConstant.clinics}/{id}')
   Future<dynamic> deleteClinic(
       @Header('Authorization') String token, @Path('id') String id);
   @GET(ApiConstant.clinics)
   Future<List<ClinicResponse>> getAllClinics(
-      @Header('Authorization') String token);    
+      @Header('Authorization') String token);
+  @POST(ApiConstant.clinics)
+  Future<dynamic> addClinic(
+      @Header('Authorization') String token, @Body() ClinicRequest body);
+  @GET(ApiConstant.doctorAppointments)
+  Future<List<AppoinmentDocResponse>> getAllDoctorAppointments(
+      @Header('Authorization') String token);
 }

@@ -1,6 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs.dart';
-import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dart';
 import 'package:pretty_dio_logger/pretty_dio_logger.dart';
 
 class DioFactory {
@@ -17,6 +15,7 @@ class DioFactory {
       dio!
         ..options.connectTimeout = timeOut
         ..options.receiveTimeout = timeOut;
+
       addDioInterceptor();
       return dio!;
     } else {
@@ -32,13 +31,5 @@ class DioFactory {
         responseHeader: true,
       ),
     );
-  }
-
-  static Future<void> addHeader() async {
-    getDio().options.headers = {
-      'content-type': 'application/json',
-      "Authorization":
-          "Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}",
-    };
   }
 }

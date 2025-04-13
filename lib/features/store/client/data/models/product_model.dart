@@ -11,6 +11,7 @@ class ProductResponse {
   final String description;
   @JsonKey(name: 'image_url')
   final String image;
+  final String category;
 
   ProductResponse(
       {required this.name,
@@ -18,6 +19,7 @@ class ProductResponse {
       required this.price,
       required this.description,
       required this.id,
+      required this.category,
       required this.image});
 
   factory ProductResponse.fromJson(Map<String, dynamic> json) =>

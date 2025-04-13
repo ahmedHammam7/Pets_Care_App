@@ -23,7 +23,9 @@ class ShowProductsScreen extends StatelessWidget {
           if (state is AllProductsLoading || state is DeleteProductLoading) {
             return const ProductsLoading();
           } else if (state is DeleteProductSuccess) {
-            context.pop();
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              context.pop();
+            });
           } else if (state is AllProductsSuccess) {
             return ListView.builder(
               itemBuilder: (context, index) => StoreProductsListItem(

@@ -1,16 +1,19 @@
+import 'dart:math';
+
+import 'package:dio/dio.dart';
 import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs.dart';
 import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dart';
 import 'package:pets_care_app/core/network/api_error_handler.dart';
 import 'package:pets_care_app/core/network/api_result.dart';
 import 'package:pets_care_app/core/network/api_service.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
-import 'package:pets_care_app/features/store/store/data/models/product_body.dart';
 import 'package:pets_care_app/features/store/store/data/models/store_info_response.dart';
 
 class StoreStoreRepos {
   final ApiService _apiService;
+  final Dio dio;
 
-  StoreStoreRepos(this._apiService);
+  StoreStoreRepos(this._apiService, this.dio);
   Future<ApiResult<StoreInfoResponse>> getStoreProfile() async {
     try {
       final response = await _apiService.getStoreProfile(
@@ -33,11 +36,11 @@ class StoreStoreRepos {
     }
   }
 
-  Future<ApiResult<dynamic>> addProduct(Map<String, dynamic> body) async {
+  Future<ApiResult<dynamic>> addProduct(FormData formData) async {
     try {
       final response = await _apiService.addProduct(
           'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}',
-          body);
+          formData);
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));
@@ -65,12 +68,12 @@ class StoreStoreRepos {
     }
   }
 
-  Future<ApiResult<dynamic>> updateProduct(String id, ProductBody body) async {
+  Future<ApiResult<dynamic>> updateProduct(String id, FormData formData) async {
     try {
       final response = await _apiService.updateProduct(
           'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}',
           id,
-          body);
+          formData);
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));

@@ -34,7 +34,8 @@ Future<void> setupGetit() async {
   getIt.registerLazySingleton<StoreRepo>(() => StoreRepo(getIt()));
   getIt.registerFactory<StoreCubit>(() => StoreCubit(getIt()));
   //store store
-  getIt.registerLazySingleton<StoreStoreRepos>(() => StoreStoreRepos(getIt()));
+  getIt.registerLazySingleton<StoreStoreRepos>(
+      () => StoreStoreRepos(getIt(), dio));
   getIt.registerFactory<StoreStoreCubit>(() => StoreStoreCubit(getIt()));
   // doctor clinic
   getIt

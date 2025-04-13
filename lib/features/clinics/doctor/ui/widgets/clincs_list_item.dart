@@ -3,10 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
+import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_response.dart';
 
 class ClincsListItem extends StatelessWidget {
-  const ClincsListItem({super.key});
-
+  const ClincsListItem({super.key, required this.clinic});
+  final ClinicResponse clinic;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -26,25 +27,79 @@ class ClincsListItem extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Text(
-                    "Monday - Friday",
-                    overflow: TextOverflow.ellipsis,
-                    style: AppTextStyles.homeContainerText,
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.calendar_month_sharp,
+                        color: AppColors.white,
+                      ),
+                      horizontalSpace(10),
+                      Text(
+                        clinic.day,
+                        overflow: TextOverflow.ellipsis,
+                        style: AppTextStyles.homeContainerText,
+                      ),
+                    ],
                   ),
-                  Text(
-                    "\$ 300",
-                    overflow: TextOverflow.ellipsis,
-                    style: AppTextStyles.homeContainerText,
+                  verticalSpace(10),
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.attach_money_rounded,
+                        color: AppColors.white,
+                      ),
+                      horizontalSpace(10),
+                      Text(
+                        clinic.price,
+                        overflow: TextOverflow.ellipsis,
+                        style: AppTextStyles.homeContainerText,
+                      ),
+                    ],
                   ),
-                  Text(
-                    "7:00 AM - 8:00 PM",
-                    overflow: TextOverflow.ellipsis,
-                    style: AppTextStyles.homeContainerText,
+                  verticalSpace(10),
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.timelapse_rounded,
+                        color: AppColors.white,
+                      ),
+                      horizontalSpace(10),
+                      Text(
+                        clinic.time,
+                        overflow: TextOverflow.ellipsis,
+                        style: AppTextStyles.homeContainerText,
+                      ),
+                    ],
                   ),
-                  Text(
-                    "Maadi",
-                    overflow: TextOverflow.ellipsis,
-                    style: AppTextStyles.homeContainerText,
+                  verticalSpace(10),
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.location_on,
+                        color: AppColors.white,
+                      ),
+                      horizontalSpace(10),
+                      Text(
+                        clinic.address,
+                        overflow: TextOverflow.ellipsis,
+                        style: AppTextStyles.homeContainerText,
+                      ),
+                    ],
+                  ),
+                  verticalSpace(10),
+                  Row(
+                    children: [
+                      const Icon(
+                        Icons.date_range_rounded,
+                        color: AppColors.white,
+                      ),
+                      horizontalSpace(10),
+                      Text(
+                        clinic.appointmentDate,
+                        overflow: TextOverflow.ellipsis,
+                        style: AppTextStyles.homeContainerText,
+                      ),
+                    ],
                   ),
                 ],
               ),
@@ -53,11 +108,17 @@ class ClincsListItem extends StatelessWidget {
             Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Image.asset(
-                  "assets/png/clinic.jpg",
-                  height: 100.h,
-                  width: 130.w,
-                ),
+                clinic.photo == "" || clinic.photo.isEmpty
+                    ? Image.asset(
+                        "assets/png/clinic.jpg",
+                        height: 100.h,
+                        width: 130.w,
+                      )
+                    : Image.network(
+                        clinic.photo,
+                        height: 100.h,
+                        width: 130.w,
+                      ),
                 Row(
                   children: [
                     IconButton(

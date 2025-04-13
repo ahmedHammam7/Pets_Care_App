@@ -15,7 +15,9 @@ import 'package:pets_care_app/features/check/ui/check_screen.dart';
 import 'package:pets_care_app/features/clinics/client/ui/clinics_screen.dart';
 import 'package:pets_care_app/features/clinics/doctor/logic/cubit/doctor_clinic_cubit.dart';
 import 'package:pets_care_app/features/clinics/doctor/ui/add_clinic_screen.dart';
+import 'package:pets_care_app/features/clinics/doctor/ui/appoinment_details_screen.dart';
 import 'package:pets_care_app/features/clinics/doctor/ui/doctor_clincs_screen.dart';
+import 'package:pets_care_app/features/clinics/doctor/ui/show_appoinments_screen.dart';
 import 'package:pets_care_app/features/clinics/doctor/ui/show_clincs_screen.dart';
 import 'package:pets_care_app/features/clinics/doctor/ui/update_info_screen.dart';
 import 'package:pets_care_app/features/home/ui/views/home_screen.dart';
@@ -154,7 +156,10 @@ class AppRoutes {
         );
       case Routes.doctorClincsScreen:
         return MaterialPageRoute(
-          builder: (context) => const DoctorClincsScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<DoctorClinicCubit>(),
+            child: const DoctorClincsScreen(),
+          ),
         );
       case Routes.doctorAddClinicScreen:
         return MaterialPageRoute(
@@ -162,7 +167,10 @@ class AppRoutes {
         );
       case Routes.doctorShowClinicsScreen:
         return MaterialPageRoute(
-          builder: (context) => const ShowClincsScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<DoctorClinicCubit>()..getAllClinics(),
+            child: const ShowClincsScreen(),
+          ),
         );
       case Routes.doctorUpdateInfoScreen:
         return MaterialPageRoute(
@@ -171,6 +179,18 @@ class AppRoutes {
                 getIt<DoctorClinicCubit>()..loadDoctorProfile(),
             child: const DoctorUpdateInfoScreen(),
           ),
+        );
+      case Routes.doctorShowAppointmentsScreen:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) =>
+                getIt<DoctorClinicCubit>()..getAllDoctorAppointments(),
+            child: const ShowAppoinmentsScreen(),
+          ),
+        );
+      case Routes.doctorAppointmentsDetailsScreen:
+        return MaterialPageRoute(
+          builder: (context) => const AppoinmentDetailsScreen(),
         );
       default:
         return null;

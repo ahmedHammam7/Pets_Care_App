@@ -71,14 +71,15 @@ class _AddProductScreenState extends State<AddProductScreen> {
                         },
                       ),
                       verticalSpace(10),
-                      AppTextField.outsideHint(
+                      AppDropDownMenu(
                         hint: "Category",
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return "Please enter category";
-                          }
-                          return null;
-                        },
+                        initialSelection: "food",
+                        items: const [
+                          "food",
+                          "vititems",
+                          "accessory",
+                          "smart_device"
+                        ],
                         controller:
                             context.read<StoreStoreCubit>().categoryController,
                       ),
@@ -113,8 +114,8 @@ class _AddProductScreenState extends State<AddProductScreen> {
                       verticalSpace(20),
                       AppDropDownMenu(
                         hint: "Type",
-                        initialSelection: "Dog",
-                        items: const ["Dog", "Cat"],
+                        initialSelection: "dog",
+                        items: const ["dog", "cat"],
                         controller:
                             context.read<StoreStoreCubit>().typeController,
                       ),
@@ -154,7 +155,7 @@ class _AddProductScreenState extends State<AddProductScreen> {
                               .formKey
                               .currentState!
                               .validate()) {
-                            await context.read<StoreStoreCubit>().addProduct();
+                            await context.read<StoreStoreCubit>().addProductt();
                           }
                         },
                       )
@@ -169,9 +170,16 @@ class _AddProductScreenState extends State<AddProductScreen> {
     );
   }
 
-  Future<void> pickImage() async {
-    context.read<StoreStoreCubit>().image =
-        await ImagePicker().pickImage(source: ImageSource.gallery);
-    setState(() {});
+  Future<File?> pickImage() async {
+    final picker = ImagePicker();
+    final pickedFile = await picker.pickImage(source: ImageSource.gallery);
+    if (pickedFile != null) {
+      setState(() {
+        context.read<StoreStoreCubit>().image = pickedFile;
+      });
+      return File(pickedFile.path);
+    }
+
+    return null;
   }
 }

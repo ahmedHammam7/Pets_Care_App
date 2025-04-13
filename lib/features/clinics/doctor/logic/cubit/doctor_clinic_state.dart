@@ -19,9 +19,17 @@ class DoctorClinicState with _$DoctorClinicState {
   const factory DoctorClinicState.deleteSuccess() = deleteDoctorClinicSuccess;
   const factory DoctorClinicState.deleteError(String message) =
       deleteDoctorClinicError;
- // get clinics
-  const factory DoctorClinicState.clinicsLoading() = getDoctorClinicsLoading; 
-const factory DoctorClinicState.clinicsSuccess(List<ClinicResponse> data) = getDoctorClinicsSucess;   
- const factory DoctorClinicState.clinicsError(String message) =
-      getDoctorClinicsError; 
+  // get clinics
+  const factory DoctorClinicState.clinicsLoading() = getDoctorClinicsLoading;
+  const factory DoctorClinicState.clinicsSuccess(List<ClinicResponse> data) =
+      getDoctorClinicsSucess;
+  const factory DoctorClinicState.clinicsError(String message) =
+      getDoctorClinicsError;
+//logout
+
+  const factory DoctorClinicState.logoutSuccess() = DoctorlogoutSuccess;
+ // get all appointments
+  const factory DoctorClinicState.appointmentsLoading() = getDoctorAppointmentsLoading;
+  const factory DoctorClinicState.appointmentsSuccess(List<AppoinmentDocResponse> data) = getDoctorAppointmentsSucess;
+  const factory DoctorClinicState.appointmentsError(String message) = getDoctorAppointmentsError; 
 }
