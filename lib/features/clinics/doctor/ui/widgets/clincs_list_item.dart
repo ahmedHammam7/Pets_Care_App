@@ -1,9 +1,13 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pets_care_app/core/helper/extension.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
+import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_response.dart';
+import 'package:pets_care_app/features/clinics/doctor/logic/cubit/doctor_clinic_cubit.dart';
 
 class ClincsListItem extends StatelessWidget {
   const ClincsListItem({super.key, required this.clinic});
@@ -59,15 +63,18 @@ class ClincsListItem extends StatelessWidget {
                   verticalSpace(10),
                   Row(
                     children: [
-                      const Icon(
+                      Icon(
                         Icons.timelapse_rounded,
                         color: AppColors.white,
+                        size: 12.sp,
                       ),
                       horizontalSpace(10),
                       Text(
-                        clinic.time,
+                        " ${clinic.time} to ${clinic.endTime}",
                         overflow: TextOverflow.ellipsis,
-                        style: AppTextStyles.homeContainerText,
+                        style: AppTextStyles.homeContainerText.copyWith(
+                          fontSize: 12.sp,
+                        ),
                       ),
                     ],
                   ),
@@ -122,14 +129,21 @@ class ClincsListItem extends StatelessWidget {
                 Row(
                   children: [
                     IconButton(
-                      onPressed: () {},
+                      onPressed: () async {
+                        await context.pushNamed(Routes.doctorUpdateClinicScreen,
+                            arguments: clinic);
+                      },
                       icon: const Icon(
                         Icons.edit,
                         color: AppColors.white,
                       ),
                     ),
                     IconButton(
-                      onPressed: () async {},
+                      onPressed: () async {
+                        await context
+                            .read<DoctorClinicCubit>()
+                            .deleteClinic(clinic.id.toString());
+                      },
                       icon: const Icon(
                         Icons.delete,
                         color: AppColors.red,

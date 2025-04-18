@@ -28,4 +28,5 @@ class Routes {
       '/doctorShowAppointmentsScreen';
   static const String doctorAppointmentsDetailsScreen =
       '/doctorAppointmentsDetailsScreen';
+  static const String doctorUpdateClinicScreen = '/doctorUpdateClinicScreen';
 }

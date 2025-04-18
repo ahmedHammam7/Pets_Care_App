@@ -4,10 +4,14 @@ import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/core/widgets/custom_app_bar.dart';
+import 'package:pets_care_app/features/clinics/doctor/data/models/appoinment_doc_response.dart';
 
 class AppoinmentDetailsScreen extends StatelessWidget {
-  const AppoinmentDetailsScreen({super.key});
-
+  const AppoinmentDetailsScreen({
+    super.key,
+    required this.data,
+  });
+  final AppoinmentDocData data;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,49 +28,58 @@ class AppoinmentDetailsScreen extends StatelessWidget {
             ),
             child: Column(
               children: [
-                Image.asset(
-                  "assets/png/testDog.png",
-                  height: 100.h,
-                ),
+                data.pet.photo == "" || data.pet.photo.isEmpty
+                    ? Image.asset(
+                        "assets/png/testDog.png",
+                        height: 100.h,
+                      )
+                    : Image.network(
+                        data.pet.photo,
+                        height: 100.h,
+                      ),
                 verticalSpace(10),
                 Text("Pet Details", style: AppTextStyles.primaryButtonText),
                 verticalSpace(10),
-                twoWidgets("Pet Name: ", Icons.pets),
+                twoWidgets("Pet Name:${data.pet.petName} ", Icons.pets),
                 verticalSpace(10),
-                twoWidgets("Pet Type: ", Icons.pets),
+                twoWidgets("Pet Type:${data.pet.petType} ", Icons.pets),
                 verticalSpace(10),
-                twoWidgets("gender: ", Icons.pets),
+                twoWidgets("gender:${data.pet.gender} ", Icons.pets),
                 verticalSpace(10),
-                twoWidgets("age: ", Icons.pets),
+                twoWidgets("age:${data.pet.age} ", Icons.pets),
                 verticalSpace(10),
-                twoWidgets("height: ", Icons.height),
+                twoWidgets("height: ${data.pet.height}", Icons.height),
                 verticalSpace(10),
-                twoWidgets("weight: ", Icons.monitor_weight_sharp),
+                twoWidgets(
+                    "weight:${data.pet.weight} ", Icons.monitor_weight_sharp),
                 verticalSpace(10),
                 Text("User Details", style: AppTextStyles.primaryButtonText),
                 verticalSpace(10),
-                twoWidgets("User Name: ", Icons.man),
+                twoWidgets("User Name: ${data.user.name}", Icons.man),
                 verticalSpace(10),
-                twoWidgets("User Email: ", Icons.email),
+                twoWidgets("User Email: ${data.user.email}", Icons.email),
                 verticalSpace(10),
-                twoWidgets("User Phone: ", Icons.phone),
+                twoWidgets("User Phone:${data.user.phone} ", Icons.phone),
                 verticalSpace(10),
-                Image.asset(
-                  "assets/png/vet 1.png",
-                  height: 100.h,
-                ),
+                data.clinic.photo == "" || data.pet.photo.isEmpty
+                    ? Image.asset(
+                        "assets/png/vet 1.png",
+                        height: 100.h,
+                      )
+                    : Image.network(
+                        data.clinic.photo,
+                        height: 100.h,
+                      ),
                 verticalSpace(10),
                 Text("Clinic Details", style: AppTextStyles.primaryButtonText),
                 verticalSpace(10),
-                twoWidgets("Appointment Date: ", Icons.date_range),
+                twoWidgets("Appointment Date:${data.clinic.appointmentDate} ",
+                    Icons.date_range),
                 verticalSpace(10),
-                twoWidgets("day: ", Icons.calendar_month),
+                twoWidgets("price:${data.clinic.price} ", Icons.price_change),
                 verticalSpace(10),
-                twoWidgets("time: ", Icons.access_time_rounded),
-                verticalSpace(10),
-                twoWidgets("price: ", Icons.price_change),
-                verticalSpace(10),
-                twoWidgets("location: ", Icons.location_on),
+                twoWidgets(
+                    "location:${data.clinic.address} ", Icons.location_on),
                 verticalSpace(10),
               ],
             ),

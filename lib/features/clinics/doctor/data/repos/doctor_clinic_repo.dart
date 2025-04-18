@@ -1,3 +1,4 @@
+import 'package:dio/dio.dart';
 import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs.dart';
 import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dart';
 import 'package:pets_care_app/core/network/api_error_handler.dart';
@@ -47,18 +48,40 @@ class DoctorClinicRepo {
   Future<ApiResult<List<ClinicResponse>>> getAllClinics() async {
     try {
       final response = await _apiService.getAllClinics(
-          'Bearer 18|mwTmgHb1s2kMXOtB1928aa3KDstNYpcEoE5zC4wQe8e5bd63');
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}');
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));
     }
   }
 
-  Future<ApiResult<List<AppoinmentDocResponse>>>
-      getAllDoctorAppointments() async {
+  Future<ApiResult<AppoinmentDocResponse>> getAllDoctorAppointments() async {
     try {
       final response = await _apiService.getAllDoctorAppointments(
-          'Bearer 18|mwTmgHb1s2kMXOtB1928aa3KDstNYpcEoE5zC4wQe8e5bd63');
+          'Bearer 145|pjAj0DZz91JdkSbvnLzsFfyx0PKYuF2nqLSfzwKAe9b94516');
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  Future<ApiResult<dynamic>> addClinic(FormData formData) async {
+    try {
+      final response = await _apiService.addClinic(
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}',
+          formData);
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  Future<ApiResult<dynamic>> updateClinic(String id, FormData formData) async {
+    try {
+      final response = await _apiService.updateClinic(
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}',
+          id,
+          formData);
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));

@@ -42,12 +42,14 @@ class DoctorProfileDoctor {
   final int price;
   @JsonKey(name: 'medical_syndicate_code')
   final int medicalSyndicateCode;
+  final int id;
 
   DoctorProfileDoctor(
       this.specialization,
       this.licenseNumber,
       this.experienceYears,
       this.workingTime,
+      this.id,
       this.address,
       this.price,
       this.medicalSyndicateCode);

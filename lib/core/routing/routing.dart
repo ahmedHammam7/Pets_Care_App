@@ -13,12 +13,15 @@ import 'package:pets_care_app/features/cart/ui/views/cart_screen.dart';
 import 'package:pets_care_app/features/chat_bot/ui/chat_bot_screen.dart';
 import 'package:pets_care_app/features/check/ui/check_screen.dart';
 import 'package:pets_care_app/features/clinics/client/ui/clinics_screen.dart';
+import 'package:pets_care_app/features/clinics/doctor/data/models/appoinment_doc_response.dart';
+import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/logic/cubit/doctor_clinic_cubit.dart';
 import 'package:pets_care_app/features/clinics/doctor/ui/add_clinic_screen.dart';
 import 'package:pets_care_app/features/clinics/doctor/ui/appoinment_details_screen.dart';
 import 'package:pets_care_app/features/clinics/doctor/ui/doctor_clincs_screen.dart';
 import 'package:pets_care_app/features/clinics/doctor/ui/show_appoinments_screen.dart';
 import 'package:pets_care_app/features/clinics/doctor/ui/show_clincs_screen.dart';
+import 'package:pets_care_app/features/clinics/doctor/ui/update_clinic_screen.dart';
 import 'package:pets_care_app/features/clinics/doctor/ui/update_info_screen.dart';
 import 'package:pets_care_app/features/home/ui/views/home_screen.dart';
 import 'package:pets_care_app/features/home_layout/ui/home_layout.dart';
@@ -163,7 +166,10 @@ class AppRoutes {
         );
       case Routes.doctorAddClinicScreen:
         return MaterialPageRoute(
-          builder: (context) => const AddClinicScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<DoctorClinicCubit>(),
+            child: const AddClinicScreen(),
+          ),
         );
       case Routes.doctorShowClinicsScreen:
         return MaterialPageRoute(
@@ -190,7 +196,18 @@ class AppRoutes {
         );
       case Routes.doctorAppointmentsDetailsScreen:
         return MaterialPageRoute(
-          builder: (context) => const AppoinmentDetailsScreen(),
+          builder: (context) => AppoinmentDetailsScreen(
+            data: args as AppoinmentDocData,
+          ),
+        );
+      case Routes.doctorUpdateClinicScreen:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<DoctorClinicCubit>(),
+            child: UpdateClinicScreen(
+              clinic: args as ClinicResponse,
+            ),
+          ),
         );
       default:
         return null;

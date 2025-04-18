@@ -213,7 +213,7 @@ class _ProfileScreenBodyState extends State<DoctorProfileBody> {
                           hint: "Working Time",
                           controller: context
                               .read<DoctorClinicCubit>()
-                              .workingHoursController,
+                              .startTimeController,
                           validator: (value) {
                             if (value == null || value.isEmpty) {
                               return "Please enter Working Time";

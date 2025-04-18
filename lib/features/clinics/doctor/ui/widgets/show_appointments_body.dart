@@ -5,17 +5,21 @@ import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
+import 'package:pets_care_app/features/clinics/doctor/data/models/appoinment_doc_response.dart';
 
 class ShowAppointmentsBody extends StatelessWidget {
-  const ShowAppointmentsBody({super.key});
-
+  const ShowAppointmentsBody({super.key, required this.appointments});
+  final AppoinmentDocResponse appointments;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: SizedBox(
         height: MediaQuery.sizeOf(context).height * 0.9,
         child: ListView.builder(
-          itemBuilder: (context, index) => const ShowAppointmentsListItem(),
+          itemCount: appointments.data.length,
+          itemBuilder: (context, index) => ShowAppointmentsListItem(
+            data: appointments.data[index],
+          ),
         ),
       ),
     );
@@ -25,15 +29,17 @@ class ShowAppointmentsBody extends StatelessWidget {
 class ShowAppointmentsListItem extends StatelessWidget {
   const ShowAppointmentsListItem({
     super.key,
+    required this.data,
   });
-
+  final AppoinmentDocData data;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
       child: GestureDetector(
         onTap: () async {
-          await context.pushNamed(Routes.doctorAppointmentsDetailsScreen);
+          await context.pushNamed(Routes.doctorAppointmentsDetailsScreen,
+              arguments: data);
         },
         child: Container(
           padding: EdgeInsets.symmetric(horizontal: 10.w, vertical: 10.h),
@@ -43,62 +49,29 @@ class ShowAppointmentsListItem extends StatelessWidget {
             borderRadius: BorderRadius.circular(16.r),
           ),
           child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              const Spacer(),
-              SizedBox(
-                width: MediaQuery.of(context).size.width * 0.4,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Row(
-                      children: [
-                        const Icon(
-                          Icons.calendar_month_sharp,
-                          color: AppColors.white,
-                        ),
-                        horizontalSpace(10),
-                        Text(
-                          "clinic.day",
-                          overflow: TextOverflow.ellipsis,
-                          style: AppTextStyles.homeContainerText,
-                        ),
-                      ],
-                    ),
-                    verticalSpace(10),
-                    Row(
-                      children: [
-                        const Icon(
-                          Icons.timelapse_sharp,
-                          color: AppColors.white,
-                        ),
-                        horizontalSpace(10),
-                        Text(
-                          "clinic.time",
-                          overflow: TextOverflow.ellipsis,
-                          style: AppTextStyles.homeContainerText,
-                        ),
-                      ],
-                    ),
-                  ],
-                ),
-              ),
-              const Spacer(),
-              IconButton(
-                onPressed: () {},
-                icon: const Icon(
-                  Icons.edit,
-                  color: AppColors.white,
-                ),
+              const Icon(
+                Icons.calendar_month_sharp,
+                color: AppColors.white,
               ),
               horizontalSpace(10),
-              IconButton(
-                onPressed: () async {},
-                icon: const Icon(
-                  Icons.delete,
-                  color: AppColors.red,
-                ),
+              Text(
+                data.day,
+                overflow: TextOverflow.ellipsis,
+                style: AppTextStyles.homeContainerText,
               ),
-              const Spacer(),
+              horizontalSpace(20),
+              const Icon(
+                Icons.timelapse_sharp,
+                color: AppColors.white,
+              ),
+              horizontalSpace(10),
+              Text(
+                data.time,
+                overflow: TextOverflow.ellipsis,
+                style: AppTextStyles.homeContainerText,
+              ),
             ],
           ),
         ),

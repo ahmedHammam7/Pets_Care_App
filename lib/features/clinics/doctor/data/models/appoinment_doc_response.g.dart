@@ -9,6 +9,21 @@ part of 'appoinment_doc_response.dart';
 AppoinmentDocResponse _$AppoinmentDocResponseFromJson(
         Map<String, dynamic> json) =>
     AppoinmentDocResponse(
+      data: (json['data'] as List<dynamic>)
+          .map((e) => AppoinmentDocData.fromJson(e as Map<String, dynamic>))
+          .toList(),
+      message: json['message'] as String,
+    );
+
+Map<String, dynamic> _$AppoinmentDocResponseToJson(
+        AppoinmentDocResponse instance) =>
+    <String, dynamic>{
+      'message': instance.message,
+      'data': instance.data,
+    };
+
+AppoinmentDocData _$AppoinmentDocDataFromJson(Map<String, dynamic> json) =>
+    AppoinmentDocData(
       pet: PetAppointmentDocResponse.fromJson(
           json['pet'] as Map<String, dynamic>),
       day: json['day'] as String,
@@ -19,8 +34,7 @@ AppoinmentDocResponse _$AppoinmentDocResponseFromJson(
           json['user'] as Map<String, dynamic>),
     );
 
-Map<String, dynamic> _$AppoinmentDocResponseToJson(
-        AppoinmentDocResponse instance) =>
+Map<String, dynamic> _$AppoinmentDocDataToJson(AppoinmentDocData instance) =>
     <String, dynamic>{
       'day': instance.day,
       'time': instance.time,
@@ -55,7 +69,7 @@ PetAppointmentDocResponse _$PetAppointmentDocResponseFromJson(
       color: json['color'] as String,
       height: json['height'] as String,
       weight: json['weight'] as String,
-      photo: json['photo'] as String,
+      photo: json['photo_url'] as String,
     );
 
 Map<String, dynamic> _$PetAppointmentDocResponseToJson(
@@ -68,7 +82,7 @@ Map<String, dynamic> _$PetAppointmentDocResponseToJson(
       'color': instance.color,
       'height': instance.height,
       'weight': instance.weight,
-      'photo': instance.photo,
+      'photo_url': instance.photo,
     };
 
 ClinicAppoinmentDocResponse _$ClinicAppoinmentDocResponseFromJson(
@@ -77,7 +91,7 @@ ClinicAppoinmentDocResponse _$ClinicAppoinmentDocResponseFromJson(
       appointmentDate: json['appointment_date'] as String,
       price: json['price'] as String,
       address: json['address'] as String,
-      photo: json['photo'] as String,
+      photo: json['photo_url'] as String,
     );
 
 Map<String, dynamic> _$ClinicAppoinmentDocResponseToJson(
@@ -86,5 +100,5 @@ Map<String, dynamic> _$ClinicAppoinmentDocResponseToJson(
       'appointment_date': instance.appointmentDate,
       'price': instance.price,
       'address': instance.address,
-      'photo': instance.photo,
+      'photo_url': instance.photo,
     };

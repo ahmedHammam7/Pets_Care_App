@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pets_care_app/core/helper/extension.dart';
 import 'package:pets_care_app/core/widgets/custom_app_bar.dart';
 import 'package:pets_care_app/features/clinics/doctor/logic/cubit/doctor_clinic_cubit.dart';
 import 'package:pets_care_app/features/clinics/doctor/ui/widgets/clinics_loading.dart';
@@ -17,7 +18,9 @@ class ShowClincsScreen extends StatelessWidget {
           buildWhen: (previous, current) =>
               current is getDoctorClinicsLoading ||
               current is getDoctorClinicsSucess ||
-              current is getDoctorClinicsError,
+              current is getDoctorClinicsError ||
+              current is deleteDoctorClinicError ||
+              current is deleteDoctorClinicSuccess,
           builder: (context, state) {
             if (state is getDoctorClinicsLoading) {
               return const ClinicsLoadingWidget();
@@ -25,6 +28,23 @@ class ShowClincsScreen extends StatelessWidget {
               return ShowClincsBody(
                 clincs: state.data,
               );
+            }
+
+            if (state is deleteDoctorClinicError) {
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                  content: Text(state.message.toString()),
+                  backgroundColor: Colors.red,
+                ));
+              });
+            } else if (state is deleteDoctorClinicSuccess) {
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                  content: Text("Deleted Successfully"),
+                  backgroundColor: Colors.green,
+                ));
+                context.pop();
+              });
             }
 
             if (state is getDoctorClinicsError) {

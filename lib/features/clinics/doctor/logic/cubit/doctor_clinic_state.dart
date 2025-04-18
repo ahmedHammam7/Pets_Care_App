@@ -28,8 +28,23 @@ class DoctorClinicState with _$DoctorClinicState {
 //logout
 
   const factory DoctorClinicState.logoutSuccess() = DoctorlogoutSuccess;
- // get all appointments
-  const factory DoctorClinicState.appointmentsLoading() = getDoctorAppointmentsLoading;
-  const factory DoctorClinicState.appointmentsSuccess(List<AppoinmentDocResponse> data) = getDoctorAppointmentsSucess;
-  const factory DoctorClinicState.appointmentsError(String message) = getDoctorAppointmentsError; 
+  // get all appointments
+  const factory DoctorClinicState.appointmentsLoading() =
+      getDoctorAppointmentsLoading;
+  const factory DoctorClinicState.appointmentsSuccess(
+      AppoinmentDocResponse data) = getDoctorAppointmentsSucess;
+  const factory DoctorClinicState.appointmentsError(String message) =
+      getDoctorAppointmentsError;
+  // add clinic
+  const factory DoctorClinicState.addClinicLoading() = addDoctorClinicLoading;
+  const factory DoctorClinicState.addClinicSuccess() = addDoctorClinicSuccess;
+  const factory DoctorClinicState.addClinicError(String message) =
+      addDoctorClinicError;
+// update clinic
+  const factory DoctorClinicState.updateClinicLoading() =
+      updateDoctorClinicLoading;
+  const factory DoctorClinicState.updateClinicSuccess() =
+      updateDoctorClinicSuccess;
+  const factory DoctorClinicState.updateClinicError(String message) =
+      updateDoctorClinicError;
 }

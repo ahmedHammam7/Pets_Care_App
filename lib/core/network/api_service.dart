@@ -3,7 +3,6 @@ import 'package:pets_care_app/core/network/api_constant.dart';
 import 'package:pets_care_app/features/auth/login/data/models/login_response.dart';
 import 'package:pets_care_app/features/auth/register/data/models/register_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/appoinment_doc_response.dart';
-import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_request.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/doctor_profile_response.dart';
 import 'package:pets_care_app/features/profile/data/models/profile_response.dart';
@@ -60,8 +59,12 @@ abstract class ApiService {
       @Header('Authorization') String token);
   @POST(ApiConstant.clinics)
   Future<dynamic> addClinic(
-      @Header('Authorization') String token, @Body() ClinicRequest body);
+      @Header('Authorization') String token, @Body() dynamic body);
   @GET(ApiConstant.doctorAppointments)
-  Future<List<AppoinmentDocResponse>> getAllDoctorAppointments(
+  Future<AppoinmentDocResponse> getAllDoctorAppointments(
       @Header('Authorization') String token);
+
+  @POST('${ApiConstant.clinics}/{id}')
+  Future<dynamic> updateClinic(@Header('Authorization') String token,
+      @Path('id') String id, @Body() dynamic body);
 }

@@ -3,22 +3,35 @@ part 'appoinment_doc_response.g.dart';
 
 @JsonSerializable()
 class AppoinmentDocResponse {
+  final String message;
+  @JsonKey(name: 'data')
+  final List<AppoinmentDocData> data;
+  AppoinmentDocResponse({required this.data, required this.message});
+
+  factory AppoinmentDocResponse.fromJson(Map<String, dynamic> json) =>
+      _$AppoinmentDocResponseFromJson(json);
+}
+
+@JsonSerializable()
+class AppoinmentDocData {
   final String day;
   final String time;
+  @JsonKey(name: 'user')
   final UserAppointmentDocResponse user;
+  @JsonKey(name: 'pet')
   final PetAppointmentDocResponse pet;
   @JsonKey(name: 'veterinary_clinic')
   final ClinicAppoinmentDocResponse clinic;
 
-  AppoinmentDocResponse(
+  AppoinmentDocData(
       {required this.pet,
       required this.day,
       required this.time,
       required this.clinic,
       required this.user});
 
-  factory AppoinmentDocResponse.fromJson(Map<String, dynamic> json) =>
-      _$AppoinmentDocResponseFromJson(json);
+  factory AppoinmentDocData.fromJson(Map<String, dynamic> json) =>
+      _$AppoinmentDocDataFromJson(json);
 }
 
 @JsonSerializable()
@@ -45,6 +58,7 @@ class PetAppointmentDocResponse {
   final String color;
   final String height;
   final String weight;
+  @JsonKey(name: 'photo_url')
   final String photo;
 
   PetAppointmentDocResponse(
@@ -60,15 +74,21 @@ class PetAppointmentDocResponse {
   factory PetAppointmentDocResponse.fromJson(Map<String, dynamic> json) =>
       _$PetAppointmentDocResponseFromJson(json);
 }
+
 @JsonSerializable()
 class ClinicAppoinmentDocResponse {
-    @JsonKey(name: 'appointment_date')
-    final String appointmentDate;
-    final String price;
-    final String address;
-    final String photo;
+  @JsonKey(name: 'appointment_date')
+  final String appointmentDate;
+  final String price;
+  final String address;
+  @JsonKey(name: 'photo_url')
+  final String photo;
 
-  ClinicAppoinmentDocResponse({required this.appointmentDate, required this.price, required this.address, required this.photo});
+  ClinicAppoinmentDocResponse(
+      {required this.appointmentDate,
+      required this.price,
+      required this.address,
+      required this.photo});
 
   factory ClinicAppoinmentDocResponse.fromJson(Map<String, dynamic> json) =>
       _$ClinicAppoinmentDocResponseFromJson(json);
