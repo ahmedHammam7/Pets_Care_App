@@ -1,0 +1,157 @@
+import 'dart:io';
+
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pets_care_app/core/helper/spacer.dart';
+import 'package:pets_care_app/core/themes/colors.dart';
+import 'package:pets_care_app/core/widgets/app_drop_down_menu.dart';
+import 'package:pets_care_app/core/widgets/app_text_field.dart';
+import 'package:pets_care_app/features/add_pets/logic/cubit/pets_cubit.dart';
+import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
+import 'package:shimmer/shimmer.dart';
+
+class AddPetsLoading extends StatelessWidget {
+  const AddPetsLoading({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Shimmer.fromColors(
+      baseColor: Colors.white,
+      highlightColor: AppColors.storeSizeItemColor,
+      child: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
+        child: Form(
+          key: context.read<PetsCubit>().formKey,
+          child: Column(
+            children: [
+              AppTextField.outsideHint(
+                hint: "Pet Name",
+                controller: context.read<PetsCubit>().petNameController,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "Please enter pet name";
+                  }
+                  return null;
+                },
+              ),
+              verticalSpace(10),
+              AppTextField.outsideHint(
+                hint: "Height",
+                controller: context.read<PetsCubit>().petHeightController,
+                keyboardType: TextInputType.number,
+                numeric: true,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "Please enter height";
+                  }
+                  return null;
+                },
+              ),
+              verticalSpace(10),
+              AppTextField.outsideHint(
+                hint: "Weight",
+                controller: context.read<PetsCubit>().petWeightController,
+                keyboardType: TextInputType.number,
+                numeric: true,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "Please enter height";
+                  }
+                  return null;
+                },
+              ),
+              verticalSpace(10),
+              AppTextField.outsideHint(
+                hint: "Age",
+                controller: context.read<PetsCubit>().petAgeController,
+                keyboardType: TextInputType.number,
+                numeric: true,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "Please enter age";
+                  }
+                  return null;
+                },
+              ),
+              verticalSpace(10),
+              AppTextField.outsideHint(
+                hint: "Color",
+                controller: context.read<PetsCubit>().petColorController,
+                isMultiline: true,
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "Please enter color";
+                  }
+                  return null;
+                },
+              ),
+              verticalSpace(20),
+              AppDropDownMenu(
+                hint: "Type",
+                initialSelection: "dog",
+                items: const ["dog", "cat"],
+                controller: context.read<PetsCubit>().petTypeController,
+              ),
+              verticalSpace(20),
+              AppTextField.outsideHint(
+                hint: "Vaccine Date",
+                controller: context.read<PetsCubit>().petVaccineTimeController,
+                insideHint: "-/-/-",
+                validator: (value) {
+                  if (value == null || value.isEmpty) {
+                    return "Please enter vaccine Date";
+                  }
+                  return null;
+                },
+                maxWidth: 300,
+                suffixIcon: Icon(
+                  Icons.calendar_month,
+                  color: AppColors.gray,
+                ),
+                onTap: () async {
+                  // await _selectDate();
+                },
+              ),
+              verticalSpace(20),
+              Stack(
+                children: [
+                  CircleAvatar(
+                    radius: 100.r,
+                    backgroundColor: AppColors.primaryColor,
+                    child: GestureDetector(
+                      onTap: () async {
+                        // await pickImage();
+                      },
+                      child: CircleAvatar(
+                        radius: 96.r,
+                        backgroundColor: AppColors.white,
+                        backgroundImage: context.read<PetsCubit>().photo == null
+                            ? const AssetImage("assets/png/cat.png")
+                            : FileImage(
+                                File(context.read<PetsCubit>().photo!.path)),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+              verticalSpace(20),
+              PrimaryButton(
+                text: "Add",
+                onTap: () async {
+                  if (context
+                      .read<PetsCubit>()
+                      .formKey
+                      .currentState!
+                      .validate()) {
+                    await context.read<PetsCubit>().addPet();
+                  }
+                },
+              )
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}

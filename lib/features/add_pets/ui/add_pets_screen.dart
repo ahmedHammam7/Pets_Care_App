@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pets_care_app/core/helper/extension.dart';
+import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
+import 'package:pets_care_app/core/widgets/custom_app_bar.dart';
 import 'package:pets_care_app/features/add_pets/ui/widgets/add_pets_body.dart';
 
 class AddPetsScreen extends StatelessWidget {
@@ -12,11 +15,9 @@ class AddPetsScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: AppColors.white,
-        title: Text("Add pets", style: AppTextStyles.shopTitle),
-        centerTitle: true,
         leading: IconButton(
-          onPressed: () {
-            Navigator.pop(context);
+          onPressed: () async {
+            await context.pushNamed(Routes.homeLayout);
           },
           icon: Icon(
             Icons.arrow_back_ios_new,

@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
-import 'package:pets_care_app/di/dependency_injection.dart';
+import 'package:pets_care_app/core/di/dependency_injection.dart';
+import 'package:pets_care_app/features/add_pets/data/models/pet_response.dart';
+import 'package:pets_care_app/features/add_pets/logic/cubit/pets_cubit.dart';
 import 'package:pets_care_app/features/add_pets/ui/add_pets_screen.dart';
+import 'package:pets_care_app/features/add_pets/ui/edit_pet_screen.dart';
 import 'package:pets_care_app/features/auth/login/logic/cubit/login_cubit.dart';
 import 'package:pets_care_app/features/auth/login/ui/views/login_screen.dart';
 import 'package:pets_care_app/features/auth/register/logic/cubit/register_cubit.dart';
@@ -27,6 +30,7 @@ import 'package:pets_care_app/features/home/ui/views/home_screen.dart';
 import 'package:pets_care_app/features/home_layout/ui/home_layout.dart';
 import 'package:pets_care_app/features/locations/ui/location_screen.dart';
 import 'package:pets_care_app/features/onBoarding/ui/views/on_boarding_screen.dart';
+import 'package:pets_care_app/features/profile/logic/cubit/profile_cubit.dart';
 import 'package:pets_care_app/features/profile/ui/views/profile_screen.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
 import 'package:pets_care_app/features/store/client/logic/cubit/store_cubit.dart';
@@ -88,7 +92,10 @@ class AppRoutes {
 
       case Routes.addPetsScreen:
         return MaterialPageRoute(
-          builder: (context) => const AddPetsScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<PetsCubit>()..getAllPets(),
+            child: const AddPetsScreen(),
+          ),
         );
       case Routes.registerDoctorScreen:
         return MaterialPageRoute(
@@ -106,7 +113,10 @@ class AppRoutes {
         );
       case Routes.homeLayout:
         return MaterialPageRoute(
-          builder: (context) => const HomeLayout(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<ProfileCubit>()..loadUserProfile(),
+            child: const HomeLayout(),
+          ),
         );
       case Routes.checkScreen:
         return MaterialPageRoute(
@@ -209,6 +219,16 @@ class AppRoutes {
             ),
           ),
         );
+      case Routes.editPetScreen:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<PetsCubit>(),
+            child: EditPetScreen(
+              pet: args as PetResponse,
+            ),
+          ),
+        );
+
       default:
         return null;
     }

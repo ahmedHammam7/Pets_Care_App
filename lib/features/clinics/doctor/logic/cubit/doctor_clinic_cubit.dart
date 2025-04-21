@@ -9,7 +9,6 @@ import 'package:pets_care_app/features/clinics/doctor/data/models/appoinment_doc
 import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/doctor_profile_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/repos/doctor_clinic_repo.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 part 'doctor_clinic_state.dart';
 part 'doctor_clinic_cubit.freezed.dart';

@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:pets_care_app/core/network/api_constant.dart';
+import 'package:pets_care_app/features/add_pets/data/models/pet_response.dart';
 import 'package:pets_care_app/features/auth/login/data/models/login_response.dart';
 import 'package:pets_care_app/features/auth/register/data/models/register_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/appoinment_doc_response.dart';
@@ -66,5 +67,17 @@ abstract class ApiService {
 
   @POST('${ApiConstant.clinics}/{id}')
   Future<dynamic> updateClinic(@Header('Authorization') String token,
+      @Path('id') String id, @Body() dynamic body);
+  @GET(ApiConstant.pets)
+  Future<List<PetResponse>> getAllPets(@Header('Authorization') String token);
+  @POST(ApiConstant.pets)
+  Future<dynamic> addPet(
+      @Header('Authorization') String token, @Body() dynamic body);
+  @DELETE('${ApiConstant.pets}/{id}')
+  Future<dynamic> deletePet(
+      @Header('Authorization') String token, @Path('id') String id);
+
+  @POST('${ApiConstant.pets}/{id}')
+  Future<dynamic> updatePet(@Header('Authorization') String token,
       @Path('id') String id, @Body() dynamic body);
 }

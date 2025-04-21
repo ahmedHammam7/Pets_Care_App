@@ -22,12 +22,9 @@ mixin _$ProfileState<T> {
     required TResult Function() loading,
     required TResult Function(T data) success,
     required TResult Function(String message) error,
-    required TResult Function() doctorLoading,
-    required TResult Function(T data) doctorSuccess,
-    required TResult Function(String message) doctorError,
-    required TResult Function() storeLoading,
-    required TResult Function(T data) storeSuccess,
-    required TResult Function(String message) storeError,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -36,12 +33,9 @@ mixin _$ProfileState<T> {
     TResult? Function()? loading,
     TResult? Function(T data)? success,
     TResult? Function(String message)? error,
-    TResult? Function()? doctorLoading,
-    TResult? Function(T data)? doctorSuccess,
-    TResult? Function(String message)? doctorError,
-    TResult? Function()? storeLoading,
-    TResult? Function(T data)? storeSuccess,
-    TResult? Function(String message)? storeError,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -50,12 +44,9 @@ mixin _$ProfileState<T> {
     TResult Function()? loading,
     TResult Function(T data)? success,
     TResult Function(String message)? error,
-    TResult Function()? doctorLoading,
-    TResult Function(T data)? doctorSuccess,
-    TResult Function(String message)? doctorError,
-    TResult Function()? storeLoading,
-    TResult Function(T data)? storeSuccess,
-    TResult Function(String message)? storeError,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -65,12 +56,9 @@ mixin _$ProfileState<T> {
     required TResult Function(Loading<T> value) loading,
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
-    required TResult Function(DoctorProfileLoading<T> value) doctorLoading,
-    required TResult Function(DoctorProfileSuccess<T> value) doctorSuccess,
-    required TResult Function(DoctorProfileError<T> value) doctorError,
-    required TResult Function(StoreProfileLoading<T> value) storeLoading,
-    required TResult Function(StoreProfileSuccess<T> value) storeSuccess,
-    required TResult Function(StoreProfileError<T> value) storeError,
+    required TResult Function(UpdateLoading<T> value) updateLoading,
+    required TResult Function(UpdateSuccess<T> value) updateSuccess,
+    required TResult Function(UpdateError<T> value) updateError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -79,12 +67,9 @@ mixin _$ProfileState<T> {
     TResult? Function(Loading<T> value)? loading,
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
-    TResult? Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult? Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult? Function(DoctorProfileError<T> value)? doctorError,
-    TResult? Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult? Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult? Function(StoreProfileError<T> value)? storeError,
+    TResult? Function(UpdateLoading<T> value)? updateLoading,
+    TResult? Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult? Function(UpdateError<T> value)? updateError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -93,12 +78,9 @@ mixin _$ProfileState<T> {
     TResult Function(Loading<T> value)? loading,
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
-    TResult Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult Function(DoctorProfileError<T> value)? doctorError,
-    TResult Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult Function(StoreProfileError<T> value)? storeError,
+    TResult Function(UpdateLoading<T> value)? updateLoading,
+    TResult Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult Function(UpdateError<T> value)? updateError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -170,12 +152,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function() loading,
     required TResult Function(T data) success,
     required TResult Function(String message) error,
-    required TResult Function() doctorLoading,
-    required TResult Function(T data) doctorSuccess,
-    required TResult Function(String message) doctorError,
-    required TResult Function() storeLoading,
-    required TResult Function(T data) storeSuccess,
-    required TResult Function(String message) storeError,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateError,
   }) {
     return initial();
   }
@@ -187,12 +166,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function()? loading,
     TResult? Function(T data)? success,
     TResult? Function(String message)? error,
-    TResult? Function()? doctorLoading,
-    TResult? Function(T data)? doctorSuccess,
-    TResult? Function(String message)? doctorError,
-    TResult? Function()? storeLoading,
-    TResult? Function(T data)? storeSuccess,
-    TResult? Function(String message)? storeError,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateError,
   }) {
     return initial?.call();
   }
@@ -204,12 +180,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function()? loading,
     TResult Function(T data)? success,
     TResult Function(String message)? error,
-    TResult Function()? doctorLoading,
-    TResult Function(T data)? doctorSuccess,
-    TResult Function(String message)? doctorError,
-    TResult Function()? storeLoading,
-    TResult Function(T data)? storeSuccess,
-    TResult Function(String message)? storeError,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -225,12 +198,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     required TResult Function(Loading<T> value) loading,
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
-    required TResult Function(DoctorProfileLoading<T> value) doctorLoading,
-    required TResult Function(DoctorProfileSuccess<T> value) doctorSuccess,
-    required TResult Function(DoctorProfileError<T> value) doctorError,
-    required TResult Function(StoreProfileLoading<T> value) storeLoading,
-    required TResult Function(StoreProfileSuccess<T> value) storeSuccess,
-    required TResult Function(StoreProfileError<T> value) storeError,
+    required TResult Function(UpdateLoading<T> value) updateLoading,
+    required TResult Function(UpdateSuccess<T> value) updateSuccess,
+    required TResult Function(UpdateError<T> value) updateError,
   }) {
     return initial(this);
   }
@@ -242,12 +212,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult? Function(Loading<T> value)? loading,
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
-    TResult? Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult? Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult? Function(DoctorProfileError<T> value)? doctorError,
-    TResult? Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult? Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult? Function(StoreProfileError<T> value)? storeError,
+    TResult? Function(UpdateLoading<T> value)? updateLoading,
+    TResult? Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult? Function(UpdateError<T> value)? updateError,
   }) {
     return initial?.call(this);
   }
@@ -259,12 +226,9 @@ class _$InitialImpl<T> implements _Initial<T> {
     TResult Function(Loading<T> value)? loading,
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
-    TResult Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult Function(DoctorProfileError<T> value)? doctorError,
-    TResult Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult Function(StoreProfileError<T> value)? storeError,
+    TResult Function(UpdateLoading<T> value)? updateLoading,
+    TResult Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult Function(UpdateError<T> value)? updateError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -323,12 +287,9 @@ class _$LoadingImpl<T> implements Loading<T> {
     required TResult Function() loading,
     required TResult Function(T data) success,
     required TResult Function(String message) error,
-    required TResult Function() doctorLoading,
-    required TResult Function(T data) doctorSuccess,
-    required TResult Function(String message) doctorError,
-    required TResult Function() storeLoading,
-    required TResult Function(T data) storeSuccess,
-    required TResult Function(String message) storeError,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateError,
   }) {
     return loading();
   }
@@ -340,12 +301,9 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult? Function()? loading,
     TResult? Function(T data)? success,
     TResult? Function(String message)? error,
-    TResult? Function()? doctorLoading,
-    TResult? Function(T data)? doctorSuccess,
-    TResult? Function(String message)? doctorError,
-    TResult? Function()? storeLoading,
-    TResult? Function(T data)? storeSuccess,
-    TResult? Function(String message)? storeError,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateError,
   }) {
     return loading?.call();
   }
@@ -357,12 +315,9 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult Function()? loading,
     TResult Function(T data)? success,
     TResult Function(String message)? error,
-    TResult Function()? doctorLoading,
-    TResult Function(T data)? doctorSuccess,
-    TResult Function(String message)? doctorError,
-    TResult Function()? storeLoading,
-    TResult Function(T data)? storeSuccess,
-    TResult Function(String message)? storeError,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -378,12 +333,9 @@ class _$LoadingImpl<T> implements Loading<T> {
     required TResult Function(Loading<T> value) loading,
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
-    required TResult Function(DoctorProfileLoading<T> value) doctorLoading,
-    required TResult Function(DoctorProfileSuccess<T> value) doctorSuccess,
-    required TResult Function(DoctorProfileError<T> value) doctorError,
-    required TResult Function(StoreProfileLoading<T> value) storeLoading,
-    required TResult Function(StoreProfileSuccess<T> value) storeSuccess,
-    required TResult Function(StoreProfileError<T> value) storeError,
+    required TResult Function(UpdateLoading<T> value) updateLoading,
+    required TResult Function(UpdateSuccess<T> value) updateSuccess,
+    required TResult Function(UpdateError<T> value) updateError,
   }) {
     return loading(this);
   }
@@ -395,12 +347,9 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult? Function(Loading<T> value)? loading,
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
-    TResult? Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult? Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult? Function(DoctorProfileError<T> value)? doctorError,
-    TResult? Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult? Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult? Function(StoreProfileError<T> value)? storeError,
+    TResult? Function(UpdateLoading<T> value)? updateLoading,
+    TResult? Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult? Function(UpdateError<T> value)? updateError,
   }) {
     return loading?.call(this);
   }
@@ -412,12 +361,9 @@ class _$LoadingImpl<T> implements Loading<T> {
     TResult Function(Loading<T> value)? loading,
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
-    TResult Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult Function(DoctorProfileError<T> value)? doctorError,
-    TResult Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult Function(StoreProfileError<T> value)? storeError,
+    TResult Function(UpdateLoading<T> value)? updateLoading,
+    TResult Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult Function(UpdateError<T> value)? updateError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -504,12 +450,9 @@ class _$SuccessImpl<T> implements Success<T> {
     required TResult Function() loading,
     required TResult Function(T data) success,
     required TResult Function(String message) error,
-    required TResult Function() doctorLoading,
-    required TResult Function(T data) doctorSuccess,
-    required TResult Function(String message) doctorError,
-    required TResult Function() storeLoading,
-    required TResult Function(T data) storeSuccess,
-    required TResult Function(String message) storeError,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateError,
   }) {
     return success(data);
   }
@@ -521,12 +464,9 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult? Function()? loading,
     TResult? Function(T data)? success,
     TResult? Function(String message)? error,
-    TResult? Function()? doctorLoading,
-    TResult? Function(T data)? doctorSuccess,
-    TResult? Function(String message)? doctorError,
-    TResult? Function()? storeLoading,
-    TResult? Function(T data)? storeSuccess,
-    TResult? Function(String message)? storeError,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateError,
   }) {
     return success?.call(data);
   }
@@ -538,12 +478,9 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult Function()? loading,
     TResult Function(T data)? success,
     TResult Function(String message)? error,
-    TResult Function()? doctorLoading,
-    TResult Function(T data)? doctorSuccess,
-    TResult Function(String message)? doctorError,
-    TResult Function()? storeLoading,
-    TResult Function(T data)? storeSuccess,
-    TResult Function(String message)? storeError,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -559,12 +496,9 @@ class _$SuccessImpl<T> implements Success<T> {
     required TResult Function(Loading<T> value) loading,
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
-    required TResult Function(DoctorProfileLoading<T> value) doctorLoading,
-    required TResult Function(DoctorProfileSuccess<T> value) doctorSuccess,
-    required TResult Function(DoctorProfileError<T> value) doctorError,
-    required TResult Function(StoreProfileLoading<T> value) storeLoading,
-    required TResult Function(StoreProfileSuccess<T> value) storeSuccess,
-    required TResult Function(StoreProfileError<T> value) storeError,
+    required TResult Function(UpdateLoading<T> value) updateLoading,
+    required TResult Function(UpdateSuccess<T> value) updateSuccess,
+    required TResult Function(UpdateError<T> value) updateError,
   }) {
     return success(this);
   }
@@ -576,12 +510,9 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult? Function(Loading<T> value)? loading,
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
-    TResult? Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult? Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult? Function(DoctorProfileError<T> value)? doctorError,
-    TResult? Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult? Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult? Function(StoreProfileError<T> value)? storeError,
+    TResult? Function(UpdateLoading<T> value)? updateLoading,
+    TResult? Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult? Function(UpdateError<T> value)? updateError,
   }) {
     return success?.call(this);
   }
@@ -593,12 +524,9 @@ class _$SuccessImpl<T> implements Success<T> {
     TResult Function(Loading<T> value)? loading,
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
-    TResult Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult Function(DoctorProfileError<T> value)? doctorError,
-    TResult Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult Function(StoreProfileError<T> value)? storeError,
+    TResult Function(UpdateLoading<T> value)? updateLoading,
+    TResult Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult Function(UpdateError<T> value)? updateError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -692,12 +620,9 @@ class _$ErrorImpl<T> implements Error<T> {
     required TResult Function() loading,
     required TResult Function(T data) success,
     required TResult Function(String message) error,
-    required TResult Function() doctorLoading,
-    required TResult Function(T data) doctorSuccess,
-    required TResult Function(String message) doctorError,
-    required TResult Function() storeLoading,
-    required TResult Function(T data) storeSuccess,
-    required TResult Function(String message) storeError,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateError,
   }) {
     return error(message);
   }
@@ -709,12 +634,9 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult? Function()? loading,
     TResult? Function(T data)? success,
     TResult? Function(String message)? error,
-    TResult? Function()? doctorLoading,
-    TResult? Function(T data)? doctorSuccess,
-    TResult? Function(String message)? doctorError,
-    TResult? Function()? storeLoading,
-    TResult? Function(T data)? storeSuccess,
-    TResult? Function(String message)? storeError,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateError,
   }) {
     return error?.call(message);
   }
@@ -726,12 +648,9 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult Function()? loading,
     TResult Function(T data)? success,
     TResult Function(String message)? error,
-    TResult Function()? doctorLoading,
-    TResult Function(T data)? doctorSuccess,
-    TResult Function(String message)? doctorError,
-    TResult Function()? storeLoading,
-    TResult Function(T data)? storeSuccess,
-    TResult Function(String message)? storeError,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -747,12 +666,9 @@ class _$ErrorImpl<T> implements Error<T> {
     required TResult Function(Loading<T> value) loading,
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
-    required TResult Function(DoctorProfileLoading<T> value) doctorLoading,
-    required TResult Function(DoctorProfileSuccess<T> value) doctorSuccess,
-    required TResult Function(DoctorProfileError<T> value) doctorError,
-    required TResult Function(StoreProfileLoading<T> value) storeLoading,
-    required TResult Function(StoreProfileSuccess<T> value) storeSuccess,
-    required TResult Function(StoreProfileError<T> value) storeError,
+    required TResult Function(UpdateLoading<T> value) updateLoading,
+    required TResult Function(UpdateSuccess<T> value) updateSuccess,
+    required TResult Function(UpdateError<T> value) updateError,
   }) {
     return error(this);
   }
@@ -764,12 +680,9 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult? Function(Loading<T> value)? loading,
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
-    TResult? Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult? Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult? Function(DoctorProfileError<T> value)? doctorError,
-    TResult? Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult? Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult? Function(StoreProfileError<T> value)? storeError,
+    TResult? Function(UpdateLoading<T> value)? updateLoading,
+    TResult? Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult? Function(UpdateError<T> value)? updateError,
   }) {
     return error?.call(this);
   }
@@ -781,12 +694,9 @@ class _$ErrorImpl<T> implements Error<T> {
     TResult Function(Loading<T> value)? loading,
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
-    TResult Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult Function(DoctorProfileError<T> value)? doctorError,
-    TResult Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult Function(StoreProfileError<T> value)? storeError,
+    TResult Function(UpdateLoading<T> value)? updateLoading,
+    TResult Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult Function(UpdateError<T> value)? updateError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -809,19 +719,18 @@ abstract class Error<T> implements ProfileState<T> {
 }
 
 /// @nodoc
-abstract class _$$DoctorProfileLoadingImplCopyWith<T, $Res> {
-  factory _$$DoctorProfileLoadingImplCopyWith(
-          _$DoctorProfileLoadingImpl<T> value,
-          $Res Function(_$DoctorProfileLoadingImpl<T>) then) =
-      __$$DoctorProfileLoadingImplCopyWithImpl<T, $Res>;
+abstract class _$$UpdateLoadingImplCopyWith<T, $Res> {
+  factory _$$UpdateLoadingImplCopyWith(_$UpdateLoadingImpl<T> value,
+          $Res Function(_$UpdateLoadingImpl<T>) then) =
+      __$$UpdateLoadingImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$DoctorProfileLoadingImplCopyWithImpl<T, $Res>
-    extends _$ProfileStateCopyWithImpl<T, $Res, _$DoctorProfileLoadingImpl<T>>
-    implements _$$DoctorProfileLoadingImplCopyWith<T, $Res> {
-  __$$DoctorProfileLoadingImplCopyWithImpl(_$DoctorProfileLoadingImpl<T> _value,
-      $Res Function(_$DoctorProfileLoadingImpl<T>) _then)
+class __$$UpdateLoadingImplCopyWithImpl<T, $Res>
+    extends _$ProfileStateCopyWithImpl<T, $Res, _$UpdateLoadingImpl<T>>
+    implements _$$UpdateLoadingImplCopyWith<T, $Res> {
+  __$$UpdateLoadingImplCopyWithImpl(_$UpdateLoadingImpl<T> _value,
+      $Res Function(_$UpdateLoadingImpl<T>) _then)
       : super(_value, _then);
 
   /// Create a copy of ProfileState
@@ -830,19 +739,18 @@ class __$$DoctorProfileLoadingImplCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$DoctorProfileLoadingImpl<T> implements DoctorProfileLoading<T> {
-  const _$DoctorProfileLoadingImpl();
+class _$UpdateLoadingImpl<T> implements UpdateLoading<T> {
+  const _$UpdateLoadingImpl();
 
   @override
   String toString() {
-    return 'ProfileState<$T>.doctorLoading()';
+    return 'ProfileState<$T>.updateLoading()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DoctorProfileLoadingImpl<T>);
+        (other.runtimeType == runtimeType && other is _$UpdateLoadingImpl<T>);
   }
 
   @override
@@ -855,14 +763,11 @@ class _$DoctorProfileLoadingImpl<T> implements DoctorProfileLoading<T> {
     required TResult Function() loading,
     required TResult Function(T data) success,
     required TResult Function(String message) error,
-    required TResult Function() doctorLoading,
-    required TResult Function(T data) doctorSuccess,
-    required TResult Function(String message) doctorError,
-    required TResult Function() storeLoading,
-    required TResult Function(T data) storeSuccess,
-    required TResult Function(String message) storeError,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateError,
   }) {
-    return doctorLoading();
+    return updateLoading();
   }
 
   @override
@@ -872,14 +777,11 @@ class _$DoctorProfileLoadingImpl<T> implements DoctorProfileLoading<T> {
     TResult? Function()? loading,
     TResult? Function(T data)? success,
     TResult? Function(String message)? error,
-    TResult? Function()? doctorLoading,
-    TResult? Function(T data)? doctorSuccess,
-    TResult? Function(String message)? doctorError,
-    TResult? Function()? storeLoading,
-    TResult? Function(T data)? storeSuccess,
-    TResult? Function(String message)? storeError,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateError,
   }) {
-    return doctorLoading?.call();
+    return updateLoading?.call();
   }
 
   @override
@@ -889,16 +791,13 @@ class _$DoctorProfileLoadingImpl<T> implements DoctorProfileLoading<T> {
     TResult Function()? loading,
     TResult Function(T data)? success,
     TResult Function(String message)? error,
-    TResult Function()? doctorLoading,
-    TResult Function(T data)? doctorSuccess,
-    TResult Function(String message)? doctorError,
-    TResult Function()? storeLoading,
-    TResult Function(T data)? storeSuccess,
-    TResult Function(String message)? storeError,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateError,
     required TResult orElse(),
   }) {
-    if (doctorLoading != null) {
-      return doctorLoading();
+    if (updateLoading != null) {
+      return updateLoading();
     }
     return orElse();
   }
@@ -910,14 +809,11 @@ class _$DoctorProfileLoadingImpl<T> implements DoctorProfileLoading<T> {
     required TResult Function(Loading<T> value) loading,
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
-    required TResult Function(DoctorProfileLoading<T> value) doctorLoading,
-    required TResult Function(DoctorProfileSuccess<T> value) doctorSuccess,
-    required TResult Function(DoctorProfileError<T> value) doctorError,
-    required TResult Function(StoreProfileLoading<T> value) storeLoading,
-    required TResult Function(StoreProfileSuccess<T> value) storeSuccess,
-    required TResult Function(StoreProfileError<T> value) storeError,
+    required TResult Function(UpdateLoading<T> value) updateLoading,
+    required TResult Function(UpdateSuccess<T> value) updateSuccess,
+    required TResult Function(UpdateError<T> value) updateError,
   }) {
-    return doctorLoading(this);
+    return updateLoading(this);
   }
 
   @override
@@ -927,14 +823,11 @@ class _$DoctorProfileLoadingImpl<T> implements DoctorProfileLoading<T> {
     TResult? Function(Loading<T> value)? loading,
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
-    TResult? Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult? Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult? Function(DoctorProfileError<T> value)? doctorError,
-    TResult? Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult? Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult? Function(StoreProfileError<T> value)? storeError,
+    TResult? Function(UpdateLoading<T> value)? updateLoading,
+    TResult? Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult? Function(UpdateError<T> value)? updateError,
   }) {
-    return doctorLoading?.call(this);
+    return updateLoading?.call(this);
   }
 
   @override
@@ -944,420 +837,35 @@ class _$DoctorProfileLoadingImpl<T> implements DoctorProfileLoading<T> {
     TResult Function(Loading<T> value)? loading,
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
-    TResult Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult Function(DoctorProfileError<T> value)? doctorError,
-    TResult Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult Function(StoreProfileError<T> value)? storeError,
+    TResult Function(UpdateLoading<T> value)? updateLoading,
+    TResult Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult Function(UpdateError<T> value)? updateError,
     required TResult orElse(),
   }) {
-    if (doctorLoading != null) {
-      return doctorLoading(this);
+    if (updateLoading != null) {
+      return updateLoading(this);
     }
     return orElse();
   }
 }
 
-abstract class DoctorProfileLoading<T> implements ProfileState<T> {
-  const factory DoctorProfileLoading() = _$DoctorProfileLoadingImpl<T>;
+abstract class UpdateLoading<T> implements ProfileState<T> {
+  const factory UpdateLoading() = _$UpdateLoadingImpl<T>;
 }
 
 /// @nodoc
-abstract class _$$DoctorProfileSuccessImplCopyWith<T, $Res> {
-  factory _$$DoctorProfileSuccessImplCopyWith(
-          _$DoctorProfileSuccessImpl<T> value,
-          $Res Function(_$DoctorProfileSuccessImpl<T>) then) =
-      __$$DoctorProfileSuccessImplCopyWithImpl<T, $Res>;
-  @useResult
-  $Res call({T data});
+abstract class _$$UpdateSuccessImplCopyWith<T, $Res> {
+  factory _$$UpdateSuccessImplCopyWith(_$UpdateSuccessImpl<T> value,
+          $Res Function(_$UpdateSuccessImpl<T>) then) =
+      __$$UpdateSuccessImplCopyWithImpl<T, $Res>;
 }
 
 /// @nodoc
-class __$$DoctorProfileSuccessImplCopyWithImpl<T, $Res>
-    extends _$ProfileStateCopyWithImpl<T, $Res, _$DoctorProfileSuccessImpl<T>>
-    implements _$$DoctorProfileSuccessImplCopyWith<T, $Res> {
-  __$$DoctorProfileSuccessImplCopyWithImpl(_$DoctorProfileSuccessImpl<T> _value,
-      $Res Function(_$DoctorProfileSuccessImpl<T>) _then)
-      : super(_value, _then);
-
-  /// Create a copy of ProfileState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? data = freezed,
-  }) {
-    return _then(_$DoctorProfileSuccessImpl<T>(
-      freezed == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as T,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$DoctorProfileSuccessImpl<T> implements DoctorProfileSuccess<T> {
-  const _$DoctorProfileSuccessImpl(this.data);
-
-  @override
-  final T data;
-
-  @override
-  String toString() {
-    return 'ProfileState<$T>.doctorSuccess(data: $data)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DoctorProfileSuccessImpl<T> &&
-            const DeepCollectionEquality().equals(other.data, data));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
-
-  /// Create a copy of ProfileState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DoctorProfileSuccessImplCopyWith<T, _$DoctorProfileSuccessImpl<T>>
-      get copyWith => __$$DoctorProfileSuccessImplCopyWithImpl<T,
-          _$DoctorProfileSuccessImpl<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(T data) success,
-    required TResult Function(String message) error,
-    required TResult Function() doctorLoading,
-    required TResult Function(T data) doctorSuccess,
-    required TResult Function(String message) doctorError,
-    required TResult Function() storeLoading,
-    required TResult Function(T data) storeSuccess,
-    required TResult Function(String message) storeError,
-  }) {
-    return doctorSuccess(data);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(T data)? success,
-    TResult? Function(String message)? error,
-    TResult? Function()? doctorLoading,
-    TResult? Function(T data)? doctorSuccess,
-    TResult? Function(String message)? doctorError,
-    TResult? Function()? storeLoading,
-    TResult? Function(T data)? storeSuccess,
-    TResult? Function(String message)? storeError,
-  }) {
-    return doctorSuccess?.call(data);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(T data)? success,
-    TResult Function(String message)? error,
-    TResult Function()? doctorLoading,
-    TResult Function(T data)? doctorSuccess,
-    TResult Function(String message)? doctorError,
-    TResult Function()? storeLoading,
-    TResult Function(T data)? storeSuccess,
-    TResult Function(String message)? storeError,
-    required TResult orElse(),
-  }) {
-    if (doctorSuccess != null) {
-      return doctorSuccess(data);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial<T> value) initial,
-    required TResult Function(Loading<T> value) loading,
-    required TResult Function(Success<T> value) success,
-    required TResult Function(Error<T> value) error,
-    required TResult Function(DoctorProfileLoading<T> value) doctorLoading,
-    required TResult Function(DoctorProfileSuccess<T> value) doctorSuccess,
-    required TResult Function(DoctorProfileError<T> value) doctorError,
-    required TResult Function(StoreProfileLoading<T> value) storeLoading,
-    required TResult Function(StoreProfileSuccess<T> value) storeSuccess,
-    required TResult Function(StoreProfileError<T> value) storeError,
-  }) {
-    return doctorSuccess(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(Loading<T> value)? loading,
-    TResult? Function(Success<T> value)? success,
-    TResult? Function(Error<T> value)? error,
-    TResult? Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult? Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult? Function(DoctorProfileError<T> value)? doctorError,
-    TResult? Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult? Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult? Function(StoreProfileError<T> value)? storeError,
-  }) {
-    return doctorSuccess?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial<T> value)? initial,
-    TResult Function(Loading<T> value)? loading,
-    TResult Function(Success<T> value)? success,
-    TResult Function(Error<T> value)? error,
-    TResult Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult Function(DoctorProfileError<T> value)? doctorError,
-    TResult Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult Function(StoreProfileError<T> value)? storeError,
-    required TResult orElse(),
-  }) {
-    if (doctorSuccess != null) {
-      return doctorSuccess(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class DoctorProfileSuccess<T> implements ProfileState<T> {
-  const factory DoctorProfileSuccess(final T data) =
-      _$DoctorProfileSuccessImpl<T>;
-
-  T get data;
-
-  /// Create a copy of ProfileState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DoctorProfileSuccessImplCopyWith<T, _$DoctorProfileSuccessImpl<T>>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$DoctorProfileErrorImplCopyWith<T, $Res> {
-  factory _$$DoctorProfileErrorImplCopyWith(_$DoctorProfileErrorImpl<T> value,
-          $Res Function(_$DoctorProfileErrorImpl<T>) then) =
-      __$$DoctorProfileErrorImplCopyWithImpl<T, $Res>;
-  @useResult
-  $Res call({String message});
-}
-
-/// @nodoc
-class __$$DoctorProfileErrorImplCopyWithImpl<T, $Res>
-    extends _$ProfileStateCopyWithImpl<T, $Res, _$DoctorProfileErrorImpl<T>>
-    implements _$$DoctorProfileErrorImplCopyWith<T, $Res> {
-  __$$DoctorProfileErrorImplCopyWithImpl(_$DoctorProfileErrorImpl<T> _value,
-      $Res Function(_$DoctorProfileErrorImpl<T>) _then)
-      : super(_value, _then);
-
-  /// Create a copy of ProfileState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? message = null,
-  }) {
-    return _then(_$DoctorProfileErrorImpl<T>(
-      null == message
-          ? _value.message
-          : message // ignore: cast_nullable_to_non_nullable
-              as String,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$DoctorProfileErrorImpl<T> implements DoctorProfileError<T> {
-  const _$DoctorProfileErrorImpl(this.message);
-
-  @override
-  final String message;
-
-  @override
-  String toString() {
-    return 'ProfileState<$T>.doctorError(message: $message)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$DoctorProfileErrorImpl<T> &&
-            (identical(other.message, message) || other.message == message));
-  }
-
-  @override
-  int get hashCode => Object.hash(runtimeType, message);
-
-  /// Create a copy of ProfileState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$DoctorProfileErrorImplCopyWith<T, _$DoctorProfileErrorImpl<T>>
-      get copyWith => __$$DoctorProfileErrorImplCopyWithImpl<T,
-          _$DoctorProfileErrorImpl<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(T data) success,
-    required TResult Function(String message) error,
-    required TResult Function() doctorLoading,
-    required TResult Function(T data) doctorSuccess,
-    required TResult Function(String message) doctorError,
-    required TResult Function() storeLoading,
-    required TResult Function(T data) storeSuccess,
-    required TResult Function(String message) storeError,
-  }) {
-    return doctorError(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(T data)? success,
-    TResult? Function(String message)? error,
-    TResult? Function()? doctorLoading,
-    TResult? Function(T data)? doctorSuccess,
-    TResult? Function(String message)? doctorError,
-    TResult? Function()? storeLoading,
-    TResult? Function(T data)? storeSuccess,
-    TResult? Function(String message)? storeError,
-  }) {
-    return doctorError?.call(message);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(T data)? success,
-    TResult Function(String message)? error,
-    TResult Function()? doctorLoading,
-    TResult Function(T data)? doctorSuccess,
-    TResult Function(String message)? doctorError,
-    TResult Function()? storeLoading,
-    TResult Function(T data)? storeSuccess,
-    TResult Function(String message)? storeError,
-    required TResult orElse(),
-  }) {
-    if (doctorError != null) {
-      return doctorError(message);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial<T> value) initial,
-    required TResult Function(Loading<T> value) loading,
-    required TResult Function(Success<T> value) success,
-    required TResult Function(Error<T> value) error,
-    required TResult Function(DoctorProfileLoading<T> value) doctorLoading,
-    required TResult Function(DoctorProfileSuccess<T> value) doctorSuccess,
-    required TResult Function(DoctorProfileError<T> value) doctorError,
-    required TResult Function(StoreProfileLoading<T> value) storeLoading,
-    required TResult Function(StoreProfileSuccess<T> value) storeSuccess,
-    required TResult Function(StoreProfileError<T> value) storeError,
-  }) {
-    return doctorError(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(Loading<T> value)? loading,
-    TResult? Function(Success<T> value)? success,
-    TResult? Function(Error<T> value)? error,
-    TResult? Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult? Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult? Function(DoctorProfileError<T> value)? doctorError,
-    TResult? Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult? Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult? Function(StoreProfileError<T> value)? storeError,
-  }) {
-    return doctorError?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial<T> value)? initial,
-    TResult Function(Loading<T> value)? loading,
-    TResult Function(Success<T> value)? success,
-    TResult Function(Error<T> value)? error,
-    TResult Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult Function(DoctorProfileError<T> value)? doctorError,
-    TResult Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult Function(StoreProfileError<T> value)? storeError,
-    required TResult orElse(),
-  }) {
-    if (doctorError != null) {
-      return doctorError(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class DoctorProfileError<T> implements ProfileState<T> {
-  const factory DoctorProfileError(final String message) =
-      _$DoctorProfileErrorImpl<T>;
-
-  String get message;
-
-  /// Create a copy of ProfileState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$DoctorProfileErrorImplCopyWith<T, _$DoctorProfileErrorImpl<T>>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$StoreProfileLoadingImplCopyWith<T, $Res> {
-  factory _$$StoreProfileLoadingImplCopyWith(_$StoreProfileLoadingImpl<T> value,
-          $Res Function(_$StoreProfileLoadingImpl<T>) then) =
-      __$$StoreProfileLoadingImplCopyWithImpl<T, $Res>;
-}
-
-/// @nodoc
-class __$$StoreProfileLoadingImplCopyWithImpl<T, $Res>
-    extends _$ProfileStateCopyWithImpl<T, $Res, _$StoreProfileLoadingImpl<T>>
-    implements _$$StoreProfileLoadingImplCopyWith<T, $Res> {
-  __$$StoreProfileLoadingImplCopyWithImpl(_$StoreProfileLoadingImpl<T> _value,
-      $Res Function(_$StoreProfileLoadingImpl<T>) _then)
+class __$$UpdateSuccessImplCopyWithImpl<T, $Res>
+    extends _$ProfileStateCopyWithImpl<T, $Res, _$UpdateSuccessImpl<T>>
+    implements _$$UpdateSuccessImplCopyWith<T, $Res> {
+  __$$UpdateSuccessImplCopyWithImpl(_$UpdateSuccessImpl<T> _value,
+      $Res Function(_$UpdateSuccessImpl<T>) _then)
       : super(_value, _then);
 
   /// Create a copy of ProfileState
@@ -1366,19 +874,18 @@ class __$$StoreProfileLoadingImplCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$StoreProfileLoadingImpl<T> implements StoreProfileLoading<T> {
-  const _$StoreProfileLoadingImpl();
+class _$UpdateSuccessImpl<T> implements UpdateSuccess<T> {
+  const _$UpdateSuccessImpl();
 
   @override
   String toString() {
-    return 'ProfileState<$T>.storeLoading()';
+    return 'ProfileState<$T>.updateSuccess()';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$StoreProfileLoadingImpl<T>);
+        (other.runtimeType == runtimeType && other is _$UpdateSuccessImpl<T>);
   }
 
   @override
@@ -1391,14 +898,11 @@ class _$StoreProfileLoadingImpl<T> implements StoreProfileLoading<T> {
     required TResult Function() loading,
     required TResult Function(T data) success,
     required TResult Function(String message) error,
-    required TResult Function() doctorLoading,
-    required TResult Function(T data) doctorSuccess,
-    required TResult Function(String message) doctorError,
-    required TResult Function() storeLoading,
-    required TResult Function(T data) storeSuccess,
-    required TResult Function(String message) storeError,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateError,
   }) {
-    return storeLoading();
+    return updateSuccess();
   }
 
   @override
@@ -1408,14 +912,11 @@ class _$StoreProfileLoadingImpl<T> implements StoreProfileLoading<T> {
     TResult? Function()? loading,
     TResult? Function(T data)? success,
     TResult? Function(String message)? error,
-    TResult? Function()? doctorLoading,
-    TResult? Function(T data)? doctorSuccess,
-    TResult? Function(String message)? doctorError,
-    TResult? Function()? storeLoading,
-    TResult? Function(T data)? storeSuccess,
-    TResult? Function(String message)? storeError,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateError,
   }) {
-    return storeLoading?.call();
+    return updateSuccess?.call();
   }
 
   @override
@@ -1425,16 +926,13 @@ class _$StoreProfileLoadingImpl<T> implements StoreProfileLoading<T> {
     TResult Function()? loading,
     TResult Function(T data)? success,
     TResult Function(String message)? error,
-    TResult Function()? doctorLoading,
-    TResult Function(T data)? doctorSuccess,
-    TResult Function(String message)? doctorError,
-    TResult Function()? storeLoading,
-    TResult Function(T data)? storeSuccess,
-    TResult Function(String message)? storeError,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateError,
     required TResult orElse(),
   }) {
-    if (storeLoading != null) {
-      return storeLoading();
+    if (updateSuccess != null) {
+      return updateSuccess();
     }
     return orElse();
   }
@@ -1446,14 +944,11 @@ class _$StoreProfileLoadingImpl<T> implements StoreProfileLoading<T> {
     required TResult Function(Loading<T> value) loading,
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
-    required TResult Function(DoctorProfileLoading<T> value) doctorLoading,
-    required TResult Function(DoctorProfileSuccess<T> value) doctorSuccess,
-    required TResult Function(DoctorProfileError<T> value) doctorError,
-    required TResult Function(StoreProfileLoading<T> value) storeLoading,
-    required TResult Function(StoreProfileSuccess<T> value) storeSuccess,
-    required TResult Function(StoreProfileError<T> value) storeError,
+    required TResult Function(UpdateLoading<T> value) updateLoading,
+    required TResult Function(UpdateSuccess<T> value) updateSuccess,
+    required TResult Function(UpdateError<T> value) updateError,
   }) {
-    return storeLoading(this);
+    return updateSuccess(this);
   }
 
   @override
@@ -1463,14 +958,11 @@ class _$StoreProfileLoadingImpl<T> implements StoreProfileLoading<T> {
     TResult? Function(Loading<T> value)? loading,
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
-    TResult? Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult? Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult? Function(DoctorProfileError<T> value)? doctorError,
-    TResult? Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult? Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult? Function(StoreProfileError<T> value)? storeError,
+    TResult? Function(UpdateLoading<T> value)? updateLoading,
+    TResult? Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult? Function(UpdateError<T> value)? updateError,
   }) {
-    return storeLoading?.call(this);
+    return updateSuccess?.call(this);
   }
 
   @override
@@ -1480,231 +972,37 @@ class _$StoreProfileLoadingImpl<T> implements StoreProfileLoading<T> {
     TResult Function(Loading<T> value)? loading,
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
-    TResult Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult Function(DoctorProfileError<T> value)? doctorError,
-    TResult Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult Function(StoreProfileError<T> value)? storeError,
+    TResult Function(UpdateLoading<T> value)? updateLoading,
+    TResult Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult Function(UpdateError<T> value)? updateError,
     required TResult orElse(),
   }) {
-    if (storeLoading != null) {
-      return storeLoading(this);
+    if (updateSuccess != null) {
+      return updateSuccess(this);
     }
     return orElse();
   }
 }
 
-abstract class StoreProfileLoading<T> implements ProfileState<T> {
-  const factory StoreProfileLoading() = _$StoreProfileLoadingImpl<T>;
+abstract class UpdateSuccess<T> implements ProfileState<T> {
+  const factory UpdateSuccess() = _$UpdateSuccessImpl<T>;
 }
 
 /// @nodoc
-abstract class _$$StoreProfileSuccessImplCopyWith<T, $Res> {
-  factory _$$StoreProfileSuccessImplCopyWith(_$StoreProfileSuccessImpl<T> value,
-          $Res Function(_$StoreProfileSuccessImpl<T>) then) =
-      __$$StoreProfileSuccessImplCopyWithImpl<T, $Res>;
-  @useResult
-  $Res call({T data});
-}
-
-/// @nodoc
-class __$$StoreProfileSuccessImplCopyWithImpl<T, $Res>
-    extends _$ProfileStateCopyWithImpl<T, $Res, _$StoreProfileSuccessImpl<T>>
-    implements _$$StoreProfileSuccessImplCopyWith<T, $Res> {
-  __$$StoreProfileSuccessImplCopyWithImpl(_$StoreProfileSuccessImpl<T> _value,
-      $Res Function(_$StoreProfileSuccessImpl<T>) _then)
-      : super(_value, _then);
-
-  /// Create a copy of ProfileState
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? data = freezed,
-  }) {
-    return _then(_$StoreProfileSuccessImpl<T>(
-      freezed == data
-          ? _value.data
-          : data // ignore: cast_nullable_to_non_nullable
-              as T,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$StoreProfileSuccessImpl<T> implements StoreProfileSuccess<T> {
-  const _$StoreProfileSuccessImpl(this.data);
-
-  @override
-  final T data;
-
-  @override
-  String toString() {
-    return 'ProfileState<$T>.storeSuccess(data: $data)';
-  }
-
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$StoreProfileSuccessImpl<T> &&
-            const DeepCollectionEquality().equals(other.data, data));
-  }
-
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, const DeepCollectionEquality().hash(data));
-
-  /// Create a copy of ProfileState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$StoreProfileSuccessImplCopyWith<T, _$StoreProfileSuccessImpl<T>>
-      get copyWith => __$$StoreProfileSuccessImplCopyWithImpl<T,
-          _$StoreProfileSuccessImpl<T>>(this, _$identity);
-
-  @override
-  @optionalTypeArgs
-  TResult when<TResult extends Object?>({
-    required TResult Function() initial,
-    required TResult Function() loading,
-    required TResult Function(T data) success,
-    required TResult Function(String message) error,
-    required TResult Function() doctorLoading,
-    required TResult Function(T data) doctorSuccess,
-    required TResult Function(String message) doctorError,
-    required TResult Function() storeLoading,
-    required TResult Function(T data) storeSuccess,
-    required TResult Function(String message) storeError,
-  }) {
-    return storeSuccess(data);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? whenOrNull<TResult extends Object?>({
-    TResult? Function()? initial,
-    TResult? Function()? loading,
-    TResult? Function(T data)? success,
-    TResult? Function(String message)? error,
-    TResult? Function()? doctorLoading,
-    TResult? Function(T data)? doctorSuccess,
-    TResult? Function(String message)? doctorError,
-    TResult? Function()? storeLoading,
-    TResult? Function(T data)? storeSuccess,
-    TResult? Function(String message)? storeError,
-  }) {
-    return storeSuccess?.call(data);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object?>({
-    TResult Function()? initial,
-    TResult Function()? loading,
-    TResult Function(T data)? success,
-    TResult Function(String message)? error,
-    TResult Function()? doctorLoading,
-    TResult Function(T data)? doctorSuccess,
-    TResult Function(String message)? doctorError,
-    TResult Function()? storeLoading,
-    TResult Function(T data)? storeSuccess,
-    TResult Function(String message)? storeError,
-    required TResult orElse(),
-  }) {
-    if (storeSuccess != null) {
-      return storeSuccess(data);
-    }
-    return orElse();
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult map<TResult extends Object?>({
-    required TResult Function(_Initial<T> value) initial,
-    required TResult Function(Loading<T> value) loading,
-    required TResult Function(Success<T> value) success,
-    required TResult Function(Error<T> value) error,
-    required TResult Function(DoctorProfileLoading<T> value) doctorLoading,
-    required TResult Function(DoctorProfileSuccess<T> value) doctorSuccess,
-    required TResult Function(DoctorProfileError<T> value) doctorError,
-    required TResult Function(StoreProfileLoading<T> value) storeLoading,
-    required TResult Function(StoreProfileSuccess<T> value) storeSuccess,
-    required TResult Function(StoreProfileError<T> value) storeError,
-  }) {
-    return storeSuccess(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult? mapOrNull<TResult extends Object?>({
-    TResult? Function(_Initial<T> value)? initial,
-    TResult? Function(Loading<T> value)? loading,
-    TResult? Function(Success<T> value)? success,
-    TResult? Function(Error<T> value)? error,
-    TResult? Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult? Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult? Function(DoctorProfileError<T> value)? doctorError,
-    TResult? Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult? Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult? Function(StoreProfileError<T> value)? storeError,
-  }) {
-    return storeSuccess?.call(this);
-  }
-
-  @override
-  @optionalTypeArgs
-  TResult maybeMap<TResult extends Object?>({
-    TResult Function(_Initial<T> value)? initial,
-    TResult Function(Loading<T> value)? loading,
-    TResult Function(Success<T> value)? success,
-    TResult Function(Error<T> value)? error,
-    TResult Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult Function(DoctorProfileError<T> value)? doctorError,
-    TResult Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult Function(StoreProfileError<T> value)? storeError,
-    required TResult orElse(),
-  }) {
-    if (storeSuccess != null) {
-      return storeSuccess(this);
-    }
-    return orElse();
-  }
-}
-
-abstract class StoreProfileSuccess<T> implements ProfileState<T> {
-  const factory StoreProfileSuccess(final T data) =
-      _$StoreProfileSuccessImpl<T>;
-
-  T get data;
-
-  /// Create a copy of ProfileState
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$StoreProfileSuccessImplCopyWith<T, _$StoreProfileSuccessImpl<T>>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class _$$StoreProfileErrorImplCopyWith<T, $Res> {
-  factory _$$StoreProfileErrorImplCopyWith(_$StoreProfileErrorImpl<T> value,
-          $Res Function(_$StoreProfileErrorImpl<T>) then) =
-      __$$StoreProfileErrorImplCopyWithImpl<T, $Res>;
+abstract class _$$UpdateErrorImplCopyWith<T, $Res> {
+  factory _$$UpdateErrorImplCopyWith(_$UpdateErrorImpl<T> value,
+          $Res Function(_$UpdateErrorImpl<T>) then) =
+      __$$UpdateErrorImplCopyWithImpl<T, $Res>;
   @useResult
   $Res call({String message});
 }
 
 /// @nodoc
-class __$$StoreProfileErrorImplCopyWithImpl<T, $Res>
-    extends _$ProfileStateCopyWithImpl<T, $Res, _$StoreProfileErrorImpl<T>>
-    implements _$$StoreProfileErrorImplCopyWith<T, $Res> {
-  __$$StoreProfileErrorImplCopyWithImpl(_$StoreProfileErrorImpl<T> _value,
-      $Res Function(_$StoreProfileErrorImpl<T>) _then)
+class __$$UpdateErrorImplCopyWithImpl<T, $Res>
+    extends _$ProfileStateCopyWithImpl<T, $Res, _$UpdateErrorImpl<T>>
+    implements _$$UpdateErrorImplCopyWith<T, $Res> {
+  __$$UpdateErrorImplCopyWithImpl(
+      _$UpdateErrorImpl<T> _value, $Res Function(_$UpdateErrorImpl<T>) _then)
       : super(_value, _then);
 
   /// Create a copy of ProfileState
@@ -1714,7 +1012,7 @@ class __$$StoreProfileErrorImplCopyWithImpl<T, $Res>
   $Res call({
     Object? message = null,
   }) {
-    return _then(_$StoreProfileErrorImpl<T>(
+    return _then(_$UpdateErrorImpl<T>(
       null == message
           ? _value.message
           : message // ignore: cast_nullable_to_non_nullable
@@ -1725,22 +1023,22 @@ class __$$StoreProfileErrorImplCopyWithImpl<T, $Res>
 
 /// @nodoc
 
-class _$StoreProfileErrorImpl<T> implements StoreProfileError<T> {
-  const _$StoreProfileErrorImpl(this.message);
+class _$UpdateErrorImpl<T> implements UpdateError<T> {
+  const _$UpdateErrorImpl(this.message);
 
   @override
   final String message;
 
   @override
   String toString() {
-    return 'ProfileState<$T>.storeError(message: $message)';
+    return 'ProfileState<$T>.updateError(message: $message)';
   }
 
   @override
   bool operator ==(Object other) {
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
-            other is _$StoreProfileErrorImpl<T> &&
+            other is _$UpdateErrorImpl<T> &&
             (identical(other.message, message) || other.message == message));
   }
 
@@ -1752,10 +1050,9 @@ class _$StoreProfileErrorImpl<T> implements StoreProfileError<T> {
   @JsonKey(includeFromJson: false, includeToJson: false)
   @override
   @pragma('vm:prefer-inline')
-  _$$StoreProfileErrorImplCopyWith<T, _$StoreProfileErrorImpl<T>>
-      get copyWith =>
-          __$$StoreProfileErrorImplCopyWithImpl<T, _$StoreProfileErrorImpl<T>>(
-              this, _$identity);
+  _$$UpdateErrorImplCopyWith<T, _$UpdateErrorImpl<T>> get copyWith =>
+      __$$UpdateErrorImplCopyWithImpl<T, _$UpdateErrorImpl<T>>(
+          this, _$identity);
 
   @override
   @optionalTypeArgs
@@ -1764,14 +1061,11 @@ class _$StoreProfileErrorImpl<T> implements StoreProfileError<T> {
     required TResult Function() loading,
     required TResult Function(T data) success,
     required TResult Function(String message) error,
-    required TResult Function() doctorLoading,
-    required TResult Function(T data) doctorSuccess,
-    required TResult Function(String message) doctorError,
-    required TResult Function() storeLoading,
-    required TResult Function(T data) storeSuccess,
-    required TResult Function(String message) storeError,
+    required TResult Function() updateLoading,
+    required TResult Function() updateSuccess,
+    required TResult Function(String message) updateError,
   }) {
-    return storeError(message);
+    return updateError(message);
   }
 
   @override
@@ -1781,14 +1075,11 @@ class _$StoreProfileErrorImpl<T> implements StoreProfileError<T> {
     TResult? Function()? loading,
     TResult? Function(T data)? success,
     TResult? Function(String message)? error,
-    TResult? Function()? doctorLoading,
-    TResult? Function(T data)? doctorSuccess,
-    TResult? Function(String message)? doctorError,
-    TResult? Function()? storeLoading,
-    TResult? Function(T data)? storeSuccess,
-    TResult? Function(String message)? storeError,
+    TResult? Function()? updateLoading,
+    TResult? Function()? updateSuccess,
+    TResult? Function(String message)? updateError,
   }) {
-    return storeError?.call(message);
+    return updateError?.call(message);
   }
 
   @override
@@ -1798,16 +1089,13 @@ class _$StoreProfileErrorImpl<T> implements StoreProfileError<T> {
     TResult Function()? loading,
     TResult Function(T data)? success,
     TResult Function(String message)? error,
-    TResult Function()? doctorLoading,
-    TResult Function(T data)? doctorSuccess,
-    TResult Function(String message)? doctorError,
-    TResult Function()? storeLoading,
-    TResult Function(T data)? storeSuccess,
-    TResult Function(String message)? storeError,
+    TResult Function()? updateLoading,
+    TResult Function()? updateSuccess,
+    TResult Function(String message)? updateError,
     required TResult orElse(),
   }) {
-    if (storeError != null) {
-      return storeError(message);
+    if (updateError != null) {
+      return updateError(message);
     }
     return orElse();
   }
@@ -1819,14 +1107,11 @@ class _$StoreProfileErrorImpl<T> implements StoreProfileError<T> {
     required TResult Function(Loading<T> value) loading,
     required TResult Function(Success<T> value) success,
     required TResult Function(Error<T> value) error,
-    required TResult Function(DoctorProfileLoading<T> value) doctorLoading,
-    required TResult Function(DoctorProfileSuccess<T> value) doctorSuccess,
-    required TResult Function(DoctorProfileError<T> value) doctorError,
-    required TResult Function(StoreProfileLoading<T> value) storeLoading,
-    required TResult Function(StoreProfileSuccess<T> value) storeSuccess,
-    required TResult Function(StoreProfileError<T> value) storeError,
+    required TResult Function(UpdateLoading<T> value) updateLoading,
+    required TResult Function(UpdateSuccess<T> value) updateSuccess,
+    required TResult Function(UpdateError<T> value) updateError,
   }) {
-    return storeError(this);
+    return updateError(this);
   }
 
   @override
@@ -1836,14 +1121,11 @@ class _$StoreProfileErrorImpl<T> implements StoreProfileError<T> {
     TResult? Function(Loading<T> value)? loading,
     TResult? Function(Success<T> value)? success,
     TResult? Function(Error<T> value)? error,
-    TResult? Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult? Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult? Function(DoctorProfileError<T> value)? doctorError,
-    TResult? Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult? Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult? Function(StoreProfileError<T> value)? storeError,
+    TResult? Function(UpdateLoading<T> value)? updateLoading,
+    TResult? Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult? Function(UpdateError<T> value)? updateError,
   }) {
-    return storeError?.call(this);
+    return updateError?.call(this);
   }
 
   @override
@@ -1853,30 +1135,26 @@ class _$StoreProfileErrorImpl<T> implements StoreProfileError<T> {
     TResult Function(Loading<T> value)? loading,
     TResult Function(Success<T> value)? success,
     TResult Function(Error<T> value)? error,
-    TResult Function(DoctorProfileLoading<T> value)? doctorLoading,
-    TResult Function(DoctorProfileSuccess<T> value)? doctorSuccess,
-    TResult Function(DoctorProfileError<T> value)? doctorError,
-    TResult Function(StoreProfileLoading<T> value)? storeLoading,
-    TResult Function(StoreProfileSuccess<T> value)? storeSuccess,
-    TResult Function(StoreProfileError<T> value)? storeError,
+    TResult Function(UpdateLoading<T> value)? updateLoading,
+    TResult Function(UpdateSuccess<T> value)? updateSuccess,
+    TResult Function(UpdateError<T> value)? updateError,
     required TResult orElse(),
   }) {
-    if (storeError != null) {
-      return storeError(this);
+    if (updateError != null) {
+      return updateError(this);
     }
     return orElse();
   }
 }
 
-abstract class StoreProfileError<T> implements ProfileState<T> {
-  const factory StoreProfileError(final String message) =
-      _$StoreProfileErrorImpl<T>;
+abstract class UpdateError<T> implements ProfileState<T> {
+  const factory UpdateError(final String message) = _$UpdateErrorImpl<T>;
 
   String get message;
 
   /// Create a copy of ProfileState
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$StoreProfileErrorImplCopyWith<T, _$StoreProfileErrorImpl<T>>
-      get copyWith => throw _privateConstructorUsedError;
+  _$$UpdateErrorImplCopyWith<T, _$UpdateErrorImpl<T>> get copyWith =>
+      throw _privateConstructorUsedError;
 }

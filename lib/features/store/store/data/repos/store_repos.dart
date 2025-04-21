@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:dio/dio.dart';
 import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs.dart';
 import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dart';

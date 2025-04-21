@@ -58,7 +58,7 @@ class DoctorClinicRepo {
   Future<ApiResult<AppoinmentDocResponse>> getAllDoctorAppointments() async {
     try {
       final response = await _apiService.getAllDoctorAppointments(
-          'Bearer 145|pjAj0DZz91JdkSbvnLzsFfyx0PKYuF2nqLSfzwKAe9b94516');
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}');
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));

@@ -7,4 +7,5 @@ class ApiConstant {
   static const String items = "items";
   static const String clinics = "clinics";
   static const String doctorAppointments = "doctor/clinics/appointments";
+  static const String pets = "pets";
 }
