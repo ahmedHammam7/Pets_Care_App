@@ -11,4 +11,5 @@ class ApiConstant {
   static const String stores = "stores";
   static const String searchStore = "/search-items-store-name-address?query=";
   static const String searchItems = "/search-items?query=";
+  static const String searchClinics = "/clinics-search?query=";
 }

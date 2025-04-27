@@ -3,6 +3,8 @@ import 'package:pets_care_app/core/network/api_constant.dart';
 import 'package:pets_care_app/features/add_pets/data/models/pet_response.dart';
 import 'package:pets_care_app/features/auth/login/data/models/login_response.dart';
 import 'package:pets_care_app/features/auth/register/data/models/register_response.dart';
+import 'package:pets_care_app/features/clinics/client/data/models/get_all_clinics_response.dart';
+import 'package:pets_care_app/features/clinics/client/data/repos/owner_clincs_repo.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/appoinment_doc_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/doctor_profile_response.dart';
@@ -97,5 +99,12 @@ abstract class ApiService {
   );
   @GET('${ApiConstant.searchItems}{query}')
   Future<SearchItemsResponse> searchItems(
+      @Header('Authorization') String token, @Path('query') String query);
+  @GET(ApiConstant.clinics)
+  Future<GetAllClinicsResponse> getAllClinicsClient(
+      @Header('Authorization') String token);
+
+  @GET('${ApiConstant.searchClinics}{query}')
+  Future<GetAllClinicsResponse> searchClinics(
       @Header('Authorization') String token, @Path('query') String query);
 }

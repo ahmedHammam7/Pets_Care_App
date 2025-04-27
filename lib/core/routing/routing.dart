@@ -15,6 +15,7 @@ import 'package:pets_care_app/features/auth/register/ui/views/register_store_scr
 import 'package:pets_care_app/features/cart/ui/views/cart_screen.dart';
 import 'package:pets_care_app/features/chat_bot/ui/chat_bot_screen.dart';
 import 'package:pets_care_app/features/check/ui/check_screen.dart';
+import 'package:pets_care_app/features/clinics/client/logic/cubit/owner_clinics_cubit.dart';
 import 'package:pets_care_app/features/clinics/client/ui/clinics_screen.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/appoinment_doc_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_response.dart';
@@ -93,7 +94,10 @@ class AppRoutes {
         );
       case Routes.clinicsScreen:
         return MaterialPageRoute(
-          builder: (context) => const ClinicsScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<OwnerClinicsCubit>()..getAllClinics(),
+            child: const ClinicsScreen(),
+          ),
         );
 
       case Routes.addPetsScreen:

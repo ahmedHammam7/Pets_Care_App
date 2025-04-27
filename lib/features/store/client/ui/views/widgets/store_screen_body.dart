@@ -8,6 +8,7 @@ import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/features/store/client/logic/cubit/store_cubit.dart';
 import 'package:pets_care_app/features/store/client/ui/views/widgets/search_field.dart';
 import 'package:pets_care_app/features/store/client/ui/views/widgets/store_item.dart';
+import 'package:shimmer/shimmer.dart';
 
 class StoreScreenBody extends StatelessWidget {
   const StoreScreenBody({
@@ -44,11 +45,26 @@ class StoreScreenBody extends StatelessWidget {
               current is SearchItemsError,
           builder: (context, state) {
             if (state is SpecificStoreLoading || state is SearchItemsLoading) {
-              return const SliverToBoxAdapter(
-                child: Center(
-                    child: CircularProgressIndicator(
-                  color: AppColors.primaryColor,
-                )),
+              return SliverPadding(
+                padding: EdgeInsets.only(left: 12.w, right: 12.w, bottom: 12.h),
+                sliver: SliverGrid.builder(
+                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                      mainAxisSpacing: 14.h,
+                      crossAxisSpacing: 14.w,
+                      mainAxisExtent: MediaQuery.sizeOf(context).height * 0.26,
+                      crossAxisCount: 2),
+                  itemCount: 5,
+                  itemBuilder: (context, index) => Shimmer.fromColors(
+                    baseColor: Colors.white,
+                    highlightColor: AppColors.storeSizeItemColor,
+                    child: const StoreItem(
+                      image: "",
+                      name: "",
+                      price: "",
+                      size: "",
+                    ),
+                  ),
+                ),
               );
             } else if (state is SpecificStoreSuccess) {
               if (state.stores.store.items.isEmpty) {

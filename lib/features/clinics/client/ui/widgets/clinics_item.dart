@@ -3,10 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
+import 'package:pets_care_app/features/clinics/client/data/models/get_all_clinics_response.dart';
 
 class ClinicsItem extends StatelessWidget {
-  const ClinicsItem({super.key});
-
+  const ClinicsItem({super.key, required this.data});
+  final ClinicResponseData data;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -20,36 +21,33 @@ class ClinicsItem extends StatelessWidget {
           elevation: 8,
           child: SizedBox(
             height: 131.h,
-            width: 274.w,
+            width: MediaQuery.of(context).size.width * .5,
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 15.w, vertical: 10.h),
               child: Column(
                 children: [
                   Row(
                     children: [
-                      Image.asset(
-                        "assets/png/vet 1.png",
-                        height: 50.h,
-                      ),
+                      data.photo == "" || data.photo == null
+                          ? Image.asset(
+                              "assets/png/vet 1.png",
+                              height: 50.h,
+                            )
+                          : Image.network(
+                              data.photo!,
+                              height: 50.h,
+                            ),
                       horizontalSpace(10),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
                           SizedBox(
-                            width: 150.w,
+                            width: MediaQuery.sizeOf(context).width * .3,
                             child: Text(
-                              "Dr. Tama3a ",
+                              data.doctorName ?? "",
                               overflow: TextOverflow.ellipsis,
-                              style: AppTextStyles.clinicsTitle
-                                  .copyWith(fontWeight: FontWeight.w500),
-                            ),
-                          ),
-                          SizedBox(
-                            width: 170.w,
-                            child: Text(
-                              "Bachelor of veterinary science",
-                              overflow: TextOverflow.ellipsis,
-                              style: AppTextStyles.storeSizeItem,
+                              style: AppTextStyles.clinicsTitle.copyWith(
+                                  fontWeight: FontWeight.w500, fontSize: 18.sp),
                             ),
                           ),
                         ],
@@ -60,7 +58,7 @@ class ClinicsItem extends StatelessWidget {
                   Row(
                     children: [
                       Text(
-                        "10 years of experience",
+                        data.appointmentDate ?? "",
                         style: AppTextStyles.experience,
                       ),
                       const Spacer(),
@@ -69,14 +67,14 @@ class ClinicsItem extends StatelessWidget {
                         color: AppColors.storeSizeItemColor,
                         size: 15.sp,
                       ),
-                      Text("2.5 km", style: AppTextStyles.experience),
+                      Text(data.address ?? "", style: AppTextStyles.experience),
                       const Spacer(),
                       Icon(
                         Icons.monetization_on_rounded,
                         color: AppColors.storeSizeItemColor,
                         size: 15.sp,
                       ),
-                      Text("100" "\$", style: AppTextStyles.experience),
+                      Text(data.price ?? "\$", style: AppTextStyles.experience),
                       const Spacer(),
                     ],
                   ),
@@ -90,7 +88,7 @@ class ClinicsItem extends StatelessWidget {
                       ),
                       horizontalSpace(5),
                       Text(
-                        "Monday - Friday at 8.00 am - 5.00pm",
+                        "${data.day ?? ""} - ${data.timeRange ?? ""}",
                         style: AppTextStyles.experience,
                       ),
                     ],
