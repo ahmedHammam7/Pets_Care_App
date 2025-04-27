@@ -33,7 +33,9 @@ import 'package:pets_care_app/features/onBoarding/ui/views/on_boarding_screen.da
 import 'package:pets_care_app/features/profile/logic/cubit/profile_cubit.dart';
 import 'package:pets_care_app/features/profile/ui/views/profile_screen.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
+import 'package:pets_care_app/features/store/client/data/models/specific_store_item.dart';
 import 'package:pets_care_app/features/store/client/logic/cubit/store_cubit.dart';
+import 'package:pets_care_app/features/store/client/ui/views/all_stores_screen.dart';
 import 'package:pets_care_app/features/store/client/ui/views/details_screen.dart';
 import 'package:pets_care_app/features/store/client/ui/views/store_screen.dart';
 import 'package:pets_care_app/features/store/store/logic/cubit/store_store_cubit.dart';
@@ -74,12 +76,16 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
             create: (context) => getIt<StoreCubit>(),
-            child: const StoreScreen(),
+            child: StoreScreen(
+              id: args as String,
+            ),
           ),
         );
       case Routes.detailsScreen:
         return MaterialPageRoute(
-          builder: (context) => const DetailsScreen(),
+          builder: (context) => DetailsScreen(
+            item: args,
+          ),
         );
       case Routes.cartScreen:
         return MaterialPageRoute(
@@ -226,6 +232,13 @@ class AppRoutes {
             child: EditPetScreen(
               pet: args as PetResponse,
             ),
+          ),
+        );
+      case Routes.allStoresScreen:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<StoreCubit>()..getAllStores(),
+            child: const AllStoresScreen(),
           ),
         );
 

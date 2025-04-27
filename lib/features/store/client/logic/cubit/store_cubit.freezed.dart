@@ -22,6 +22,19 @@ mixin _$StoreState {
     required TResult Function() loading,
     required TResult Function(List<ProductResponse> products) success,
     required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -30,6 +43,18 @@ mixin _$StoreState {
     TResult? Function()? loading,
     TResult? Function(List<ProductResponse> products)? success,
     TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -38,6 +63,18 @@ mixin _$StoreState {
     TResult Function()? loading,
     TResult Function(List<ProductResponse> products)? success,
     TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -47,6 +84,18 @@ mixin _$StoreState {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -55,6 +104,18 @@ mixin _$StoreState {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -63,6 +124,18 @@ mixin _$StoreState {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -110,12 +183,18 @@ class __$$InitialImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$InitialImpl implements _Initial {
+class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   const _$InitialImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'StoreState.initial()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'StoreState.initial'));
   }
 
   @override
@@ -134,6 +213,19 @@ class _$InitialImpl implements _Initial {
     required TResult Function() loading,
     required TResult Function(List<ProductResponse> products) success,
     required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
   }) {
     return initial();
   }
@@ -145,6 +237,18 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? loading,
     TResult? Function(List<ProductResponse> products)? success,
     TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
   }) {
     return initial?.call();
   }
@@ -156,6 +260,18 @@ class _$InitialImpl implements _Initial {
     TResult Function()? loading,
     TResult Function(List<ProductResponse> products)? success,
     TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -171,6 +287,18 @@ class _$InitialImpl implements _Initial {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
   }) {
     return initial(this);
   }
@@ -182,6 +310,18 @@ class _$InitialImpl implements _Initial {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
   }) {
     return initial?.call(this);
   }
@@ -193,6 +333,18 @@ class _$InitialImpl implements _Initial {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -227,12 +379,18 @@ class __$$LoadingImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$LoadingImpl implements Loading {
+class _$LoadingImpl with DiagnosticableTreeMixin implements Loading {
   const _$LoadingImpl();
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'StoreState.loading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'StoreState.loading'));
   }
 
   @override
@@ -251,6 +409,19 @@ class _$LoadingImpl implements Loading {
     required TResult Function() loading,
     required TResult Function(List<ProductResponse> products) success,
     required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
   }) {
     return loading();
   }
@@ -262,6 +433,18 @@ class _$LoadingImpl implements Loading {
     TResult? Function()? loading,
     TResult? Function(List<ProductResponse> products)? success,
     TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
   }) {
     return loading?.call();
   }
@@ -273,6 +456,18 @@ class _$LoadingImpl implements Loading {
     TResult Function()? loading,
     TResult Function(List<ProductResponse> products)? success,
     TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -288,6 +483,18 @@ class _$LoadingImpl implements Loading {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
   }) {
     return loading(this);
   }
@@ -299,6 +506,18 @@ class _$LoadingImpl implements Loading {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
   }) {
     return loading?.call(this);
   }
@@ -310,6 +529,18 @@ class _$LoadingImpl implements Loading {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -358,7 +589,7 @@ class __$$SuccessImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$SuccessImpl implements Success {
+class _$SuccessImpl with DiagnosticableTreeMixin implements Success {
   const _$SuccessImpl(final List<ProductResponse> products)
       : _products = products;
 
@@ -371,8 +602,16 @@ class _$SuccessImpl implements Success {
   }
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'StoreState.success(products: $products)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'StoreState.success'))
+      ..add(DiagnosticsProperty('products', products));
   }
 
   @override
@@ -402,6 +641,19 @@ class _$SuccessImpl implements Success {
     required TResult Function() loading,
     required TResult Function(List<ProductResponse> products) success,
     required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
   }) {
     return success(products);
   }
@@ -413,6 +665,18 @@ class _$SuccessImpl implements Success {
     TResult? Function()? loading,
     TResult? Function(List<ProductResponse> products)? success,
     TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
   }) {
     return success?.call(products);
   }
@@ -424,6 +688,18 @@ class _$SuccessImpl implements Success {
     TResult Function()? loading,
     TResult Function(List<ProductResponse> products)? success,
     TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -439,6 +715,18 @@ class _$SuccessImpl implements Success {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
   }) {
     return success(this);
   }
@@ -450,6 +738,18 @@ class _$SuccessImpl implements Success {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
   }) {
     return success?.call(this);
   }
@@ -461,6 +761,18 @@ class _$SuccessImpl implements Success {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -517,15 +829,23 @@ class __$$ErrorImplCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$ErrorImpl implements Error {
+class _$ErrorImpl with DiagnosticableTreeMixin implements Error {
   const _$ErrorImpl(this.message);
 
   @override
   final String message;
 
   @override
-  String toString() {
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
     return 'StoreState.error(message: $message)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'StoreState.error'))
+      ..add(DiagnosticsProperty('message', message));
   }
 
   @override
@@ -554,6 +874,19 @@ class _$ErrorImpl implements Error {
     required TResult Function() loading,
     required TResult Function(List<ProductResponse> products) success,
     required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
   }) {
     return error(message);
   }
@@ -565,6 +898,18 @@ class _$ErrorImpl implements Error {
     TResult? Function()? loading,
     TResult? Function(List<ProductResponse> products)? success,
     TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
   }) {
     return error?.call(message);
   }
@@ -576,6 +921,18 @@ class _$ErrorImpl implements Error {
     TResult Function()? loading,
     TResult Function(List<ProductResponse> products)? success,
     TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -591,6 +948,18 @@ class _$ErrorImpl implements Error {
     required TResult Function(Loading value) loading,
     required TResult Function(Success value) success,
     required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
   }) {
     return error(this);
   }
@@ -602,6 +971,18 @@ class _$ErrorImpl implements Error {
     TResult? Function(Loading value)? loading,
     TResult? Function(Success value)? success,
     TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
   }) {
     return error?.call(this);
   }
@@ -613,6 +994,18 @@ class _$ErrorImpl implements Error {
     TResult Function(Loading value)? loading,
     TResult Function(Success value)? success,
     TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -631,5 +1024,2697 @@ abstract class Error implements StoreState {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$ErrorImplCopyWith<_$ErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AllStoresLoadingImplCopyWith<$Res> {
+  factory _$$AllStoresLoadingImplCopyWith(_$AllStoresLoadingImpl value,
+          $Res Function(_$AllStoresLoadingImpl) then) =
+      __$$AllStoresLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AllStoresLoadingImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$AllStoresLoadingImpl>
+    implements _$$AllStoresLoadingImplCopyWith<$Res> {
+  __$$AllStoresLoadingImplCopyWithImpl(_$AllStoresLoadingImpl _value,
+      $Res Function(_$AllStoresLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AllStoresLoadingImpl
+    with DiagnosticableTreeMixin
+    implements AllStoresLoading {
+  const _$AllStoresLoadingImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.allStoresLoading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'StoreState.allStoresLoading'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AllStoresLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+  }) {
+    return allStoresLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+  }) {
+    return allStoresLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (allStoresLoading != null) {
+      return allStoresLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+  }) {
+    return allStoresLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+  }) {
+    return allStoresLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (allStoresLoading != null) {
+      return allStoresLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AllStoresLoading implements StoreState {
+  const factory AllStoresLoading() = _$AllStoresLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$AllStoresSuccessImplCopyWith<$Res> {
+  factory _$$AllStoresSuccessImplCopyWith(_$AllStoresSuccessImpl value,
+          $Res Function(_$AllStoresSuccessImpl) then) =
+      __$$AllStoresSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({StoreResponse stores});
+}
+
+/// @nodoc
+class __$$AllStoresSuccessImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$AllStoresSuccessImpl>
+    implements _$$AllStoresSuccessImplCopyWith<$Res> {
+  __$$AllStoresSuccessImplCopyWithImpl(_$AllStoresSuccessImpl _value,
+      $Res Function(_$AllStoresSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? stores = null,
+  }) {
+    return _then(_$AllStoresSuccessImpl(
+      null == stores
+          ? _value.stores
+          : stores // ignore: cast_nullable_to_non_nullable
+              as StoreResponse,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AllStoresSuccessImpl
+    with DiagnosticableTreeMixin
+    implements AllStoresSuccess {
+  const _$AllStoresSuccessImpl(this.stores);
+
+  @override
+  final StoreResponse stores;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.allStoresSuccess(stores: $stores)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'StoreState.allStoresSuccess'))
+      ..add(DiagnosticsProperty('stores', stores));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AllStoresSuccessImpl &&
+            (identical(other.stores, stores) || other.stores == stores));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, stores);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AllStoresSuccessImplCopyWith<_$AllStoresSuccessImpl> get copyWith =>
+      __$$AllStoresSuccessImplCopyWithImpl<_$AllStoresSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+  }) {
+    return allStoresSuccess(stores);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+  }) {
+    return allStoresSuccess?.call(stores);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (allStoresSuccess != null) {
+      return allStoresSuccess(stores);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+  }) {
+    return allStoresSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+  }) {
+    return allStoresSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (allStoresSuccess != null) {
+      return allStoresSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AllStoresSuccess implements StoreState {
+  const factory AllStoresSuccess(final StoreResponse stores) =
+      _$AllStoresSuccessImpl;
+
+  StoreResponse get stores;
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AllStoresSuccessImplCopyWith<_$AllStoresSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AllStoresErrorImplCopyWith<$Res> {
+  factory _$$AllStoresErrorImplCopyWith(_$AllStoresErrorImpl value,
+          $Res Function(_$AllStoresErrorImpl) then) =
+      __$$AllStoresErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$AllStoresErrorImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$AllStoresErrorImpl>
+    implements _$$AllStoresErrorImplCopyWith<$Res> {
+  __$$AllStoresErrorImplCopyWithImpl(
+      _$AllStoresErrorImpl _value, $Res Function(_$AllStoresErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$AllStoresErrorImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AllStoresErrorImpl
+    with DiagnosticableTreeMixin
+    implements AllStoresError {
+  const _$AllStoresErrorImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.allStoresError(message: $message)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'StoreState.allStoresError'))
+      ..add(DiagnosticsProperty('message', message));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AllStoresErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AllStoresErrorImplCopyWith<_$AllStoresErrorImpl> get copyWith =>
+      __$$AllStoresErrorImplCopyWithImpl<_$AllStoresErrorImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+  }) {
+    return allStoresError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+  }) {
+    return allStoresError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (allStoresError != null) {
+      return allStoresError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+  }) {
+    return allStoresError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+  }) {
+    return allStoresError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (allStoresError != null) {
+      return allStoresError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AllStoresError implements StoreState {
+  const factory AllStoresError(final String message) = _$AllStoresErrorImpl;
+
+  String get message;
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AllStoresErrorImplCopyWith<_$AllStoresErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SearchStoresLoadingImplCopyWith<$Res> {
+  factory _$$SearchStoresLoadingImplCopyWith(_$SearchStoresLoadingImpl value,
+          $Res Function(_$SearchStoresLoadingImpl) then) =
+      __$$SearchStoresLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SearchStoresLoadingImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$SearchStoresLoadingImpl>
+    implements _$$SearchStoresLoadingImplCopyWith<$Res> {
+  __$$SearchStoresLoadingImplCopyWithImpl(_$SearchStoresLoadingImpl _value,
+      $Res Function(_$SearchStoresLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$SearchStoresLoadingImpl
+    with DiagnosticableTreeMixin
+    implements SearchStoresLoading {
+  const _$SearchStoresLoadingImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.searchStoresLoading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'StoreState.searchStoresLoading'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SearchStoresLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+  }) {
+    return searchStoresLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+  }) {
+    return searchStoresLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (searchStoresLoading != null) {
+      return searchStoresLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+  }) {
+    return searchStoresLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+  }) {
+    return searchStoresLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (searchStoresLoading != null) {
+      return searchStoresLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SearchStoresLoading implements StoreState {
+  const factory SearchStoresLoading() = _$SearchStoresLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$SearchStoresSuccessImplCopyWith<$Res> {
+  factory _$$SearchStoresSuccessImplCopyWith(_$SearchStoresSuccessImpl value,
+          $Res Function(_$SearchStoresSuccessImpl) then) =
+      __$$SearchStoresSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({StoreResponse stores});
+}
+
+/// @nodoc
+class __$$SearchStoresSuccessImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$SearchStoresSuccessImpl>
+    implements _$$SearchStoresSuccessImplCopyWith<$Res> {
+  __$$SearchStoresSuccessImplCopyWithImpl(_$SearchStoresSuccessImpl _value,
+      $Res Function(_$SearchStoresSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? stores = null,
+  }) {
+    return _then(_$SearchStoresSuccessImpl(
+      null == stores
+          ? _value.stores
+          : stores // ignore: cast_nullable_to_non_nullable
+              as StoreResponse,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SearchStoresSuccessImpl
+    with DiagnosticableTreeMixin
+    implements SearchStoresSuccess {
+  const _$SearchStoresSuccessImpl(this.stores);
+
+  @override
+  final StoreResponse stores;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.searchStoresSuccess(stores: $stores)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'StoreState.searchStoresSuccess'))
+      ..add(DiagnosticsProperty('stores', stores));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SearchStoresSuccessImpl &&
+            (identical(other.stores, stores) || other.stores == stores));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, stores);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchStoresSuccessImplCopyWith<_$SearchStoresSuccessImpl> get copyWith =>
+      __$$SearchStoresSuccessImplCopyWithImpl<_$SearchStoresSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+  }) {
+    return searchStoresSuccess(stores);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+  }) {
+    return searchStoresSuccess?.call(stores);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (searchStoresSuccess != null) {
+      return searchStoresSuccess(stores);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+  }) {
+    return searchStoresSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+  }) {
+    return searchStoresSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (searchStoresSuccess != null) {
+      return searchStoresSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SearchStoresSuccess implements StoreState {
+  const factory SearchStoresSuccess(final StoreResponse stores) =
+      _$SearchStoresSuccessImpl;
+
+  StoreResponse get stores;
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SearchStoresSuccessImplCopyWith<_$SearchStoresSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SearchStoresErrorImplCopyWith<$Res> {
+  factory _$$SearchStoresErrorImplCopyWith(_$SearchStoresErrorImpl value,
+          $Res Function(_$SearchStoresErrorImpl) then) =
+      __$$SearchStoresErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$SearchStoresErrorImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$SearchStoresErrorImpl>
+    implements _$$SearchStoresErrorImplCopyWith<$Res> {
+  __$$SearchStoresErrorImplCopyWithImpl(_$SearchStoresErrorImpl _value,
+      $Res Function(_$SearchStoresErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$SearchStoresErrorImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SearchStoresErrorImpl
+    with DiagnosticableTreeMixin
+    implements SearchStoresError {
+  const _$SearchStoresErrorImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.searchStoresError(message: $message)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'StoreState.searchStoresError'))
+      ..add(DiagnosticsProperty('message', message));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SearchStoresErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchStoresErrorImplCopyWith<_$SearchStoresErrorImpl> get copyWith =>
+      __$$SearchStoresErrorImplCopyWithImpl<_$SearchStoresErrorImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+  }) {
+    return searchStoresError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+  }) {
+    return searchStoresError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (searchStoresError != null) {
+      return searchStoresError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+  }) {
+    return searchStoresError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+  }) {
+    return searchStoresError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (searchStoresError != null) {
+      return searchStoresError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SearchStoresError implements StoreState {
+  const factory SearchStoresError(final String message) =
+      _$SearchStoresErrorImpl;
+
+  String get message;
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SearchStoresErrorImplCopyWith<_$SearchStoresErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SpecificStoreLoadingImplCopyWith<$Res> {
+  factory _$$SpecificStoreLoadingImplCopyWith(_$SpecificStoreLoadingImpl value,
+          $Res Function(_$SpecificStoreLoadingImpl) then) =
+      __$$SpecificStoreLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SpecificStoreLoadingImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$SpecificStoreLoadingImpl>
+    implements _$$SpecificStoreLoadingImplCopyWith<$Res> {
+  __$$SpecificStoreLoadingImplCopyWithImpl(_$SpecificStoreLoadingImpl _value,
+      $Res Function(_$SpecificStoreLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$SpecificStoreLoadingImpl
+    with DiagnosticableTreeMixin
+    implements SpecificStoreLoading {
+  const _$SpecificStoreLoadingImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.specificStoreLoading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'StoreState.specificStoreLoading'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SpecificStoreLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+  }) {
+    return specificStoreLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+  }) {
+    return specificStoreLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (specificStoreLoading != null) {
+      return specificStoreLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+  }) {
+    return specificStoreLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+  }) {
+    return specificStoreLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (specificStoreLoading != null) {
+      return specificStoreLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SpecificStoreLoading implements StoreState {
+  const factory SpecificStoreLoading() = _$SpecificStoreLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$SpecificStoreSuccessImplCopyWith<$Res> {
+  factory _$$SpecificStoreSuccessImplCopyWith(_$SpecificStoreSuccessImpl value,
+          $Res Function(_$SpecificStoreSuccessImpl) then) =
+      __$$SpecificStoreSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({SpecificStoreResponse stores});
+}
+
+/// @nodoc
+class __$$SpecificStoreSuccessImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$SpecificStoreSuccessImpl>
+    implements _$$SpecificStoreSuccessImplCopyWith<$Res> {
+  __$$SpecificStoreSuccessImplCopyWithImpl(_$SpecificStoreSuccessImpl _value,
+      $Res Function(_$SpecificStoreSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? stores = null,
+  }) {
+    return _then(_$SpecificStoreSuccessImpl(
+      null == stores
+          ? _value.stores
+          : stores // ignore: cast_nullable_to_non_nullable
+              as SpecificStoreResponse,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SpecificStoreSuccessImpl
+    with DiagnosticableTreeMixin
+    implements SpecificStoreSuccess {
+  const _$SpecificStoreSuccessImpl(this.stores);
+
+  @override
+  final SpecificStoreResponse stores;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.specificStoreSuccess(stores: $stores)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'StoreState.specificStoreSuccess'))
+      ..add(DiagnosticsProperty('stores', stores));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SpecificStoreSuccessImpl &&
+            (identical(other.stores, stores) || other.stores == stores));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, stores);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SpecificStoreSuccessImplCopyWith<_$SpecificStoreSuccessImpl>
+      get copyWith =>
+          __$$SpecificStoreSuccessImplCopyWithImpl<_$SpecificStoreSuccessImpl>(
+              this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+  }) {
+    return specificStoreSuccess(stores);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+  }) {
+    return specificStoreSuccess?.call(stores);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (specificStoreSuccess != null) {
+      return specificStoreSuccess(stores);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+  }) {
+    return specificStoreSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+  }) {
+    return specificStoreSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (specificStoreSuccess != null) {
+      return specificStoreSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SpecificStoreSuccess implements StoreState {
+  const factory SpecificStoreSuccess(final SpecificStoreResponse stores) =
+      _$SpecificStoreSuccessImpl;
+
+  SpecificStoreResponse get stores;
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SpecificStoreSuccessImplCopyWith<_$SpecificStoreSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SpecificStoreErrorImplCopyWith<$Res> {
+  factory _$$SpecificStoreErrorImplCopyWith(_$SpecificStoreErrorImpl value,
+          $Res Function(_$SpecificStoreErrorImpl) then) =
+      __$$SpecificStoreErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$SpecificStoreErrorImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$SpecificStoreErrorImpl>
+    implements _$$SpecificStoreErrorImplCopyWith<$Res> {
+  __$$SpecificStoreErrorImplCopyWithImpl(_$SpecificStoreErrorImpl _value,
+      $Res Function(_$SpecificStoreErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$SpecificStoreErrorImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SpecificStoreErrorImpl
+    with DiagnosticableTreeMixin
+    implements SpecificStoreError {
+  const _$SpecificStoreErrorImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.specificStoreError(message: $message)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'StoreState.specificStoreError'))
+      ..add(DiagnosticsProperty('message', message));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SpecificStoreErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SpecificStoreErrorImplCopyWith<_$SpecificStoreErrorImpl> get copyWith =>
+      __$$SpecificStoreErrorImplCopyWithImpl<_$SpecificStoreErrorImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+  }) {
+    return specificStoreError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+  }) {
+    return specificStoreError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (specificStoreError != null) {
+      return specificStoreError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+  }) {
+    return specificStoreError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+  }) {
+    return specificStoreError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (specificStoreError != null) {
+      return specificStoreError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SpecificStoreError implements StoreState {
+  const factory SpecificStoreError(final String message) =
+      _$SpecificStoreErrorImpl;
+
+  String get message;
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SpecificStoreErrorImplCopyWith<_$SpecificStoreErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SearchItemsLoadingImplCopyWith<$Res> {
+  factory _$$SearchItemsLoadingImplCopyWith(_$SearchItemsLoadingImpl value,
+          $Res Function(_$SearchItemsLoadingImpl) then) =
+      __$$SearchItemsLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$SearchItemsLoadingImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$SearchItemsLoadingImpl>
+    implements _$$SearchItemsLoadingImplCopyWith<$Res> {
+  __$$SearchItemsLoadingImplCopyWithImpl(_$SearchItemsLoadingImpl _value,
+      $Res Function(_$SearchItemsLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$SearchItemsLoadingImpl
+    with DiagnosticableTreeMixin
+    implements SearchItemsLoading {
+  const _$SearchItemsLoadingImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.searchItemsLoading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'StoreState.searchItemsLoading'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$SearchItemsLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+  }) {
+    return searchItemsLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+  }) {
+    return searchItemsLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (searchItemsLoading != null) {
+      return searchItemsLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+  }) {
+    return searchItemsLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+  }) {
+    return searchItemsLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (searchItemsLoading != null) {
+      return searchItemsLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SearchItemsLoading implements StoreState {
+  const factory SearchItemsLoading() = _$SearchItemsLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$SearchItemsSuccessImplCopyWith<$Res> {
+  factory _$$SearchItemsSuccessImplCopyWith(_$SearchItemsSuccessImpl value,
+          $Res Function(_$SearchItemsSuccessImpl) then) =
+      __$$SearchItemsSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({SearchItemsResponse items});
+}
+
+/// @nodoc
+class __$$SearchItemsSuccessImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$SearchItemsSuccessImpl>
+    implements _$$SearchItemsSuccessImplCopyWith<$Res> {
+  __$$SearchItemsSuccessImplCopyWithImpl(_$SearchItemsSuccessImpl _value,
+      $Res Function(_$SearchItemsSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? items = null,
+  }) {
+    return _then(_$SearchItemsSuccessImpl(
+      null == items
+          ? _value.items
+          : items // ignore: cast_nullable_to_non_nullable
+              as SearchItemsResponse,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SearchItemsSuccessImpl
+    with DiagnosticableTreeMixin
+    implements SearchItemsSuccess {
+  const _$SearchItemsSuccessImpl(this.items);
+
+  @override
+  final SearchItemsResponse items;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.searchItemsSuccess(items: $items)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'StoreState.searchItemsSuccess'))
+      ..add(DiagnosticsProperty('items', items));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SearchItemsSuccessImpl &&
+            (identical(other.items, items) || other.items == items));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, items);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchItemsSuccessImplCopyWith<_$SearchItemsSuccessImpl> get copyWith =>
+      __$$SearchItemsSuccessImplCopyWithImpl<_$SearchItemsSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+  }) {
+    return searchItemsSuccess(items);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+  }) {
+    return searchItemsSuccess?.call(items);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (searchItemsSuccess != null) {
+      return searchItemsSuccess(items);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+  }) {
+    return searchItemsSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+  }) {
+    return searchItemsSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (searchItemsSuccess != null) {
+      return searchItemsSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SearchItemsSuccess implements StoreState {
+  const factory SearchItemsSuccess(final SearchItemsResponse items) =
+      _$SearchItemsSuccessImpl;
+
+  SearchItemsResponse get items;
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SearchItemsSuccessImplCopyWith<_$SearchItemsSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$SearchItemsErrorImplCopyWith<$Res> {
+  factory _$$SearchItemsErrorImplCopyWith(_$SearchItemsErrorImpl value,
+          $Res Function(_$SearchItemsErrorImpl) then) =
+      __$$SearchItemsErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$SearchItemsErrorImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$SearchItemsErrorImpl>
+    implements _$$SearchItemsErrorImplCopyWith<$Res> {
+  __$$SearchItemsErrorImplCopyWithImpl(_$SearchItemsErrorImpl _value,
+      $Res Function(_$SearchItemsErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$SearchItemsErrorImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$SearchItemsErrorImpl
+    with DiagnosticableTreeMixin
+    implements SearchItemsError {
+  const _$SearchItemsErrorImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.searchItemsError(message: $message)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'StoreState.searchItemsError'))
+      ..add(DiagnosticsProperty('message', message));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$SearchItemsErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$SearchItemsErrorImplCopyWith<_$SearchItemsErrorImpl> get copyWith =>
+      __$$SearchItemsErrorImplCopyWithImpl<_$SearchItemsErrorImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+  }) {
+    return searchItemsError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+  }) {
+    return searchItemsError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (searchItemsError != null) {
+      return searchItemsError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+  }) {
+    return searchItemsError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+  }) {
+    return searchItemsError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    required TResult orElse(),
+  }) {
+    if (searchItemsError != null) {
+      return searchItemsError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class SearchItemsError implements StoreState {
+  const factory SearchItemsError(final String message) = _$SearchItemsErrorImpl;
+
+  String get message;
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$SearchItemsErrorImplCopyWith<_$SearchItemsErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -3,7 +3,6 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
-import 'package:pets_care_app/features/add_pets/ui/widgets/added_pets_widget.dart';
 import 'package:shimmer/shimmer.dart';
 
 class GetPetsLoading extends StatelessWidget {
@@ -136,6 +135,5 @@ class AddedPetsLoading extends StatelessWidget {
         ),
       ),
     );
-    ;
   }
 }

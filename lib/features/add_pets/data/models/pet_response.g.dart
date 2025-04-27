@@ -15,7 +15,7 @@ PetResponse _$PetResponseFromJson(Map<String, dynamic> json) => PetResponse(
       color: json['color'] as String,
       height: json['height'] as String,
       weight: json['weight'] as String,
-      vaccineTime: json['vaccination_time'] as String,
+      vaccineTime: json['vaccination_time'] as String?,
       photo: json['photo_url'] as String,
     );
 

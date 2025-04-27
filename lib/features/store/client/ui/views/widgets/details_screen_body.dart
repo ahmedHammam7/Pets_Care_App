@@ -9,8 +9,8 @@ import 'package:pets_care_app/features/store/client/ui/views/widgets/details_scr
 import 'package:pets_care_app/features/store/client/ui/views/widgets/quantity_widget.dart';
 
 class DetailsScreenBody extends StatelessWidget {
-  const DetailsScreenBody({super.key});
-
+  const DetailsScreenBody({super.key, required this.item});
+  final dynamic item;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -30,13 +30,17 @@ class DetailsScreenBody extends StatelessWidget {
                     size: 24.sp,
                   )),
               Image(
-                image: const AssetImage("assets/png/food_test.png"),
+                image: item.image == "" || item.image == null
+                    ? const AssetImage("assets/png/food_test.png")
+                    : NetworkImage(item.image!),
                 height: 373.h,
               ),
-              const DetailsScreenInfo(),
+              DetailsScreenInfo(
+                item: item,
+              ),
               verticalSpace(10),
               Text(
-                "Brighten up your pet's bowl with the colourful corn and beetroot kibble in JosiDog MasterMix! Crunchy and flavourful variety for adult dogs of all sizes, plus a wide range of important nutrients included. No added soya, sugar or milk products. Free from artificial colourings, flavourings and preservatives. Contains animal protein, vitamins & minerals.",
+                item.description ?? "",
                 style: AppTextStyles.storeItemDesc,
               ),
               const QuantityWidget(),

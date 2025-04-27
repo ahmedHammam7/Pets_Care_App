@@ -4,6 +4,9 @@ import 'package:pets_care_app/core/network/api_error_handler.dart';
 import 'package:pets_care_app/core/network/api_result.dart';
 import 'package:pets_care_app/core/network/api_service.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
+import 'package:pets_care_app/features/store/client/data/models/search_items_response.dart';
+import 'package:pets_care_app/features/store/client/data/models/specific_store_item.dart';
+import 'package:pets_care_app/features/store/client/data/models/store_response.dart';
 
 class StoreRepo {
   final ApiService _apiService;
@@ -14,6 +17,49 @@ class StoreRepo {
     try {
       final response = await _apiService.getAllProducts(
           'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}');
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  Future<ApiResult<StoreResponse>> getAllStores() async {
+    try {
+      final response = await _apiService.getAllStores(
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}');
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  Future<ApiResult<StoreResponse>> searchStore(String query) async {
+    try {
+      final response = await _apiService.searchStore(
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}',
+          query);
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  Future<ApiResult<SpecificStoreResponse>> getSpecificStore(String id) async {
+    try {
+      final response = await _apiService.getSpecificStoreAndItems(
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}',
+          '$id/items');
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  Future<ApiResult<SearchItemsResponse>> searchItems(String query) async {
+    try {
+      final response = await _apiService.searchItems(
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}',
+          query);
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));

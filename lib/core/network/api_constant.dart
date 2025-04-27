@@ -8,4 +8,7 @@ class ApiConstant {
   static const String clinics = "clinics";
   static const String doctorAppointments = "doctor/clinics/appointments";
   static const String pets = "pets";
+  static const String stores = "stores";
+  static const String searchStore = "/search-items-store-name-address?query=";
+  static const String searchItems = "/search-items?query=";
 }

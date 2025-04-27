@@ -4,8 +4,8 @@ import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 
 class DetailsScreenInfo extends StatelessWidget {
-  const DetailsScreenInfo({super.key});
-
+  const DetailsScreenInfo({super.key, required this.item});
+  final dynamic item;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -19,7 +19,7 @@ class DetailsScreenInfo extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              "Josi Dog Master Mix - 900g",
+              item.name ?? "",
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,
               style: AppTextStyles.detaisInfo,
@@ -27,12 +27,12 @@ class DetailsScreenInfo extends StatelessWidget {
             Row(
               children: [
                 Text(
-                  "Brand: Josera",
+                  item.foodType ?? "",
                   style: AppTextStyles.brandText,
                 ),
                 const Spacer(),
                 Text(
-                  "Rs 1500.00",
+                  item.price ?? "",
                   style: AppTextStyles.storePrice.copyWith(fontSize: 14.sp),
                 ),
               ],

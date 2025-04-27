@@ -3,9 +3,9 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 
 class SearchField extends StatelessWidget {
-  const SearchField({super.key, this.onsubmitted});
+  const SearchField({super.key, this.onchanged});
 
-  final void Function(String)? onsubmitted;
+  final void Function(String)? onchanged;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -15,7 +15,7 @@ class SearchField extends StatelessWidget {
         margin: EdgeInsets.zero,
         shadowColor: Colors.grey,
         child: TextField(
-          onSubmitted: onsubmitted,
+          onChanged: onchanged,
           cursorColor: AppColors.primaryColor,
           decoration: InputDecoration(
             isDense: true,

@@ -28,7 +28,7 @@ class _HomeRowFeaturesState extends State<HomeRowFeatures> {
                   selectedIndex = index;
                   setState(() {});
                   if (index == 0) {
-                    context.pushNamed(Routes.storeScreen);
+                    context.pushNamed(Routes.allStoresScreen);
                   }
                   if (index == 1) {
                     context.pushNamed(Routes.clinicsScreen);

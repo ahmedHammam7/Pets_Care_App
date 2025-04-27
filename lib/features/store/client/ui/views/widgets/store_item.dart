@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pets_care_app/core/helper/extension.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
-import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/features/store/client/ui/views/widgets/separated_line.dart';
@@ -14,18 +12,18 @@ class StoreItem extends StatelessWidget {
       required this.price,
       required this.name,
       required this.size,
-      this.cartOnTap});
+      this.cartOnTap,
+      this.onTab});
   final String image;
   final String price;
   final String name;
   final String size;
   final void Function()? cartOnTap;
+  final void Function()? onTab;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () async {
-        await context.pushNamed(Routes.detailsScreen);
-      },
+      onTap: onTab,
       child: Card(
         color: AppColors.white,
         margin: EdgeInsets.zero,
@@ -39,10 +37,15 @@ class StoreItem extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Image.asset(
-                  image,
-                  height: 94.h,
-                ),
+                image == ""
+                    ? Image.asset(
+                        "assets/png/food.png",
+                        height: 94.h,
+                      )
+                    : Image.network(
+                        image,
+                        height: 94.h,
+                      ),
                 verticalSpace(10),
                 SizedBox(
                   width: 140.w,

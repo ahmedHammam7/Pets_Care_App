@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pets_care_app/core/di/dependency_injection.dart';
 import 'package:pets_care_app/core/helper/extension.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
@@ -9,8 +10,8 @@ import 'package:pets_care_app/features/store/client/logic/cubit/store_cubit.dart
 import 'package:pets_care_app/features/store/client/ui/views/widgets/store_screen_body.dart';
 
 class StoreScreen extends StatelessWidget {
-  const StoreScreen({super.key});
-
+  const StoreScreen({super.key, required this.id});
+  final String id;
   @override
   Widget build(BuildContext context) {
     return BlocListener<StoreCubit, StoreState>(
@@ -49,7 +50,10 @@ class StoreScreen extends StatelessWidget {
             )
           ],
         ),
-        body: const StoreScreenBody(),
+        body: BlocProvider(
+          create: (context) => getIt<StoreCubit>()..getSpecificStore(id),
+          child: const StoreScreenBody(),
+        ),
       ),
     );
   }

@@ -8,6 +8,9 @@ import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_respons
 import 'package:pets_care_app/features/clinics/doctor/data/models/doctor_profile_response.dart';
 import 'package:pets_care_app/features/profile/data/models/profile_response.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
+import 'package:pets_care_app/features/store/client/data/models/search_items_response.dart';
+import 'package:pets_care_app/features/store/client/data/models/specific_store_item.dart';
+import 'package:pets_care_app/features/store/client/data/models/store_response.dart';
 import 'package:pets_care_app/features/store/store/data/models/store_info_response.dart';
 import 'package:retrofit/error_logger.dart';
 
@@ -80,4 +83,19 @@ abstract class ApiService {
   @POST('${ApiConstant.pets}/{id}')
   Future<dynamic> updatePet(@Header('Authorization') String token,
       @Path('id') String id, @Body() dynamic body);
+
+  @GET(ApiConstant.stores)
+  Future<StoreResponse> getAllStores(@Header('Authorization') String token);
+
+  @GET('${ApiConstant.searchStore}{query}')
+  Future<StoreResponse> searchStore(
+      @Header('Authorization') String token, @Path('query') String query);
+  @GET('${ApiConstant.stores}/{id}')
+  Future<SpecificStoreResponse> getSpecificStoreAndItems(
+    @Header('Authorization') String token,
+    @Path('id') String id,
+  );
+  @GET('${ApiConstant.searchItems}{query}')
+  Future<SearchItemsResponse> searchItems(
+      @Header('Authorization') String token, @Path('query') String query);
 }
