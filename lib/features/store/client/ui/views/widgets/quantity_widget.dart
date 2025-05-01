@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
+import 'package:pets_care_app/features/store/client/logic/cubit/store_cubit.dart';
 
 class QuantityWidget extends StatefulWidget {
   const QuantityWidget({super.key});
@@ -9,8 +11,6 @@ class QuantityWidget extends StatefulWidget {
   @override
   State<QuantityWidget> createState() => _QuantityWidgetState();
 }
-
-int quantity = 1;
 
 class _QuantityWidgetState extends State<QuantityWidget> {
   @override
@@ -27,8 +27,8 @@ class _QuantityWidgetState extends State<QuantityWidget> {
           IconButton(
             onPressed: () {
               setState(() {
-                if (quantity > 1) {
-                  quantity--;
+                if (context.read<StoreCubit>().quantity > 1) {
+                  context.read<StoreCubit>().quantity--;
                 }
               });
             },
@@ -38,13 +38,13 @@ class _QuantityWidgetState extends State<QuantityWidget> {
               color: AppColors.primaryColor,
             ),
           ),
-          Text(quantity.toString(),
+          Text(context.read<StoreCubit>().quantity.toString(),
               style: AppTextStyles.quantityWidgetText
                   .copyWith(color: AppColors.primaryColor, fontSize: 16.sp)),
           IconButton(
             onPressed: () {
               setState(() {
-                quantity++;
+                context.read<StoreCubit>().quantity++;
               });
             },
             icon: Icon(

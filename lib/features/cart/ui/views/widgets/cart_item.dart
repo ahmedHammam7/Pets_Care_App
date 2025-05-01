@@ -1,17 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
+import 'package:pets_care_app/features/cart/data/models/get_cart_response.dart';
+import 'package:pets_care_app/features/cart/logic/cubit/cart_cubit.dart';
 
 class CartItem extends StatefulWidget {
-  const CartItem({super.key});
-
+  const CartItem({super.key, required this.cartItem, required this.quantity});
+  final GetCartItem cartItem;
+  final int quantity;
   @override
   State<CartItem> createState() => _CartItemState();
 }
-
-int quantity = 1;
 
 class _CartItemState extends State<CartItem> {
   @override
@@ -19,7 +21,13 @@ class _CartItemState extends State<CartItem> {
     return Dismissible(
       key: UniqueKey(),
       onDismissed: (direction) async {
-        if (direction == DismissDirection.endToStart) {}
+        if (direction == DismissDirection.endToStart) {
+          setState(() async {
+            await context
+                .read<CartCubit>()
+                .deleteCart(widget.cartItem.id.toString());
+          });
+        }
       },
       direction: DismissDirection.endToStart,
       background: Card(
@@ -43,22 +51,27 @@ class _CartItemState extends State<CartItem> {
           padding: EdgeInsets.only(right: 0, left: 10.w),
           child: Row(
             children: [
-              Image.asset(
-                "assets/png/food_test.png",
-                height: 70.h,
-              ),
+              widget.cartItem.image == null || widget.cartItem.image == ""
+                  ? Image.asset(
+                      "assets/png/food_test.png",
+                      height: 70.h,
+                    )
+                  : Image.network(
+                      widget.cartItem.image!,
+                      height: 70.h,
+                    ),
               horizontalSpace(12),
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Rs 7850.00 x 3",
+                    widget.cartItem.price ?? "",
                     style: AppTextStyles.storePrice,
                   ),
                   SizedBox(
                     width: 152.w,
                     child: Text(
-                      "Josera MIni Deluxe",
+                      widget.cartItem.name ?? "",
                       overflow: TextOverflow.ellipsis,
                       style: AppTextStyles.cartItemName,
                     ),
@@ -66,7 +79,7 @@ class _CartItemState extends State<CartItem> {
                   SizedBox(
                     width: 152.w,
                     child: Text(
-                      "900g",
+                      widget.cartItem.description ?? "",
                       style: AppTextStyles.storeSizeItem
                           .copyWith(fontWeight: FontWeight.w400),
                     ),
@@ -74,39 +87,14 @@ class _CartItemState extends State<CartItem> {
                 ],
               ),
               const Spacer(),
-              Column(
-                children: [
-                  IconButton(
-                    onPressed: () {
-                      setState(() {
-                        if (quantity > 1) {
-                          quantity--;
-                        }
-                      });
-                    },
-                    icon: Icon(
-                      Icons.remove,
-                      size: 18.sp,
-                      color: AppColors.green,
-                    ),
-                  ),
-                  Text(quantity.toString(),
-                      style: AppTextStyles.quantityWidgetText.copyWith(
-                          color: AppColors.darkGray, fontSize: 14.sp)),
-                  IconButton(
-                    onPressed: () {
-                      setState(() {
-                        quantity++;
-                      });
-                    },
-                    icon: Icon(
-                      Icons.add,
-                      size: 18.sp,
-                      color: AppColors.green,
-                    ),
-                  ),
-                ],
+              Text(
+                widget.quantity.toString(),
+                style: AppTextStyles.quantityWidgetText.copyWith(
+                    color: AppColors.darkGray,
+                    fontSize: 14.sp,
+                    fontWeight: FontWeight.bold),
               ),
+              horizontalSpace(15),
             ],
           ),
         ),

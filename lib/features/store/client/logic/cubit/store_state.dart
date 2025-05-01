@@ -30,4 +30,14 @@ class StoreState with _$StoreState {
   const factory StoreState.searchItemsSuccess(SearchItemsResponse items) =
       SearchItemsSuccess;
   const factory StoreState.searchItemsError(String message) = SearchItemsError;
+// add to cart
+  const factory StoreState.addToCartLoading() = AddToCartLoading;
+  const factory StoreState.addToCartSuccess() = AddToCartSuccess;
+  const factory StoreState.addToCartError(String message) = AddToCartError;
+// get recommended Food
+  const factory StoreState.recommendedFoodLoading() = RecommendedFoodLoading;
+  const factory StoreState.recommendedFoodSuccess(
+      RecomendedFoodResponse items) = RecommendedFoodSuccess;
+  const factory StoreState.recommendedFoodError(String message) =
+      RecommendedFoodError;
 }

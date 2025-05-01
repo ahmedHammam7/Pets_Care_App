@@ -3,6 +3,8 @@ import 'package:pets_care_app/core/network/api_constant.dart';
 import 'package:pets_care_app/features/add_pets/data/models/pet_response.dart';
 import 'package:pets_care_app/features/auth/login/data/models/login_response.dart';
 import 'package:pets_care_app/features/auth/register/data/models/register_response.dart';
+import 'package:pets_care_app/features/cart/data/models/checkout_response.dart';
+import 'package:pets_care_app/features/cart/data/models/get_cart_response.dart';
 import 'package:pets_care_app/features/clinics/client/data/models/get_all_clinics_response.dart';
 import 'package:pets_care_app/features/clinics/client/data/repos/owner_clincs_repo.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/appoinment_doc_response.dart';
@@ -10,6 +12,7 @@ import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_respons
 import 'package:pets_care_app/features/clinics/doctor/data/models/doctor_profile_response.dart';
 import 'package:pets_care_app/features/profile/data/models/profile_response.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
+import 'package:pets_care_app/features/store/client/data/models/recomended_food_response.dart';
 import 'package:pets_care_app/features/store/client/data/models/search_items_response.dart';
 import 'package:pets_care_app/features/store/client/data/models/specific_store_item.dart';
 import 'package:pets_care_app/features/store/client/data/models/store_response.dart';
@@ -107,4 +110,19 @@ abstract class ApiService {
   @GET('${ApiConstant.searchClinics}{query}')
   Future<GetAllClinicsResponse> searchClinics(
       @Header('Authorization') String token, @Path('query') String query);
+  @POST(ApiConstant.addCart)
+  Future<dynamic> addToCart(
+      @Header('Authorization') String token, @Body() dynamic body);
+  @GET(ApiConstant.cart)
+  Future<GetCartResponse> getCart(@Header('Authorization') String token);
+  @DELETE('${ApiConstant.removeCart}/{id}')
+  Future<dynamic> deleteCart(
+      @Header('Authorization') String token, @Path('id') String id);
+  @POST(ApiConstant.pickOrder)
+  Future<CheckoutResponse> checkout(
+    @Header('Authorization') String token,
+  );
+  @GET(ApiConstant.recommendedFood)
+  Future<RecomendedFoodResponse> getRecommendedFood(
+      @Header('Authorization') String token);
 }

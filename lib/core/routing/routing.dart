@@ -12,7 +12,9 @@ import 'package:pets_care_app/features/auth/register/logic/cubit/register_cubit.
 import 'package:pets_care_app/features/auth/register/ui/views/register_doctor_screen.dart';
 import 'package:pets_care_app/features/auth/register/ui/views/register_screen.dart';
 import 'package:pets_care_app/features/auth/register/ui/views/register_store_screen.dart';
+import 'package:pets_care_app/features/cart/logic/cubit/cart_cubit.dart';
 import 'package:pets_care_app/features/cart/ui/views/cart_screen.dart';
+import 'package:pets_care_app/features/cart/ui/views/pick_order_screen.dart';
 import 'package:pets_care_app/features/chat_bot/ui/chat_bot_screen.dart';
 import 'package:pets_care_app/features/check/ui/check_screen.dart';
 import 'package:pets_care_app/features/clinics/client/logic/cubit/owner_clinics_cubit.dart';
@@ -84,13 +86,19 @@ class AppRoutes {
         );
       case Routes.detailsScreen:
         return MaterialPageRoute(
-          builder: (context) => DetailsScreen(
-            item: args,
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<StoreCubit>(),
+            child: DetailsScreen(
+              item: args,
+            ),
           ),
         );
       case Routes.cartScreen:
         return MaterialPageRoute(
-          builder: (context) => const CartScreen(),
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<CartCubit>()..getCart(),
+            child: const CartScreen(),
+          ),
         );
       case Routes.clinicsScreen:
         return MaterialPageRoute(
@@ -123,8 +131,15 @@ class AppRoutes {
         );
       case Routes.homeLayout:
         return MaterialPageRoute(
-          builder: (context) => BlocProvider(
-            create: (context) => getIt<ProfileCubit>()..loadUserProfile(),
+          builder: (context) => MultiBlocProvider(
+            providers: [
+              BlocProvider(
+                create: (context) => getIt<ProfileCubit>()..loadUserProfile(),
+              ),
+              BlocProvider(
+                create: (context) => getIt<StoreCubit>()..getRecommendedFood(),
+              ),
+            ],
             child: const HomeLayout(),
           ),
         );
@@ -243,6 +258,13 @@ class AppRoutes {
           builder: (context) => BlocProvider(
             create: (context) => getIt<StoreCubit>()..getAllStores(),
             child: const AllStoresScreen(),
+          ),
+        );
+      case Routes.pickeOrderScreen:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<CartCubit>()..checkout(),
+            child: const PickOrderScreen(),
           ),
         );
 

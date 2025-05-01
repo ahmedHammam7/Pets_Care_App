@@ -12,4 +12,10 @@ class ApiConstant {
   static const String searchStore = "/search-items-store-name-address?query=";
   static const String searchItems = "/search-items?query=";
   static const String searchClinics = "/clinics-search?query=";
+  static const String appointments = "/appointments";
+  static const String addCart = "/cart/add";
+  static const String cart = "/cart";
+  static const String removeCart = "/cart/remove";
+  static const String pickOrder = "/place-order";
+  static const String recommendedFood = "/pets/recommended-food";
 }

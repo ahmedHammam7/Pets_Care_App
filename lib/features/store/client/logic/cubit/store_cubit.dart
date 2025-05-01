@@ -1,8 +1,10 @@
+import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
+import 'package:pets_care_app/features/store/client/data/models/recomended_food_response.dart';
 import 'package:pets_care_app/features/store/client/data/models/search_items_response.dart';
 import 'package:pets_care_app/features/store/client/data/models/specific_store_item.dart';
 import 'package:pets_care_app/features/store/client/data/models/store_response.dart';
@@ -14,6 +16,7 @@ part 'store_cubit.freezed.dart';
 class StoreCubit extends Cubit<StoreState> {
   StoreCubit(this._storeRepo) : super(const StoreState.initial());
   final StoreRepo _storeRepo;
+  int quantity = 1;
   Future<void> getProducts() async {
     emit(const StoreState.loading());
     final result = await _storeRepo.getAllProducts();
@@ -75,6 +78,33 @@ class StoreCubit extends Cubit<StoreState> {
       },
       failure: (message) {
         emit(StoreState.searchItemsError(message.getAllErrorMessages()));
+      },
+    );
+  }
+
+  Future<void> addToCart(int id, int quantity) async {
+    emit(const StoreState.addToCartLoading());
+    FormData body = FormData.fromMap({'item_id': id, "quantity": quantity});
+    final result = await _storeRepo.addToCart(body);
+    result.when(
+      success: (response) {
+        emit(const StoreState.addToCartSuccess());
+      },
+      failure: (message) {
+        emit(StoreState.addToCartError(message.getAllErrorMessages()));
+      },
+    );
+  }
+
+  Future<void> getRecommendedFood() async {
+    emit(const StoreState.recommendedFoodLoading());
+    final result = await _storeRepo.getRecommendedFood();
+    result.when(
+      success: (response) {
+        emit(StoreState.recommendedFoodSuccess(response));
+      },
+      failure: (message) {
+        emit(StoreState.recommendedFoodError(message.getAllErrorMessages()));
       },
     );
   }
