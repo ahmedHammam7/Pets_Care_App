@@ -18,4 +18,6 @@ class ApiConstant {
   static const String removeCart = "/cart/remove";
   static const String pickOrder = "/place-order";
   static const String recommendedFood = "/pets/recommended-food";
+  static const String addFavorite = "/favorites/toggle";
+  static const String favorites = "/favorites";
 }

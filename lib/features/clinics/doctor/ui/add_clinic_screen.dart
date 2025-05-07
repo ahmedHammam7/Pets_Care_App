@@ -46,7 +46,9 @@ class _AddClinicScreenState extends State<AddClinicScreen> {
           });
         }
         return Scaffold(
-          appBar: customAppBar(context),
+          appBar: customAppBar(
+            context,
+          ),
           body: SingleChildScrollView(
             child: Padding(
               padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),

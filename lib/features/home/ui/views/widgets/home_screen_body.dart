@@ -67,8 +67,10 @@ class HomeScreenBody extends StatelessWidget {
                   itemCount: state.items.items.length,
                   itemBuilder: (context, index) => GestureDetector(
                     onTap: () {
-                      context.pushNamed(Routes.detailsScreen,
-                          arguments: state.items.items[index]);
+                      context.pushNamed(Routes.detailsScreen, arguments: {
+                        "item": state.items.items[index],
+                        "id": state.items.items[index].id
+                      });
                     },
                     child: RecommendedListItem(
                       item: state.items.items[index],

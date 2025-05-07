@@ -6,45 +6,50 @@ import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/features/store/client/logic/cubit/store_cubit.dart';
-import 'package:pets_care_app/features/store/client/ui/views/widgets/search_field.dart';
 import 'package:pets_care_app/features/store/client/ui/views/widgets/store_item.dart';
 import 'package:shimmer/shimmer.dart';
 
-class StoreScreenBody extends StatelessWidget {
-  const StoreScreenBody({
-    super.key,
-  });
+class FavouriteScreenBody extends StatelessWidget {
+  const FavouriteScreenBody({super.key});
 
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
       slivers: [
-        SliverLayoutBuilder(
-          builder: (context, constraints) => SliverToBoxAdapter(
-            child: SafeArea(
-              child: Padding(
-                padding: EdgeInsets.symmetric(
-                  horizontal: 10.w,
-                ),
-                child: SearchField(
-                  onchanged: (value) async {
-                    await context.read<StoreCubit>().searchItems(value);
-                  },
-                ),
-              ),
-            ),
-          ),
-        ),
-        BlocBuilder<StoreCubit, StoreState>(
+        BlocConsumer<StoreCubit, StoreState>(
+          listenWhen: (previous, current) =>
+              current is FavoritesError ||
+              current is FavoritesLoading ||
+              current is FavoritesSuccess ||
+              current is AddFavoriteError ||
+              current is AddFavoriteLoading ||
+              current is AddFavoriteSuccess,
           buildWhen: (previous, current) =>
-              current is SpecificStoreError ||
-              current is SpecificStoreLoading ||
-              current is SpecificStoreSuccess ||
-              current is SearchItemsLoading ||
-              current is SearchItemsSuccess ||
-              current is SearchItemsError,
+              current is FavoritesError ||
+              current is FavoritesLoading ||
+              current is FavoritesSuccess ||
+              current is AddFavoriteError ||
+              current is AddFavoriteLoading ||
+              current is AddFavoriteSuccess,
+          listener: (previous, current) {
+            if (current is AddFavoriteSuccess) {
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                  content: Text("Added to favorites"),
+                  backgroundColor: Colors.green,
+                ));
+              });
+            } else if (current is AddFavoriteError) {
+              WidgetsBinding.instance.addPostFrameCallback((_) {
+                ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                  content: Text("Something went wrong"),
+                  backgroundColor: Colors.red,
+                ));
+              });
+            }
+          },
           builder: (context, state) {
-            if (state is SpecificStoreLoading || state is SearchItemsLoading) {
+            if (state is AddFavoriteLoading || state is FavoritesLoading) {
               return SliverPadding(
                 padding: EdgeInsets.only(left: 12.w, right: 12.w, bottom: 12.h),
                 sliver: SliverGrid.builder(
@@ -66,12 +71,12 @@ class StoreScreenBody extends StatelessWidget {
                   ),
                 ),
               );
-            } else if (state is SpecificStoreSuccess) {
-              if (state.stores.store.items.isEmpty) {
+            } else if (state is FavoritesSuccess) {
+              if (state.items.isEmpty) {
                 return SliverToBoxAdapter(
                   child: Center(
                     child: Text(
-                      "The Store is Empty",
+                      "There is no items to show",
                       style: AppTextStyles.homeContainerText
                           .copyWith(color: AppColors.darkGray, fontSize: 30.sp),
                     ),
@@ -86,53 +91,31 @@ class StoreScreenBody extends StatelessWidget {
                       crossAxisSpacing: 14.w,
                       mainAxisExtent: MediaQuery.sizeOf(context).height * 0.26,
                       crossAxisCount: 2),
-                  itemCount: state.stores.store.items.length,
+                  itemCount: state.items.length,
                   itemBuilder: (context, index) => StoreItem(
                     onTab: () async {
-                      await context.pushNamed(Routes.detailsScreen, arguments: {
-                        "item": state.stores.store.items[index],
-                        "id": state.stores.store.items[index].id
-                      });
+                      await context.pushNamed(
+                        Routes.detailsScreen,
+                        arguments: {
+                          "item": state.items[index].item,
+                          "id": state.items[index].itemId,
+                        },
+                      );
                     },
-                    image: state.stores.store.items[index].image ?? "",
-                    name: state.stores.store.items[index].name ?? "",
-                    price: state.stores.store.items[index].price ?? "",
-                    size: state.stores.store.items[index].foodType ?? "",
+                    image: state.items[index].item.image ?? "",
+                    name: state.items[index].item.name ?? "",
+                    price: state.items[index].item.price ?? "",
+                    size: state.items[index].item.foodType ?? "",
                   ),
                 ),
               );
-            } else if (state is SpecificStoreError ||
-                state is SearchItemsError) {
+            } else if (state is FavoritesError) {
               return SliverToBoxAdapter(
                 child: Center(
                   child: Text(
                     "There is no items to show",
                     style: AppTextStyles.homeContainerText
                         .copyWith(color: AppColors.darkGray, fontSize: 30.sp),
-                  ),
-                ),
-              );
-            } else if (state is SearchItemsSuccess) {
-              return SliverPadding(
-                padding: EdgeInsets.only(left: 12.w, right: 12.w, bottom: 12.h),
-                sliver: SliverGrid.builder(
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                      mainAxisSpacing: 14.h,
-                      crossAxisSpacing: 14.w,
-                      mainAxisExtent: MediaQuery.sizeOf(context).height * 0.26,
-                      crossAxisCount: 2),
-                  itemCount: state.items.items.length,
-                  itemBuilder: (context, index) => StoreItem(
-                    onTab: () async {
-                      await context.pushNamed(
-                        Routes.detailsScreen,
-                        arguments: state.items.items[index],
-                      );
-                    },
-                    image: state.items.items[index].image ?? "",
-                    name: state.items.items[index].name ?? "",
-                    price: state.items.items[index].price ?? "",
-                    size: state.items.items[index].foodType ?? "",
                   ),
                 ),
               );

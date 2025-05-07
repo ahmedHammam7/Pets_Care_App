@@ -1,5 +1,7 @@
+import 'package:dio/dio.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pets_care_app/features/clinics/client/data/models/appoinments_owner_response.dart';
 import 'package:pets_care_app/features/clinics/client/data/models/get_all_clinics_response.dart';
 import 'package:pets_care_app/features/clinics/client/data/repos/owner_clincs_repo.dart';
 
@@ -42,6 +44,82 @@ class OwnerClinicsCubit extends Cubit<OwnerClinicsState> {
       failure: (message) {
         emit(
           OwnerClinicsState.searchClinicsFailure(
+            message.getAllErrorMessages(),
+          ),
+        );
+      },
+    );
+  }
+
+  Future<void> createAppointment(FormData body) async {
+    emit(const SearchClinicsLoading());
+    final result = await _ownerClincsRepo.createAppointment(body);
+    result.when(
+      success: (response) {
+        emit(
+          const OwnerClinicsState.createAppointmentSuccess(),
+        );
+      },
+      failure: (message) {
+        emit(
+          OwnerClinicsState.createAppointmentFailure(
+            message.getAllErrorMessages(),
+          ),
+        );
+      },
+    );
+  }
+
+  Future<void> getAllAppointments() async {
+    emit(const OwnerClinicsState.getAllAppointmentsLoading());
+    final result = await _ownerClincsRepo.getAppoinments();
+    result.when(
+      success: (response) {
+        emit(
+          OwnerClinicsState.getAllAppointmentsSuccess(response),
+        );
+      },
+      failure: (message) {
+        emit(
+          OwnerClinicsState.getAllAppointmentsFailure(
+            message.getAllErrorMessages(),
+          ),
+        );
+      },
+    );
+  }
+
+  Future<void> deleteAppoinment(String id) async {
+    emit(const OwnerClinicsState.deleteAppointmentLoading());
+    final result = await _ownerClincsRepo.deleteAppoinment(id);
+    result.when(
+      success: (response) {
+        emit(
+          const OwnerClinicsState.deleteAppointmentSuccess(),
+        );
+      },
+      failure: (message) {
+        emit(
+          OwnerClinicsState.deleteAppointmentFailure(
+            message.getAllErrorMessages(),
+          ),
+        );
+      },
+    );
+  }
+
+  Future<void> updateAppoinment(String id, FormData body) async {
+    emit(const OwnerClinicsState.updateAppointmentLoading());
+    final result = await _ownerClincsRepo.updateAppoinment(id, body);
+    result.when(
+      success: (response) {
+        emit(
+          const OwnerClinicsState.updateAppointmentSuccess(),
+        );
+      },
+      failure: (message) {
+        emit(
+          OwnerClinicsState.updateAppointmentFailure(
             message.getAllErrorMessages(),
           ),
         );

@@ -12,8 +12,10 @@ import 'package:pets_care_app/features/add_pets/data/models/pet_response.dart';
 import 'package:pets_care_app/features/add_pets/logic/cubit/pets_cubit.dart';
 
 class AddedPetsWidget extends StatelessWidget {
-  const AddedPetsWidget({super.key, required this.pet});
+  const AddedPetsWidget(
+      {super.key, required this.pet, required this.showUpdateOrDelete});
   final PetResponse pet;
+  final bool showUpdateOrDelete;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -29,6 +31,7 @@ class AddedPetsWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Row(
+                mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   pet.photo == "" || pet.photo.isEmpty
                       ? Image.asset(
@@ -39,34 +42,36 @@ class AddedPetsWidget extends StatelessWidget {
                           pet.photo,
                           height: 61.h,
                         ),
-                  const Spacer(
-                    flex: 4,
-                  ),
+                  horizontalSpace(10),
                   Text(
                     pet.petName,
                     style: AppTextStyles.addedPetstext,
                   ),
-                  const Spacer(
-                    flex: 4,
-                  ),
+                  horizontalSpace(10),
                   Text(
                     pet.gender,
                     style: AppTextStyles.addedPetstext,
                   ),
-                  IconButton(
-                    onPressed: () {
-                      context.read<PetsCubit>().deletePet(pet.petId.toString());
-                    },
-                    icon: const Icon(Icons.delete),
-                    color: AppColors.red,
-                  ),
-                  IconButton(
-                    onPressed: () async {
-                      await context.pushNamed(Routes.editPetScreen,
-                          arguments: pet);
-                    },
-                    icon: const Icon(Icons.edit),
-                  ),
+                  showUpdateOrDelete
+                      ? IconButton(
+                          onPressed: () {
+                            context
+                                .read<PetsCubit>()
+                                .deletePet(pet.petId.toString());
+                          },
+                          icon: const Icon(Icons.delete),
+                          color: AppColors.red,
+                        )
+                      : const SizedBox.shrink(),
+                  showUpdateOrDelete
+                      ? IconButton(
+                          onPressed: () async {
+                            await context.pushNamed(Routes.editPetScreen,
+                                arguments: pet);
+                          },
+                          icon: const Icon(Icons.edit),
+                        )
+                      : const SizedBox.shrink(),
                 ],
               ),
               verticalSpace(10),

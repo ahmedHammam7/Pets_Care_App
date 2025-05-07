@@ -61,6 +61,10 @@ dependencies:
   equatable: ^2.0.7
   intl: ^0.20.2
   flutter_chat_ui: ^1.6.15
+  google_generative_ai: ^0.4.3
+ 
+ 
+  
  
 
 dev_dependencies:

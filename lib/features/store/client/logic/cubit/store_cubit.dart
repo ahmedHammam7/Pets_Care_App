@@ -2,6 +2,7 @@ import 'package:dio/dio.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pets_care_app/features/store/client/data/models/favourite_response.dart';
 
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
 import 'package:pets_care_app/features/store/client/data/models/recomended_food_response.dart';
@@ -105,6 +106,43 @@ class StoreCubit extends Cubit<StoreState> {
       },
       failure: (message) {
         emit(StoreState.recommendedFoodError(message.getAllErrorMessages()));
+      },
+    );
+  }
+
+  Future<void> addFavorite(int id) async {
+    emit(const StoreState.addFavoriteLoading());
+    FormData body = FormData.fromMap({'item_id': id});
+    final result = await _storeRepo.addFavorite(body);
+    result.when(
+      success: (response) {
+        emit(const StoreState.addFavoriteSuccess());
+      },
+      failure: (message) {
+        emit(
+          StoreState.addFavoriteError(
+            message.getAllErrorMessages(),
+          ),
+        );
+      },
+    );
+  }
+
+  Future<void> getFavorites() async {
+    emit(const StoreState.favoritesLoading());
+    final result = await _storeRepo.getAllFavorites();
+    result.when(
+      success: (response) {
+        emit(
+          StoreState.favoritesSuccess(response),
+        );
+      },
+      failure: (message) {
+        emit(
+          StoreState.favoritesError(
+            message.getAllErrorMessages(),
+          ),
+        );
       },
     );
   }

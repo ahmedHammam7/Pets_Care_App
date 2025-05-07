@@ -32,4 +32,10 @@ class Routes {
   static const String editPetScreen = '/editPetScreen';
   static const String allStoresScreen = '/allStoresScreen';
   static const String pickeOrderScreen = '/pickeOrderScreen';
+  static const String doctorDetailsScreen = '/doctorDetailsScreen';
+  static const String bookAppointmentScreen = '/bookAppointmentScreen';
+  static const String finishOppointmentScreen = '/finishOppointmentScreen';
+  static const String appoinmnenstScreen = '/appoinmnenstScreen';
+  static const String updateAppoinmentScreen = '/updateAppoinmentScreen';
+  static const String favoritesScreen = '/favoritesScreen';
 }

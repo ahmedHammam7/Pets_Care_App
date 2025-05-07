@@ -40,4 +40,13 @@ class StoreState with _$StoreState {
       RecomendedFoodResponse items) = RecommendedFoodSuccess;
   const factory StoreState.recommendedFoodError(String message) =
       RecommendedFoodError;
+// add favorite
+  const factory StoreState.addFavoriteLoading() = AddFavoriteLoading;
+  const factory StoreState.addFavoriteSuccess() = AddFavoriteSuccess;
+  const factory StoreState.addFavoriteError(String message) = AddFavoriteError;
+// get all favorites
+  const factory StoreState.favoritesLoading() = FavoritesLoading;
+  const factory StoreState.favoritesSuccess(List<FavouriteResponse> items) =
+      FavoritesSuccess;
+  const factory StoreState.favoritesError(String message) = FavoritesError;
 }

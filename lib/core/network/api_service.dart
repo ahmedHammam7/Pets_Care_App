@@ -5,12 +5,13 @@ import 'package:pets_care_app/features/auth/login/data/models/login_response.dar
 import 'package:pets_care_app/features/auth/register/data/models/register_response.dart';
 import 'package:pets_care_app/features/cart/data/models/checkout_response.dart';
 import 'package:pets_care_app/features/cart/data/models/get_cart_response.dart';
+import 'package:pets_care_app/features/clinics/client/data/models/appoinments_owner_response.dart';
 import 'package:pets_care_app/features/clinics/client/data/models/get_all_clinics_response.dart';
-import 'package:pets_care_app/features/clinics/client/data/repos/owner_clincs_repo.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/appoinment_doc_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/doctor_profile_response.dart';
 import 'package:pets_care_app/features/profile/data/models/profile_response.dart';
+import 'package:pets_care_app/features/store/client/data/models/favourite_response.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
 import 'package:pets_care_app/features/store/client/data/models/recomended_food_response.dart';
 import 'package:pets_care_app/features/store/client/data/models/search_items_response.dart';
@@ -124,5 +125,23 @@ abstract class ApiService {
   );
   @GET(ApiConstant.recommendedFood)
   Future<RecomendedFoodResponse> getRecommendedFood(
+      @Header('Authorization') String token);
+  @POST(ApiConstant.addFavorite)
+  Future<dynamic> addOrDeleteFavorite(
+      @Header('Authorization') String token, @Body() dynamic body);
+  @POST(ApiConstant.appointments)
+  Future<dynamic> createAppointment(
+      @Header('Authorization') String token, @Body() dynamic body);
+  @GET(ApiConstant.appointments)
+  Future<List<AppoinmentsOwnerResponse>> getAppoinments(
+      @Header('Authorization') String token);
+  @DELETE('${ApiConstant.appointments}/{id}')
+  Future<dynamic> deleteAppoinment(
+      @Header('Authorization') String token, @Path('id') String id);
+  @POST('${ApiConstant.appointments}/{id}')
+  Future<dynamic> updateAppoinment(@Header('Authorization') String token,
+      @Path('id') String id, @Body() dynamic body);
+  @GET(ApiConstant.favorites)
+  Future<List<FavouriteResponse>> getAllFavorites(
       @Header('Authorization') String token);
 }

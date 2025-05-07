@@ -4,6 +4,7 @@ import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dar
 import 'package:pets_care_app/core/network/api_error_handler.dart';
 import 'package:pets_care_app/core/network/api_result.dart';
 import 'package:pets_care_app/core/network/api_service.dart';
+import 'package:pets_care_app/features/store/client/data/models/favourite_response.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
 import 'package:pets_care_app/features/store/client/data/models/recomended_food_response.dart';
 import 'package:pets_care_app/features/store/client/data/models/search_items_response.dart';
@@ -82,6 +83,27 @@ class StoreRepo {
   Future<ApiResult<RecomendedFoodResponse>> getRecommendedFood() async {
     try {
       final response = await _apiService.getRecommendedFood(
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}');
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  Future<ApiResult<dynamic>> addFavorite(FormData body) async {
+    try {
+      final response = await _apiService.addOrDeleteFavorite(
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}',
+          body);
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  Future<ApiResult<List<FavouriteResponse>>> getAllFavorites() async {
+    try {
+      final response = await _apiService.getAllFavorites(
           'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}');
       return ApiResult.success(response);
     } catch (e) {

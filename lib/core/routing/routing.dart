@@ -17,8 +17,15 @@ import 'package:pets_care_app/features/cart/ui/views/cart_screen.dart';
 import 'package:pets_care_app/features/cart/ui/views/pick_order_screen.dart';
 import 'package:pets_care_app/features/chat_bot/ui/chat_bot_screen.dart';
 import 'package:pets_care_app/features/check/ui/check_screen.dart';
+import 'package:pets_care_app/features/clinics/client/data/models/appoinments_owner_response.dart';
+import 'package:pets_care_app/features/clinics/client/data/models/get_all_clinics_response.dart';
 import 'package:pets_care_app/features/clinics/client/logic/cubit/owner_clinics_cubit.dart';
+import 'package:pets_care_app/features/clinics/client/ui/appoinments_screen.dart';
+import 'package:pets_care_app/features/clinics/client/ui/book_appoinment_screen.dart';
 import 'package:pets_care_app/features/clinics/client/ui/clinics_screen.dart';
+import 'package:pets_care_app/features/clinics/client/ui/doctor_details_screen.dart';
+import 'package:pets_care_app/features/clinics/client/ui/finish_appoinment_screen.dart';
+import 'package:pets_care_app/features/clinics/client/ui/update_appoinment_screen.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/appoinment_doc_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/logic/cubit/doctor_clinic_cubit.dart';
@@ -36,10 +43,10 @@ import 'package:pets_care_app/features/onBoarding/ui/views/on_boarding_screen.da
 import 'package:pets_care_app/features/profile/logic/cubit/profile_cubit.dart';
 import 'package:pets_care_app/features/profile/ui/views/profile_screen.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
-import 'package:pets_care_app/features/store/client/data/models/specific_store_item.dart';
 import 'package:pets_care_app/features/store/client/logic/cubit/store_cubit.dart';
 import 'package:pets_care_app/features/store/client/ui/views/all_stores_screen.dart';
 import 'package:pets_care_app/features/store/client/ui/views/details_screen.dart';
+import 'package:pets_care_app/features/store/client/ui/views/favourite_screen.dart';
 import 'package:pets_care_app/features/store/client/ui/views/store_screen.dart';
 import 'package:pets_care_app/features/store/store/logic/cubit/store_store_cubit.dart';
 import 'package:pets_care_app/features/store/store/ui/show_products_screen.dart';
@@ -84,12 +91,15 @@ class AppRoutes {
             ),
           ),
         );
+
       case Routes.detailsScreen:
+        final arguments = args as Map<String, dynamic>;
         return MaterialPageRoute(
           builder: (context) => BlocProvider(
             create: (context) => getIt<StoreCubit>(),
             child: DetailsScreen(
-              item: args,
+              item: arguments["item"],
+              id: arguments["id"],
             ),
           ),
         );
@@ -138,6 +148,9 @@ class AppRoutes {
               ),
               BlocProvider(
                 create: (context) => getIt<StoreCubit>()..getRecommendedFood(),
+              ),
+              BlocProvider(
+                create: (context) => getIt<PetsCubit>()..getAllPets(),
               ),
             ],
             child: const HomeLayout(),
@@ -267,7 +280,56 @@ class AppRoutes {
             child: const PickOrderScreen(),
           ),
         );
-
+      case Routes.doctorDetailsScreen:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<OwnerClinicsCubit>(),
+            child: DoctorDetailsScreen(
+              data: args as ClinicResponseData,
+            ),
+          ),
+        );
+      case Routes.bookAppointmentScreen:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<PetsCubit>()..getAllPets(),
+            child: BookAppoinmentScreen(
+              clinic: args as ClinicResponseData,
+            ),
+          ),
+        );
+      case Routes.finishOppointmentScreen:
+        final arguments = args as Map<String, dynamic>;
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<OwnerClinicsCubit>(),
+            child: FinishAppoinmentScreen(
+              clinic: arguments['clinic'] as ClinicResponseData,
+              pet: arguments['pet'] as PetResponse,
+            ),
+          ),
+        );
+      case Routes.appoinmnenstScreen:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) =>
+                getIt<OwnerClinicsCubit>()..getAllAppointments(),
+            child: const AppoinmentsScreen(),
+          ),
+        );
+      case Routes.updateAppoinmentScreen:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<OwnerClinicsCubit>(),
+            child: UpdateAppoinmentScreen(
+              data: args as AppoinmentsOwnerResponse,
+            ),
+          ),
+        );
+      case Routes.favoritesScreen:
+        return MaterialPageRoute(
+          builder: (context) => const FavouriteScreen(),
+        );
       default:
         return null;
     }

@@ -4,10 +4,11 @@ import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
+import 'package:pets_care_app/features/clinics/client/data/models/get_all_clinics_response.dart';
 
 class ChoaseAppointmentWidget extends StatefulWidget {
-  const ChoaseAppointmentWidget({super.key});
-
+  const ChoaseAppointmentWidget({super.key, required this.data});
+  final ClinicResponseData data;
   @override
   State<ChoaseAppointmentWidget> createState() => _ChoaseAppointmentBodyState();
 }
@@ -102,7 +103,7 @@ class _ChoaseAppointmentBodyState extends State<ChoaseAppointmentWidget> {
               verticalSpace(15),
               PrimaryButton(
                 text: "Book an Appointment",
-                onTap: () {},
+                onTap: () async {},
                 textstyle: AppTextStyles.addToCartButton,
                 radius: 8,
               ),

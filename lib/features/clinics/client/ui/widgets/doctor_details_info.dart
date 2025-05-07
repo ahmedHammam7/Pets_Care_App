@@ -3,10 +3,11 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
+import 'package:pets_care_app/features/clinics/client/data/models/get_all_clinics_response.dart';
 
 class DoctorDetailsInfo extends StatelessWidget {
-  const DoctorDetailsInfo({super.key});
-
+  const DoctorDetailsInfo({super.key, required this.data});
+  final ClinicResponseData data;
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -21,13 +22,13 @@ class DoctorDetailsInfo extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "Dr. Tama3a",
+                data.doctorName ?? "",
                 overflow: TextOverflow.ellipsis,
                 textAlign: TextAlign.center,
                 style: AppTextStyles.detaisInfo,
               ),
               Text(
-                "Bachelor of Veterinary Science",
+                data.address ?? "",
                 style: AppTextStyles.brandText,
               ),
               verticalSpace(20),
@@ -40,21 +41,14 @@ class DoctorDetailsInfo extends StatelessWidget {
                   ),
                   horizontalSpace(5),
                   Text(
-                    "Monday - Friday at 8.00 am - 5.00pm",
+                    data.timeRange ?? "",
                     style: AppTextStyles.experience,
                   ),
-                  horizontalSpace(30),
-                  Icon(
-                    Icons.location_on,
-                    color: AppColors.primaryColor,
-                    size: 15.sp,
-                  ),
-                  Text("2.5 km", style: AppTextStyles.experience),
                 ],
               ),
               verticalSpace(10),
               Text(
-                "500 L.E for an Appointment",
+                "${data.price ?? ""} L.E for an Appointment",
                 style: AppTextStyles.storePrice,
               )
             ],

@@ -1,5 +1,3 @@
-import 'dart:math';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,8 +12,9 @@ import 'package:pets_care_app/features/store/client/ui/views/widgets/details_scr
 import 'package:pets_care_app/features/store/client/ui/views/widgets/quantity_widget.dart';
 
 class DetailsScreenBody extends StatelessWidget {
-  const DetailsScreenBody({super.key, required this.item});
+  const DetailsScreenBody({super.key, required this.item, this.id});
   final dynamic item;
+  final dynamic id;
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -42,6 +41,7 @@ class DetailsScreenBody extends StatelessWidget {
               ),
               DetailsScreenInfo(
                 item: item,
+                id: id,
               ),
               verticalSpace(10),
               Text(
@@ -49,23 +49,45 @@ class DetailsScreenBody extends StatelessWidget {
                 style: AppTextStyles.storeItemDesc,
               ),
               const QuantityWidget(),
-              BlocBuilder<StoreCubit, StoreState>(
+              BlocConsumer<StoreCubit, StoreState>(
+                listenWhen: (previous, current) =>
+                    current is AddToCartSuccess ||
+                    current is AddToCartError ||
+                    current is AddToCartLoading ||
+                    current is AddFavoriteSuccess ||
+                    current is AddFavoriteError ||
+                    current is AddFavoriteLoading,
                 buildWhen: (previous, current) =>
                     current is AddToCartSuccess ||
                     current is AddToCartError ||
-                    current is AddToCartLoading,
+                    current is AddToCartLoading ||
+                    current is AddFavoriteSuccess ||
+                    current is AddFavoriteError ||
+                    current is AddFavoriteLoading,
+                listener: (context, state) {
+                  if (state is AddFavoriteSuccess ||
+                      state is AddToCartSuccess) {
+                    WidgetsBinding.instance.addPostFrameCallback((_) async {
+                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                        content: Text("Product Added Successfully"),
+                        backgroundColor: Colors.green,
+                      ));
+                    });
+                  }
+                  if (state is AddFavoriteError || state is AddToCartError) {
+                    WidgetsBinding.instance.addPostFrameCallback((_) async {
+                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                        content: Text("something went wrong"),
+                        backgroundColor: Colors.red,
+                      ));
+                    });
+                  }
+                },
                 builder: (context, state) {
                   if (state is AddToCartLoading) {
                     return const Center(
                         child: CircularProgressIndicator(
                       color: AppColors.primaryColor,
-                    ));
-                  } else if (state is AddToCartError) {
-                    return Center(
-                        child: Text(
-                      state.message,
-                      style: AppTextStyles.homeContainerText
-                          .copyWith(color: AppColors.primaryColor),
                     ));
                   } else if (state is AddToCartSuccess) {
                     WidgetsBinding.instance.addPostFrameCallback((_) async {
@@ -75,8 +97,9 @@ class DetailsScreenBody extends StatelessWidget {
                   return PrimaryButton(
                     text: "Add to Cart",
                     onTap: () async {
-                      await context.read<StoreCubit>().addToCart(
-                          item.id!, context.read<StoreCubit>().quantity);
+                      await context
+                          .read<StoreCubit>()
+                          .addToCart(id, context.read<StoreCubit>().quantity);
                     },
                     textstyle: AppTextStyles.addToCartButton,
                     radius: 8,

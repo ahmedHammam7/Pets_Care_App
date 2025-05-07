@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:pets_care_app/core/helper/extension.dart';
 import 'package:pets_care_app/core/helper/spacer.dart';
+import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/features/clinics/client/data/models/get_all_clinics_response.dart';
@@ -13,7 +15,9 @@ class ClinicsItem extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 10.h),
       child: GestureDetector(
-        onTap: () {},
+        onTap: () async {
+          await context.pushNamed(Routes.doctorDetailsScreen, arguments: data);
+        },
         child: Card(
           color: AppColors.white,
           margin: EdgeInsets.zero,
@@ -38,19 +42,14 @@ class ClinicsItem extends StatelessWidget {
                               height: 50.h,
                             ),
                       horizontalSpace(10),
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          SizedBox(
-                            width: MediaQuery.sizeOf(context).width * .3,
-                            child: Text(
-                              data.doctorName ?? "",
-                              overflow: TextOverflow.ellipsis,
-                              style: AppTextStyles.clinicsTitle.copyWith(
-                                  fontWeight: FontWeight.w500, fontSize: 18.sp),
-                            ),
-                          ),
-                        ],
+                      SizedBox(
+                        width: MediaQuery.sizeOf(context).width * .3,
+                        child: Text(
+                          data.doctorName ?? "",
+                          overflow: TextOverflow.ellipsis,
+                          style: AppTextStyles.clinicsTitle.copyWith(
+                              fontWeight: FontWeight.w500, fontSize: 18.sp),
+                        ),
                       )
                     ],
                   ),

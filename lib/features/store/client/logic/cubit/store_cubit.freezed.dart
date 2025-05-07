@@ -42,6 +42,12 @@ mixin _$StoreState {
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -68,6 +74,12 @@ mixin _$StoreState {
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -94,6 +106,12 @@ mixin _$StoreState {
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -123,6 +141,12 @@ mixin _$StoreState {
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -149,6 +173,12 @@ mixin _$StoreState {
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -175,6 +205,12 @@ mixin _$StoreState {
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -272,6 +308,12 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return initial();
   }
@@ -301,6 +343,12 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return initial?.call();
   }
@@ -330,6 +378,12 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -365,6 +419,12 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return initial(this);
   }
@@ -394,6 +454,12 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return initial?.call(this);
   }
@@ -423,6 +489,12 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -507,6 +579,12 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements Loading {
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return loading();
   }
@@ -536,6 +614,12 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements Loading {
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return loading?.call();
   }
@@ -565,6 +649,12 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements Loading {
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -600,6 +690,12 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements Loading {
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return loading(this);
   }
@@ -629,6 +725,12 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements Loading {
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return loading?.call(this);
   }
@@ -658,6 +760,12 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements Loading {
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (loading != null) {
@@ -778,6 +886,12 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements Success {
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return success(products);
   }
@@ -807,6 +921,12 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements Success {
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return success?.call(products);
   }
@@ -836,6 +956,12 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements Success {
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -871,6 +997,12 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements Success {
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return success(this);
   }
@@ -900,6 +1032,12 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements Success {
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return success?.call(this);
   }
@@ -929,6 +1067,12 @@ class _$SuccessImpl with DiagnosticableTreeMixin implements Success {
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (success != null) {
@@ -1050,6 +1194,12 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements Error {
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return error(message);
   }
@@ -1079,6 +1229,12 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements Error {
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return error?.call(message);
   }
@@ -1108,6 +1264,12 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements Error {
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1143,6 +1305,12 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements Error {
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return error(this);
   }
@@ -1172,6 +1340,12 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements Error {
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return error?.call(this);
   }
@@ -1201,6 +1375,12 @@ class _$ErrorImpl with DiagnosticableTreeMixin implements Error {
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (error != null) {
@@ -1295,6 +1475,12 @@ class _$AllStoresLoadingImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return allStoresLoading();
   }
@@ -1324,6 +1510,12 @@ class _$AllStoresLoadingImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return allStoresLoading?.call();
   }
@@ -1353,6 +1545,12 @@ class _$AllStoresLoadingImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (allStoresLoading != null) {
@@ -1388,6 +1586,12 @@ class _$AllStoresLoadingImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return allStoresLoading(this);
   }
@@ -1417,6 +1621,12 @@ class _$AllStoresLoadingImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return allStoresLoading?.call(this);
   }
@@ -1446,6 +1656,12 @@ class _$AllStoresLoadingImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (allStoresLoading != null) {
@@ -1562,6 +1778,12 @@ class _$AllStoresSuccessImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return allStoresSuccess(stores);
   }
@@ -1591,6 +1813,12 @@ class _$AllStoresSuccessImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return allStoresSuccess?.call(stores);
   }
@@ -1620,6 +1848,12 @@ class _$AllStoresSuccessImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (allStoresSuccess != null) {
@@ -1655,6 +1889,12 @@ class _$AllStoresSuccessImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return allStoresSuccess(this);
   }
@@ -1684,6 +1924,12 @@ class _$AllStoresSuccessImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return allStoresSuccess?.call(this);
   }
@@ -1713,6 +1959,12 @@ class _$AllStoresSuccessImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (allStoresSuccess != null) {
@@ -1838,6 +2090,12 @@ class _$AllStoresErrorImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return allStoresError(message);
   }
@@ -1867,6 +2125,12 @@ class _$AllStoresErrorImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return allStoresError?.call(message);
   }
@@ -1896,6 +2160,12 @@ class _$AllStoresErrorImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (allStoresError != null) {
@@ -1931,6 +2201,12 @@ class _$AllStoresErrorImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return allStoresError(this);
   }
@@ -1960,6 +2236,12 @@ class _$AllStoresErrorImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return allStoresError?.call(this);
   }
@@ -1989,6 +2271,12 @@ class _$AllStoresErrorImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (allStoresError != null) {
@@ -2085,6 +2373,12 @@ class _$SearchStoresLoadingImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return searchStoresLoading();
   }
@@ -2114,6 +2408,12 @@ class _$SearchStoresLoadingImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return searchStoresLoading?.call();
   }
@@ -2143,6 +2443,12 @@ class _$SearchStoresLoadingImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (searchStoresLoading != null) {
@@ -2178,6 +2484,12 @@ class _$SearchStoresLoadingImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return searchStoresLoading(this);
   }
@@ -2207,6 +2519,12 @@ class _$SearchStoresLoadingImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return searchStoresLoading?.call(this);
   }
@@ -2236,6 +2554,12 @@ class _$SearchStoresLoadingImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (searchStoresLoading != null) {
@@ -2352,6 +2676,12 @@ class _$SearchStoresSuccessImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return searchStoresSuccess(stores);
   }
@@ -2381,6 +2711,12 @@ class _$SearchStoresSuccessImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return searchStoresSuccess?.call(stores);
   }
@@ -2410,6 +2746,12 @@ class _$SearchStoresSuccessImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (searchStoresSuccess != null) {
@@ -2445,6 +2787,12 @@ class _$SearchStoresSuccessImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return searchStoresSuccess(this);
   }
@@ -2474,6 +2822,12 @@ class _$SearchStoresSuccessImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return searchStoresSuccess?.call(this);
   }
@@ -2503,6 +2857,12 @@ class _$SearchStoresSuccessImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (searchStoresSuccess != null) {
@@ -2628,6 +2988,12 @@ class _$SearchStoresErrorImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return searchStoresError(message);
   }
@@ -2657,6 +3023,12 @@ class _$SearchStoresErrorImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return searchStoresError?.call(message);
   }
@@ -2686,6 +3058,12 @@ class _$SearchStoresErrorImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (searchStoresError != null) {
@@ -2721,6 +3099,12 @@ class _$SearchStoresErrorImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return searchStoresError(this);
   }
@@ -2750,6 +3134,12 @@ class _$SearchStoresErrorImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return searchStoresError?.call(this);
   }
@@ -2779,6 +3169,12 @@ class _$SearchStoresErrorImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (searchStoresError != null) {
@@ -2876,6 +3272,12 @@ class _$SpecificStoreLoadingImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return specificStoreLoading();
   }
@@ -2905,6 +3307,12 @@ class _$SpecificStoreLoadingImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return specificStoreLoading?.call();
   }
@@ -2934,6 +3342,12 @@ class _$SpecificStoreLoadingImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (specificStoreLoading != null) {
@@ -2969,6 +3383,12 @@ class _$SpecificStoreLoadingImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return specificStoreLoading(this);
   }
@@ -2998,6 +3418,12 @@ class _$SpecificStoreLoadingImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return specificStoreLoading?.call(this);
   }
@@ -3027,6 +3453,12 @@ class _$SpecificStoreLoadingImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (specificStoreLoading != null) {
@@ -3144,6 +3576,12 @@ class _$SpecificStoreSuccessImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return specificStoreSuccess(stores);
   }
@@ -3173,6 +3611,12 @@ class _$SpecificStoreSuccessImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return specificStoreSuccess?.call(stores);
   }
@@ -3202,6 +3646,12 @@ class _$SpecificStoreSuccessImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (specificStoreSuccess != null) {
@@ -3237,6 +3687,12 @@ class _$SpecificStoreSuccessImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return specificStoreSuccess(this);
   }
@@ -3266,6 +3722,12 @@ class _$SpecificStoreSuccessImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return specificStoreSuccess?.call(this);
   }
@@ -3295,6 +3757,12 @@ class _$SpecificStoreSuccessImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (specificStoreSuccess != null) {
@@ -3420,6 +3888,12 @@ class _$SpecificStoreErrorImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return specificStoreError(message);
   }
@@ -3449,6 +3923,12 @@ class _$SpecificStoreErrorImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return specificStoreError?.call(message);
   }
@@ -3478,6 +3958,12 @@ class _$SpecificStoreErrorImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (specificStoreError != null) {
@@ -3513,6 +3999,12 @@ class _$SpecificStoreErrorImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return specificStoreError(this);
   }
@@ -3542,6 +4034,12 @@ class _$SpecificStoreErrorImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return specificStoreError?.call(this);
   }
@@ -3571,6 +4069,12 @@ class _$SpecificStoreErrorImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (specificStoreError != null) {
@@ -3667,6 +4171,12 @@ class _$SearchItemsLoadingImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return searchItemsLoading();
   }
@@ -3696,6 +4206,12 @@ class _$SearchItemsLoadingImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return searchItemsLoading?.call();
   }
@@ -3725,6 +4241,12 @@ class _$SearchItemsLoadingImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (searchItemsLoading != null) {
@@ -3760,6 +4282,12 @@ class _$SearchItemsLoadingImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return searchItemsLoading(this);
   }
@@ -3789,6 +4317,12 @@ class _$SearchItemsLoadingImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return searchItemsLoading?.call(this);
   }
@@ -3818,6 +4352,12 @@ class _$SearchItemsLoadingImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (searchItemsLoading != null) {
@@ -3934,6 +4474,12 @@ class _$SearchItemsSuccessImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return searchItemsSuccess(items);
   }
@@ -3963,6 +4509,12 @@ class _$SearchItemsSuccessImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return searchItemsSuccess?.call(items);
   }
@@ -3992,6 +4544,12 @@ class _$SearchItemsSuccessImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (searchItemsSuccess != null) {
@@ -4027,6 +4585,12 @@ class _$SearchItemsSuccessImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return searchItemsSuccess(this);
   }
@@ -4056,6 +4620,12 @@ class _$SearchItemsSuccessImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return searchItemsSuccess?.call(this);
   }
@@ -4085,6 +4655,12 @@ class _$SearchItemsSuccessImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (searchItemsSuccess != null) {
@@ -4210,6 +4786,12 @@ class _$SearchItemsErrorImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return searchItemsError(message);
   }
@@ -4239,6 +4821,12 @@ class _$SearchItemsErrorImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return searchItemsError?.call(message);
   }
@@ -4268,6 +4856,12 @@ class _$SearchItemsErrorImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (searchItemsError != null) {
@@ -4303,6 +4897,12 @@ class _$SearchItemsErrorImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return searchItemsError(this);
   }
@@ -4332,6 +4932,12 @@ class _$SearchItemsErrorImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return searchItemsError?.call(this);
   }
@@ -4361,6 +4967,12 @@ class _$SearchItemsErrorImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (searchItemsError != null) {
@@ -4455,6 +5067,12 @@ class _$AddToCartLoadingImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return addToCartLoading();
   }
@@ -4484,6 +5102,12 @@ class _$AddToCartLoadingImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return addToCartLoading?.call();
   }
@@ -4513,6 +5137,12 @@ class _$AddToCartLoadingImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (addToCartLoading != null) {
@@ -4548,6 +5178,12 @@ class _$AddToCartLoadingImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return addToCartLoading(this);
   }
@@ -4577,6 +5213,12 @@ class _$AddToCartLoadingImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return addToCartLoading?.call(this);
   }
@@ -4606,6 +5248,12 @@ class _$AddToCartLoadingImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (addToCartLoading != null) {
@@ -4692,6 +5340,12 @@ class _$AddToCartSuccessImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return addToCartSuccess();
   }
@@ -4721,6 +5375,12 @@ class _$AddToCartSuccessImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return addToCartSuccess?.call();
   }
@@ -4750,6 +5410,12 @@ class _$AddToCartSuccessImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (addToCartSuccess != null) {
@@ -4785,6 +5451,12 @@ class _$AddToCartSuccessImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return addToCartSuccess(this);
   }
@@ -4814,6 +5486,12 @@ class _$AddToCartSuccessImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return addToCartSuccess?.call(this);
   }
@@ -4843,6 +5521,12 @@ class _$AddToCartSuccessImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (addToCartSuccess != null) {
@@ -4959,6 +5643,12 @@ class _$AddToCartErrorImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return addToCartError(message);
   }
@@ -4988,6 +5678,12 @@ class _$AddToCartErrorImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return addToCartError?.call(message);
   }
@@ -5017,6 +5713,12 @@ class _$AddToCartErrorImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (addToCartError != null) {
@@ -5052,6 +5754,12 @@ class _$AddToCartErrorImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return addToCartError(this);
   }
@@ -5081,6 +5789,12 @@ class _$AddToCartErrorImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return addToCartError?.call(this);
   }
@@ -5110,6 +5824,12 @@ class _$AddToCartErrorImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (addToCartError != null) {
@@ -5208,6 +5928,12 @@ class _$RecommendedFoodLoadingImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return recommendedFoodLoading();
   }
@@ -5237,6 +5963,12 @@ class _$RecommendedFoodLoadingImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return recommendedFoodLoading?.call();
   }
@@ -5266,6 +5998,12 @@ class _$RecommendedFoodLoadingImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (recommendedFoodLoading != null) {
@@ -5301,6 +6039,12 @@ class _$RecommendedFoodLoadingImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return recommendedFoodLoading(this);
   }
@@ -5330,6 +6074,12 @@ class _$RecommendedFoodLoadingImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return recommendedFoodLoading?.call(this);
   }
@@ -5359,6 +6109,12 @@ class _$RecommendedFoodLoadingImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (recommendedFoodLoading != null) {
@@ -5477,6 +6233,12 @@ class _$RecommendedFoodSuccessImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return recommendedFoodSuccess(items);
   }
@@ -5506,6 +6268,12 @@ class _$RecommendedFoodSuccessImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return recommendedFoodSuccess?.call(items);
   }
@@ -5535,6 +6303,12 @@ class _$RecommendedFoodSuccessImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (recommendedFoodSuccess != null) {
@@ -5570,6 +6344,12 @@ class _$RecommendedFoodSuccessImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return recommendedFoodSuccess(this);
   }
@@ -5599,6 +6379,12 @@ class _$RecommendedFoodSuccessImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return recommendedFoodSuccess?.call(this);
   }
@@ -5628,6 +6414,12 @@ class _$RecommendedFoodSuccessImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (recommendedFoodSuccess != null) {
@@ -5754,6 +6546,12 @@ class _$RecommendedFoodErrorImpl
     required TResult Function(RecomendedFoodResponse items)
         recommendedFoodSuccess,
     required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
   }) {
     return recommendedFoodError(message);
   }
@@ -5783,6 +6581,12 @@ class _$RecommendedFoodErrorImpl
     TResult? Function()? recommendedFoodLoading,
     TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
   }) {
     return recommendedFoodError?.call(message);
   }
@@ -5812,6 +6616,12 @@ class _$RecommendedFoodErrorImpl
     TResult Function()? recommendedFoodLoading,
     TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
     TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
     required TResult orElse(),
   }) {
     if (recommendedFoodError != null) {
@@ -5847,6 +6657,12 @@ class _$RecommendedFoodErrorImpl
     required TResult Function(RecommendedFoodSuccess value)
         recommendedFoodSuccess,
     required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
   }) {
     return recommendedFoodError(this);
   }
@@ -5876,6 +6692,12 @@ class _$RecommendedFoodErrorImpl
     TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
   }) {
     return recommendedFoodError?.call(this);
   }
@@ -5905,6 +6727,12 @@ class _$RecommendedFoodErrorImpl
     TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
     TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
     TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
     required TResult orElse(),
   }) {
     if (recommendedFoodError != null) {
@@ -5925,4 +6753,1766 @@ abstract class RecommendedFoodError implements StoreState {
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$RecommendedFoodErrorImplCopyWith<_$RecommendedFoodErrorImpl>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$AddFavoriteLoadingImplCopyWith<$Res> {
+  factory _$$AddFavoriteLoadingImplCopyWith(_$AddFavoriteLoadingImpl value,
+          $Res Function(_$AddFavoriteLoadingImpl) then) =
+      __$$AddFavoriteLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddFavoriteLoadingImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$AddFavoriteLoadingImpl>
+    implements _$$AddFavoriteLoadingImplCopyWith<$Res> {
+  __$$AddFavoriteLoadingImplCopyWithImpl(_$AddFavoriteLoadingImpl _value,
+      $Res Function(_$AddFavoriteLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AddFavoriteLoadingImpl
+    with DiagnosticableTreeMixin
+    implements AddFavoriteLoading {
+  const _$AddFavoriteLoadingImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.addFavoriteLoading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'StoreState.addFavoriteLoading'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AddFavoriteLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+    required TResult Function() addToCartLoading,
+    required TResult Function() addToCartSuccess,
+    required TResult Function(String message) addToCartError,
+    required TResult Function() recommendedFoodLoading,
+    required TResult Function(RecomendedFoodResponse items)
+        recommendedFoodSuccess,
+    required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
+  }) {
+    return addFavoriteLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+    TResult? Function()? addToCartLoading,
+    TResult? Function()? addToCartSuccess,
+    TResult? Function(String message)? addToCartError,
+    TResult? Function()? recommendedFoodLoading,
+    TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
+    TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
+  }) {
+    return addFavoriteLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    TResult Function()? addToCartLoading,
+    TResult Function()? addToCartSuccess,
+    TResult Function(String message)? addToCartError,
+    TResult Function()? recommendedFoodLoading,
+    TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
+    TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
+    required TResult orElse(),
+  }) {
+    if (addFavoriteLoading != null) {
+      return addFavoriteLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+    required TResult Function(AddToCartLoading value) addToCartLoading,
+    required TResult Function(AddToCartSuccess value) addToCartSuccess,
+    required TResult Function(AddToCartError value) addToCartError,
+    required TResult Function(RecommendedFoodLoading value)
+        recommendedFoodLoading,
+    required TResult Function(RecommendedFoodSuccess value)
+        recommendedFoodSuccess,
+    required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
+  }) {
+    return addFavoriteLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+    TResult? Function(AddToCartLoading value)? addToCartLoading,
+    TResult? Function(AddToCartSuccess value)? addToCartSuccess,
+    TResult? Function(AddToCartError value)? addToCartError,
+    TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
+    TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
+    TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
+  }) {
+    return addFavoriteLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    TResult Function(AddToCartLoading value)? addToCartLoading,
+    TResult Function(AddToCartSuccess value)? addToCartSuccess,
+    TResult Function(AddToCartError value)? addToCartError,
+    TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
+    TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
+    TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
+    required TResult orElse(),
+  }) {
+    if (addFavoriteLoading != null) {
+      return addFavoriteLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddFavoriteLoading implements StoreState {
+  const factory AddFavoriteLoading() = _$AddFavoriteLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$AddFavoriteSuccessImplCopyWith<$Res> {
+  factory _$$AddFavoriteSuccessImplCopyWith(_$AddFavoriteSuccessImpl value,
+          $Res Function(_$AddFavoriteSuccessImpl) then) =
+      __$$AddFavoriteSuccessImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$AddFavoriteSuccessImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$AddFavoriteSuccessImpl>
+    implements _$$AddFavoriteSuccessImplCopyWith<$Res> {
+  __$$AddFavoriteSuccessImplCopyWithImpl(_$AddFavoriteSuccessImpl _value,
+      $Res Function(_$AddFavoriteSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$AddFavoriteSuccessImpl
+    with DiagnosticableTreeMixin
+    implements AddFavoriteSuccess {
+  const _$AddFavoriteSuccessImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.addFavoriteSuccess()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+        .add(DiagnosticsProperty('type', 'StoreState.addFavoriteSuccess'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$AddFavoriteSuccessImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+    required TResult Function() addToCartLoading,
+    required TResult Function() addToCartSuccess,
+    required TResult Function(String message) addToCartError,
+    required TResult Function() recommendedFoodLoading,
+    required TResult Function(RecomendedFoodResponse items)
+        recommendedFoodSuccess,
+    required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
+  }) {
+    return addFavoriteSuccess();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+    TResult? Function()? addToCartLoading,
+    TResult? Function()? addToCartSuccess,
+    TResult? Function(String message)? addToCartError,
+    TResult? Function()? recommendedFoodLoading,
+    TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
+    TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
+  }) {
+    return addFavoriteSuccess?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    TResult Function()? addToCartLoading,
+    TResult Function()? addToCartSuccess,
+    TResult Function(String message)? addToCartError,
+    TResult Function()? recommendedFoodLoading,
+    TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
+    TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
+    required TResult orElse(),
+  }) {
+    if (addFavoriteSuccess != null) {
+      return addFavoriteSuccess();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+    required TResult Function(AddToCartLoading value) addToCartLoading,
+    required TResult Function(AddToCartSuccess value) addToCartSuccess,
+    required TResult Function(AddToCartError value) addToCartError,
+    required TResult Function(RecommendedFoodLoading value)
+        recommendedFoodLoading,
+    required TResult Function(RecommendedFoodSuccess value)
+        recommendedFoodSuccess,
+    required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
+  }) {
+    return addFavoriteSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+    TResult? Function(AddToCartLoading value)? addToCartLoading,
+    TResult? Function(AddToCartSuccess value)? addToCartSuccess,
+    TResult? Function(AddToCartError value)? addToCartError,
+    TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
+    TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
+    TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
+  }) {
+    return addFavoriteSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    TResult Function(AddToCartLoading value)? addToCartLoading,
+    TResult Function(AddToCartSuccess value)? addToCartSuccess,
+    TResult Function(AddToCartError value)? addToCartError,
+    TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
+    TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
+    TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
+    required TResult orElse(),
+  }) {
+    if (addFavoriteSuccess != null) {
+      return addFavoriteSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddFavoriteSuccess implements StoreState {
+  const factory AddFavoriteSuccess() = _$AddFavoriteSuccessImpl;
+}
+
+/// @nodoc
+abstract class _$$AddFavoriteErrorImplCopyWith<$Res> {
+  factory _$$AddFavoriteErrorImplCopyWith(_$AddFavoriteErrorImpl value,
+          $Res Function(_$AddFavoriteErrorImpl) then) =
+      __$$AddFavoriteErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$AddFavoriteErrorImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$AddFavoriteErrorImpl>
+    implements _$$AddFavoriteErrorImplCopyWith<$Res> {
+  __$$AddFavoriteErrorImplCopyWithImpl(_$AddFavoriteErrorImpl _value,
+      $Res Function(_$AddFavoriteErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$AddFavoriteErrorImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$AddFavoriteErrorImpl
+    with DiagnosticableTreeMixin
+    implements AddFavoriteError {
+  const _$AddFavoriteErrorImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.addFavoriteError(message: $message)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'StoreState.addFavoriteError'))
+      ..add(DiagnosticsProperty('message', message));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$AddFavoriteErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$AddFavoriteErrorImplCopyWith<_$AddFavoriteErrorImpl> get copyWith =>
+      __$$AddFavoriteErrorImplCopyWithImpl<_$AddFavoriteErrorImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+    required TResult Function() addToCartLoading,
+    required TResult Function() addToCartSuccess,
+    required TResult Function(String message) addToCartError,
+    required TResult Function() recommendedFoodLoading,
+    required TResult Function(RecomendedFoodResponse items)
+        recommendedFoodSuccess,
+    required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
+  }) {
+    return addFavoriteError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+    TResult? Function()? addToCartLoading,
+    TResult? Function()? addToCartSuccess,
+    TResult? Function(String message)? addToCartError,
+    TResult? Function()? recommendedFoodLoading,
+    TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
+    TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
+  }) {
+    return addFavoriteError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    TResult Function()? addToCartLoading,
+    TResult Function()? addToCartSuccess,
+    TResult Function(String message)? addToCartError,
+    TResult Function()? recommendedFoodLoading,
+    TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
+    TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
+    required TResult orElse(),
+  }) {
+    if (addFavoriteError != null) {
+      return addFavoriteError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+    required TResult Function(AddToCartLoading value) addToCartLoading,
+    required TResult Function(AddToCartSuccess value) addToCartSuccess,
+    required TResult Function(AddToCartError value) addToCartError,
+    required TResult Function(RecommendedFoodLoading value)
+        recommendedFoodLoading,
+    required TResult Function(RecommendedFoodSuccess value)
+        recommendedFoodSuccess,
+    required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
+  }) {
+    return addFavoriteError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+    TResult? Function(AddToCartLoading value)? addToCartLoading,
+    TResult? Function(AddToCartSuccess value)? addToCartSuccess,
+    TResult? Function(AddToCartError value)? addToCartError,
+    TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
+    TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
+    TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
+  }) {
+    return addFavoriteError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    TResult Function(AddToCartLoading value)? addToCartLoading,
+    TResult Function(AddToCartSuccess value)? addToCartSuccess,
+    TResult Function(AddToCartError value)? addToCartError,
+    TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
+    TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
+    TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
+    required TResult orElse(),
+  }) {
+    if (addFavoriteError != null) {
+      return addFavoriteError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class AddFavoriteError implements StoreState {
+  const factory AddFavoriteError(final String message) = _$AddFavoriteErrorImpl;
+
+  String get message;
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$AddFavoriteErrorImplCopyWith<_$AddFavoriteErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FavoritesLoadingImplCopyWith<$Res> {
+  factory _$$FavoritesLoadingImplCopyWith(_$FavoritesLoadingImpl value,
+          $Res Function(_$FavoritesLoadingImpl) then) =
+      __$$FavoritesLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$FavoritesLoadingImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$FavoritesLoadingImpl>
+    implements _$$FavoritesLoadingImplCopyWith<$Res> {
+  __$$FavoritesLoadingImplCopyWithImpl(_$FavoritesLoadingImpl _value,
+      $Res Function(_$FavoritesLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$FavoritesLoadingImpl
+    with DiagnosticableTreeMixin
+    implements FavoritesLoading {
+  const _$FavoritesLoadingImpl();
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.favoritesLoading()';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty('type', 'StoreState.favoritesLoading'));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType && other is _$FavoritesLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+    required TResult Function() addToCartLoading,
+    required TResult Function() addToCartSuccess,
+    required TResult Function(String message) addToCartError,
+    required TResult Function() recommendedFoodLoading,
+    required TResult Function(RecomendedFoodResponse items)
+        recommendedFoodSuccess,
+    required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
+  }) {
+    return favoritesLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+    TResult? Function()? addToCartLoading,
+    TResult? Function()? addToCartSuccess,
+    TResult? Function(String message)? addToCartError,
+    TResult? Function()? recommendedFoodLoading,
+    TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
+    TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
+  }) {
+    return favoritesLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    TResult Function()? addToCartLoading,
+    TResult Function()? addToCartSuccess,
+    TResult Function(String message)? addToCartError,
+    TResult Function()? recommendedFoodLoading,
+    TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
+    TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
+    required TResult orElse(),
+  }) {
+    if (favoritesLoading != null) {
+      return favoritesLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+    required TResult Function(AddToCartLoading value) addToCartLoading,
+    required TResult Function(AddToCartSuccess value) addToCartSuccess,
+    required TResult Function(AddToCartError value) addToCartError,
+    required TResult Function(RecommendedFoodLoading value)
+        recommendedFoodLoading,
+    required TResult Function(RecommendedFoodSuccess value)
+        recommendedFoodSuccess,
+    required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
+  }) {
+    return favoritesLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+    TResult? Function(AddToCartLoading value)? addToCartLoading,
+    TResult? Function(AddToCartSuccess value)? addToCartSuccess,
+    TResult? Function(AddToCartError value)? addToCartError,
+    TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
+    TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
+    TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
+  }) {
+    return favoritesLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    TResult Function(AddToCartLoading value)? addToCartLoading,
+    TResult Function(AddToCartSuccess value)? addToCartSuccess,
+    TResult Function(AddToCartError value)? addToCartError,
+    TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
+    TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
+    TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
+    required TResult orElse(),
+  }) {
+    if (favoritesLoading != null) {
+      return favoritesLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FavoritesLoading implements StoreState {
+  const factory FavoritesLoading() = _$FavoritesLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$FavoritesSuccessImplCopyWith<$Res> {
+  factory _$$FavoritesSuccessImplCopyWith(_$FavoritesSuccessImpl value,
+          $Res Function(_$FavoritesSuccessImpl) then) =
+      __$$FavoritesSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({List<FavouriteResponse> items});
+}
+
+/// @nodoc
+class __$$FavoritesSuccessImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$FavoritesSuccessImpl>
+    implements _$$FavoritesSuccessImplCopyWith<$Res> {
+  __$$FavoritesSuccessImplCopyWithImpl(_$FavoritesSuccessImpl _value,
+      $Res Function(_$FavoritesSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? items = null,
+  }) {
+    return _then(_$FavoritesSuccessImpl(
+      null == items
+          ? _value._items
+          : items // ignore: cast_nullable_to_non_nullable
+              as List<FavouriteResponse>,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FavoritesSuccessImpl
+    with DiagnosticableTreeMixin
+    implements FavoritesSuccess {
+  const _$FavoritesSuccessImpl(final List<FavouriteResponse> items)
+      : _items = items;
+
+  final List<FavouriteResponse> _items;
+  @override
+  List<FavouriteResponse> get items {
+    if (_items is EqualUnmodifiableListView) return _items;
+    // ignore: implicit_dynamic_type
+    return EqualUnmodifiableListView(_items);
+  }
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.favoritesSuccess(items: $items)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'StoreState.favoritesSuccess'))
+      ..add(DiagnosticsProperty('items', items));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FavoritesSuccessImpl &&
+            const DeepCollectionEquality().equals(other._items, _items));
+  }
+
+  @override
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(_items));
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FavoritesSuccessImplCopyWith<_$FavoritesSuccessImpl> get copyWith =>
+      __$$FavoritesSuccessImplCopyWithImpl<_$FavoritesSuccessImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+    required TResult Function() addToCartLoading,
+    required TResult Function() addToCartSuccess,
+    required TResult Function(String message) addToCartError,
+    required TResult Function() recommendedFoodLoading,
+    required TResult Function(RecomendedFoodResponse items)
+        recommendedFoodSuccess,
+    required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
+  }) {
+    return favoritesSuccess(items);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+    TResult? Function()? addToCartLoading,
+    TResult? Function()? addToCartSuccess,
+    TResult? Function(String message)? addToCartError,
+    TResult? Function()? recommendedFoodLoading,
+    TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
+    TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
+  }) {
+    return favoritesSuccess?.call(items);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    TResult Function()? addToCartLoading,
+    TResult Function()? addToCartSuccess,
+    TResult Function(String message)? addToCartError,
+    TResult Function()? recommendedFoodLoading,
+    TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
+    TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
+    required TResult orElse(),
+  }) {
+    if (favoritesSuccess != null) {
+      return favoritesSuccess(items);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+    required TResult Function(AddToCartLoading value) addToCartLoading,
+    required TResult Function(AddToCartSuccess value) addToCartSuccess,
+    required TResult Function(AddToCartError value) addToCartError,
+    required TResult Function(RecommendedFoodLoading value)
+        recommendedFoodLoading,
+    required TResult Function(RecommendedFoodSuccess value)
+        recommendedFoodSuccess,
+    required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
+  }) {
+    return favoritesSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+    TResult? Function(AddToCartLoading value)? addToCartLoading,
+    TResult? Function(AddToCartSuccess value)? addToCartSuccess,
+    TResult? Function(AddToCartError value)? addToCartError,
+    TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
+    TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
+    TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
+  }) {
+    return favoritesSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    TResult Function(AddToCartLoading value)? addToCartLoading,
+    TResult Function(AddToCartSuccess value)? addToCartSuccess,
+    TResult Function(AddToCartError value)? addToCartError,
+    TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
+    TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
+    TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
+    required TResult orElse(),
+  }) {
+    if (favoritesSuccess != null) {
+      return favoritesSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FavoritesSuccess implements StoreState {
+  const factory FavoritesSuccess(final List<FavouriteResponse> items) =
+      _$FavoritesSuccessImpl;
+
+  List<FavouriteResponse> get items;
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FavoritesSuccessImplCopyWith<_$FavoritesSuccessImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$FavoritesErrorImplCopyWith<$Res> {
+  factory _$$FavoritesErrorImplCopyWith(_$FavoritesErrorImpl value,
+          $Res Function(_$FavoritesErrorImpl) then) =
+      __$$FavoritesErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$FavoritesErrorImplCopyWithImpl<$Res>
+    extends _$StoreStateCopyWithImpl<$Res, _$FavoritesErrorImpl>
+    implements _$$FavoritesErrorImplCopyWith<$Res> {
+  __$$FavoritesErrorImplCopyWithImpl(
+      _$FavoritesErrorImpl _value, $Res Function(_$FavoritesErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$FavoritesErrorImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$FavoritesErrorImpl
+    with DiagnosticableTreeMixin
+    implements FavoritesError {
+  const _$FavoritesErrorImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'StoreState.favoritesError(message: $message)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'StoreState.favoritesError'))
+      ..add(DiagnosticsProperty('message', message));
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$FavoritesErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$FavoritesErrorImplCopyWith<_$FavoritesErrorImpl> get copyWith =>
+      __$$FavoritesErrorImplCopyWithImpl<_$FavoritesErrorImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() loading,
+    required TResult Function(List<ProductResponse> products) success,
+    required TResult Function(String message) error,
+    required TResult Function() allStoresLoading,
+    required TResult Function(StoreResponse stores) allStoresSuccess,
+    required TResult Function(String message) allStoresError,
+    required TResult Function() searchStoresLoading,
+    required TResult Function(StoreResponse stores) searchStoresSuccess,
+    required TResult Function(String message) searchStoresError,
+    required TResult Function() specificStoreLoading,
+    required TResult Function(SpecificStoreResponse stores)
+        specificStoreSuccess,
+    required TResult Function(String message) specificStoreError,
+    required TResult Function() searchItemsLoading,
+    required TResult Function(SearchItemsResponse items) searchItemsSuccess,
+    required TResult Function(String message) searchItemsError,
+    required TResult Function() addToCartLoading,
+    required TResult Function() addToCartSuccess,
+    required TResult Function(String message) addToCartError,
+    required TResult Function() recommendedFoodLoading,
+    required TResult Function(RecomendedFoodResponse items)
+        recommendedFoodSuccess,
+    required TResult Function(String message) recommendedFoodError,
+    required TResult Function() addFavoriteLoading,
+    required TResult Function() addFavoriteSuccess,
+    required TResult Function(String message) addFavoriteError,
+    required TResult Function() favoritesLoading,
+    required TResult Function(List<FavouriteResponse> items) favoritesSuccess,
+    required TResult Function(String message) favoritesError,
+  }) {
+    return favoritesError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? loading,
+    TResult? Function(List<ProductResponse> products)? success,
+    TResult? Function(String message)? error,
+    TResult? Function()? allStoresLoading,
+    TResult? Function(StoreResponse stores)? allStoresSuccess,
+    TResult? Function(String message)? allStoresError,
+    TResult? Function()? searchStoresLoading,
+    TResult? Function(StoreResponse stores)? searchStoresSuccess,
+    TResult? Function(String message)? searchStoresError,
+    TResult? Function()? specificStoreLoading,
+    TResult? Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult? Function(String message)? specificStoreError,
+    TResult? Function()? searchItemsLoading,
+    TResult? Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult? Function(String message)? searchItemsError,
+    TResult? Function()? addToCartLoading,
+    TResult? Function()? addToCartSuccess,
+    TResult? Function(String message)? addToCartError,
+    TResult? Function()? recommendedFoodLoading,
+    TResult? Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
+    TResult? Function(String message)? recommendedFoodError,
+    TResult? Function()? addFavoriteLoading,
+    TResult? Function()? addFavoriteSuccess,
+    TResult? Function(String message)? addFavoriteError,
+    TResult? Function()? favoritesLoading,
+    TResult? Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult? Function(String message)? favoritesError,
+  }) {
+    return favoritesError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? loading,
+    TResult Function(List<ProductResponse> products)? success,
+    TResult Function(String message)? error,
+    TResult Function()? allStoresLoading,
+    TResult Function(StoreResponse stores)? allStoresSuccess,
+    TResult Function(String message)? allStoresError,
+    TResult Function()? searchStoresLoading,
+    TResult Function(StoreResponse stores)? searchStoresSuccess,
+    TResult Function(String message)? searchStoresError,
+    TResult Function()? specificStoreLoading,
+    TResult Function(SpecificStoreResponse stores)? specificStoreSuccess,
+    TResult Function(String message)? specificStoreError,
+    TResult Function()? searchItemsLoading,
+    TResult Function(SearchItemsResponse items)? searchItemsSuccess,
+    TResult Function(String message)? searchItemsError,
+    TResult Function()? addToCartLoading,
+    TResult Function()? addToCartSuccess,
+    TResult Function(String message)? addToCartError,
+    TResult Function()? recommendedFoodLoading,
+    TResult Function(RecomendedFoodResponse items)? recommendedFoodSuccess,
+    TResult Function(String message)? recommendedFoodError,
+    TResult Function()? addFavoriteLoading,
+    TResult Function()? addFavoriteSuccess,
+    TResult Function(String message)? addFavoriteError,
+    TResult Function()? favoritesLoading,
+    TResult Function(List<FavouriteResponse> items)? favoritesSuccess,
+    TResult Function(String message)? favoritesError,
+    required TResult orElse(),
+  }) {
+    if (favoritesError != null) {
+      return favoritesError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(Loading value) loading,
+    required TResult Function(Success value) success,
+    required TResult Function(Error value) error,
+    required TResult Function(AllStoresLoading value) allStoresLoading,
+    required TResult Function(AllStoresSuccess value) allStoresSuccess,
+    required TResult Function(AllStoresError value) allStoresError,
+    required TResult Function(SearchStoresLoading value) searchStoresLoading,
+    required TResult Function(SearchStoresSuccess value) searchStoresSuccess,
+    required TResult Function(SearchStoresError value) searchStoresError,
+    required TResult Function(SpecificStoreLoading value) specificStoreLoading,
+    required TResult Function(SpecificStoreSuccess value) specificStoreSuccess,
+    required TResult Function(SpecificStoreError value) specificStoreError,
+    required TResult Function(SearchItemsLoading value) searchItemsLoading,
+    required TResult Function(SearchItemsSuccess value) searchItemsSuccess,
+    required TResult Function(SearchItemsError value) searchItemsError,
+    required TResult Function(AddToCartLoading value) addToCartLoading,
+    required TResult Function(AddToCartSuccess value) addToCartSuccess,
+    required TResult Function(AddToCartError value) addToCartError,
+    required TResult Function(RecommendedFoodLoading value)
+        recommendedFoodLoading,
+    required TResult Function(RecommendedFoodSuccess value)
+        recommendedFoodSuccess,
+    required TResult Function(RecommendedFoodError value) recommendedFoodError,
+    required TResult Function(AddFavoriteLoading value) addFavoriteLoading,
+    required TResult Function(AddFavoriteSuccess value) addFavoriteSuccess,
+    required TResult Function(AddFavoriteError value) addFavoriteError,
+    required TResult Function(FavoritesLoading value) favoritesLoading,
+    required TResult Function(FavoritesSuccess value) favoritesSuccess,
+    required TResult Function(FavoritesError value) favoritesError,
+  }) {
+    return favoritesError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(Loading value)? loading,
+    TResult? Function(Success value)? success,
+    TResult? Function(Error value)? error,
+    TResult? Function(AllStoresLoading value)? allStoresLoading,
+    TResult? Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult? Function(AllStoresError value)? allStoresError,
+    TResult? Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult? Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult? Function(SearchStoresError value)? searchStoresError,
+    TResult? Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult? Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult? Function(SpecificStoreError value)? specificStoreError,
+    TResult? Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult? Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult? Function(SearchItemsError value)? searchItemsError,
+    TResult? Function(AddToCartLoading value)? addToCartLoading,
+    TResult? Function(AddToCartSuccess value)? addToCartSuccess,
+    TResult? Function(AddToCartError value)? addToCartError,
+    TResult? Function(RecommendedFoodLoading value)? recommendedFoodLoading,
+    TResult? Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
+    TResult? Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult? Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult? Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult? Function(AddFavoriteError value)? addFavoriteError,
+    TResult? Function(FavoritesLoading value)? favoritesLoading,
+    TResult? Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult? Function(FavoritesError value)? favoritesError,
+  }) {
+    return favoritesError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(Loading value)? loading,
+    TResult Function(Success value)? success,
+    TResult Function(Error value)? error,
+    TResult Function(AllStoresLoading value)? allStoresLoading,
+    TResult Function(AllStoresSuccess value)? allStoresSuccess,
+    TResult Function(AllStoresError value)? allStoresError,
+    TResult Function(SearchStoresLoading value)? searchStoresLoading,
+    TResult Function(SearchStoresSuccess value)? searchStoresSuccess,
+    TResult Function(SearchStoresError value)? searchStoresError,
+    TResult Function(SpecificStoreLoading value)? specificStoreLoading,
+    TResult Function(SpecificStoreSuccess value)? specificStoreSuccess,
+    TResult Function(SpecificStoreError value)? specificStoreError,
+    TResult Function(SearchItemsLoading value)? searchItemsLoading,
+    TResult Function(SearchItemsSuccess value)? searchItemsSuccess,
+    TResult Function(SearchItemsError value)? searchItemsError,
+    TResult Function(AddToCartLoading value)? addToCartLoading,
+    TResult Function(AddToCartSuccess value)? addToCartSuccess,
+    TResult Function(AddToCartError value)? addToCartError,
+    TResult Function(RecommendedFoodLoading value)? recommendedFoodLoading,
+    TResult Function(RecommendedFoodSuccess value)? recommendedFoodSuccess,
+    TResult Function(RecommendedFoodError value)? recommendedFoodError,
+    TResult Function(AddFavoriteLoading value)? addFavoriteLoading,
+    TResult Function(AddFavoriteSuccess value)? addFavoriteSuccess,
+    TResult Function(AddFavoriteError value)? addFavoriteError,
+    TResult Function(FavoritesLoading value)? favoritesLoading,
+    TResult Function(FavoritesSuccess value)? favoritesSuccess,
+    TResult Function(FavoritesError value)? favoritesError,
+    required TResult orElse(),
+  }) {
+    if (favoritesError != null) {
+      return favoritesError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class FavoritesError implements StoreState {
+  const factory FavoritesError(final String message) = _$FavoritesErrorImpl;
+
+  String get message;
+
+  /// Create a copy of StoreState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$FavoritesErrorImplCopyWith<_$FavoritesErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
 }
