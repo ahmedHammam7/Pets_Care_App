@@ -93,6 +93,13 @@ class DetailsScreenBody extends StatelessWidget {
                     WidgetsBinding.instance.addPostFrameCallback((_) async {
                       await context.pushNamed(Routes.cartScreen);
                     });
+                  } else if (state is AddFavoriteSuccess) {
+                    WidgetsBinding.instance.addPostFrameCallback((_) async {
+                      await context.pushNamedAndRemoveUntil(
+                          Routes.homeLayout,
+                          predicate: (route) => false,
+                          (route) => false);
+                    });
                   }
                   return PrimaryButton(
                     text: "Add to Cart",
