@@ -71,6 +71,9 @@ class _ChatBotScreenState extends State<ChatBotScreen> {
               Expanded(
                 flex: 15,
                 child: TextFormField(
+                  onFieldSubmitted: (value) async {
+                    await sendMessage();
+                  },
                   controller: _userMessage,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(

@@ -5,6 +5,7 @@ import 'package:pets_care_app/features/auth/login/data/models/login_response.dar
 import 'package:pets_care_app/features/auth/register/data/models/register_response.dart';
 import 'package:pets_care_app/features/cart/data/models/checkout_response.dart';
 import 'package:pets_care_app/features/cart/data/models/get_cart_response.dart';
+import 'package:pets_care_app/features/check/data/models/predict_response.dart';
 import 'package:pets_care_app/features/clinics/client/data/models/appoinments_owner_response.dart';
 import 'package:pets_care_app/features/clinics/client/data/models/get_all_clinics_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/appoinment_doc_response.dart';
@@ -144,4 +145,6 @@ abstract class ApiService {
   @GET(ApiConstant.favorites)
   Future<List<FavouriteResponse>> getAllFavorites(
       @Header('Authorization') String token);
+  @POST(ApiConstant.predict)
+  Future<PredictResponse> checkByAi(@Body() dynamic body);
 }

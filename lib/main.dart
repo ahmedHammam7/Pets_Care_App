@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pets_care_app/core/helper/constants.dart';
+import 'package:pets_care_app/core/helper/error_screen.dart';
 import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs.dart';
 import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dart';
 import 'package:pets_care_app/core/di/dependency_injection.dart';
@@ -7,6 +8,13 @@ import 'package:pets_care_app/pets_care_app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  ErrorWidget.builder = (FlutterErrorDetails details) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      home: ErrorScreen(errorDetails: details),
+    );
+  };
+
   await setupGetit();
   await checkLoggedIn();
   runApp(const PetsCareApp());

@@ -10,6 +10,8 @@ import 'package:pets_care_app/features/auth/register/data/repos/register_repo.da
 import 'package:pets_care_app/features/auth/register/logic/cubit/register_cubit.dart';
 import 'package:pets_care_app/features/cart/data/repos/cart_repo.dart';
 import 'package:pets_care_app/features/cart/logic/cubit/cart_cubit.dart';
+import 'package:pets_care_app/features/check/data/repos/check_repo.dart';
+import 'package:pets_care_app/features/check/logic/cubit/check_cubit.dart';
 import 'package:pets_care_app/features/clinics/client/data/repos/owner_clincs_repo.dart';
 import 'package:pets_care_app/features/clinics/client/logic/cubit/owner_clinics_cubit.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/repos/doctor_clinic_repo.dart';
@@ -56,4 +58,7 @@ Future<void> setupGetit() async {
   //cart
   getIt.registerLazySingleton<CartRepo>(() => CartRepo(getIt()));
   getIt.registerFactory<CartCubit>(() => CartCubit(getIt()));
+  //check
+  getIt.registerLazySingleton<CheckRepo>(() => CheckRepo(getIt()));
+  getIt.registerFactory<CheckCubit>(() => CheckCubit(getIt()));
 }

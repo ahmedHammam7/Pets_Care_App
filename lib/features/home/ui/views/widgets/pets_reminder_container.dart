@@ -45,7 +45,7 @@ class PetsReminderContainer extends StatelessWidget {
                     SizedBox(
                       width: 170.w,
                       child: Text(
-                        "Your ${state.pets[0].petName} will get Vacciniation at ${state.pets[0].vaccineTime}!",
+                        "Your ${state.pets[0].petName} will get Vacciniation at ${state.pets[0].vaccineTime} !",
                         style: AppTextStyles.homeContainerText,
                       ),
                     ),

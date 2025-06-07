@@ -20,4 +20,5 @@ class ApiConstant {
   static const String recommendedFood = "/pets/recommended-food";
   static const String addFavorite = "/favorites/toggle";
   static const String favorites = "/favorites";
+  static const String predict = "predict";
 }

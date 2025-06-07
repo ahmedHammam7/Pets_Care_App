@@ -1,28 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:pets_care_app/core/themes/text_styles.dart';
+import 'package:pets_care_app/features/check/ui/widgets/check_screen_body.dart';
 
 class CheckScreen extends StatelessWidget {
   const CheckScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.warning_amber_outlined,
-              size: 100.h,
-            ),
-            Text(
-              "Under development",
-              style: AppTextStyles.shopTitle,
-            )
-          ],
-        ),
-      ),
+    return const Scaffold(
+      body: CheckScreenBody(),
     );
   }
 }

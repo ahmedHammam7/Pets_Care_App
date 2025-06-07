@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pets_care_app/core/helper/no_internet_screen.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/di/dependency_injection.dart';
 import 'package:pets_care_app/features/add_pets/data/models/pet_response.dart';
@@ -16,6 +17,7 @@ import 'package:pets_care_app/features/cart/logic/cubit/cart_cubit.dart';
 import 'package:pets_care_app/features/cart/ui/views/cart_screen.dart';
 import 'package:pets_care_app/features/cart/ui/views/pick_order_screen.dart';
 import 'package:pets_care_app/features/chat_bot/ui/chat_bot_screen.dart';
+import 'package:pets_care_app/features/check/logic/cubit/check_cubit.dart';
 import 'package:pets_care_app/features/check/ui/check_screen.dart';
 import 'package:pets_care_app/features/clinics/client/data/models/appoinments_owner_response.dart';
 import 'package:pets_care_app/features/clinics/client/data/models/get_all_clinics_response.dart';
@@ -151,6 +153,9 @@ class AppRoutes {
               ),
               BlocProvider(
                 create: (context) => getIt<PetsCubit>()..getAllPets(),
+              ),
+              BlocProvider(
+                create: (context) => getIt<CheckCubit>(),
               ),
             ],
             child: const HomeLayout(),
@@ -330,6 +335,7 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (context) => const FavouriteScreen(),
         );
+
       default:
         return null;
     }

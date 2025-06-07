@@ -128,6 +128,17 @@ class _ManualAddPetsFormState extends State<ManualAddPetsForm> {
                     return null;
                   },
                 ),
+                verticalSpace(10),
+                AppTextField.outsideHint(
+                  hint: "ْCollar number",
+                  keyboardType: TextInputType.number,
+                  validator: (value) {
+                    if (value == null || value.isEmpty) {
+                      return "Please enter Collar number";
+                    }
+                    return null;
+                  },
+                ),
                 verticalSpace(20),
                 AppDropDownMenu(
                   hint: "Type",
