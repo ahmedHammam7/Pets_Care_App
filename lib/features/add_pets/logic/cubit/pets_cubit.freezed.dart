@@ -31,6 +31,12 @@ mixin _$PetsState {
     required TResult Function() updatePetLoading,
     required TResult Function() updatePetSuccess,
     required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -48,6 +54,12 @@ mixin _$PetsState {
     TResult? Function()? updatePetLoading,
     TResult? Function()? updatePetSuccess,
     TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -65,6 +77,12 @@ mixin _$PetsState {
     TResult Function()? updatePetLoading,
     TResult Function()? updatePetSuccess,
     TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -83,6 +101,16 @@ mixin _$PetsState {
     required TResult Function(UpdatePetLoading value) updatePetLoading,
     required TResult Function(UpdatePetSuccess value) updatePetSuccess,
     required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -100,6 +128,12 @@ mixin _$PetsState {
     TResult? Function(UpdatePetLoading value)? updatePetLoading,
     TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
   }) =>
       throw _privateConstructorUsedError;
   @optionalTypeArgs
@@ -117,6 +151,12 @@ mixin _$PetsState {
     TResult Function(UpdatePetLoading value)? updatePetLoading,
     TResult Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
     required TResult orElse(),
   }) =>
       throw _privateConstructorUsedError;
@@ -196,6 +236,12 @@ class _$InitialImpl implements _Initial {
     required TResult Function() updatePetLoading,
     required TResult Function() updatePetSuccess,
     required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
   }) {
     return initial();
   }
@@ -216,6 +262,12 @@ class _$InitialImpl implements _Initial {
     TResult? Function()? updatePetLoading,
     TResult? Function()? updatePetSuccess,
     TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
   }) {
     return initial?.call();
   }
@@ -236,6 +288,12 @@ class _$InitialImpl implements _Initial {
     TResult Function()? updatePetLoading,
     TResult Function()? updatePetSuccess,
     TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -260,6 +318,16 @@ class _$InitialImpl implements _Initial {
     required TResult Function(UpdatePetLoading value) updatePetLoading,
     required TResult Function(UpdatePetSuccess value) updatePetSuccess,
     required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
   }) {
     return initial(this);
   }
@@ -280,6 +348,12 @@ class _$InitialImpl implements _Initial {
     TResult? Function(UpdatePetLoading value)? updatePetLoading,
     TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
   }) {
     return initial?.call(this);
   }
@@ -300,6 +374,12 @@ class _$InitialImpl implements _Initial {
     TResult Function(UpdatePetLoading value)? updatePetLoading,
     TResult Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (initial != null) {
@@ -367,6 +447,12 @@ class _$GetAllPetsLoadingImpl implements GetAllPetsLoading {
     required TResult Function() updatePetLoading,
     required TResult Function() updatePetSuccess,
     required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
   }) {
     return getAllPetsLoading();
   }
@@ -387,6 +473,12 @@ class _$GetAllPetsLoadingImpl implements GetAllPetsLoading {
     TResult? Function()? updatePetLoading,
     TResult? Function()? updatePetSuccess,
     TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
   }) {
     return getAllPetsLoading?.call();
   }
@@ -407,6 +499,12 @@ class _$GetAllPetsLoadingImpl implements GetAllPetsLoading {
     TResult Function()? updatePetLoading,
     TResult Function()? updatePetSuccess,
     TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (getAllPetsLoading != null) {
@@ -431,6 +529,16 @@ class _$GetAllPetsLoadingImpl implements GetAllPetsLoading {
     required TResult Function(UpdatePetLoading value) updatePetLoading,
     required TResult Function(UpdatePetSuccess value) updatePetSuccess,
     required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
   }) {
     return getAllPetsLoading(this);
   }
@@ -451,6 +559,12 @@ class _$GetAllPetsLoadingImpl implements GetAllPetsLoading {
     TResult? Function(UpdatePetLoading value)? updatePetLoading,
     TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
   }) {
     return getAllPetsLoading?.call(this);
   }
@@ -471,6 +585,12 @@ class _$GetAllPetsLoadingImpl implements GetAllPetsLoading {
     TResult Function(UpdatePetLoading value)? updatePetLoading,
     TResult Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (getAllPetsLoading != null) {
@@ -572,6 +692,12 @@ class _$GetAllPetsSuccessImpl implements GetAllPetsSuccess {
     required TResult Function() updatePetLoading,
     required TResult Function() updatePetSuccess,
     required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
   }) {
     return getAllPetsSuccess(pets);
   }
@@ -592,6 +718,12 @@ class _$GetAllPetsSuccessImpl implements GetAllPetsSuccess {
     TResult? Function()? updatePetLoading,
     TResult? Function()? updatePetSuccess,
     TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
   }) {
     return getAllPetsSuccess?.call(pets);
   }
@@ -612,6 +744,12 @@ class _$GetAllPetsSuccessImpl implements GetAllPetsSuccess {
     TResult Function()? updatePetLoading,
     TResult Function()? updatePetSuccess,
     TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (getAllPetsSuccess != null) {
@@ -636,6 +774,16 @@ class _$GetAllPetsSuccessImpl implements GetAllPetsSuccess {
     required TResult Function(UpdatePetLoading value) updatePetLoading,
     required TResult Function(UpdatePetSuccess value) updatePetSuccess,
     required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
   }) {
     return getAllPetsSuccess(this);
   }
@@ -656,6 +804,12 @@ class _$GetAllPetsSuccessImpl implements GetAllPetsSuccess {
     TResult? Function(UpdatePetLoading value)? updatePetLoading,
     TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
   }) {
     return getAllPetsSuccess?.call(this);
   }
@@ -676,6 +830,12 @@ class _$GetAllPetsSuccessImpl implements GetAllPetsSuccess {
     TResult Function(UpdatePetLoading value)? updatePetLoading,
     TResult Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (getAllPetsSuccess != null) {
@@ -780,6 +940,12 @@ class _$GetAllPetsErrorImpl implements GetAllPetsError {
     required TResult Function() updatePetLoading,
     required TResult Function() updatePetSuccess,
     required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
   }) {
     return getAllPetsError(message);
   }
@@ -800,6 +966,12 @@ class _$GetAllPetsErrorImpl implements GetAllPetsError {
     TResult? Function()? updatePetLoading,
     TResult? Function()? updatePetSuccess,
     TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
   }) {
     return getAllPetsError?.call(message);
   }
@@ -820,6 +992,12 @@ class _$GetAllPetsErrorImpl implements GetAllPetsError {
     TResult Function()? updatePetLoading,
     TResult Function()? updatePetSuccess,
     TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (getAllPetsError != null) {
@@ -844,6 +1022,16 @@ class _$GetAllPetsErrorImpl implements GetAllPetsError {
     required TResult Function(UpdatePetLoading value) updatePetLoading,
     required TResult Function(UpdatePetSuccess value) updatePetSuccess,
     required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
   }) {
     return getAllPetsError(this);
   }
@@ -864,6 +1052,12 @@ class _$GetAllPetsErrorImpl implements GetAllPetsError {
     TResult? Function(UpdatePetLoading value)? updatePetLoading,
     TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
   }) {
     return getAllPetsError?.call(this);
   }
@@ -884,6 +1078,12 @@ class _$GetAllPetsErrorImpl implements GetAllPetsError {
     TResult Function(UpdatePetLoading value)? updatePetLoading,
     TResult Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (getAllPetsError != null) {
@@ -959,6 +1159,12 @@ class _$AddPetLoadingImpl implements AddPetLoading {
     required TResult Function() updatePetLoading,
     required TResult Function() updatePetSuccess,
     required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
   }) {
     return addPetLoading();
   }
@@ -979,6 +1185,12 @@ class _$AddPetLoadingImpl implements AddPetLoading {
     TResult? Function()? updatePetLoading,
     TResult? Function()? updatePetSuccess,
     TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
   }) {
     return addPetLoading?.call();
   }
@@ -999,6 +1211,12 @@ class _$AddPetLoadingImpl implements AddPetLoading {
     TResult Function()? updatePetLoading,
     TResult Function()? updatePetSuccess,
     TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (addPetLoading != null) {
@@ -1023,6 +1241,16 @@ class _$AddPetLoadingImpl implements AddPetLoading {
     required TResult Function(UpdatePetLoading value) updatePetLoading,
     required TResult Function(UpdatePetSuccess value) updatePetSuccess,
     required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
   }) {
     return addPetLoading(this);
   }
@@ -1043,6 +1271,12 @@ class _$AddPetLoadingImpl implements AddPetLoading {
     TResult? Function(UpdatePetLoading value)? updatePetLoading,
     TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
   }) {
     return addPetLoading?.call(this);
   }
@@ -1063,6 +1297,12 @@ class _$AddPetLoadingImpl implements AddPetLoading {
     TResult Function(UpdatePetLoading value)? updatePetLoading,
     TResult Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (addPetLoading != null) {
@@ -1130,6 +1370,12 @@ class _$AddPetSuccessImpl implements AddPetSuccess {
     required TResult Function() updatePetLoading,
     required TResult Function() updatePetSuccess,
     required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
   }) {
     return addPetSuccess();
   }
@@ -1150,6 +1396,12 @@ class _$AddPetSuccessImpl implements AddPetSuccess {
     TResult? Function()? updatePetLoading,
     TResult? Function()? updatePetSuccess,
     TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
   }) {
     return addPetSuccess?.call();
   }
@@ -1170,6 +1422,12 @@ class _$AddPetSuccessImpl implements AddPetSuccess {
     TResult Function()? updatePetLoading,
     TResult Function()? updatePetSuccess,
     TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (addPetSuccess != null) {
@@ -1194,6 +1452,16 @@ class _$AddPetSuccessImpl implements AddPetSuccess {
     required TResult Function(UpdatePetLoading value) updatePetLoading,
     required TResult Function(UpdatePetSuccess value) updatePetSuccess,
     required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
   }) {
     return addPetSuccess(this);
   }
@@ -1214,6 +1482,12 @@ class _$AddPetSuccessImpl implements AddPetSuccess {
     TResult? Function(UpdatePetLoading value)? updatePetLoading,
     TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
   }) {
     return addPetSuccess?.call(this);
   }
@@ -1234,6 +1508,12 @@ class _$AddPetSuccessImpl implements AddPetSuccess {
     TResult Function(UpdatePetLoading value)? updatePetLoading,
     TResult Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (addPetSuccess != null) {
@@ -1328,6 +1608,12 @@ class _$AddPetErrorImpl implements AddPetError {
     required TResult Function() updatePetLoading,
     required TResult Function() updatePetSuccess,
     required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
   }) {
     return addPetError(message);
   }
@@ -1348,6 +1634,12 @@ class _$AddPetErrorImpl implements AddPetError {
     TResult? Function()? updatePetLoading,
     TResult? Function()? updatePetSuccess,
     TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
   }) {
     return addPetError?.call(message);
   }
@@ -1368,6 +1660,12 @@ class _$AddPetErrorImpl implements AddPetError {
     TResult Function()? updatePetLoading,
     TResult Function()? updatePetSuccess,
     TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (addPetError != null) {
@@ -1392,6 +1690,16 @@ class _$AddPetErrorImpl implements AddPetError {
     required TResult Function(UpdatePetLoading value) updatePetLoading,
     required TResult Function(UpdatePetSuccess value) updatePetSuccess,
     required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
   }) {
     return addPetError(this);
   }
@@ -1412,6 +1720,12 @@ class _$AddPetErrorImpl implements AddPetError {
     TResult? Function(UpdatePetLoading value)? updatePetLoading,
     TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
   }) {
     return addPetError?.call(this);
   }
@@ -1432,6 +1746,12 @@ class _$AddPetErrorImpl implements AddPetError {
     TResult Function(UpdatePetLoading value)? updatePetLoading,
     TResult Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (addPetError != null) {
@@ -1507,6 +1827,12 @@ class _$DeletePetLoadingImpl implements DeletePetLoading {
     required TResult Function() updatePetLoading,
     required TResult Function() updatePetSuccess,
     required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
   }) {
     return deletePetLoading();
   }
@@ -1527,6 +1853,12 @@ class _$DeletePetLoadingImpl implements DeletePetLoading {
     TResult? Function()? updatePetLoading,
     TResult? Function()? updatePetSuccess,
     TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
   }) {
     return deletePetLoading?.call();
   }
@@ -1547,6 +1879,12 @@ class _$DeletePetLoadingImpl implements DeletePetLoading {
     TResult Function()? updatePetLoading,
     TResult Function()? updatePetSuccess,
     TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (deletePetLoading != null) {
@@ -1571,6 +1909,16 @@ class _$DeletePetLoadingImpl implements DeletePetLoading {
     required TResult Function(UpdatePetLoading value) updatePetLoading,
     required TResult Function(UpdatePetSuccess value) updatePetSuccess,
     required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
   }) {
     return deletePetLoading(this);
   }
@@ -1591,6 +1939,12 @@ class _$DeletePetLoadingImpl implements DeletePetLoading {
     TResult? Function(UpdatePetLoading value)? updatePetLoading,
     TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
   }) {
     return deletePetLoading?.call(this);
   }
@@ -1611,6 +1965,12 @@ class _$DeletePetLoadingImpl implements DeletePetLoading {
     TResult Function(UpdatePetLoading value)? updatePetLoading,
     TResult Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (deletePetLoading != null) {
@@ -1678,6 +2038,12 @@ class _$DeletePetSuccessImpl implements DeletePetSuccess {
     required TResult Function() updatePetLoading,
     required TResult Function() updatePetSuccess,
     required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
   }) {
     return deletePetSuccess();
   }
@@ -1698,6 +2064,12 @@ class _$DeletePetSuccessImpl implements DeletePetSuccess {
     TResult? Function()? updatePetLoading,
     TResult? Function()? updatePetSuccess,
     TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
   }) {
     return deletePetSuccess?.call();
   }
@@ -1718,6 +2090,12 @@ class _$DeletePetSuccessImpl implements DeletePetSuccess {
     TResult Function()? updatePetLoading,
     TResult Function()? updatePetSuccess,
     TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (deletePetSuccess != null) {
@@ -1742,6 +2120,16 @@ class _$DeletePetSuccessImpl implements DeletePetSuccess {
     required TResult Function(UpdatePetLoading value) updatePetLoading,
     required TResult Function(UpdatePetSuccess value) updatePetSuccess,
     required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
   }) {
     return deletePetSuccess(this);
   }
@@ -1762,6 +2150,12 @@ class _$DeletePetSuccessImpl implements DeletePetSuccess {
     TResult? Function(UpdatePetLoading value)? updatePetLoading,
     TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
   }) {
     return deletePetSuccess?.call(this);
   }
@@ -1782,6 +2176,12 @@ class _$DeletePetSuccessImpl implements DeletePetSuccess {
     TResult Function(UpdatePetLoading value)? updatePetLoading,
     TResult Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (deletePetSuccess != null) {
@@ -1877,6 +2277,12 @@ class _$DeletePetErrorImpl implements DeletePetError {
     required TResult Function() updatePetLoading,
     required TResult Function() updatePetSuccess,
     required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
   }) {
     return deletePetError(message);
   }
@@ -1897,6 +2303,12 @@ class _$DeletePetErrorImpl implements DeletePetError {
     TResult? Function()? updatePetLoading,
     TResult? Function()? updatePetSuccess,
     TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
   }) {
     return deletePetError?.call(message);
   }
@@ -1917,6 +2329,12 @@ class _$DeletePetErrorImpl implements DeletePetError {
     TResult Function()? updatePetLoading,
     TResult Function()? updatePetSuccess,
     TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (deletePetError != null) {
@@ -1941,6 +2359,16 @@ class _$DeletePetErrorImpl implements DeletePetError {
     required TResult Function(UpdatePetLoading value) updatePetLoading,
     required TResult Function(UpdatePetSuccess value) updatePetSuccess,
     required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
   }) {
     return deletePetError(this);
   }
@@ -1961,6 +2389,12 @@ class _$DeletePetErrorImpl implements DeletePetError {
     TResult? Function(UpdatePetLoading value)? updatePetLoading,
     TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
   }) {
     return deletePetError?.call(this);
   }
@@ -1981,6 +2415,12 @@ class _$DeletePetErrorImpl implements DeletePetError {
     TResult Function(UpdatePetLoading value)? updatePetLoading,
     TResult Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (deletePetError != null) {
@@ -2056,6 +2496,12 @@ class _$UpdatePetLoadingImpl implements UpdatePetLoading {
     required TResult Function() updatePetLoading,
     required TResult Function() updatePetSuccess,
     required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
   }) {
     return updatePetLoading();
   }
@@ -2076,6 +2522,12 @@ class _$UpdatePetLoadingImpl implements UpdatePetLoading {
     TResult? Function()? updatePetLoading,
     TResult? Function()? updatePetSuccess,
     TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
   }) {
     return updatePetLoading?.call();
   }
@@ -2096,6 +2548,12 @@ class _$UpdatePetLoadingImpl implements UpdatePetLoading {
     TResult Function()? updatePetLoading,
     TResult Function()? updatePetSuccess,
     TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (updatePetLoading != null) {
@@ -2120,6 +2578,16 @@ class _$UpdatePetLoadingImpl implements UpdatePetLoading {
     required TResult Function(UpdatePetLoading value) updatePetLoading,
     required TResult Function(UpdatePetSuccess value) updatePetSuccess,
     required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
   }) {
     return updatePetLoading(this);
   }
@@ -2140,6 +2608,12 @@ class _$UpdatePetLoadingImpl implements UpdatePetLoading {
     TResult? Function(UpdatePetLoading value)? updatePetLoading,
     TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
   }) {
     return updatePetLoading?.call(this);
   }
@@ -2160,6 +2634,12 @@ class _$UpdatePetLoadingImpl implements UpdatePetLoading {
     TResult Function(UpdatePetLoading value)? updatePetLoading,
     TResult Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (updatePetLoading != null) {
@@ -2227,6 +2707,12 @@ class _$UpdatePetSuccessImpl implements UpdatePetSuccess {
     required TResult Function() updatePetLoading,
     required TResult Function() updatePetSuccess,
     required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
   }) {
     return updatePetSuccess();
   }
@@ -2247,6 +2733,12 @@ class _$UpdatePetSuccessImpl implements UpdatePetSuccess {
     TResult? Function()? updatePetLoading,
     TResult? Function()? updatePetSuccess,
     TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
   }) {
     return updatePetSuccess?.call();
   }
@@ -2267,6 +2759,12 @@ class _$UpdatePetSuccessImpl implements UpdatePetSuccess {
     TResult Function()? updatePetLoading,
     TResult Function()? updatePetSuccess,
     TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (updatePetSuccess != null) {
@@ -2291,6 +2789,16 @@ class _$UpdatePetSuccessImpl implements UpdatePetSuccess {
     required TResult Function(UpdatePetLoading value) updatePetLoading,
     required TResult Function(UpdatePetSuccess value) updatePetSuccess,
     required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
   }) {
     return updatePetSuccess(this);
   }
@@ -2311,6 +2819,12 @@ class _$UpdatePetSuccessImpl implements UpdatePetSuccess {
     TResult? Function(UpdatePetLoading value)? updatePetLoading,
     TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
   }) {
     return updatePetSuccess?.call(this);
   }
@@ -2331,6 +2845,12 @@ class _$UpdatePetSuccessImpl implements UpdatePetSuccess {
     TResult Function(UpdatePetLoading value)? updatePetLoading,
     TResult Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (updatePetSuccess != null) {
@@ -2426,6 +2946,12 @@ class _$UpdatePetErrorImpl implements UpdatePetError {
     required TResult Function() updatePetLoading,
     required TResult Function() updatePetSuccess,
     required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
   }) {
     return updatePetError(message);
   }
@@ -2446,6 +2972,12 @@ class _$UpdatePetErrorImpl implements UpdatePetError {
     TResult? Function()? updatePetLoading,
     TResult? Function()? updatePetSuccess,
     TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
   }) {
     return updatePetError?.call(message);
   }
@@ -2466,6 +2998,12 @@ class _$UpdatePetErrorImpl implements UpdatePetError {
     TResult Function()? updatePetLoading,
     TResult Function()? updatePetSuccess,
     TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (updatePetError != null) {
@@ -2490,6 +3028,16 @@ class _$UpdatePetErrorImpl implements UpdatePetError {
     required TResult Function(UpdatePetLoading value) updatePetLoading,
     required TResult Function(UpdatePetSuccess value) updatePetSuccess,
     required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
   }) {
     return updatePetError(this);
   }
@@ -2510,6 +3058,12 @@ class _$UpdatePetErrorImpl implements UpdatePetError {
     TResult? Function(UpdatePetLoading value)? updatePetLoading,
     TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
   }) {
     return updatePetError?.call(this);
   }
@@ -2530,6 +3084,12 @@ class _$UpdatePetErrorImpl implements UpdatePetError {
     TResult Function(UpdatePetLoading value)? updatePetLoading,
     TResult Function(UpdatePetSuccess value)? updatePetSuccess,
     TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
     required TResult orElse(),
   }) {
     if (updatePetError != null) {
@@ -2548,5 +3108,1427 @@ abstract class UpdatePetError implements PetsState {
   /// with the given fields replaced by the non-null parameter values.
   @JsonKey(includeFromJson: false, includeToJson: false)
   _$$UpdatePetErrorImplCopyWith<_$UpdatePetErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetPetActivityLoadingImplCopyWith<$Res> {
+  factory _$$GetPetActivityLoadingImplCopyWith(
+          _$GetPetActivityLoadingImpl value,
+          $Res Function(_$GetPetActivityLoadingImpl) then) =
+      __$$GetPetActivityLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetPetActivityLoadingImplCopyWithImpl<$Res>
+    extends _$PetsStateCopyWithImpl<$Res, _$GetPetActivityLoadingImpl>
+    implements _$$GetPetActivityLoadingImplCopyWith<$Res> {
+  __$$GetPetActivityLoadingImplCopyWithImpl(_$GetPetActivityLoadingImpl _value,
+      $Res Function(_$GetPetActivityLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PetsState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$GetPetActivityLoadingImpl implements GetPetActivityLoading {
+  const _$GetPetActivityLoadingImpl();
+
+  @override
+  String toString() {
+    return 'PetsState.getPetActivityLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetPetActivityLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getAllPetsLoading,
+    required TResult Function(List<PetResponse> pets) getAllPetsSuccess,
+    required TResult Function(String message) getAllPetsError,
+    required TResult Function() addPetLoading,
+    required TResult Function() addPetSuccess,
+    required TResult Function(String message) addPetError,
+    required TResult Function() deletePetLoading,
+    required TResult Function() deletePetSuccess,
+    required TResult Function(String message) deletePetError,
+    required TResult Function() updatePetLoading,
+    required TResult Function() updatePetSuccess,
+    required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
+  }) {
+    return getPetActivityLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getAllPetsLoading,
+    TResult? Function(List<PetResponse> pets)? getAllPetsSuccess,
+    TResult? Function(String message)? getAllPetsError,
+    TResult? Function()? addPetLoading,
+    TResult? Function()? addPetSuccess,
+    TResult? Function(String message)? addPetError,
+    TResult? Function()? deletePetLoading,
+    TResult? Function()? deletePetSuccess,
+    TResult? Function(String message)? deletePetError,
+    TResult? Function()? updatePetLoading,
+    TResult? Function()? updatePetSuccess,
+    TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
+  }) {
+    return getPetActivityLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getAllPetsLoading,
+    TResult Function(List<PetResponse> pets)? getAllPetsSuccess,
+    TResult Function(String message)? getAllPetsError,
+    TResult Function()? addPetLoading,
+    TResult Function()? addPetSuccess,
+    TResult Function(String message)? addPetError,
+    TResult Function()? deletePetLoading,
+    TResult Function()? deletePetSuccess,
+    TResult Function(String message)? deletePetError,
+    TResult Function()? updatePetLoading,
+    TResult Function()? updatePetSuccess,
+    TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
+    required TResult orElse(),
+  }) {
+    if (getPetActivityLoading != null) {
+      return getPetActivityLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetAllPetsLoading value) getAllPetsLoading,
+    required TResult Function(GetAllPetsSuccess value) getAllPetsSuccess,
+    required TResult Function(GetAllPetsError value) getAllPetsError,
+    required TResult Function(AddPetLoading value) addPetLoading,
+    required TResult Function(AddPetSuccess value) addPetSuccess,
+    required TResult Function(AddPetError value) addPetError,
+    required TResult Function(DeletePetLoading value) deletePetLoading,
+    required TResult Function(DeletePetSuccess value) deletePetSuccess,
+    required TResult Function(DeletePetError value) deletePetError,
+    required TResult Function(UpdatePetLoading value) updatePetLoading,
+    required TResult Function(UpdatePetSuccess value) updatePetSuccess,
+    required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
+  }) {
+    return getPetActivityLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetAllPetsLoading value)? getAllPetsLoading,
+    TResult? Function(GetAllPetsSuccess value)? getAllPetsSuccess,
+    TResult? Function(GetAllPetsError value)? getAllPetsError,
+    TResult? Function(AddPetLoading value)? addPetLoading,
+    TResult? Function(AddPetSuccess value)? addPetSuccess,
+    TResult? Function(AddPetError value)? addPetError,
+    TResult? Function(DeletePetLoading value)? deletePetLoading,
+    TResult? Function(DeletePetSuccess value)? deletePetSuccess,
+    TResult? Function(DeletePetError value)? deletePetError,
+    TResult? Function(UpdatePetLoading value)? updatePetLoading,
+    TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
+    TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
+  }) {
+    return getPetActivityLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetAllPetsLoading value)? getAllPetsLoading,
+    TResult Function(GetAllPetsSuccess value)? getAllPetsSuccess,
+    TResult Function(GetAllPetsError value)? getAllPetsError,
+    TResult Function(AddPetLoading value)? addPetLoading,
+    TResult Function(AddPetSuccess value)? addPetSuccess,
+    TResult Function(AddPetError value)? addPetError,
+    TResult Function(DeletePetLoading value)? deletePetLoading,
+    TResult Function(DeletePetSuccess value)? deletePetSuccess,
+    TResult Function(DeletePetError value)? deletePetError,
+    TResult Function(UpdatePetLoading value)? updatePetLoading,
+    TResult Function(UpdatePetSuccess value)? updatePetSuccess,
+    TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
+    required TResult orElse(),
+  }) {
+    if (getPetActivityLoading != null) {
+      return getPetActivityLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetPetActivityLoading implements PetsState {
+  const factory GetPetActivityLoading() = _$GetPetActivityLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$GetPetActivitySuccessImplCopyWith<$Res> {
+  factory _$$GetPetActivitySuccessImplCopyWith(
+          _$GetPetActivitySuccessImpl value,
+          $Res Function(_$GetPetActivitySuccessImpl) then) =
+      __$$GetPetActivitySuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({ActivityResponse activity});
+}
+
+/// @nodoc
+class __$$GetPetActivitySuccessImplCopyWithImpl<$Res>
+    extends _$PetsStateCopyWithImpl<$Res, _$GetPetActivitySuccessImpl>
+    implements _$$GetPetActivitySuccessImplCopyWith<$Res> {
+  __$$GetPetActivitySuccessImplCopyWithImpl(_$GetPetActivitySuccessImpl _value,
+      $Res Function(_$GetPetActivitySuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PetsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? activity = null,
+  }) {
+    return _then(_$GetPetActivitySuccessImpl(
+      null == activity
+          ? _value.activity
+          : activity // ignore: cast_nullable_to_non_nullable
+              as ActivityResponse,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetPetActivitySuccessImpl implements GetPetActivitySuccess {
+  const _$GetPetActivitySuccessImpl(this.activity);
+
+  @override
+  final ActivityResponse activity;
+
+  @override
+  String toString() {
+    return 'PetsState.getPetActivitySuccess(activity: $activity)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetPetActivitySuccessImpl &&
+            (identical(other.activity, activity) ||
+                other.activity == activity));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, activity);
+
+  /// Create a copy of PetsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetPetActivitySuccessImplCopyWith<_$GetPetActivitySuccessImpl>
+      get copyWith => __$$GetPetActivitySuccessImplCopyWithImpl<
+          _$GetPetActivitySuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getAllPetsLoading,
+    required TResult Function(List<PetResponse> pets) getAllPetsSuccess,
+    required TResult Function(String message) getAllPetsError,
+    required TResult Function() addPetLoading,
+    required TResult Function() addPetSuccess,
+    required TResult Function(String message) addPetError,
+    required TResult Function() deletePetLoading,
+    required TResult Function() deletePetSuccess,
+    required TResult Function(String message) deletePetError,
+    required TResult Function() updatePetLoading,
+    required TResult Function() updatePetSuccess,
+    required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
+  }) {
+    return getPetActivitySuccess(activity);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getAllPetsLoading,
+    TResult? Function(List<PetResponse> pets)? getAllPetsSuccess,
+    TResult? Function(String message)? getAllPetsError,
+    TResult? Function()? addPetLoading,
+    TResult? Function()? addPetSuccess,
+    TResult? Function(String message)? addPetError,
+    TResult? Function()? deletePetLoading,
+    TResult? Function()? deletePetSuccess,
+    TResult? Function(String message)? deletePetError,
+    TResult? Function()? updatePetLoading,
+    TResult? Function()? updatePetSuccess,
+    TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
+  }) {
+    return getPetActivitySuccess?.call(activity);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getAllPetsLoading,
+    TResult Function(List<PetResponse> pets)? getAllPetsSuccess,
+    TResult Function(String message)? getAllPetsError,
+    TResult Function()? addPetLoading,
+    TResult Function()? addPetSuccess,
+    TResult Function(String message)? addPetError,
+    TResult Function()? deletePetLoading,
+    TResult Function()? deletePetSuccess,
+    TResult Function(String message)? deletePetError,
+    TResult Function()? updatePetLoading,
+    TResult Function()? updatePetSuccess,
+    TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
+    required TResult orElse(),
+  }) {
+    if (getPetActivitySuccess != null) {
+      return getPetActivitySuccess(activity);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetAllPetsLoading value) getAllPetsLoading,
+    required TResult Function(GetAllPetsSuccess value) getAllPetsSuccess,
+    required TResult Function(GetAllPetsError value) getAllPetsError,
+    required TResult Function(AddPetLoading value) addPetLoading,
+    required TResult Function(AddPetSuccess value) addPetSuccess,
+    required TResult Function(AddPetError value) addPetError,
+    required TResult Function(DeletePetLoading value) deletePetLoading,
+    required TResult Function(DeletePetSuccess value) deletePetSuccess,
+    required TResult Function(DeletePetError value) deletePetError,
+    required TResult Function(UpdatePetLoading value) updatePetLoading,
+    required TResult Function(UpdatePetSuccess value) updatePetSuccess,
+    required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
+  }) {
+    return getPetActivitySuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetAllPetsLoading value)? getAllPetsLoading,
+    TResult? Function(GetAllPetsSuccess value)? getAllPetsSuccess,
+    TResult? Function(GetAllPetsError value)? getAllPetsError,
+    TResult? Function(AddPetLoading value)? addPetLoading,
+    TResult? Function(AddPetSuccess value)? addPetSuccess,
+    TResult? Function(AddPetError value)? addPetError,
+    TResult? Function(DeletePetLoading value)? deletePetLoading,
+    TResult? Function(DeletePetSuccess value)? deletePetSuccess,
+    TResult? Function(DeletePetError value)? deletePetError,
+    TResult? Function(UpdatePetLoading value)? updatePetLoading,
+    TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
+    TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
+  }) {
+    return getPetActivitySuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetAllPetsLoading value)? getAllPetsLoading,
+    TResult Function(GetAllPetsSuccess value)? getAllPetsSuccess,
+    TResult Function(GetAllPetsError value)? getAllPetsError,
+    TResult Function(AddPetLoading value)? addPetLoading,
+    TResult Function(AddPetSuccess value)? addPetSuccess,
+    TResult Function(AddPetError value)? addPetError,
+    TResult Function(DeletePetLoading value)? deletePetLoading,
+    TResult Function(DeletePetSuccess value)? deletePetSuccess,
+    TResult Function(DeletePetError value)? deletePetError,
+    TResult Function(UpdatePetLoading value)? updatePetLoading,
+    TResult Function(UpdatePetSuccess value)? updatePetSuccess,
+    TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
+    required TResult orElse(),
+  }) {
+    if (getPetActivitySuccess != null) {
+      return getPetActivitySuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetPetActivitySuccess implements PetsState {
+  const factory GetPetActivitySuccess(final ActivityResponse activity) =
+      _$GetPetActivitySuccessImpl;
+
+  ActivityResponse get activity;
+
+  /// Create a copy of PetsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetPetActivitySuccessImplCopyWith<_$GetPetActivitySuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetPetActivityErrorImplCopyWith<$Res> {
+  factory _$$GetPetActivityErrorImplCopyWith(_$GetPetActivityErrorImpl value,
+          $Res Function(_$GetPetActivityErrorImpl) then) =
+      __$$GetPetActivityErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$GetPetActivityErrorImplCopyWithImpl<$Res>
+    extends _$PetsStateCopyWithImpl<$Res, _$GetPetActivityErrorImpl>
+    implements _$$GetPetActivityErrorImplCopyWith<$Res> {
+  __$$GetPetActivityErrorImplCopyWithImpl(_$GetPetActivityErrorImpl _value,
+      $Res Function(_$GetPetActivityErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PetsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$GetPetActivityErrorImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetPetActivityErrorImpl implements GetPetActivityError {
+  const _$GetPetActivityErrorImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'PetsState.getPetActivityError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetPetActivityErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of PetsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetPetActivityErrorImplCopyWith<_$GetPetActivityErrorImpl> get copyWith =>
+      __$$GetPetActivityErrorImplCopyWithImpl<_$GetPetActivityErrorImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getAllPetsLoading,
+    required TResult Function(List<PetResponse> pets) getAllPetsSuccess,
+    required TResult Function(String message) getAllPetsError,
+    required TResult Function() addPetLoading,
+    required TResult Function() addPetSuccess,
+    required TResult Function(String message) addPetError,
+    required TResult Function() deletePetLoading,
+    required TResult Function() deletePetSuccess,
+    required TResult Function(String message) deletePetError,
+    required TResult Function() updatePetLoading,
+    required TResult Function() updatePetSuccess,
+    required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
+  }) {
+    return getPetActivityError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getAllPetsLoading,
+    TResult? Function(List<PetResponse> pets)? getAllPetsSuccess,
+    TResult? Function(String message)? getAllPetsError,
+    TResult? Function()? addPetLoading,
+    TResult? Function()? addPetSuccess,
+    TResult? Function(String message)? addPetError,
+    TResult? Function()? deletePetLoading,
+    TResult? Function()? deletePetSuccess,
+    TResult? Function(String message)? deletePetError,
+    TResult? Function()? updatePetLoading,
+    TResult? Function()? updatePetSuccess,
+    TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
+  }) {
+    return getPetActivityError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getAllPetsLoading,
+    TResult Function(List<PetResponse> pets)? getAllPetsSuccess,
+    TResult Function(String message)? getAllPetsError,
+    TResult Function()? addPetLoading,
+    TResult Function()? addPetSuccess,
+    TResult Function(String message)? addPetError,
+    TResult Function()? deletePetLoading,
+    TResult Function()? deletePetSuccess,
+    TResult Function(String message)? deletePetError,
+    TResult Function()? updatePetLoading,
+    TResult Function()? updatePetSuccess,
+    TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
+    required TResult orElse(),
+  }) {
+    if (getPetActivityError != null) {
+      return getPetActivityError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetAllPetsLoading value) getAllPetsLoading,
+    required TResult Function(GetAllPetsSuccess value) getAllPetsSuccess,
+    required TResult Function(GetAllPetsError value) getAllPetsError,
+    required TResult Function(AddPetLoading value) addPetLoading,
+    required TResult Function(AddPetSuccess value) addPetSuccess,
+    required TResult Function(AddPetError value) addPetError,
+    required TResult Function(DeletePetLoading value) deletePetLoading,
+    required TResult Function(DeletePetSuccess value) deletePetSuccess,
+    required TResult Function(DeletePetError value) deletePetError,
+    required TResult Function(UpdatePetLoading value) updatePetLoading,
+    required TResult Function(UpdatePetSuccess value) updatePetSuccess,
+    required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
+  }) {
+    return getPetActivityError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetAllPetsLoading value)? getAllPetsLoading,
+    TResult? Function(GetAllPetsSuccess value)? getAllPetsSuccess,
+    TResult? Function(GetAllPetsError value)? getAllPetsError,
+    TResult? Function(AddPetLoading value)? addPetLoading,
+    TResult? Function(AddPetSuccess value)? addPetSuccess,
+    TResult? Function(AddPetError value)? addPetError,
+    TResult? Function(DeletePetLoading value)? deletePetLoading,
+    TResult? Function(DeletePetSuccess value)? deletePetSuccess,
+    TResult? Function(DeletePetError value)? deletePetError,
+    TResult? Function(UpdatePetLoading value)? updatePetLoading,
+    TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
+    TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
+  }) {
+    return getPetActivityError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetAllPetsLoading value)? getAllPetsLoading,
+    TResult Function(GetAllPetsSuccess value)? getAllPetsSuccess,
+    TResult Function(GetAllPetsError value)? getAllPetsError,
+    TResult Function(AddPetLoading value)? addPetLoading,
+    TResult Function(AddPetSuccess value)? addPetSuccess,
+    TResult Function(AddPetError value)? addPetError,
+    TResult Function(DeletePetLoading value)? deletePetLoading,
+    TResult Function(DeletePetSuccess value)? deletePetSuccess,
+    TResult Function(DeletePetError value)? deletePetError,
+    TResult Function(UpdatePetLoading value)? updatePetLoading,
+    TResult Function(UpdatePetSuccess value)? updatePetSuccess,
+    TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
+    required TResult orElse(),
+  }) {
+    if (getPetActivityError != null) {
+      return getPetActivityError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetPetActivityError implements PetsState {
+  const factory GetPetActivityError(final String message) =
+      _$GetPetActivityErrorImpl;
+
+  String get message;
+
+  /// Create a copy of PetsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetPetActivityErrorImplCopyWith<_$GetPetActivityErrorImpl> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetPetLocationLoadingImplCopyWith<$Res> {
+  factory _$$GetPetLocationLoadingImplCopyWith(
+          _$GetPetLocationLoadingImpl value,
+          $Res Function(_$GetPetLocationLoadingImpl) then) =
+      __$$GetPetLocationLoadingImplCopyWithImpl<$Res>;
+}
+
+/// @nodoc
+class __$$GetPetLocationLoadingImplCopyWithImpl<$Res>
+    extends _$PetsStateCopyWithImpl<$Res, _$GetPetLocationLoadingImpl>
+    implements _$$GetPetLocationLoadingImplCopyWith<$Res> {
+  __$$GetPetLocationLoadingImplCopyWithImpl(_$GetPetLocationLoadingImpl _value,
+      $Res Function(_$GetPetLocationLoadingImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PetsState
+  /// with the given fields replaced by the non-null parameter values.
+}
+
+/// @nodoc
+
+class _$GetPetLocationLoadingImpl implements GetPetLocationLoading {
+  const _$GetPetLocationLoadingImpl();
+
+  @override
+  String toString() {
+    return 'PetsState.getPetLocationLoading()';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetPetLocationLoadingImpl);
+  }
+
+  @override
+  int get hashCode => runtimeType.hashCode;
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getAllPetsLoading,
+    required TResult Function(List<PetResponse> pets) getAllPetsSuccess,
+    required TResult Function(String message) getAllPetsError,
+    required TResult Function() addPetLoading,
+    required TResult Function() addPetSuccess,
+    required TResult Function(String message) addPetError,
+    required TResult Function() deletePetLoading,
+    required TResult Function() deletePetSuccess,
+    required TResult Function(String message) deletePetError,
+    required TResult Function() updatePetLoading,
+    required TResult Function() updatePetSuccess,
+    required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
+  }) {
+    return getPetLocationLoading();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getAllPetsLoading,
+    TResult? Function(List<PetResponse> pets)? getAllPetsSuccess,
+    TResult? Function(String message)? getAllPetsError,
+    TResult? Function()? addPetLoading,
+    TResult? Function()? addPetSuccess,
+    TResult? Function(String message)? addPetError,
+    TResult? Function()? deletePetLoading,
+    TResult? Function()? deletePetSuccess,
+    TResult? Function(String message)? deletePetError,
+    TResult? Function()? updatePetLoading,
+    TResult? Function()? updatePetSuccess,
+    TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
+  }) {
+    return getPetLocationLoading?.call();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getAllPetsLoading,
+    TResult Function(List<PetResponse> pets)? getAllPetsSuccess,
+    TResult Function(String message)? getAllPetsError,
+    TResult Function()? addPetLoading,
+    TResult Function()? addPetSuccess,
+    TResult Function(String message)? addPetError,
+    TResult Function()? deletePetLoading,
+    TResult Function()? deletePetSuccess,
+    TResult Function(String message)? deletePetError,
+    TResult Function()? updatePetLoading,
+    TResult Function()? updatePetSuccess,
+    TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
+    required TResult orElse(),
+  }) {
+    if (getPetLocationLoading != null) {
+      return getPetLocationLoading();
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetAllPetsLoading value) getAllPetsLoading,
+    required TResult Function(GetAllPetsSuccess value) getAllPetsSuccess,
+    required TResult Function(GetAllPetsError value) getAllPetsError,
+    required TResult Function(AddPetLoading value) addPetLoading,
+    required TResult Function(AddPetSuccess value) addPetSuccess,
+    required TResult Function(AddPetError value) addPetError,
+    required TResult Function(DeletePetLoading value) deletePetLoading,
+    required TResult Function(DeletePetSuccess value) deletePetSuccess,
+    required TResult Function(DeletePetError value) deletePetError,
+    required TResult Function(UpdatePetLoading value) updatePetLoading,
+    required TResult Function(UpdatePetSuccess value) updatePetSuccess,
+    required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
+  }) {
+    return getPetLocationLoading(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetAllPetsLoading value)? getAllPetsLoading,
+    TResult? Function(GetAllPetsSuccess value)? getAllPetsSuccess,
+    TResult? Function(GetAllPetsError value)? getAllPetsError,
+    TResult? Function(AddPetLoading value)? addPetLoading,
+    TResult? Function(AddPetSuccess value)? addPetSuccess,
+    TResult? Function(AddPetError value)? addPetError,
+    TResult? Function(DeletePetLoading value)? deletePetLoading,
+    TResult? Function(DeletePetSuccess value)? deletePetSuccess,
+    TResult? Function(DeletePetError value)? deletePetError,
+    TResult? Function(UpdatePetLoading value)? updatePetLoading,
+    TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
+    TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
+  }) {
+    return getPetLocationLoading?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetAllPetsLoading value)? getAllPetsLoading,
+    TResult Function(GetAllPetsSuccess value)? getAllPetsSuccess,
+    TResult Function(GetAllPetsError value)? getAllPetsError,
+    TResult Function(AddPetLoading value)? addPetLoading,
+    TResult Function(AddPetSuccess value)? addPetSuccess,
+    TResult Function(AddPetError value)? addPetError,
+    TResult Function(DeletePetLoading value)? deletePetLoading,
+    TResult Function(DeletePetSuccess value)? deletePetSuccess,
+    TResult Function(DeletePetError value)? deletePetError,
+    TResult Function(UpdatePetLoading value)? updatePetLoading,
+    TResult Function(UpdatePetSuccess value)? updatePetSuccess,
+    TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
+    required TResult orElse(),
+  }) {
+    if (getPetLocationLoading != null) {
+      return getPetLocationLoading(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetPetLocationLoading implements PetsState {
+  const factory GetPetLocationLoading() = _$GetPetLocationLoadingImpl;
+}
+
+/// @nodoc
+abstract class _$$GetPetLocationSuccessImplCopyWith<$Res> {
+  factory _$$GetPetLocationSuccessImplCopyWith(
+          _$GetPetLocationSuccessImpl value,
+          $Res Function(_$GetPetLocationSuccessImpl) then) =
+      __$$GetPetLocationSuccessImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({LocationResponse location});
+}
+
+/// @nodoc
+class __$$GetPetLocationSuccessImplCopyWithImpl<$Res>
+    extends _$PetsStateCopyWithImpl<$Res, _$GetPetLocationSuccessImpl>
+    implements _$$GetPetLocationSuccessImplCopyWith<$Res> {
+  __$$GetPetLocationSuccessImplCopyWithImpl(_$GetPetLocationSuccessImpl _value,
+      $Res Function(_$GetPetLocationSuccessImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PetsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? location = null,
+  }) {
+    return _then(_$GetPetLocationSuccessImpl(
+      null == location
+          ? _value.location
+          : location // ignore: cast_nullable_to_non_nullable
+              as LocationResponse,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetPetLocationSuccessImpl implements GetPetLocationSuccess {
+  const _$GetPetLocationSuccessImpl(this.location);
+
+  @override
+  final LocationResponse location;
+
+  @override
+  String toString() {
+    return 'PetsState.getPetLocationSuccess(location: $location)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetPetLocationSuccessImpl &&
+            (identical(other.location, location) ||
+                other.location == location));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, location);
+
+  /// Create a copy of PetsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetPetLocationSuccessImplCopyWith<_$GetPetLocationSuccessImpl>
+      get copyWith => __$$GetPetLocationSuccessImplCopyWithImpl<
+          _$GetPetLocationSuccessImpl>(this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getAllPetsLoading,
+    required TResult Function(List<PetResponse> pets) getAllPetsSuccess,
+    required TResult Function(String message) getAllPetsError,
+    required TResult Function() addPetLoading,
+    required TResult Function() addPetSuccess,
+    required TResult Function(String message) addPetError,
+    required TResult Function() deletePetLoading,
+    required TResult Function() deletePetSuccess,
+    required TResult Function(String message) deletePetError,
+    required TResult Function() updatePetLoading,
+    required TResult Function() updatePetSuccess,
+    required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
+  }) {
+    return getPetLocationSuccess(location);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getAllPetsLoading,
+    TResult? Function(List<PetResponse> pets)? getAllPetsSuccess,
+    TResult? Function(String message)? getAllPetsError,
+    TResult? Function()? addPetLoading,
+    TResult? Function()? addPetSuccess,
+    TResult? Function(String message)? addPetError,
+    TResult? Function()? deletePetLoading,
+    TResult? Function()? deletePetSuccess,
+    TResult? Function(String message)? deletePetError,
+    TResult? Function()? updatePetLoading,
+    TResult? Function()? updatePetSuccess,
+    TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
+  }) {
+    return getPetLocationSuccess?.call(location);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getAllPetsLoading,
+    TResult Function(List<PetResponse> pets)? getAllPetsSuccess,
+    TResult Function(String message)? getAllPetsError,
+    TResult Function()? addPetLoading,
+    TResult Function()? addPetSuccess,
+    TResult Function(String message)? addPetError,
+    TResult Function()? deletePetLoading,
+    TResult Function()? deletePetSuccess,
+    TResult Function(String message)? deletePetError,
+    TResult Function()? updatePetLoading,
+    TResult Function()? updatePetSuccess,
+    TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
+    required TResult orElse(),
+  }) {
+    if (getPetLocationSuccess != null) {
+      return getPetLocationSuccess(location);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetAllPetsLoading value) getAllPetsLoading,
+    required TResult Function(GetAllPetsSuccess value) getAllPetsSuccess,
+    required TResult Function(GetAllPetsError value) getAllPetsError,
+    required TResult Function(AddPetLoading value) addPetLoading,
+    required TResult Function(AddPetSuccess value) addPetSuccess,
+    required TResult Function(AddPetError value) addPetError,
+    required TResult Function(DeletePetLoading value) deletePetLoading,
+    required TResult Function(DeletePetSuccess value) deletePetSuccess,
+    required TResult Function(DeletePetError value) deletePetError,
+    required TResult Function(UpdatePetLoading value) updatePetLoading,
+    required TResult Function(UpdatePetSuccess value) updatePetSuccess,
+    required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
+  }) {
+    return getPetLocationSuccess(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetAllPetsLoading value)? getAllPetsLoading,
+    TResult? Function(GetAllPetsSuccess value)? getAllPetsSuccess,
+    TResult? Function(GetAllPetsError value)? getAllPetsError,
+    TResult? Function(AddPetLoading value)? addPetLoading,
+    TResult? Function(AddPetSuccess value)? addPetSuccess,
+    TResult? Function(AddPetError value)? addPetError,
+    TResult? Function(DeletePetLoading value)? deletePetLoading,
+    TResult? Function(DeletePetSuccess value)? deletePetSuccess,
+    TResult? Function(DeletePetError value)? deletePetError,
+    TResult? Function(UpdatePetLoading value)? updatePetLoading,
+    TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
+    TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
+  }) {
+    return getPetLocationSuccess?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetAllPetsLoading value)? getAllPetsLoading,
+    TResult Function(GetAllPetsSuccess value)? getAllPetsSuccess,
+    TResult Function(GetAllPetsError value)? getAllPetsError,
+    TResult Function(AddPetLoading value)? addPetLoading,
+    TResult Function(AddPetSuccess value)? addPetSuccess,
+    TResult Function(AddPetError value)? addPetError,
+    TResult Function(DeletePetLoading value)? deletePetLoading,
+    TResult Function(DeletePetSuccess value)? deletePetSuccess,
+    TResult Function(DeletePetError value)? deletePetError,
+    TResult Function(UpdatePetLoading value)? updatePetLoading,
+    TResult Function(UpdatePetSuccess value)? updatePetSuccess,
+    TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
+    required TResult orElse(),
+  }) {
+    if (getPetLocationSuccess != null) {
+      return getPetLocationSuccess(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetPetLocationSuccess implements PetsState {
+  const factory GetPetLocationSuccess(final LocationResponse location) =
+      _$GetPetLocationSuccessImpl;
+
+  LocationResponse get location;
+
+  /// Create a copy of PetsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetPetLocationSuccessImplCopyWith<_$GetPetLocationSuccessImpl>
+      get copyWith => throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class _$$GetPetLocationErrorImplCopyWith<$Res> {
+  factory _$$GetPetLocationErrorImplCopyWith(_$GetPetLocationErrorImpl value,
+          $Res Function(_$GetPetLocationErrorImpl) then) =
+      __$$GetPetLocationErrorImplCopyWithImpl<$Res>;
+  @useResult
+  $Res call({String message});
+}
+
+/// @nodoc
+class __$$GetPetLocationErrorImplCopyWithImpl<$Res>
+    extends _$PetsStateCopyWithImpl<$Res, _$GetPetLocationErrorImpl>
+    implements _$$GetPetLocationErrorImplCopyWith<$Res> {
+  __$$GetPetLocationErrorImplCopyWithImpl(_$GetPetLocationErrorImpl _value,
+      $Res Function(_$GetPetLocationErrorImpl) _then)
+      : super(_value, _then);
+
+  /// Create a copy of PetsState
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
+  @override
+  $Res call({
+    Object? message = null,
+  }) {
+    return _then(_$GetPetLocationErrorImpl(
+      null == message
+          ? _value.message
+          : message // ignore: cast_nullable_to_non_nullable
+              as String,
+    ));
+  }
+}
+
+/// @nodoc
+
+class _$GetPetLocationErrorImpl implements GetPetLocationError {
+  const _$GetPetLocationErrorImpl(this.message);
+
+  @override
+  final String message;
+
+  @override
+  String toString() {
+    return 'PetsState.getPetLocationError(message: $message)';
+  }
+
+  @override
+  bool operator ==(Object other) {
+    return identical(this, other) ||
+        (other.runtimeType == runtimeType &&
+            other is _$GetPetLocationErrorImpl &&
+            (identical(other.message, message) || other.message == message));
+  }
+
+  @override
+  int get hashCode => Object.hash(runtimeType, message);
+
+  /// Create a copy of PetsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  @override
+  @pragma('vm:prefer-inline')
+  _$$GetPetLocationErrorImplCopyWith<_$GetPetLocationErrorImpl> get copyWith =>
+      __$$GetPetLocationErrorImplCopyWithImpl<_$GetPetLocationErrorImpl>(
+          this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  TResult when<TResult extends Object?>({
+    required TResult Function() initial,
+    required TResult Function() getAllPetsLoading,
+    required TResult Function(List<PetResponse> pets) getAllPetsSuccess,
+    required TResult Function(String message) getAllPetsError,
+    required TResult Function() addPetLoading,
+    required TResult Function() addPetSuccess,
+    required TResult Function(String message) addPetError,
+    required TResult Function() deletePetLoading,
+    required TResult Function() deletePetSuccess,
+    required TResult Function(String message) deletePetError,
+    required TResult Function() updatePetLoading,
+    required TResult Function() updatePetSuccess,
+    required TResult Function(String message) updatePetError,
+    required TResult Function() getPetActivityLoading,
+    required TResult Function(ActivityResponse activity) getPetActivitySuccess,
+    required TResult Function(String message) getPetActivityError,
+    required TResult Function() getPetLocationLoading,
+    required TResult Function(LocationResponse location) getPetLocationSuccess,
+    required TResult Function(String message) getPetLocationError,
+  }) {
+    return getPetLocationError(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? whenOrNull<TResult extends Object?>({
+    TResult? Function()? initial,
+    TResult? Function()? getAllPetsLoading,
+    TResult? Function(List<PetResponse> pets)? getAllPetsSuccess,
+    TResult? Function(String message)? getAllPetsError,
+    TResult? Function()? addPetLoading,
+    TResult? Function()? addPetSuccess,
+    TResult? Function(String message)? addPetError,
+    TResult? Function()? deletePetLoading,
+    TResult? Function()? deletePetSuccess,
+    TResult? Function(String message)? deletePetError,
+    TResult? Function()? updatePetLoading,
+    TResult? Function()? updatePetSuccess,
+    TResult? Function(String message)? updatePetError,
+    TResult? Function()? getPetActivityLoading,
+    TResult? Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult? Function(String message)? getPetActivityError,
+    TResult? Function()? getPetLocationLoading,
+    TResult? Function(LocationResponse location)? getPetLocationSuccess,
+    TResult? Function(String message)? getPetLocationError,
+  }) {
+    return getPetLocationError?.call(message);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function()? initial,
+    TResult Function()? getAllPetsLoading,
+    TResult Function(List<PetResponse> pets)? getAllPetsSuccess,
+    TResult Function(String message)? getAllPetsError,
+    TResult Function()? addPetLoading,
+    TResult Function()? addPetSuccess,
+    TResult Function(String message)? addPetError,
+    TResult Function()? deletePetLoading,
+    TResult Function()? deletePetSuccess,
+    TResult Function(String message)? deletePetError,
+    TResult Function()? updatePetLoading,
+    TResult Function()? updatePetSuccess,
+    TResult Function(String message)? updatePetError,
+    TResult Function()? getPetActivityLoading,
+    TResult Function(ActivityResponse activity)? getPetActivitySuccess,
+    TResult Function(String message)? getPetActivityError,
+    TResult Function()? getPetLocationLoading,
+    TResult Function(LocationResponse location)? getPetLocationSuccess,
+    TResult Function(String message)? getPetLocationError,
+    required TResult orElse(),
+  }) {
+    if (getPetLocationError != null) {
+      return getPetLocationError(message);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult map<TResult extends Object?>({
+    required TResult Function(_Initial value) initial,
+    required TResult Function(GetAllPetsLoading value) getAllPetsLoading,
+    required TResult Function(GetAllPetsSuccess value) getAllPetsSuccess,
+    required TResult Function(GetAllPetsError value) getAllPetsError,
+    required TResult Function(AddPetLoading value) addPetLoading,
+    required TResult Function(AddPetSuccess value) addPetSuccess,
+    required TResult Function(AddPetError value) addPetError,
+    required TResult Function(DeletePetLoading value) deletePetLoading,
+    required TResult Function(DeletePetSuccess value) deletePetSuccess,
+    required TResult Function(DeletePetError value) deletePetError,
+    required TResult Function(UpdatePetLoading value) updatePetLoading,
+    required TResult Function(UpdatePetSuccess value) updatePetSuccess,
+    required TResult Function(UpdatePetError value) updatePetError,
+    required TResult Function(GetPetActivityLoading value)
+        getPetActivityLoading,
+    required TResult Function(GetPetActivitySuccess value)
+        getPetActivitySuccess,
+    required TResult Function(GetPetActivityError value) getPetActivityError,
+    required TResult Function(GetPetLocationLoading value)
+        getPetLocationLoading,
+    required TResult Function(GetPetLocationSuccess value)
+        getPetLocationSuccess,
+    required TResult Function(GetPetLocationError value) getPetLocationError,
+  }) {
+    return getPetLocationError(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult? mapOrNull<TResult extends Object?>({
+    TResult? Function(_Initial value)? initial,
+    TResult? Function(GetAllPetsLoading value)? getAllPetsLoading,
+    TResult? Function(GetAllPetsSuccess value)? getAllPetsSuccess,
+    TResult? Function(GetAllPetsError value)? getAllPetsError,
+    TResult? Function(AddPetLoading value)? addPetLoading,
+    TResult? Function(AddPetSuccess value)? addPetSuccess,
+    TResult? Function(AddPetError value)? addPetError,
+    TResult? Function(DeletePetLoading value)? deletePetLoading,
+    TResult? Function(DeletePetSuccess value)? deletePetSuccess,
+    TResult? Function(DeletePetError value)? deletePetError,
+    TResult? Function(UpdatePetLoading value)? updatePetLoading,
+    TResult? Function(UpdatePetSuccess value)? updatePetSuccess,
+    TResult? Function(UpdatePetError value)? updatePetError,
+    TResult? Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult? Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult? Function(GetPetActivityError value)? getPetActivityError,
+    TResult? Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult? Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult? Function(GetPetLocationError value)? getPetLocationError,
+  }) {
+    return getPetLocationError?.call(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_Initial value)? initial,
+    TResult Function(GetAllPetsLoading value)? getAllPetsLoading,
+    TResult Function(GetAllPetsSuccess value)? getAllPetsSuccess,
+    TResult Function(GetAllPetsError value)? getAllPetsError,
+    TResult Function(AddPetLoading value)? addPetLoading,
+    TResult Function(AddPetSuccess value)? addPetSuccess,
+    TResult Function(AddPetError value)? addPetError,
+    TResult Function(DeletePetLoading value)? deletePetLoading,
+    TResult Function(DeletePetSuccess value)? deletePetSuccess,
+    TResult Function(DeletePetError value)? deletePetError,
+    TResult Function(UpdatePetLoading value)? updatePetLoading,
+    TResult Function(UpdatePetSuccess value)? updatePetSuccess,
+    TResult Function(UpdatePetError value)? updatePetError,
+    TResult Function(GetPetActivityLoading value)? getPetActivityLoading,
+    TResult Function(GetPetActivitySuccess value)? getPetActivitySuccess,
+    TResult Function(GetPetActivityError value)? getPetActivityError,
+    TResult Function(GetPetLocationLoading value)? getPetLocationLoading,
+    TResult Function(GetPetLocationSuccess value)? getPetLocationSuccess,
+    TResult Function(GetPetLocationError value)? getPetLocationError,
+    required TResult orElse(),
+  }) {
+    if (getPetLocationError != null) {
+      return getPetLocationError(this);
+    }
+    return orElse();
+  }
+}
+
+abstract class GetPetLocationError implements PetsState {
+  const factory GetPetLocationError(final String message) =
+      _$GetPetLocationErrorImpl;
+
+  String get message;
+
+  /// Create a copy of PetsState
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$GetPetLocationErrorImplCopyWith<_$GetPetLocationErrorImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

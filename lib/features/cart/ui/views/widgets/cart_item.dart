@@ -59,6 +59,7 @@ class _CartItemState extends State<CartItem> {
                   : Image.network(
                       widget.cartItem.image!,
                       height: 70.h,
+                      width: MediaQuery.sizeOf(context).width * 0.3,
                     ),
               horizontalSpace(12),
               Column(
@@ -69,7 +70,7 @@ class _CartItemState extends State<CartItem> {
                     style: AppTextStyles.storePrice,
                   ),
                   SizedBox(
-                    width: 152.w,
+                    width: MediaQuery.sizeOf(context).width * 0.4,
                     child: Text(
                       widget.cartItem.name ?? "",
                       overflow: TextOverflow.ellipsis,
@@ -77,7 +78,7 @@ class _CartItemState extends State<CartItem> {
                     ),
                   ),
                   SizedBox(
-                    width: 152.w,
+                    width: MediaQuery.sizeOf(context).width * 0.4,
                     child: Text(
                       widget.cartItem.description ?? "",
                       style: AppTextStyles.storeSizeItem
@@ -86,7 +87,6 @@ class _CartItemState extends State<CartItem> {
                   ),
                 ],
               ),
-              const Spacer(),
               Text(
                 widget.quantity.toString(),
                 style: AppTextStyles.quantityWidgetText.copyWith(

@@ -269,7 +269,7 @@ class _$InitialImpl with DiagnosticableTreeMixin implements _Initial {
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'StoreState.initial'));
+    properties..add(DiagnosticsProperty('type', 'StoreState.initial'));
   }
 
   @override
@@ -540,7 +540,7 @@ class _$LoadingImpl with DiagnosticableTreeMixin implements Loading {
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'StoreState.loading'));
+    properties..add(DiagnosticsProperty('type', 'StoreState.loading'));
   }
 
   @override
@@ -1436,7 +1436,7 @@ class _$AllStoresLoadingImpl
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'StoreState.allStoresLoading'));
+    properties..add(DiagnosticsProperty('type', 'StoreState.allStoresLoading'));
   }
 
   @override
@@ -2333,7 +2333,7 @@ class _$SearchStoresLoadingImpl
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-        .add(DiagnosticsProperty('type', 'StoreState.searchStoresLoading'));
+      ..add(DiagnosticsProperty('type', 'StoreState.searchStoresLoading'));
   }
 
   @override
@@ -3232,7 +3232,7 @@ class _$SpecificStoreLoadingImpl
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-        .add(DiagnosticsProperty('type', 'StoreState.specificStoreLoading'));
+      ..add(DiagnosticsProperty('type', 'StoreState.specificStoreLoading'));
   }
 
   @override
@@ -4132,7 +4132,7 @@ class _$SearchItemsLoadingImpl
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-        .add(DiagnosticsProperty('type', 'StoreState.searchItemsLoading'));
+      ..add(DiagnosticsProperty('type', 'StoreState.searchItemsLoading'));
   }
 
   @override
@@ -5028,7 +5028,7 @@ class _$AddToCartLoadingImpl
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'StoreState.addToCartLoading'));
+    properties..add(DiagnosticsProperty('type', 'StoreState.addToCartLoading'));
   }
 
   @override
@@ -5301,7 +5301,7 @@ class _$AddToCartSuccessImpl
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'StoreState.addToCartSuccess'));
+    properties..add(DiagnosticsProperty('type', 'StoreState.addToCartSuccess'));
   }
 
   @override
@@ -5888,7 +5888,7 @@ class _$RecommendedFoodLoadingImpl
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-        .add(DiagnosticsProperty('type', 'StoreState.recommendedFoodLoading'));
+      ..add(DiagnosticsProperty('type', 'StoreState.recommendedFoodLoading'));
   }
 
   @override
@@ -6790,7 +6790,7 @@ class _$AddFavoriteLoadingImpl
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-        .add(DiagnosticsProperty('type', 'StoreState.addFavoriteLoading'));
+      ..add(DiagnosticsProperty('type', 'StoreState.addFavoriteLoading'));
   }
 
   @override
@@ -7064,7 +7064,7 @@ class _$AddFavoriteSuccessImpl
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     properties
-        .add(DiagnosticsProperty('type', 'StoreState.addFavoriteSuccess'));
+      ..add(DiagnosticsProperty('type', 'StoreState.addFavoriteSuccess'));
   }
 
   @override
@@ -7648,7 +7648,7 @@ class _$FavoritesLoadingImpl
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
-    properties.add(DiagnosticsProperty('type', 'StoreState.favoritesLoading'));
+    properties..add(DiagnosticsProperty('type', 'StoreState.favoritesLoading'));
   }
 
   @override

@@ -4,7 +4,9 @@ import 'package:pets_care_app/core/helper/shared_prefs/shared_prefs_constant.dar
 import 'package:pets_care_app/core/network/api_error_handler.dart';
 import 'package:pets_care_app/core/network/api_result.dart';
 import 'package:pets_care_app/core/network/api_service.dart';
+import 'package:pets_care_app/features/add_pets/data/models/activity_response.dart';
 import 'package:pets_care_app/features/add_pets/data/models/pet_response.dart';
+import 'package:pets_care_app/features/locations/data/models/location_response.dart';
 
 class PetsRepo {
   final ApiService _apiService;
@@ -49,6 +51,28 @@ class PetsRepo {
           'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}',
           id,
           body);
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  Future<ApiResult<ActivityResponse>> getPetActivity(String id) async {
+    try {
+      final response = await _apiService.getActivity(
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}',
+          id);
+      return ApiResult.success(response);
+    } catch (e) {
+      return ApiResult.failure(ApiErrorHandler.handle(e));
+    }
+  }
+
+  Future<ApiResult<LocationResponse>> getPetLocation(String id) async {
+    try {
+      final response = await _apiService.getLocation(
+          'Bearer ${await SharedPrefHelper.getSecuredData(SharedPrefsConstant.token)}',
+          id);
       return ApiResult.success(response);
     } catch (e) {
       return ApiResult.failure(ApiErrorHandler.handle(e));

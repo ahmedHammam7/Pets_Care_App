@@ -4,7 +4,6 @@ import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/themes/text_styles.dart';
 import 'package:pets_care_app/features/check/ui/check_screen.dart';
 import 'package:pets_care_app/features/home/ui/views/home_screen.dart';
-import 'package:pets_care_app/features/locations/ui/location_screen.dart';
 import 'package:pets_care_app/features/profile/ui/views/profile_screen.dart';
 import 'package:pets_care_app/features/store/client/ui/views/favourite_screen.dart';
 
@@ -30,7 +29,6 @@ class _HomeLayoutState extends State<HomeLayout> {
       const HomeScreen(),
       const CheckScreen(),
       const FavouriteScreen(),
-      const LocationScreen(),
       const ProfileScreen(),
     ];
     return Scaffold(
@@ -53,8 +51,6 @@ class _HomeLayoutState extends State<HomeLayout> {
                 icon: Icon(Icons.monitor_heart_outlined), label: "Check"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.favorite_border), label: "Favourite"),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.location_on_outlined), label: "Locations"),
             BottomNavigationBarItem(
                 icon: Icon(Icons.person_outlined), label: "Profile"),
           ],

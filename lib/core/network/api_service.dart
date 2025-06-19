@@ -1,5 +1,6 @@
 import 'package:dio/dio.dart';
 import 'package:pets_care_app/core/network/api_constant.dart';
+import 'package:pets_care_app/features/add_pets/data/models/activity_response.dart';
 import 'package:pets_care_app/features/add_pets/data/models/pet_response.dart';
 import 'package:pets_care_app/features/auth/login/data/models/login_response.dart';
 import 'package:pets_care_app/features/auth/register/data/models/register_response.dart';
@@ -11,6 +12,7 @@ import 'package:pets_care_app/features/clinics/client/data/models/get_all_clinic
 import 'package:pets_care_app/features/clinics/doctor/data/models/appoinment_doc_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/clinic_response.dart';
 import 'package:pets_care_app/features/clinics/doctor/data/models/doctor_profile_response.dart';
+import 'package:pets_care_app/features/locations/data/models/location_response.dart';
 import 'package:pets_care_app/features/profile/data/models/profile_response.dart';
 import 'package:pets_care_app/features/store/client/data/models/favourite_response.dart';
 import 'package:pets_care_app/features/store/client/data/models/product_model.dart';
@@ -147,4 +149,10 @@ abstract class ApiService {
       @Header('Authorization') String token);
   @POST(ApiConstant.predict)
   Future<PredictResponse> checkByAi(@Body() dynamic body);
+  @GET('${ApiConstant.activities}/{id}')
+  Future<ActivityResponse> getActivity(
+      @Header('Authorization') String token, @Path('id') String id);
+  @GET('${ApiConstant.location}/{id}')
+  Future<LocationResponse> getLocation(
+      @Header('Authorization') String token, @Path('id') String id);
 }

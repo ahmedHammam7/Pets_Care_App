@@ -23,8 +23,28 @@ class AddPetsScreen extends StatelessWidget {
             size: 24.sp,
           ),
         ),
+        title: Text(
+          "My Pets",
+          style: TextStyle(
+            fontSize: 20.sp,
+            color: AppColors.primaryColor,
+            fontWeight: FontWeight.w600,
+          ),
+        ),
+        centerTitle: true,
       ),
       body: const AddPetsBody(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          context.pushNamed(Routes.addPetsForm);
+        },
+        backgroundColor: AppColors.primaryColor,
+        child: Icon(
+          Icons.add,
+          size: 30.sp,
+          color: AppColors.white,
+        ),
+      ),
     );
   }
 }

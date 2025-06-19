@@ -13,14 +13,13 @@ class GetPetsLoading extends StatelessWidget {
     return Shimmer.fromColors(
       baseColor: Colors.white,
       highlightColor: AppColors.storeSizeItemColor,
-      child: SizedBox(
-        height: MediaQuery.sizeOf(context).height * 0.5,
-        child: ListView.builder(
-          itemBuilder: (context, index) => Padding(
+      child: SliverList(
+        delegate: SliverChildBuilderDelegate(
+          (context, index) => Padding(
             padding: EdgeInsets.symmetric(vertical: 10.h),
             child: const AddedPetsLoading(),
           ),
-          itemCount: 10,
+          childCount: 10,
         ),
       ),
     );
@@ -32,105 +31,44 @@ class AddedPetsLoading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      color: AppColors.addedPets,
-      margin: EdgeInsets.zero,
-      shadowColor: Colors.grey,
-      elevation: 8,
-      child: SizedBox(
-        width: double.infinity,
-        child: Padding(
-          padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Row(
-                children: [
-                  Image.asset(
-                    "assets/png/testDog.png",
-                    height: 61.h,
-                  ),
-                  const Spacer(
-                    flex: 4,
-                  ),
-                  Text(
-                    "Tam3a",
-                    style: AppTextStyles.addedPetstext,
-                  ),
-                  const Spacer(
-                    flex: 4,
-                  ),
-                  Text(
-                    "Male",
-                    style: AppTextStyles.addedPetstext,
-                  ),
-                  const Spacer(
-                    flex: 1,
-                  ),
-                ],
-              ),
-              verticalSpace(10),
-              Text(
-                "More Details :",
-                style: AppTextStyles.addedPetstext
-                    .copyWith(fontWeight: FontWeight.w700, fontSize: 22.sp),
-              ),
-              verticalSpace(10),
-              Row(
-                children: [
-                  const Icon(Icons.color_lens_outlined),
-                  horizontalSpace(5),
-                  Text(
-                    "white",
-                    style: AppTextStyles.addedPetstext,
-                  ),
-                  const Spacer(
-                    flex: 4,
-                  ),
-                  const Icon(Icons.height),
-                  horizontalSpace(5),
-                  Text(
-                    "50.2",
-                    style: AppTextStyles.addedPetstext,
-                  ),
-                  const Spacer(
-                    flex: 4,
-                  ),
-                  const Icon(Icons.monitor_weight_outlined),
-                  horizontalSpace(5),
-                  Text(
-                    "20.2",
-                    style: AppTextStyles.addedPetstext,
-                  ),
-                  const Spacer(
-                    flex: 1,
-                  ),
-                ],
-              ),
-              verticalSpace(10),
-              Row(
-                children: [
-                  const Icon(Icons.cake_outlined),
-                  horizontalSpace(5),
-                  Text(
-                    "2" " years",
-                    style: AppTextStyles.addedPetstext,
-                  ),
-                  const Spacer(
-                    flex: 4,
-                  ),
-                  const Icon(Icons.medical_services_outlined),
-                  horizontalSpace(5),
-                  Text(
-                    "2025-11-25 10:00:00",
-                    style: AppTextStyles.addedPetstext,
-                  ),
-                  const Spacer(
-                    flex: 4,
-                  ),
-                ],
-              ),
-            ],
+    return Shimmer.fromColors(
+      baseColor: Colors.white,
+      highlightColor: AppColors.storeSizeItemColor,
+      child: Card(
+        color: AppColors.primaryColor,
+        margin: EdgeInsets.zero,
+        shadowColor: Colors.grey,
+        elevation: 8,
+        child: SizedBox(
+          width: double.infinity,
+          height: MediaQuery.sizeOf(context).height * 0.10,
+          child: Padding(
+            padding: EdgeInsets.symmetric(vertical: 10.h, horizontal: 10.w),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Image.asset(
+                      "assets/png/testDog.png",
+                      height: 61.h,
+                    ),
+                    const Spacer(),
+                    Text(
+                      "  pet.petName",
+                      style: AppTextStyles.addedPetstext
+                          .copyWith(color: AppColors.white),
+                    ),
+                    const Spacer(),
+                    const SizedBox.shrink(),
+                    const Spacer(),
+                    const SizedBox.shrink(),
+                    const Spacer(),
+                  ],
+                ),
+              ],
+            ),
           ),
         ),
       ),

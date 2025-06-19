@@ -4,13 +4,20 @@ import 'package:flutter_map/flutter_map.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:latlong2/latlong.dart';
 import 'package:location/location.dart';
+import 'package:pets_care_app/core/helper/extension.dart';
+import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:http/http.dart' as http;
 import 'package:permission_handler/permission_handler.dart';
 
 class LocationScreen extends StatefulWidget {
-  const LocationScreen({super.key});
-
+  const LocationScreen({
+    super.key,
+    required this.lat,
+    required this.lng,
+  });
+  final double lat;
+  final double lng;
   @override
   State<LocationScreen> createState() => _LocationScreenState();
 }
@@ -31,6 +38,7 @@ class _LocationScreenState extends State<LocationScreen> {
   void initState() {
     super.initState();
     _checkLocationPermission();
+    _addDestinationMarker(); // Add destination marker immediately
   }
 
   Future<void> _checkLocationPermission() async {
@@ -58,12 +66,16 @@ class _LocationScreenState extends State<LocationScreen> {
         _updateUserMarker();
       });
 
+      // Calculate route from given lat/lng once and save it
+      _calculateAndSaveRoute();
+
       location.onLocationChanged.listen((newLocation) {
         if (mounted) {
           setState(() {
             _currentLocation = newLocation;
             _updateUserMarker();
           });
+          // Don't recalculate route - keep the saved route
         }
       });
     } catch (e) {
@@ -94,17 +106,27 @@ class _LocationScreenState extends State<LocationScreen> {
     }
   }
 
-  Future<void> _getRoute(LatLng destination) async {
+  void _addDestinationMarker() {
+    final startPoint = LatLng(widget.lat, widget.lng);
+    _updateStartMarker(startPoint);
+  }
+
+  Future<void> _calculateAndSaveRoute() async {
     if (_currentLocation == null) return;
 
+    final startPoint = LatLng(widget.lat, widget.lng);
+    final destination =
+        LatLng(_currentLocation!.latitude!, _currentLocation!.longitude!);
+    await _getRoute(startPoint, destination);
+  }
+
+  Future<void> _getRoute(LatLng start, LatLng destination) async {
     setState(() {
       _isLoading = true;
       _routePoints = []; // Clear previous route
     });
 
     try {
-      final start =
-          LatLng(_currentLocation!.latitude!, _currentLocation!.longitude!);
       final response = await http.get(
         Uri.parse('https://api.openrouteservice.org/v2/directions/driving-car?'
             'api_key=$_orsApiKey&'
@@ -119,7 +141,6 @@ class _LocationScreenState extends State<LocationScreen> {
 
         setState(() {
           _routePoints = coordinates.map((e) => LatLng(e[1], e[0])).toList();
-          _updateDestinationMarker(destination);
         });
       } else {
         _showErrorSnackbar("Failed to get route: ${response.statusCode}");
@@ -133,18 +154,18 @@ class _LocationScreenState extends State<LocationScreen> {
     }
   }
 
-  void _updateDestinationMarker(LatLng point) {
-    _markers.removeWhere((m) => m.key == const ValueKey('destination'));
+  void _updateStartMarker(LatLng point) {
+    _markers.removeWhere((m) => m.key == const ValueKey('start_point'));
 
     _markers.add(Marker(
-      key: const ValueKey('destination'),
+      key: const ValueKey('start_point'),
       width: 80.0.w,
       height: 80.0.h,
       point: point,
       child: Icon(
-        Icons.location_on,
-        color: Colors.red,
-        size: 40.sp,
+        Icons.pets,
+        color: Colors.black,
+        size: 30.sp,
       ),
     ));
   }
@@ -160,11 +181,6 @@ class _LocationScreenState extends State<LocationScreen> {
     });
   }
 
-  void _onMapTap(TapPosition tapPosition, LatLng point) {
-    if (_currentLocation == null) return;
-    _getRoute(point);
-  }
-
   void _centerOnUserLocation() {
     if (_currentLocation != null) {
       _mapController.move(
@@ -174,9 +190,49 @@ class _LocationScreenState extends State<LocationScreen> {
     }
   }
 
+  void _centerOnStartPoint() {
+    _mapController.move(
+      LatLng(widget.lat, widget.lng),
+      _defaultZoom,
+    );
+  }
+
+  void _fitBothLocations() {
+    if (_currentLocation != null) {
+      final bounds = LatLngBounds.fromPoints([
+        LatLng(widget.lat, widget.lng),
+        LatLng(_currentLocation!.latitude!, _currentLocation!.longitude!),
+      ]);
+      _mapController.fitCamera(CameraFit.bounds(
+          bounds: bounds, padding: const EdgeInsets.all(50.0)));
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+          backgroundColor: AppColors.primaryColor,
+          title: Text(
+            'Location Tracking',
+            style: TextStyle(
+                color: AppColors.white,
+                fontWeight: FontWeight.bold,
+                fontSize: 20.sp),
+          ),
+          centerTitle: true,
+          leading: IconButton(
+            icon: Icon(
+              Icons.arrow_back,
+              color: AppColors.white,
+              size: 24.sp,
+            ),
+            onPressed: () async {
+              await context.pushNamedAndRemoveUntil(
+                  Routes.homeLayout, (route) => false,
+                  predicate: (route) => false);
+            },
+          )),
       body: Stack(
         children: [
           if (!_locationPermissionGranted)
@@ -195,7 +251,6 @@ class _LocationScreenState extends State<LocationScreen> {
                   _currentLocation!.longitude!,
                 ),
                 initialZoom: _defaultZoom,
-                onTap: _onMapTap,
               ),
               children: [
                 TileLayer(
@@ -224,10 +279,30 @@ class _LocationScreenState extends State<LocationScreen> {
             )),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: AppColors.primaryColor,
-        onPressed: _centerOnUserLocation,
-        child: const Icon(Icons.my_location, color: AppColors.white),
+      floatingActionButton: Column(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          FloatingActionButton(
+            heroTag: "start",
+            backgroundColor: Colors.black,
+            onPressed: _centerOnStartPoint,
+            child: const Icon(Icons.pets, color: AppColors.white),
+          ),
+          SizedBox(height: 10.h),
+          FloatingActionButton(
+            heroTag: "user",
+            backgroundColor: AppColors.primaryColor,
+            onPressed: _centerOnUserLocation,
+            child: const Icon(Icons.my_location, color: AppColors.white),
+          ),
+          SizedBox(height: 10.h),
+          FloatingActionButton(
+            heroTag: "fit",
+            backgroundColor: AppColors.primaryColor,
+            onPressed: _fitBothLocations,
+            child: const Icon(Icons.fit_screen, color: AppColors.white),
+          ),
+        ],
       ),
     );
   }

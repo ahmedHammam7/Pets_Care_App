@@ -73,18 +73,6 @@ class _EditPetScreenState extends State<EditPetScreen> {
                       ),
                       verticalSpace(10),
                       AppTextField.outsideHint(
-                        hint: "Gender",
-                        controller:
-                            context.read<PetsCubit>().petGenderController,
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return "Please enter pet gender";
-                          }
-                          return null;
-                        },
-                      ),
-                      verticalSpace(10),
-                      AppTextField.outsideHint(
                         hint: "Height",
                         controller:
                             context.read<PetsCubit>().petHeightController,
@@ -137,6 +125,21 @@ class _EditPetScreenState extends State<EditPetScreen> {
                           return null;
                         },
                       ),
+                      verticalSpace(10),
+                      AppTextField.outsideHint(
+                        hint: "ْCollar number",
+                        controller:
+                            context.read<PetsCubit>().deviceIdController,
+                        keyboardType: TextInputType.text,
+                      ),
+                      verticalSpace(20),
+                      AppDropDownMenu(
+                        hint: "Gender",
+                        initialSelection: "male",
+                        items: const ["male", "female"],
+                        controller:
+                            context.read<PetsCubit>().petGenderController,
+                      ),
                       verticalSpace(20),
                       AppDropDownMenu(
                         hint: "Type",
@@ -182,7 +185,12 @@ class _EditPetScreenState extends State<EditPetScreen> {
                                             .read<PetsCubit>()
                                             .photo ==
                                         null
-                                    ? NetworkImage(widget.pet.photo)
+                                    ? widget.pet.photo == null ||
+                                            widget.pet.photo!.isEmpty
+                                        ? const AssetImage(
+                                            "assets/png/testDog.png")
+                                        : // If the photo is not null, use NetworkImage
+                                        NetworkImage(widget.pet.photo!)
                                     : FileImage(File(
                                         context.read<PetsCubit>().photo!.path)),
                               ),
@@ -258,6 +266,8 @@ class _EditPetScreenState extends State<EditPetScreen> {
         widget.pet.vaccineTime.toString();
     context.read<PetsCubit>().petGenderController.text =
         widget.pet.gender.toString();
+    context.read<PetsCubit>().deviceIdController.text =
+        widget.pet.deviceId ?? ""; // Reset photo
 
     super.initState();
   }

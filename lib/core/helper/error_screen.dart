@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:pets_care_app/core/helper/extension.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
+import 'package:pets_care_app/features/auth/login/ui/views/login_screen.dart';
+import 'package:pets_care_app/features/home_layout/ui/home_layout.dart';
 
 class ErrorScreen extends StatefulWidget {
   const ErrorScreen({super.key, required this.errorDetails});
@@ -224,7 +225,7 @@ class _ErrorScreenState extends State<ErrorScreen>
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-        height: double.infinity,
+        height: MediaQuery.of(context).size.height,
         decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment.topLeft,
@@ -332,9 +333,14 @@ class _ErrorScreenState extends State<ErrorScreen>
                             height: 56,
                             child: ElevatedButton(
                               onPressed: () async {
-                                await context.pushNamedAndRemoveUntil(
-                                    Routes.homeLayout, (route) => false,
-                                    predicate: (route) => false);
+                                // Navigate to home screen
+                                await Navigator.pushAndRemoveUntil(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const LoginScreen()),
+                                  (route) => false,
+                                );
                               },
                               style: ElevatedButton.styleFrom(
                                 backgroundColor: const Color(0xFF4ecdc4),

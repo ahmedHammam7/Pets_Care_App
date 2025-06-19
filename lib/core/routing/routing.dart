@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pets_care_app/core/helper/no_internet_screen.dart';
 import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/di/dependency_injection.dart';
 import 'package:pets_care_app/features/add_pets/data/models/pet_response.dart';
 import 'package:pets_care_app/features/add_pets/logic/cubit/pets_cubit.dart';
 import 'package:pets_care_app/features/add_pets/ui/add_pets_screen.dart';
 import 'package:pets_care_app/features/add_pets/ui/edit_pet_screen.dart';
+import 'package:pets_care_app/features/add_pets/ui/pet_details_screen.dart';
+import 'package:pets_care_app/features/add_pets/ui/widgets/manual_add_pets_form.dart';
 import 'package:pets_care_app/features/auth/login/logic/cubit/login_cubit.dart';
 import 'package:pets_care_app/features/auth/login/ui/views/login_screen.dart';
 import 'package:pets_care_app/features/auth/register/logic/cubit/register_cubit.dart';
@@ -166,8 +167,12 @@ class AppRoutes {
           builder: (context) => const CheckScreen(),
         );
       case Routes.locationScreen:
+        final arguments = args as Map<String, dynamic>;
         return MaterialPageRoute(
-          builder: (context) => const LocationScreen(),
+          builder: (context) => LocationScreen(
+            lat: arguments['lat'] as double,
+            lng: arguments['lng'] as double,
+          ),
         );
       case Routes.chatBotScreen:
         return MaterialPageRoute(
@@ -335,7 +340,17 @@ class AppRoutes {
         return MaterialPageRoute(
           builder: (context) => const FavouriteScreen(),
         );
-
+      case Routes.addPetsForm:
+        return MaterialPageRoute(
+          builder: (context) => BlocProvider(
+            create: (context) => getIt<PetsCubit>(),
+            child: const ManualAddPetsForm(),
+          ),
+        );
+      case Routes.petsDetailsScreen:
+        return MaterialPageRoute(
+          builder: (context) => PetDetailsScreen(pet: args as PetResponse),
+        );
       default:
         return null;
     }

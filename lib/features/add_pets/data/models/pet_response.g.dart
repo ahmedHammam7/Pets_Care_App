@@ -7,6 +7,8 @@ part of 'pet_response.dart';
 // **************************************************************************
 
 PetResponse _$PetResponseFromJson(Map<String, dynamic> json) => PetResponse(
+      deviceId: json['device_id'],
+      photo: json['photo_url'] as String?,
       petId: (json['id'] as num).toInt(),
       petName: json['pet_name'] as String,
       petType: json['pet_type'] as String,
@@ -16,7 +18,6 @@ PetResponse _$PetResponseFromJson(Map<String, dynamic> json) => PetResponse(
       height: json['height'] as String,
       weight: json['weight'] as String,
       vaccineTime: json['vaccination_time'] as String?,
-      photo: json['photo_url'] as String,
     );
 
 Map<String, dynamic> _$PetResponseToJson(PetResponse instance) =>
@@ -29,6 +30,7 @@ Map<String, dynamic> _$PetResponseToJson(PetResponse instance) =>
       'color': instance.color,
       'height': instance.height,
       'weight': instance.weight,
+      'device_id': instance.deviceId,
       'vaccination_time': instance.vaccineTime,
       'photo_url': instance.photo,
     };

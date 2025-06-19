@@ -38,4 +38,6 @@ class Routes {
   static const String appoinmnenstScreen = '/appoinmnenstScreen';
   static const String updateAppoinmentScreen = '/updateAppoinmentScreen';
   static const String favoritesScreen = '/favoritesScreen';
+  static const String addPetsForm = '/addPetsForm';
+  static const String petsDetailsScreen = '/petsDetailsScreen';
 }

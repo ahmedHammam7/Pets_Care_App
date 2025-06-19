@@ -20,4 +20,16 @@ class PetsState with _$PetsState {
   const factory PetsState.updatePetLoading() = UpdatePetLoading;
   const factory PetsState.updatePetSuccess() = UpdatePetSuccess;
   const factory PetsState.updatePetError(String message) = UpdatePetError;
+  // get pet activity
+  const factory PetsState.getPetActivityLoading() = GetPetActivityLoading;
+  const factory PetsState.getPetActivitySuccess(ActivityResponse activity) =
+      GetPetActivitySuccess;
+  const factory PetsState.getPetActivityError(String message) =
+      GetPetActivityError;
+// get pet location
+  const factory PetsState.getPetLocationLoading() = GetPetLocationLoading;
+  const factory PetsState.getPetLocationSuccess(LocationResponse location) =
+      GetPetLocationSuccess;
+  const factory PetsState.getPetLocationError(String message) =
+      GetPetLocationError;
 }

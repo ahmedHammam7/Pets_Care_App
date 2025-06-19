@@ -10,6 +10,7 @@ import 'package:pets_care_app/core/routing/routes.dart';
 import 'package:pets_care_app/core/themes/colors.dart';
 import 'package:pets_care_app/core/widgets/app_drop_down_menu.dart';
 import 'package:pets_care_app/core/widgets/app_text_field.dart';
+import 'package:pets_care_app/core/widgets/custom_app_bar.dart';
 import 'package:pets_care_app/features/add_pets/logic/cubit/pets_cubit.dart';
 import 'package:pets_care_app/features/add_pets/ui/widgets/add_pets_loading.dart';
 import 'package:pets_care_app/features/auth/widgets/primary_button.dart';
@@ -24,190 +25,195 @@ class ManualAddPetsForm extends StatefulWidget {
 class _ManualAddPetsFormState extends State<ManualAddPetsForm> {
   @override
   Widget build(BuildContext context) {
-    return BlocBuilder<PetsCubit, PetsState>(
-      buildWhen: (previous, current) =>
-          current is AddPetLoading ||
-          current is AddPetSuccess ||
-          current is AddPetError,
-      builder: (context, state) {
-        if (state is AddPetLoading) {
-          return const AddPetsLoading();
-        } else if (state is AddPetSuccess) {
-          WidgetsBinding.instance.addPostFrameCallback((_) {
-            context.pushReplacementNamed(
-              Routes.addPetsScreen,
-            );
-            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
-              content: Text("Pet added successfully"),
-              backgroundColor: Colors.green,
-            ));
-          });
-        } else if (state is AddPetError) {
-          WidgetsBinding.instance.addPostFrameCallback((_) {
-            ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-              content: Text(state.message),
-              backgroundColor: Colors.red,
-            ));
-          });
-        }
-        return Padding(
-          padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
-          child: Form(
-            key: context.read<PetsCubit>().formKey,
-            child: Column(
-              children: [
-                AppTextField.outsideHint(
-                  hint: "Pet Name",
-                  controller: context.read<PetsCubit>().petNameController,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return "Please enter pet name";
-                    }
-                    return null;
-                  },
-                ),
-                verticalSpace(10),
-                AppTextField.outsideHint(
-                  hint: "Gender",
-                  controller: context.read<PetsCubit>().petGenderController,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return "Please enter pet gender";
-                    }
-                    return null;
-                  },
-                ),
-                verticalSpace(10),
-                AppTextField.outsideHint(
-                  hint: "Height",
-                  controller: context.read<PetsCubit>().petHeightController,
-                  keyboardType: TextInputType.number,
-                  numeric: true,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return "Please enter height";
-                    }
-                    return null;
-                  },
-                ),
-                verticalSpace(10),
-                AppTextField.outsideHint(
-                  hint: "Weight",
-                  controller: context.read<PetsCubit>().petWeightController,
-                  keyboardType: TextInputType.number,
-                  numeric: true,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return "Please enter height";
-                    }
-                    return null;
-                  },
-                ),
-                verticalSpace(10),
-                AppTextField.outsideHint(
-                  hint: "Age",
-                  controller: context.read<PetsCubit>().petAgeController,
-                  keyboardType: TextInputType.number,
-                  numeric: true,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return "Please enter age";
-                    }
-                    return null;
-                  },
-                ),
-                verticalSpace(10),
-                AppTextField.outsideHint(
-                  hint: "Color",
-                  controller: context.read<PetsCubit>().petColorController,
-                  isMultiline: true,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return "Please enter color";
-                    }
-                    return null;
-                  },
-                ),
-                verticalSpace(10),
-                AppTextField.outsideHint(
-                  hint: "ْCollar number",
-                  keyboardType: TextInputType.number,
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return "Please enter Collar number";
-                    }
-                    return null;
-                  },
-                ),
-                verticalSpace(20),
-                AppDropDownMenu(
-                  hint: "Type",
-                  initialSelection: "dog",
-                  items: const ["dog", "cat"],
-                  controller: context.read<PetsCubit>().petTypeController,
-                ),
-                verticalSpace(20),
-                AppTextField.outsideHint(
-                  hint: "Vaccine Date",
-                  controller:
-                      context.read<PetsCubit>().petVaccineTimeController,
-                  insideHint: "-/-/-",
-                  validator: (value) {
-                    if (value == null || value.isEmpty) {
-                      return "Please enter vaccine Date";
-                    }
-                    return null;
-                  },
-                  maxWidth: 300,
-                  suffixIcon: Icon(
-                    Icons.calendar_month,
-                    color: AppColors.gray,
-                  ),
-                  onTap: () async {
-                    await _selectDate();
-                  },
-                ),
-                verticalSpace(20),
-                Stack(
-                  children: [
-                    CircleAvatar(
-                      radius: 100.r,
-                      backgroundColor: AppColors.primaryColor,
-                      child: GestureDetector(
-                        onTap: () async {
-                          await pickImage();
+    return Scaffold(
+      appBar: customAppBar(context),
+      body: BlocBuilder<PetsCubit, PetsState>(
+        buildWhen: (previous, current) =>
+            current is AddPetLoading ||
+            current is AddPetSuccess ||
+            current is AddPetError,
+        builder: (context, state) {
+          if (state is AddPetLoading) {
+            return const AddPetsLoading();
+          } else if (state is AddPetSuccess) {
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              context.pushReplacementNamed(
+                Routes.homeLayout,
+              );
+              ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                content: Text("Pet added successfully"),
+                backgroundColor: Colors.green,
+              ));
+            });
+          } else if (state is AddPetError) {
+            WidgetsBinding.instance.addPostFrameCallback((_) {
+              ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                content: Text(state.message),
+                backgroundColor: Colors.red,
+              ));
+            });
+          }
+          return SafeArea(
+            child: SingleChildScrollView(
+              child: Padding(
+                padding: EdgeInsets.symmetric(horizontal: 20.w, vertical: 20.h),
+                child: Form(
+                  key: context.read<PetsCubit>().addPetFormKey,
+                  child: Column(
+                    children: [
+                      AppTextField.outsideHint(
+                        hint: "Pet Name",
+                        controller: context.read<PetsCubit>().petNameController,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return "Please enter pet name";
+                          }
+                          return null;
                         },
-                        child: CircleAvatar(
-                          radius: 96.r,
-                          backgroundColor: AppColors.white,
-                          backgroundImage: context.read<PetsCubit>().photo ==
-                                  null
-                              ? const AssetImage("assets/png/cat.png")
-                              : FileImage(
-                                  File(context.read<PetsCubit>().photo!.path)),
-                        ),
                       ),
-                    ),
-                  ],
+                      verticalSpace(10),
+                      AppTextField.outsideHint(
+                        hint: "Height",
+                        controller:
+                            context.read<PetsCubit>().petHeightController,
+                        keyboardType: TextInputType.number,
+                        numeric: true,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return "Please enter height";
+                          }
+                          return null;
+                        },
+                      ),
+                      verticalSpace(10),
+                      AppTextField.outsideHint(
+                        hint: "Weight",
+                        controller:
+                            context.read<PetsCubit>().petWeightController,
+                        keyboardType: TextInputType.number,
+                        numeric: true,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return "Please enter height";
+                          }
+                          return null;
+                        },
+                      ),
+                      verticalSpace(10),
+                      AppTextField.outsideHint(
+                        hint: "Age",
+                        controller: context.read<PetsCubit>().petAgeController,
+                        keyboardType: TextInputType.number,
+                        numeric: true,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return "Please enter age";
+                          }
+                          return null;
+                        },
+                      ),
+                      verticalSpace(10),
+                      AppTextField.outsideHint(
+                        hint: "Color",
+                        controller:
+                            context.read<PetsCubit>().petColorController,
+                        isMultiline: true,
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return "Please enter color";
+                          }
+                          return null;
+                        },
+                      ),
+                      verticalSpace(10),
+                      AppTextField.outsideHint(
+                        hint: "ْCollar number",
+                        controller:
+                            context.read<PetsCubit>().deviceIdController,
+                        keyboardType: TextInputType.text,
+                      ),
+                      verticalSpace(20),
+                      AppDropDownMenu(
+                        hint: "Type",
+                        initialSelection: "dog",
+                        items: const ["dog", "cat"],
+                        controller: context.read<PetsCubit>().petTypeController,
+                      ),
+                      verticalSpace(20),
+                      AppDropDownMenu(
+                        hint: "Gender",
+                        initialSelection: "male",
+                        items: const ["male", "female"],
+                        controller:
+                            context.read<PetsCubit>().petGenderController,
+                      ),
+                      verticalSpace(20),
+                      AppTextField.outsideHint(
+                        hint: "Vaccine Date",
+                        controller:
+                            context.read<PetsCubit>().petVaccineTimeController,
+                        insideHint: "-/-/-",
+                        validator: (value) {
+                          if (value == null || value.isEmpty) {
+                            return "Please enter vaccine Date";
+                          }
+                          return null;
+                        },
+                        maxWidth: 300,
+                        suffixIcon: Icon(
+                          Icons.calendar_month,
+                          color: AppColors.gray,
+                        ),
+                        onTap: () async {
+                          await _selectDate();
+                        },
+                      ),
+                      verticalSpace(20),
+                      Stack(
+                        children: [
+                          CircleAvatar(
+                            radius: 100.r,
+                            backgroundColor: AppColors.primaryColor,
+                            child: GestureDetector(
+                              onTap: () async {
+                                await pickImage();
+                              },
+                              child: CircleAvatar(
+                                radius: 96.r,
+                                backgroundColor: AppColors.white,
+                                backgroundImage: context
+                                            .read<PetsCubit>()
+                                            .photo ==
+                                        null
+                                    ? const AssetImage("assets/png/cat.png")
+                                    : FileImage(File(
+                                        context.read<PetsCubit>().photo!.path)),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      verticalSpace(20),
+                      PrimaryButton(
+                        text: "Add",
+                        onTap: () async {
+                          if (context
+                              .read<PetsCubit>()
+                              .addPetFormKey
+                              .currentState!
+                              .validate()) {
+                            await context.read<PetsCubit>().addPet();
+                          }
+                        },
+                      )
+                    ],
+                  ),
                 ),
-                verticalSpace(20),
-                PrimaryButton(
-                  text: "Add",
-                  onTap: () async {
-                    if (context
-                        .read<PetsCubit>()
-                        .formKey
-                        .currentState!
-                        .validate()) {
-                      await context.read<PetsCubit>().addPet();
-                    }
-                  },
-                )
-              ],
+              ),
             ),
-          ),
-        );
-      },
+          );
+        },
+      ),
     );
   }
 

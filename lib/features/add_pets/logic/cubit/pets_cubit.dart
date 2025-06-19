@@ -3,8 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:image_picker/image_picker.dart';
+import 'package:pets_care_app/features/add_pets/data/models/activity_response.dart';
 import 'package:pets_care_app/features/add_pets/data/models/pet_response.dart';
 import 'package:pets_care_app/features/add_pets/data/repos/pets_repo.dart';
+import 'package:pets_care_app/features/locations/data/models/location_response.dart';
 
 part 'pets_state.dart';
 part 'pets_cubit.freezed.dart';
@@ -21,9 +23,11 @@ class PetsCubit extends Cubit<PetsState> {
   TextEditingController petHeightController = TextEditingController();
   TextEditingController petWeightController = TextEditingController();
   TextEditingController petVaccineTimeController = TextEditingController();
+  TextEditingController deviceIdController = TextEditingController();
   XFile? photo;
   // form key
   final formKey = GlobalKey<FormState>();
+  final addPetFormKey = GlobalKey<FormState>();
 
   Future<void> getAllPets() async {
     emit(const PetsState.getAllPetsLoading());
@@ -46,6 +50,7 @@ class PetsCubit extends Cubit<PetsState> {
       'height': petHeightController.text,
       'weight': petWeightController.text,
       'vaccination_time': petVaccineTimeController.text,
+      'device_id': deviceIdController.text ?? "",
       'photo': photo != null
           ? await MultipartFile.fromFile(
               photo!.path,
@@ -81,6 +86,7 @@ class PetsCubit extends Cubit<PetsState> {
       'color': petColorController.text,
       'height': petHeightController.text,
       'weight': petWeightController.text,
+      'device_id': deviceIdController.text ?? "",
       'vaccination_time': petVaccineTimeController.text,
       'photo': photo != null
           ? await MultipartFile.fromFile(
@@ -94,6 +100,26 @@ class PetsCubit extends Cubit<PetsState> {
       emit(const PetsState.updatePetSuccess());
     }, failure: (message) {
       emit(PetsState.updatePetError(message.getAllErrorMessages()));
+    });
+  }
+
+  Future<void> getPetActivity(String id) async {
+    emit(const PetsState.getPetActivityLoading());
+    final result = await _petsRepo.getPetActivity(id);
+    result.when(success: (response) {
+      emit(PetsState.getPetActivitySuccess(response));
+    }, failure: (message) {
+      emit(PetsState.getPetActivityError(message.getAllErrorMessages()));
+    });
+  }
+
+  Future<void> getPetLocation(String id) async {
+    emit(const PetsState.getPetLocationLoading());
+    final result = await _petsRepo.getPetLocation(id);
+    result.when(success: (response) {
+      emit(PetsState.getPetLocationSuccess(response));
+    }, failure: (message) {
+      emit(PetsState.getPetLocationError(message.getAllErrorMessages()));
     });
   }
 }
